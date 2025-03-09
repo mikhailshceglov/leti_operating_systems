@@ -1,0 +1,2594 @@
+Script started on 2025-03-09 22:36:04+03:00 [TERM="alacritty" TTY="/dev/pts/2" COLUMNS="141" LINES="37"]
+~/leti/sem4/OS  =ls>                                                                                                                      
+1_lab.pdf  dir_before.txt  lab1_2.log  lab1.log  lab1.log.save	scripts  test_os_2  test_os_7
+~/leti/sem4/OS  =cd test_os_7>                                                                                                            
+~/leti/sem4/OS/test_os_7  =ls>                                                                                                            
+~/leti/sem4/OS/test_os_7  =stat te                                                                                                        
+scd ..>
+~/leti/sem4/OS  =stat test_os_7>                                                                                                          
+  File: test_os_7
+  Size: 4096      	Blocks: 8          IO Block: 4096   directory
+Device: 259,4	Inode: 3539367     Links: 2
+Access: (0755/drwxr-xr-x)  Uid: ( 1000/   misha)   Gid: ( 1000/   misha)
+Access: 2025-03-09 22:30:36.694728445 +0300
+Modify: 2025-03-09 22:16:43.980407553 +0300
+Change: 2025-03-09 22:16:43.980407553 +0300
+ Birth: 2025-03-09 22:16:43.980407553 +0300
+~/leti/sem4/OS  =ccccd test_os_7>                                                                                                         
+~/leti/sem4/OS/test_os_7  =touch filler_{1..10}touch filler_{1..10}>                                                                      
+~/leti/sem4/OS/test_os_7  =ls>                                                                                                            
+filler_1  filler_10  filler_2  filler_3  filler_4  filler_5  filler_6  filler_7  filler_8  filler_9
+~/leti/sem4/OS/test_os_7  =cdcstat .>                                                                                                     
+  File: .
+  Size: 4096      	Blocks: 8          IO Block: 4096   directory
+Device: 259,4	Inode: 3539367     Links: 2
+Access: (0755/drwxr-xr-x)  Uid: ( 1000/   misha)   Gid: ( 1000/   misha)
+Access: 2025-03-09 22:36:54.567965096 +0300
+Modify: 2025-03-09 22:36:52.803926173 +0300
+Change: 2025-03-09 22:36:52.803926173 +0300
+ Birth: 2025-03-09 22:16:43.980407553 +0300
+~/leti/sem4/OS/test_os_7  =cd .ccscsta                                                                                                    
+
+stat tstop-daemon  startx             stat
+
+
+scd ..>
+~/leti/sem4/OS  =stat test_os_7>                                                                                                          
+  File: test_os_7
+  Size: 4096      	Blocks: 8          IO Block: 4096   directory
+Device: 259,4	Inode: 3539367     Links: 2
+Access: (0755/drwxr-xr-x)  Uid: ( 1000/   misha)   Gid: ( 1000/   misha)
+Access: 2025-03-09 22:36:54.567965096 +0300
+Modify: 2025-03-09 22:36:52.803926173 +0300
+Change: 2025-03-09 22:36:52.803926173 +0300
+ Birth: 2025-03-09 22:16:43.980407553 +0300
+~/leti/sem4/OS  =cd test_os_7>                                                                                                            
+~/leti/sem4/OS/test_os_7  =touch filler_{11..1000}touch filler_{11..1000}>                                                                
+~/leti/sem4/OS/test_os_7  =ls>                                                                                                            
+filler_1     filler_180  filler_262  filler_344  filler_426  filler_508  filler_590  filler_672  filler_754  filler_836  filler_918
+filler_10    filler_181  filler_263  filler_345  filler_427  filler_509  filler_591  filler_673  filler_755  filler_837  filler_919
+filler_100   filler_182  filler_264  filler_346  filler_428  filler_51	 filler_592  filler_674  filler_756  filler_838  filler_92
+filler_1000  filler_183  filler_265  filler_347  filler_429  filler_510  filler_593  filler_675  filler_757  filler_839  filler_920
+filler_101   filler_184  filler_266  filler_348  filler_43   filler_511  filler_594  filler_676  filler_758  filler_84	 filler_921
+filler_102   filler_185  filler_267  filler_349  filler_430  filler_512  filler_595  filler_677  filler_759  filler_840  filler_922
+filler_103   filler_186  filler_268  filler_35	 filler_431  filler_513  filler_596  filler_678  filler_76   filler_841  filler_923
+filler_104   filler_187  filler_269  filler_350  filler_432  filler_514  filler_597  filler_679  filler_760  filler_842  filler_924
+filler_105   filler_188  filler_27   filler_351  filler_433  filler_515  filler_598  filler_68	 filler_761  filler_843  filler_925
+filler_106   filler_189  filler_270  filler_352  filler_434  filler_516  filler_599  filler_680  filler_762  filler_844  filler_926
+filler_107   filler_19	 filler_271  filler_353  filler_435  filler_517  filler_6    filler_681  filler_763  filler_845  filler_927
+filler_108   filler_190  filler_272  filler_354  filler_436  filler_518  filler_60   filler_682  filler_764  filler_846  filler_928
+filler_109   filler_191  filler_273  filler_355  filler_437  filler_519  filler_600  filler_683  filler_765  filler_847  filler_929
+filler_11    filler_192  filler_274  filler_356  filler_438  filler_52	 filler_601  filler_684  filler_766  filler_848  filler_93
+filler_110   filler_193  filler_275  filler_357  filler_439  filler_520  filler_602  filler_685  filler_767  filler_849  filler_930
+filler_111   filler_194  filler_276  filler_358  filler_44   filler_521  filler_603  filler_686  filler_768  filler_85	 filler_931
+filler_112   filler_195  filler_277  filler_359  filler_440  filler_522  filler_604  filler_687  filler_769  filler_850  filler_932
+filler_113   filler_196  filler_278  filler_36	 filler_441  filler_523  filler_605  filler_688  filler_77   filler_851  filler_933
+filler_114   filler_197  filler_279  filler_360  filler_442  filler_524  filler_606  filler_689  filler_770  filler_852  filler_934
+filler_115   filler_198  filler_28   filler_361  filler_443  filler_525  filler_607  filler_69	 filler_771  filler_853  filler_935
+filler_116   filler_199  filler_280  filler_362  filler_444  filler_526  filler_608  filler_690  filler_772  filler_854  filler_936
+filler_117   filler_2	 filler_281  filler_363  filler_445  filler_527  filler_609  filler_691  filler_773  filler_855  filler_937
+filler_118   filler_20	 filler_282  filler_364  filler_446  filler_528  filler_61   filler_692  filler_774  filler_856  filler_938
+filler_119   filler_200  filler_283  filler_365  filler_447  filler_529  filler_610  filler_693  filler_775  filler_857  filler_939
+filler_12    filler_201  filler_284  filler_366  filler_448  filler_53	 filler_611  filler_694  filler_776  filler_858  filler_94
+filler_120   filler_202  filler_285  filler_367  filler_449  filler_530  filler_612  filler_695  filler_777  filler_859  filler_940
+filler_121   filler_203  filler_286  filler_368  filler_45   filler_531  filler_613  filler_696  filler_778  filler_86	 filler_941
+filler_122   filler_204  filler_287  filler_369  filler_450  filler_532  filler_614  filler_697  filler_779  filler_860  filler_942
+filler_123   filler_205  filler_288  filler_37	 filler_451  filler_533  filler_615  filler_698  filler_78   filler_861  filler_943
+filler_124   filler_206  filler_289  filler_370  filler_452  filler_534  filler_616  filler_699  filler_780  filler_862  filler_944
+filler_125   filler_207  filler_29   filler_371  filler_453  filler_535  filler_617  filler_7	 filler_781  filler_863  filler_945
+filler_126   filler_208  filler_290  filler_372  filler_454  filler_536  filler_618  filler_70	 filler_782  filler_864  filler_946
+filler_127   filler_209  filler_291  filler_373  filler_455  filler_537  filler_619  filler_700  filler_783  filler_865  filler_947
+filler_128   filler_21	 filler_292  filler_374  filler_456  filler_538  filler_62   filler_701  filler_784  filler_866  filler_948
+filler_129   filler_210  filler_293  filler_375  filler_457  filler_539  filler_620  filler_702  filler_785  filler_867  filler_949
+filler_13    filler_211  filler_294  filler_376  filler_458  filler_54	 filler_621  filler_703  filler_786  filler_868  filler_95
+filler_130   filler_212  filler_295  filler_377  filler_459  filler_540  filler_622  filler_704  filler_787  filler_869  filler_950
+filler_131   filler_213  filler_296  filler_378  filler_46   filler_541  filler_623  filler_705  filler_788  filler_87	 filler_951
+filler_132   filler_214  filler_297  filler_379  filler_460  filler_542  filler_624  filler_706  filler_789  filler_870  filler_952
+filler_133   filler_215  filler_298  filler_38	 filler_461  filler_543  filler_625  filler_707  filler_79   filler_871  filler_953
+filler_134   filler_216  filler_299  filler_380  filler_462  filler_544  filler_626  filler_708  filler_790  filler_872  filler_954
+filler_135   filler_217  filler_3    filler_381  filler_463  filler_545  filler_627  filler_709  filler_791  filler_873  filler_955
+filler_136   filler_218  filler_30   filler_382  filler_464  filler_546  filler_628  filler_71	 filler_792  filler_874  filler_956
+filler_137   filler_219  filler_300  filler_383  filler_465  filler_547  filler_629  filler_710  filler_793  filler_875  filler_957
+filler_138   filler_22	 filler_301  filler_384  filler_466  filler_548  filler_63   filler_711  filler_794  filler_876  filler_958
+filler_139   filler_220  filler_302  filler_385  filler_467  filler_549  filler_630  filler_712  filler_795  filler_877  filler_959
+filler_14    filler_221  filler_303  filler_386  filler_468  filler_55	 filler_631  filler_713  filler_796  filler_878  filler_96
+filler_140   filler_222  filler_304  filler_387  filler_469  filler_550  filler_632  filler_714  filler_797  filler_879  filler_960
+filler_141   filler_223  filler_305  filler_388  filler_47   filler_551  filler_633  filler_715  filler_798  filler_88	 filler_961
+filler_142   filler_224  filler_306  filler_389  filler_470  filler_552  filler_634  filler_716  filler_799  filler_880  filler_962
+filler_143   filler_225  filler_307  filler_39	 filler_471  filler_553  filler_635  filler_717  filler_8    filler_881  filler_963
+filler_144   filler_226  filler_308  filler_390  filler_472  filler_554  filler_636  filler_718  filler_80   filler_882  filler_964
+filler_145   filler_227  filler_309  filler_391  filler_473  filler_555  filler_637  filler_719  filler_800  filler_883  filler_965
+filler_146   filler_228  filler_31   filler_392  filler_474  filler_556  filler_638  filler_72	 filler_801  filler_884  filler_966
+filler_147   filler_229  filler_310  filler_393  filler_475  filler_557  filler_639  filler_720  filler_802  filler_885  filler_967
+filler_148   filler_23	 filler_311  filler_394  filler_476  filler_558  filler_64   filler_721  filler_803  filler_886  filler_968
+filler_149   filler_230  filler_312  filler_395  filler_477  filler_559  filler_640  filler_722  filler_804  filler_887  filler_969
+filler_15    filler_231  filler_313  filler_396  filler_478  filler_56	 filler_641  filler_723  filler_805  filler_888  filler_97
+filler_150   filler_232  filler_314  filler_397  filler_479  filler_560  filler_642  filler_724  filler_806  filler_889  filler_970
+filler_151   filler_233  filler_315  filler_398  filler_48   filler_561  filler_643  filler_725  filler_807  filler_89	 filler_971
+filler_152   filler_234  filler_316  filler_399  filler_480  filler_562  filler_644  filler_726  filler_808  filler_890  filler_972
+filler_153   filler_235  filler_317  filler_4	 filler_481  filler_563  filler_645  filler_727  filler_809  filler_891  filler_973
+filler_154   filler_236  filler_318  filler_40	 filler_482  filler_564  filler_646  filler_728  filler_81   filler_892  filler_974
+filler_155   filler_237  filler_319  filler_400  filler_483  filler_565  filler_647  filler_729  filler_810  filler_893  filler_975
+filler_156   filler_238  filler_32   filler_401  filler_484  filler_566  filler_648  filler_73	 filler_811  filler_894  filler_976
+filler_157   filler_239  filler_320  filler_402  filler_485  filler_567  filler_649  filler_730  filler_812  filler_895  filler_977
+filler_158   filler_24	 filler_321  filler_403  filler_486  filler_568  filler_65   filler_731  filler_813  filler_896  filler_978
+filler_159   filler_240  filler_322  filler_404  filler_487  filler_569  filler_650  filler_732  filler_814  filler_897  filler_979
+filler_16    filler_241  filler_323  filler_405  filler_488  filler_57	 filler_651  filler_733  filler_815  filler_898  filler_98
+filler_160   filler_242  filler_324  filler_406  filler_489  filler_570  filler_652  filler_734  filler_816  filler_899  filler_980
+filler_161   filler_243  filler_325  filler_407  filler_49   filler_571  filler_653  filler_735  filler_817  filler_9	 filler_981
+filler_162   filler_244  filler_326  filler_408  filler_490  filler_572  filler_654  filler_736  filler_818  filler_90	 filler_982
+filler_163   filler_245  filler_327  filler_409  filler_491  filler_573  filler_655  filler_737  filler_819  filler_900  filler_983
+filler_164   filler_246  filler_328  filler_41	 filler_492  filler_574  filler_656  filler_738  filler_82   filler_901  filler_984
+filler_165   filler_247  filler_329  filler_410  filler_493  filler_575  filler_657  filler_739  filler_820  filler_902  filler_985
+filler_166   filler_248  filler_33   filler_411  filler_494  filler_576  filler_658  filler_74	 filler_821  filler_903  filler_986
+filler_167   filler_249  filler_330  filler_412  filler_495  filler_577  filler_659  filler_740  filler_822  filler_904  filler_987
+filler_168   filler_25	 filler_331  filler_413  filler_496  filler_578  filler_66   filler_741  filler_823  filler_905  filler_988
+filler_169   filler_250  filler_332  filler_414  filler_497  filler_579  filler_660  filler_742  filler_824  filler_906  filler_989
+filler_17    filler_251  filler_333  filler_415  filler_498  filler_58	 filler_661  filler_743  filler_825  filler_907  filler_99
+filler_170   filler_252  filler_334  filler_416  filler_499  filler_580  filler_662  filler_744  filler_826  filler_908  filler_990
+filler_171   filler_253  filler_335  filler_417  filler_5    filler_581  filler_663  filler_745  filler_827  filler_909  filler_991
+filler_172   filler_254  filler_336  filler_418  filler_50   filler_582  filler_664  filler_746  filler_828  filler_91	 filler_992
+filler_173   filler_255  filler_337  filler_419  filler_500  filler_583  filler_665  filler_747  filler_829  filler_910  filler_993
+filler_174   filler_256  filler_338  filler_42	 filler_501  filler_584  filler_666  filler_748  filler_83   filler_911  filler_994
+filler_175   filler_257  filler_339  filler_420  filler_502  filler_585  filler_667  filler_749  filler_830  filler_912  filler_995
+filler_176   filler_258  filler_34   filler_421  filler_503  filler_586  filler_668  filler_75	 filler_831  filler_913  filler_996
+filler_177   filler_259  filler_340  filler_422  filler_504  filler_587  filler_669  filler_750  filler_832  filler_914  filler_997
+filler_178   filler_26	 filler_341  filler_423  filler_505  filler_588  filler_67   filler_751  filler_833  filler_915  filler_998
+filler_179   filler_260  filler_342  filler_424  filler_506  filler_589  filler_670  filler_752  filler_834  filler_916  filler_999
+filler_18    filler_261  filler_343  filler_425  filler_507  filler_59	 filler_671  filler_753  filler_835  filler_917
+~/leti/sem4/OS/test_os_7  =cccd ..>                                                                                                       
+~/leti/sem4/OS  =cd .ls  touch filler_{11..1000}cd test_os_7           stat test_os_7>                                                    
+  File: test_os_7
+  Size: 36864     	Blocks: 72         IO Block: 4096   directory
+Device: 259,4	Inode: 3539367     Links: 2
+Access: (0755/drwxr-xr-x)  Uid: ( 1000/   misha)   Gid: ( 1000/   misha)
+Access: 2025-03-09 22:37:48.937164021 +0300
+Modify: 2025-03-09 22:37:47.005121435 +0300
+Change: 2025-03-09 22:37:47.005121435 +0300
+ Birth: 2025-03-09 22:16:43.980407553 +0300
+~/leti/sem4/OS  =cd scripts/>                                                                                                             
+~/leti/sem4/OS/scripts  =nano lab1_task7.sh>                                                                                              
+~/leti/sem4/OS/scripts  =,,./lab1_task                                                                                                     [ Writing... ] [ Wrote 29 lines ]^O Write Out   ^W Where Is    ^K Cut^T Execute     ^C Location    M-U UndoA Set Mark   M-] To BracketX Exit  ^R Read File   ^\ Replace     ^U Paste^J Justify     ^/ Go To Line  M-E RedoM-6 Copy ^Q Where Was
+
+./lab1_tasksh*  lab1_task2.sh*  lab1_task3.sh*
+1.s231231.LS>
+zsh: command not found: LS
+~/leti/sem4/OS/scripts  =kkls>                                                                                                            
+lab1_task1.sh  lab1_task2.sh  lab1_task3.sh  lab1_task7.sh  test_os_1
+~/leti/sem4/OS/scripts  =./lab1_task                                                                                                      
+
+./lab1_task7.sh >ab1_task2.sh*  lab1_task3.sh*
+zsh: permission denied: ./lab1_task7.sh
+~/leti/sem4/OS/scripts  =chmod +x lab1_task7.sh >                                                                                         
+~/leti/sem4/OS/scripts  =chmod +x lab1_task7.sh./      >                                                                                  
+Created directory: test_os_7
+Initial stat:
+  File: test_os_7
+  Size: 4096      	Blocks: 8          IO Block: 4096   directory
+Device: 259,4	Inode: 3540708     Links: 2
+Access: (0755/drwxr-xr-x)  Uid: ( 1000/   misha)   Gid: ( 1000/   misha)
+Access: 2025-03-09 22:39:26.703318189 +0300
+Modify: 2025-03-09 22:39:26.703318189 +0300
+Change: 2025-03-09 22:39:26.703318189 +0300
+ Birth: 2025-03-09 22:39:26.703318189 +0300
+
+After creating 1000 files:
+  File: test_os_7
+  Size: 36864     	Blocks: 72         IO Block: 4096   directory
+Device: 259,4	Inode: 3540708     Links: 2
+Access: (0755/drwxr-xr-x)  Uid: ( 1000/   misha)   Gid: ( 1000/   misha)
+Access: 2025-03-09 22:39:26.703318189 +0300
+Modify: 2025-03-09 22:39:26.711318366 +0300
+Change: 2025-03-09 22:39:26.711318366 +0300
+ Birth: 2025-03-09 22:39:26.703318189 +0300
+
+After removing files:
+  File: test_os_7
+  Size: 36864     	Blocks: 72         IO Block: 4096   directory
+Device: 259,4	Inode: 3540708     Links: 2
+Access: (0755/drwxr-xr-x)  Uid: ( 1000/   misha)   Gid: ( 1000/   misha)
+Access: 2025-03-09 22:39:26.715318453 +0300
+Modify: 2025-03-09 22:39:26.719318542 +0300
+Change: 2025-03-09 22:39:26.719318542 +0300
+ Birth: 2025-03-09 22:39:26.703318189 +0300
+
+Experiment completed.
+~/leti/sem4/OS/scripts  =��ссвсcd ..>                                                                                                 
+~/leti/sem4/OS  =ls>                                                                                                                      
+1_lab.pdf  dir_before.txt  lab1_2.log  lab1.log  lab1.log.save	scripts  test_os_2  test_os_7
+~/leti/sem4/OS  =cd tr                                                                                                                    
+est_os_
+
+cd test_os_7>est_os_7/
+~/leti/sem4/OS/test_os_7  =ls>                                                                                                            
+filler_1     filler_180  filler_262  filler_344  filler_426  filler_508  filler_590  filler_672  filler_754  filler_836  filler_918
+filler_10    filler_181  filler_263  filler_345  filler_427  filler_509  filler_591  filler_673  filler_755  filler_837  filler_919
+filler_100   filler_182  filler_264  filler_346  filler_428  filler_51	 filler_592  filler_674  filler_756  filler_838  filler_92
+filler_1000  filler_183  filler_265  filler_347  filler_429  filler_510  filler_593  filler_675  filler_757  filler_839  filler_920
+filler_101   filler_184  filler_266  filler_348  filler_43   filler_511  filler_594  filler_676  filler_758  filler_84	 filler_921
+filler_102   filler_185  filler_267  filler_349  filler_430  filler_512  filler_595  filler_677  filler_759  filler_840  filler_922
+filler_103   filler_186  filler_268  filler_35	 filler_431  filler_513  filler_596  filler_678  filler_76   filler_841  filler_923
+filler_104   filler_187  filler_269  filler_350  filler_432  filler_514  filler_597  filler_679  filler_760  filler_842  filler_924
+filler_105   filler_188  filler_27   filler_351  filler_433  filler_515  filler_598  filler_68	 filler_761  filler_843  filler_925
+filler_106   filler_189  filler_270  filler_352  filler_434  filler_516  filler_599  filler_680  filler_762  filler_844  filler_926
+filler_107   filler_19	 filler_271  filler_353  filler_435  filler_517  filler_6    filler_681  filler_763  filler_845  filler_927
+filler_108   filler_190  filler_272  filler_354  filler_436  filler_518  filler_60   filler_682  filler_764  filler_846  filler_928
+filler_109   filler_191  filler_273  filler_355  filler_437  filler_519  filler_600  filler_683  filler_765  filler_847  filler_929
+filler_11    filler_192  filler_274  filler_356  filler_438  filler_52	 filler_601  filler_684  filler_766  filler_848  filler_93
+filler_110   filler_193  filler_275  filler_357  filler_439  filler_520  filler_602  filler_685  filler_767  filler_849  filler_930
+filler_111   filler_194  filler_276  filler_358  filler_44   filler_521  filler_603  filler_686  filler_768  filler_85	 filler_931
+filler_112   filler_195  filler_277  filler_359  filler_440  filler_522  filler_604  filler_687  filler_769  filler_850  filler_932
+filler_113   filler_196  filler_278  filler_36	 filler_441  filler_523  filler_605  filler_688  filler_77   filler_851  filler_933
+filler_114   filler_197  filler_279  filler_360  filler_442  filler_524  filler_606  filler_689  filler_770  filler_852  filler_934
+filler_115   filler_198  filler_28   filler_361  filler_443  filler_525  filler_607  filler_69	 filler_771  filler_853  filler_935
+filler_116   filler_199  filler_280  filler_362  filler_444  filler_526  filler_608  filler_690  filler_772  filler_854  filler_936
+filler_117   filler_2	 filler_281  filler_363  filler_445  filler_527  filler_609  filler_691  filler_773  filler_855  filler_937
+filler_118   filler_20	 filler_282  filler_364  filler_446  filler_528  filler_61   filler_692  filler_774  filler_856  filler_938
+filler_119   filler_200  filler_283  filler_365  filler_447  filler_529  filler_610  filler_693  filler_775  filler_857  filler_939
+filler_12    filler_201  filler_284  filler_366  filler_448  filler_53	 filler_611  filler_694  filler_776  filler_858  filler_94
+filler_120   filler_202  filler_285  filler_367  filler_449  filler_530  filler_612  filler_695  filler_777  filler_859  filler_940
+filler_121   filler_203  filler_286  filler_368  filler_45   filler_531  filler_613  filler_696  filler_778  filler_86	 filler_941
+filler_122   filler_204  filler_287  filler_369  filler_450  filler_532  filler_614  filler_697  filler_779  filler_860  filler_942
+filler_123   filler_205  filler_288  filler_37	 filler_451  filler_533  filler_615  filler_698  filler_78   filler_861  filler_943
+filler_124   filler_206  filler_289  filler_370  filler_452  filler_534  filler_616  filler_699  filler_780  filler_862  filler_944
+filler_125   filler_207  filler_29   filler_371  filler_453  filler_535  filler_617  filler_7	 filler_781  filler_863  filler_945
+filler_126   filler_208  filler_290  filler_372  filler_454  filler_536  filler_618  filler_70	 filler_782  filler_864  filler_946
+filler_127   filler_209  filler_291  filler_373  filler_455  filler_537  filler_619  filler_700  filler_783  filler_865  filler_947
+filler_128   filler_21	 filler_292  filler_374  filler_456  filler_538  filler_62   filler_701  filler_784  filler_866  filler_948
+filler_129   filler_210  filler_293  filler_375  filler_457  filler_539  filler_620  filler_702  filler_785  filler_867  filler_949
+filler_13    filler_211  filler_294  filler_376  filler_458  filler_54	 filler_621  filler_703  filler_786  filler_868  filler_95
+filler_130   filler_212  filler_295  filler_377  filler_459  filler_540  filler_622  filler_704  filler_787  filler_869  filler_950
+filler_131   filler_213  filler_296  filler_378  filler_46   filler_541  filler_623  filler_705  filler_788  filler_87	 filler_951
+filler_132   filler_214  filler_297  filler_379  filler_460  filler_542  filler_624  filler_706  filler_789  filler_870  filler_952
+filler_133   filler_215  filler_298  filler_38	 filler_461  filler_543  filler_625  filler_707  filler_79   filler_871  filler_953
+filler_134   filler_216  filler_299  filler_380  filler_462  filler_544  filler_626  filler_708  filler_790  filler_872  filler_954
+filler_135   filler_217  filler_3    filler_381  filler_463  filler_545  filler_627  filler_709  filler_791  filler_873  filler_955
+filler_136   filler_218  filler_30   filler_382  filler_464  filler_546  filler_628  filler_71	 filler_792  filler_874  filler_956
+filler_137   filler_219  filler_300  filler_383  filler_465  filler_547  filler_629  filler_710  filler_793  filler_875  filler_957
+filler_138   filler_22	 filler_301  filler_384  filler_466  filler_548  filler_63   filler_711  filler_794  filler_876  filler_958
+filler_139   filler_220  filler_302  filler_385  filler_467  filler_549  filler_630  filler_712  filler_795  filler_877  filler_959
+filler_14    filler_221  filler_303  filler_386  filler_468  filler_55	 filler_631  filler_713  filler_796  filler_878  filler_96
+filler_140   filler_222  filler_304  filler_387  filler_469  filler_550  filler_632  filler_714  filler_797  filler_879  filler_960
+filler_141   filler_223  filler_305  filler_388  filler_47   filler_551  filler_633  filler_715  filler_798  filler_88	 filler_961
+filler_142   filler_224  filler_306  filler_389  filler_470  filler_552  filler_634  filler_716  filler_799  filler_880  filler_962
+filler_143   filler_225  filler_307  filler_39	 filler_471  filler_553  filler_635  filler_717  filler_8    filler_881  filler_963
+filler_144   filler_226  filler_308  filler_390  filler_472  filler_554  filler_636  filler_718  filler_80   filler_882  filler_964
+filler_145   filler_227  filler_309  filler_391  filler_473  filler_555  filler_637  filler_719  filler_800  filler_883  filler_965
+filler_146   filler_228  filler_31   filler_392  filler_474  filler_556  filler_638  filler_72	 filler_801  filler_884  filler_966
+filler_147   filler_229  filler_310  filler_393  filler_475  filler_557  filler_639  filler_720  filler_802  filler_885  filler_967
+filler_148   filler_23	 filler_311  filler_394  filler_476  filler_558  filler_64   filler_721  filler_803  filler_886  filler_968
+filler_149   filler_230  filler_312  filler_395  filler_477  filler_559  filler_640  filler_722  filler_804  filler_887  filler_969
+filler_15    filler_231  filler_313  filler_396  filler_478  filler_56	 filler_641  filler_723  filler_805  filler_888  filler_97
+filler_150   filler_232  filler_314  filler_397  filler_479  filler_560  filler_642  filler_724  filler_806  filler_889  filler_970
+filler_151   filler_233  filler_315  filler_398  filler_48   filler_561  filler_643  filler_725  filler_807  filler_89	 filler_971
+filler_152   filler_234  filler_316  filler_399  filler_480  filler_562  filler_644  filler_726  filler_808  filler_890  filler_972
+filler_153   filler_235  filler_317  filler_4	 filler_481  filler_563  filler_645  filler_727  filler_809  filler_891  filler_973
+filler_154   filler_236  filler_318  filler_40	 filler_482  filler_564  filler_646  filler_728  filler_81   filler_892  filler_974
+filler_155   filler_237  filler_319  filler_400  filler_483  filler_565  filler_647  filler_729  filler_810  filler_893  filler_975
+filler_156   filler_238  filler_32   filler_401  filler_484  filler_566  filler_648  filler_73	 filler_811  filler_894  filler_976
+filler_157   filler_239  filler_320  filler_402  filler_485  filler_567  filler_649  filler_730  filler_812  filler_895  filler_977
+filler_158   filler_24	 filler_321  filler_403  filler_486  filler_568  filler_65   filler_731  filler_813  filler_896  filler_978
+filler_159   filler_240  filler_322  filler_404  filler_487  filler_569  filler_650  filler_732  filler_814  filler_897  filler_979
+filler_16    filler_241  filler_323  filler_405  filler_488  filler_57	 filler_651  filler_733  filler_815  filler_898  filler_98
+filler_160   filler_242  filler_324  filler_406  filler_489  filler_570  filler_652  filler_734  filler_816  filler_899  filler_980
+filler_161   filler_243  filler_325  filler_407  filler_49   filler_571  filler_653  filler_735  filler_817  filler_9	 filler_981
+filler_162   filler_244  filler_326  filler_408  filler_490  filler_572  filler_654  filler_736  filler_818  filler_90	 filler_982
+filler_163   filler_245  filler_327  filler_409  filler_491  filler_573  filler_655  filler_737  filler_819  filler_900  filler_983
+filler_164   filler_246  filler_328  filler_41	 filler_492  filler_574  filler_656  filler_738  filler_82   filler_901  filler_984
+filler_165   filler_247  filler_329  filler_410  filler_493  filler_575  filler_657  filler_739  filler_820  filler_902  filler_985
+filler_166   filler_248  filler_33   filler_411  filler_494  filler_576  filler_658  filler_74	 filler_821  filler_903  filler_986
+filler_167   filler_249  filler_330  filler_412  filler_495  filler_577  filler_659  filler_740  filler_822  filler_904  filler_987
+filler_168   filler_25	 filler_331  filler_413  filler_496  filler_578  filler_66   filler_741  filler_823  filler_905  filler_988
+filler_169   filler_250  filler_332  filler_414  filler_497  filler_579  filler_660  filler_742  filler_824  filler_906  filler_989
+filler_17    filler_251  filler_333  filler_415  filler_498  filler_58	 filler_661  filler_743  filler_825  filler_907  filler_99
+filler_170   filler_252  filler_334  filler_416  filler_499  filler_580  filler_662  filler_744  filler_826  filler_908  filler_990
+filler_171   filler_253  filler_335  filler_417  filler_5    filler_581  filler_663  filler_745  filler_827  filler_909  filler_991
+filler_172   filler_254  filler_336  filler_418  filler_50   filler_582  filler_664  filler_746  filler_828  filler_91	 filler_992
+filler_173   filler_255  filler_337  filler_419  filler_500  filler_583  filler_665  filler_747  filler_829  filler_910  filler_993
+filler_174   filler_256  filler_338  filler_42	 filler_501  filler_584  filler_666  filler_748  filler_83   filler_911  filler_994
+filler_175   filler_257  filler_339  filler_420  filler_502  filler_585  filler_667  filler_749  filler_830  filler_912  filler_995
+filler_176   filler_258  filler_34   filler_421  filler_503  filler_586  filler_668  filler_75	 filler_831  filler_913  filler_996
+filler_177   filler_259  filler_340  filler_422  filler_504  filler_587  filler_669  filler_750  filler_832  filler_914  filler_997
+filler_178   filler_26	 filler_341  filler_423  filler_505  filler_588  filler_67   filler_751  filler_833  filler_915  filler_998
+filler_179   filler_260  filler_342  filler_424  filler_506  filler_589  filler_670  filler_752  filler_834  filler_916  filler_999
+filler_18    filler_261  filler_343  filler_425  filler_507  filler_59	 filler_671  filler_753  filler_835  filler_917
+~/leti/sem4/OS/test_os_7  =cd ..>                                                                                                         
+~/leti/sem4/OS  =rm test_os_7>                                                                                                            
+rm: cannot remove 'test_os_7': Is a directory
+~/leti/sem4/OS  =�кькrm -f test_os_7>                                                                                                  
+rm: cannot remove 'test_os_7': Is a directory
+~/leti/sem4/OS  =rm -rf test_os_7                                                                                                         
+~/leti/sem4/OS  =ls>                                                                                                                      
+1_lab.pdf  dir_before.txt  lab1_2.log  lab1.log  lab1.log.save	scripts  test_os_2
+~/leti/sem4/OS  =mkdir test_os_2/7>                                                                                                       
+~/leti/sem4/OS  =ls>                                                                                                                      
+1_lab.pdf  dir_before.txt  lab1_2.log  lab1.log  lab1.log.save	scripts  test_os_2  test_os_7
+~/leti/sem4/OS  =lmkdir test_os_7ls             rm -rf test_os_7  cd ..      ls  cd test_os_7ls          cd ../lab1_task7.sh>             
+zsh: no such file or directory: ./lab1_task7.sh
+~/leti/sem4/OS  =cdccd scripts/>                                                                                                          
+~/leti/sem4/OS/scripts  =cd scripts./lab1_task7.sh>                                                                                       
+Created directory: test_os_7
+Initial stat:
+  File: test_os_7
+  Size: 36864     	Blocks: 72         IO Block: 4096   directory
+Device: 259,4	Inode: 3540708     Links: 2
+Access: (0755/drwxr-xr-x)  Uid: ( 1000/   misha)   Gid: ( 1000/   misha)
+Access: 2025-03-09 22:39:26.715318453 +0300
+Modify: 2025-03-09 22:39:26.719318542 +0300
+Change: 2025-03-09 22:39:26.719318542 +0300
+ Birth: 2025-03-09 22:39:26.703318189 +0300
+
+After creating 1000 files:
+  File: test_os_7
+  Size: 36864     	Blocks: 72         IO Block: 4096   directory
+Device: 259,4	Inode: 3540708     Links: 2
+Access: (0755/drwxr-xr-x)  Uid: ( 1000/   misha)   Gid: ( 1000/   misha)
+Access: 2025-03-09 22:39:26.715318453 +0300
+Modify: 2025-03-09 22:41:37.910208387 +0300
+Change: 2025-03-09 22:41:37.910208387 +0300
+ Birth: 2025-03-09 22:39:26.703318189 +0300
+
+After removing files:
+  File: test_os_7
+  Size: 36864     	Blocks: 72         IO Block: 4096   directory
+Device: 259,4	Inode: 3540708     Links: 2
+Access: (0755/drwxr-xr-x)  Uid: ( 1000/   misha)   Gid: ( 1000/   misha)
+Access: 2025-03-09 22:41:37.914208475 +0300
+Modify: 2025-03-09 22:41:37.918208563 +0300
+Change: 2025-03-09 22:41:37.918208563 +0300
+ Birth: 2025-03-09 22:39:26.703318189 +0300
+
+Experiment completed.
+~/leti/sem4/OS/scripts  =cd .cls>                                                                                                         
+lab1_task1.sh  lab1_task2.sh  lab1_task3.sh  lab1_task7.sh  test_os_1  test_os_7
+~/leti/sem4/OS/scripts  =cd ..>                                                                                                           
+~/leti/sem4/OS  =ls>                                                                                                                      
+1_lab.pdf  dir_before.txt  lab1_2.log  lab1.log  lab1.log.save	scripts  test_os_2  test_os_7
+~/leti/sem4/OS  =rrrm test_os_                                                                                                            
+
+rm test_os_7>est_os_7/
+rm: cannot remove 'test_os_7': Is a directory
+~/leti/sem4/OS  =rm test_os_-test_os_7ftest_os_7 test_os_7>                                                                               
+rm: cannot remove 'test_os_7': Is a directory
+~/leti/sem4/OS  =rm -f test_os_rf test_os_7rrm test_os_7ls          cd .ls  ./lab1_task7.shcd scripts    ./lab1_task7.shls             mkdir test_os_7ls             rm -rf test_os_7>
+~/leti/sem4/OS  =ls>                                                                                                                      
+1_lab.pdf  dir_before.txt  lab1_2.log  lab1.log  lab1.log.save	scripts  test_os_2
+~/leti/sem4/OS  =cd scripts/>                                                                                                             
+~/leti/sem4/OS/scripts  =cd scriptsls        rm -rf test_os_7>                                                                            
+~/leti/sem4/OS/scripts  =rm -rf test_os_7cd scripts     ls        rm -rf test_os_7  ls          cd .ls  ./lab1_task7.sh>                  
+Created directory: test_os_7
+Initial stat:
+  File: test_os_7
+  Size: 4096      	Blocks: 8          IO Block: 4096   directory
+Device: 259,4	Inode: 3539710     Links: 2
+Access: (0755/drwxr-xr-x)  Uid: ( 1000/   misha)   Gid: ( 1000/   misha)
+Access: 2025-03-09 22:42:30.739372013 +0300
+Modify: 2025-03-09 22:42:30.739372013 +0300
+Change: 2025-03-09 22:42:30.739372013 +0300
+ Birth: 2025-03-09 22:42:30.739372013 +0300
+
+After creating 1000 files:
+  File: test_os_7
+  Size: 36864     	Blocks: 72         IO Block: 4096   directory
+Device: 259,4	Inode: 3539710     Links: 2
+Access: (0755/drwxr-xr-x)  Uid: ( 1000/   misha)   Gid: ( 1000/   misha)
+Access: 2025-03-09 22:42:30.739372013 +0300
+Modify: 2025-03-09 22:42:30.747372189 +0300
+Change: 2025-03-09 22:42:30.747372189 +0300
+ Birth: 2025-03-09 22:42:30.739372013 +0300
+
+After removing files:
+  File: test_os_7
+  Size: 36864     	Blocks: 72         IO Block: 4096   directory
+Device: 259,4	Inode: 3539710     Links: 2
+Access: (0755/drwxr-xr-x)  Uid: ( 1000/   misha)   Gid: ( 1000/   misha)
+Access: 2025-03-09 22:42:30.751372277 +0300
+Modify: 2025-03-09 22:42:30.755372366 +0300
+Change: 2025-03-09 22:42:30.755372366 +0300
+ Birth: 2025-03-09 22:42:30.739372013 +0300
+
+Experiment completed.
+~/leti/sem4/OS/scripts  =ls>                                                                                                              
+lab1_task1.sh  lab1_task2.sh  lab1_task3.sh  lab1_task7.sh  test_os_1  test_os_7
+~/leti/sem4/OS/scripts  =cd test_os_                                                                                                      
+
+cd test_os_7>est_os_7/
+~/leti/sem4/OS/scripts/test_os_7  =ls>                                                                                                    
+~/leti/sem4/OS/scripts/test_os_7  =cd ..>                                                                                                 
+~/leti/sem4/OS/scripts  =cd ..>                                                                                                           
+~/leti/sem4/OS  =ls>                                                                                                                      
+1_lab.pdf  dir_before.txt  lab1_2.log  lab1.log  lab1.log.save	scripts  test_os_2
+~/leti/sem4/OS  =cd scripts/>                                                                                                             
+~/leti/sem4/OS/scripts  =ls>                                                                                                              
+lab1_task1.sh  lab1_task2.sh  lab1_task3.sh  lab1_task7.sh  test_os_1  test_os_7
+~/leti/sem4/OS/scripts  =nano lab1_task7.sh >                                                                                             
+~/leti/sem4/OS/scripts  =cd test_os_                                                                                                                                       
+
+cd test_os_7>est_os_7/
+~/leti/sem4/OS/scripts/test_os_7  =ls>                                                                                                    
+~/leti/sem4/OS/scripts/test_os_7  =cd .ccd ..>                                                                                            
+~/leti/sem4/OS/scripts  =nano                                                                                                             
+ 
+nanolaask1.sh*  lab1_task2.sh*  lab1_task3.sh*  lab1_task7.sh*  test_os_1/      test_os_7/
+b1_task7.sh >
+~/leti/sem4/OS/scripts  =ls -l /etc/passwdls -l /etc/passwd>                                                                                                               
+-rw-r--r-- 1 root root 1512 Feb  5 12:42 /etc/passwd
+~/leti/sem4/OS/scripts  =ls -l /etc/shadowls -l /etc/shadow>                                                                              
+-rw-r----- 1 root shadow 798 Feb  5 12:42 /etc/shadow
+~/leti/sem4/OS/scripts  =ls -l /usr/bin/passwdls -l /usr/bin/passwd>                                                                      
+-rwsr-xr-x 1 root root 68248 Mar 23  2023 /usr/bin/passwd
+~/leti/sem4/OS/scripts  =cat /etc/passwd | head -n 5cat /etc/passwd | head -n 5>                                                          
+root:x:0:0:root:/root:/bin/bash
+daemon:x:1:1:daemon:/usr/sbin:/usr/sbin/nologin
+bin:x:2:2:bin:/bin:/usr/sbin/nologin
+sys:x:3:3:sys:/dev:/usr/sbin/nologin
+sync:x:4:65534:sync:/bin:/bin/sync
+~/leti/sem4/OS/scripts  =cat /etc/passwd | head -n ccat /etc/shadow | head -n 5cat /etc/shadow | head -n 5>                               
+cat: /etc/shadow: Permission denied
+~/leti/sem4/OS/scripts  =�св ъъ�с�св �с�яяcd ..>                                                                                
+~/leti/sem4/OS  =llls>                                                                                                                    
+1_lab.pdf  dir_before.txt  lab1_2.log  lab1.log  lab1.log.save	scripts  test_os_2
+~/leti/sem4/OS  =cdcmkdir rtest_os_9>                                                                                                     
+~/leti/sem4/OS  =cd test-                                                                                                                 
+_os_9>
+~/leti/sem4/OS/test_os_9  =touch file1 file2touch file1 file2>                                                                            
+~/leti/sem4/OS/test_os_9  =mkdir testdirmkdir testdianothefgr_die>                                                                        
+~/leti/sem4/OS/test_os_9  =rm another_die/>                                                                                               
+rm: cannot remove 'another_die': Is a directory
+~/leti/sem4/OS/test_os_9  =rm -f another_die/>                                                                                            
+rm: cannot remove 'another_die': Is a directory
+~/leti/sem4/OS/test_os_9  =rm -f another_dirf another_die>                                                                                
+~/leti/sem4/OS/test_os_9  =mmrm -rf another_die  mkdir another_dir>                                                                       
+~/leti/sem4/OS/test_os_9  =touch testdir/file3 testdir/file4touch testdir/file3 testdir/file/file4/file4/file4/file4/file4/file4/file4a/filen/fileo/filet/fileh/filee/filer/file_/filed/filef/file/file4i/filer/file       a/file3 another_dir/file4n/file3 another_dir/file4o/file3 another_dir/file4t/file3 another_dir/file4h/file3 another_dir/file4e/file3 another_dir/file4r/file3 another_dir/file4_/file3 another_dir/file4d/file3 another_dir/file4i/file3 another_dir/file4r/file3 another_dir/file4>
+~/leti/sem4/OS/test_os_9  =tree>                                                                                                          
+zsh: command not found: tree
+~/leti/sem4/OS/test_os_9  =sudo aptr intall tree>                                                                                         
+E: Invalid operation intall
+~/leti/sem4/OS/test_os_9  =sudo apt intall trestall tree>                                                                                 
+Reading package lists... Done
+Building dependency tree... Done
+Reading state information... Done
+The following NEW packages will be installed:
+  tree
+0 upgraded, 1 newly installed, 0 to remove and 6 not upgraded.
+Need to get 52.5 kB of archives.
+After this operation, 116 kB of additional disk space will be used.
+Get:1 http://deb.debian.org/debian bookworm/main amd64 tree amd64 2.1.0-1 [52.5 kB]
+Fetched 52.5 kB in 1s (92.4 kB/s)
+
+Selecting previously unselected package tree.
+(Reading database ... 152544 files and directories currently installed.)
+Preparing to unpack .../tree_2.1.0-1_amd64.deb ...
+Progress: [  0%] [.......................................................................................................................] 87Progress: [ 20%] [#######################................................................................................................] 8Unpacking tree (2.1.0-1) ...
+Progress: [ 40%] [###############################################........................................................................] 8Setting up tree (2.1.0-1) ...
+Progress: [ 60%] [#######################################################################................................................] 87Progress: [ 80%] [###############################################################################################........................] 8Processing triggers for man-db (2.11.2-2) ...
+
+~/leti/sem4/OS/test_os_9  =sudo apt install treetree                >                                                                     
+.
+├── another_dir
+│   ├── file3
+│   └── file4
+├── file1
+└── file2
+
+2 directories, 4 files
+~/leti/sem4/OS/test_os_9  =chmod a+x file1 chmod a+x file1 >                                                                              
+~/leti/sem4/OS/test_os_9  =chmod g+w file2 chmod g+w file2 >                                                                              
+~/leti/sem4/OS/test_os_9  =chown root:q file1chown root:q file1>                                                                          
+chown: invalid group: ‘root:q’
+~/leti/sem4/OS/test_os_9  =chown root:q fileschown root:q file1suchown root:q file1dchown root:q file1ochown root:q file1 chown root:q file1>
+chown: invalid group: ‘root:q’
+~/leti/sem4/OS/test_os_9  =grep '^q:' /etc/group                                                                                          
+~/leti/sem4/OS/test_os_9  =ls -LlR>                                                                                                       
+.:
+total 4
+drwxr-xr-x 2 misha misha 4096 Mar  9 22:52 another_dir
+-rwxr-xr-x 1 misha misha    0 Mar  9 22:51 file1
+-rw-rw-r-- 1 misha misha    0 Mar  9 22:51 file2
+
+./another_dir:
+total 0
+-rw-r--r-- 1 misha misha 0 Mar  9 22:52 file3
+-rw-r--r-- 1 misha misha 0 Mar  9 22:52 file4
+~/leti/sem4/OS/test_os_9  =ls -lgrep '^q:' /etc/groupsudo chown root:q file1grep '^q:' /etc/group  m:' /etc/groupi:' /etc/groups:' /etc/grouph:' /etc/groupa:' /etc/group>
+misha:x:1000:
+~/leti/sem4/OS/test_os_9  =grep '^misha:' /etc/groupls -lR                   grep '^q:' /etc/groupsudo chown root:q file file1m filei files fileh filea file>
+~/leti/sem4/OS/test_os_9  =chmod 777 -R testdirchmod 777 -R testdidirdirdirdiradindioditdihdiedirdi_di>                                   
+~/leti/sem4/OS/test_os_9  =>                                                                                                              
+~/leti/sem4/OS/test_os_9  =>                                                                                                              
+~/leti/sem4/OS/test_os_9  =cd ..>                                                                                                         
+~/leti/sem4/OS  =cd scripts/>                                                                                                             
+~/leti/sem4/OS/scripts  =nanio suid_test._test.c _test.c _test.c _test.c S_test.U_test.I_test.D_test..c.c.c.cT.E.S.T.>                    
+~/leti/sem4/OS/scripts  =gcc suid_test.c -o suid_test_program                                                                              [ Writing... ] [ Wrote 8 lines ]^O Write Out   ^W Where Is    ^K Cut^T Execute     ^C Location    M-U UndoA Set Mark   M-] To BracketX Exit  ^R Read File   ^\ Replace     ^U Paste^J Justify     ^/ Go To Line  M-E RedoM-6 Copy ^Q Where Was
+    T.c -o suid_test_programE.c -o suid_test_programS.c -o suid_test_programT.c -o suid_test_program    S_TEST.c -o suid_test_programU_TEST.c -o suid_test_programI_TEST.c -o suid_test_programD_TEST.c -o suid_test_program>
+~/leti/sem4/OS/scripts  =./suid_test_program./suid_test_program>                                                                          
+~/leti/sem4/OS/scripts  =sudo chown root:root suid_test_programsudo chown root:root suid_test_program>                                    
+~/leti/sem4/OS/scripts  =sudo chmod u+s suid_test_programsudo chmod u+s suid_test_program>                                                
+~/leti/sem4/OS/scripts  =./suid_test_program./suid_test_program>                                                                          
+~/leti/sem4/OS/scripts  =ls -l suid_test_filels -l suid_test_file>                                                                        
+-rw-r--r-- 1 misha misha 0 Mar  9 22:58 suid_test_file
+~/leti/sem4/OS/scripts  =cd ..>                                                                                                           
+~/leti/sem4/OS  =cdcls>                                                                                                                   
+1_lab.pdf  dir_before.txt  lab1_2.log  lab1.log  lab1.log.save	scripts  test_os_2  test_os_9
+~/leti/sem4/OS  =cd test_os_9/>                                                                                                           
+~/leti/sem4/OS/test_os_9  =touch testfiletouch testfil9__(-9_3>                                                                           
+~/leti/sem4/OS/test_os_9  =chmod 754 testfilechmod 754 testfil_9_3>                                                                       
+~/leti/sem4/OS/test_os_9  =sudo chown root:staff testfilesudo chown root:staff testfile_9_3>                                              
+~/leti/sem4/OS/test_os_9  =ls -l testfilels -l testfile>                                                                                  
+ls: cannot access 'testfile': No such file or directory
+~/leti/sem4/OS/test_os_9  =ls -l testfile_9_3>                                                                                            
+-rwxr-xr-- 1 root staff 0 Mar  9 23:00 testfile_9_3
+~/leti/sem4/OS/test_os_9  =>                                                                                                              
+~/leti/sem4/OS/test_os_9  =>                                                                                                              
+~/leti/sem4/OS/test_os_9  =mkdir exec_testmkdir exec_test>                                                                                
+~/leti/sem4/OS/test_os_9  =cd exec_testcd exec_test>                                                                                      
+~/leti/sem4/OS/test_os_9/exec_test  =touch script.shtouch script.sh>                                                                      
+~/leti/sem4/OS/test_os_9/exec_test  =chmod 755 script.shchmod 755 script.sh>                                                              
+~/leti/sem4/OS/test_os_9/exec_test  =./script.sh./script.sh>                                                                              
+~/leti/sem4/OS/test_os_9/exec_test  =chmod 700 ..                                                                                         
+>hmod 700 ..
+~/leti/sem4/OS/test_os_9/exec_test  =�тфтщтnano script.sh >                                                                          
+~/leti/sem4/OS/test_os_9/exec_test  =nano script.shchmod 700 ..                                                                            [ Writing... ] [ Wrote 2 lines ]^O Write Out   ^W Where Is    ^K Cut^T Execute     ^C Location    M-U UndoA Set Mark   M-] To BracketX Exit  ^R Read File   ^\ Replace     ^U Paste^J Justify     ^/ Go To Line  M-E RedoM-6 Copy ^Q Where Was
+Hello, World!
+~/leti/sem4/OS/test_os_9/exec_test  =./script.shnano script.shchmod 700 ..                                                                
+~/leti/sem4/OS/test_os_9/exec_test  =chmod 700 .../script.shnano script.sh./  >                                                           
+Hello, World!
+~/leti/sem4/OS/test_os_9/exec_test  =cd ~>                                                                                                
+~  =/home/misha/leti/OS/test_os_9/exec_test/script.sh                                                                                     
+>home/misha/leti/OS/test_os_9/exec_test/script.sh
+zsh: no such file or directory: /home/misha/leti/OS/test_os_9/exec_test/script.sh
+~  =>                                                                                                                                     
+~  =>                                                                                                                                     
+~  =>                                                                                                                                     
+~  =�с�сcd leti//sem4//OS/>                                                                                                             
+~/leti/sem4/OS  =llls>                                                                                                                    
+1_lab.pdf  dir_before.txt  lab1_2.log  lab1.log  lab1.log.save	scripts  test_os_2  test_os_9
+~/leti/sem4/OS  =cd scripts/>                                                                                                             
+~/leti/sem4/OS/scripts  =lslcd s                                                                                                          
+cls>
+lab1_task1.sh  lab1_task2.sh  lab1_task3.sh  lab1_task7.sh  SUID_TEST.c  suid_test_file  suid_test_program  test_os_1  test_os_7
+~/leti/sem4/OS/scripts  =cd A                                                                                                             
+S
+
+
+
+U
+
+
+
+ID_TEST
+.c>
+cd: not a directory: SUID_TEST.c
+~/leti/sem4/OS/scripts  =cd SUID_TEST. c  nSUID_TEST.cnaSUID_TEST.cnSUID_TEST.coSUID_TEST.c SUID_TEST.c>                                  
+~/leti/sem4/OS/scripts  =ccnano lavb1_rtask10.c>                                                                                                                          
+~/leti/sem4/OS/scripts  =gcc gateway.c -o gateway                                                                                          [ Writing... ] [ Wrote 64 lines ]^O Write Out   ^W Where Is    ^K Cut^T Execute     ^C Location    M-U UndoA Set Mark   M-] To BracketX Exit  ^R Read File   ^\ Replace     ^U Paste^J Justify     ^/ Go To Line  M-E RedoM-6 Copy ^Q Where Wasperror("read");exit(EXIT_FAILURE);}close(fd);return 0;
+lab1_task10.c:38:5: error: redefinition of ‘main’c -o gatewayb.c -o gateway1.c -o gateway+.c -o gateway _.c -o gatewayt.c -o gatewaya.c -o gateways.c -o gatewayl.c -o gateway k.c -o gateway1.c -o gateway0.c -o gatewaytask10>
+   38 | int main(int argc, char *argv[]) {
+      |     ^~~~
+lab1_task10.c:6:5: note: previous definition of ‘main’ with type ‘int(int,  char **)’
+    6 | int main(int argc, char *argv[]) {
+      |     ^~~~
+~/leti/sem4/OS/scripts  =gcc lab1_task10.c -o task10nano lab1_task10.c         >                                                          
+}#include <stdio.h>char *argv[]) {if (argc != 2) {fprintf(stderr, "Usage: %s <target_file>\n", argv[0]);exit(EXIT_FAILURE);}int fd = open(argv[1], O_RDONLY);if (fd == -1) {perror("open");exit(EXIT_FAILURE);}char buffer[1024];ssize_t n;while ((n = read(fd, buffer, sizeof(buffer))) > 0) {if (write(STDOUT_FILENO, buffer, n) != n) {perror("write");exit(EXIT_FAILURE);}}if (n == -1) {perror("read");exit(EXIT_FAILURE);}close(fd);return 0;
+close(fd);return 0;ror("read");exit(EXIT_FAILURE);}write");exit(EXIT_FAILURE); {rget_file>\n", argv[0]);
+~/leti/sem4/OS/scripts  =nano lab1_task10.cgcc -o task10>                                                                                  [ Writing... ] [ Wrote 33 lines ]^O Write Out   ^W Where Is    ^K Cut^T Execute     ^C Location    M-U UndoA Set Mark   M-] To BracketX Exit  ^R Read File   ^\ Replace     ^U Paste^J Justify     ^/ Go To Line  M-E RedoM-6 Copy ^Q Where Was
+~/leti/sem4/OS/scripts  =sudo chown root:root gateway                                                                                     
+tatask10>n root:root gatewaycc -o task10                           
+~/leti/sem4/OS/scripts  =sudo chmod u+s gateway                                                                                           
+~/leti/sem4/OS/scripts  =sudo sh -c 'echo "Секретное содержимое" > /home/misha/leti/OS/secret.txt'sudo sh -c 'echo "Секретное содержимое" > /home/misha/leti/OS/secret.txt'>
+sh: 1: cannot create /home/misha/leti/OS/secret.txt: Directory nonexistent
+~/leti/sem4/OS/scripts  =sudo sh -c 'echo "Секретное содержимое" > /home/misha/leti/sem4/OS/secret.txt'                
+~/leti/sem4/OS/scripts  =sudo chmod 600 /home/misha/leti/sem4/OS/secret.txtsudo chmod 600 /home/misha/leti/sem4/OS/secret.txt>            
+~/leti/sem4/OS/scripts  =sudo chown root:root /home/misha/leti/sem4/OS/secret.txtsudo chown root:root /home/misha/leti/sem4/OS/secret.txt>
+~/leti/sem4/OS/scripts  =./task10 /home/misha/leti/sem4/OS/secret.txt                                                                     
+Секретное содержимоеt.txt
+~/leti/sem4/OS/scripts  =sudo chown root:misha /home/misha/leti/sem4/OS/secret.txtsudo chown root:misha /home/misha/leti/sem4/OS/secret.txt>
+~/leti/sem4/OS/scripts  =sudo chmod 600 /home/misha/leti/sem4/OS/secret.txtsudo chmod 600 /home/misha/leti/sem4/OS/secret.txt>            
+~/leti/sem4/OS/scripts  =./task10 /home/misha/leti/sem4/OS/secret.txt./task10 /home/misha/leti/sem4/OS/secret.txt>                        
+Секретное содержимое
+~/leti/sem4/OS/scripts  =./task10 /home/misha/leti/sem4/OS/secret.txt./task10 /home/misha/leti/sem4/OS/secret.txt>                        
+Секретное содержимое
+~/leti/sem4/OS/scripts  =sudo chmod 600 /home/misha/leti/sem4/OS/secret.txtsudo chmod 600 /home/misha/leti/sem4/OS/secret.txt>            
+~/leti/sem4/OS/scripts  =./task10 /home/misha/leti/sem4/OS/secret.txt./task10 /home/misha/leti/sem4/OS/secret.txt>                        
+Секретное содержимое
+~/leti/sem4/OS/scripts  =>                                                                                                                
+~/leti/sem4/OS/scripts  =>                                                                                                                
+~/leti/sem4/OS/scripts  =>                                                                                                                
+~/leti/sem4/OS/scripts  =�ва -�вdddf -h>                                                                                               
+Filesystem      Size  Used Avail Use% Mounted on
+udev             16G     0   16G   0% /dev
+tmpfs           3.1G  7.8M  3.1G   1% /run
+/dev/nvme0n1p2  229G   22G  196G  10% /
+tmpfs            16G  114M   16G   1% /dev/shm
+tmpfs           5.0M     0  5.0M   0% /run/lock
+/dev/nvme0n1p4  412G   69G  322G  18% /home
+/dev/nvme0n1p1  487M   12M  475M   3% /boot/efi
+tmpfs           3.1G   24K  3.1G   1% /run/user/1000
+~/leti/sem4/OS/scripts  =df -a>                                                                                                           
+df: /run/user/1000/doc: Operation not permitted
+Filesystem                                  1K-blocks     Used Available Use% Mounted on
+sysfs                                               0        0         0    - /sys
+proc                                                0        0         0    - /proc
+udev                                         16209064        0  16209064   0% /dev
+devpts                                              0        0         0    - /dev/pts
+tmpfs                                         3246588     7952   3238636   1% /run
+/dev/nvme0n1p2                              239198852 22124020 204851396  10% /
+securityfs                                          0        0         0    - /sys/kernel/security
+tmpfs                                        16232932   117120  16115812   1% /dev/shm
+tmpfs                                            5120        0      5120   0% /run/lock
+cgroup2                                             0        0         0    - /sys/fs/cgroup
+pstore                                              0        0         0    - /sys/fs/pstore
+efivarfs                                            0        0         0    - /sys/firmware/efi/efivars
+bpf                                                 0        0         0    - /sys/fs/bpf
+systemd-1                                           -        -         -    - /proc/sys/fs/binfmt_misc
+hugetlbfs                                           0        0         0    - /dev/hugepages
+mqueue                                              0        0         0    - /dev/mqueue
+debugfs                                             0        0         0    - /sys/kernel/debug
+tracefs                                             0        0         0    - /sys/kernel/tracing
+configfs                                            0        0         0    - /sys/kernel/config
+ramfs                                               0        0         0    - /run/credentials/systemd-sysctl.service
+ramfs                                               0        0         0    - /run/credentials/systemd-sysusers.service
+fusectl                                             0        0         0    - /sys/fs/fuse/connections
+ramfs                                               0        0         0    - /run/credentials/systemd-tmpfiles-setup-dev.service
+/dev/nvme0n1p4                              431433164 72055308 337388820  18% /home
+/dev/nvme0n1p1                                 497696    12204    485492   3% /boot/efi
+ramfs                                               0        0         0    - /run/credentials/systemd-tmpfiles-setup.service
+binfmt_misc                                         0        0         0    - /proc/sys/fs/binfmt_misc
+tmpfs                                         3246584       24   3246560   1% /run/user/1000
+hiddify-clash-desktop_13.1.4_amd64.AppImage         0        0         0    - /tmp/.mount_hiddifNdKCFT
+~/leti/sem4/OS/scripts  =df -Th>                                                                                                          
+Filesystem     Type      Size  Used Avail Use% Mounted on
+udev           devtmpfs   16G     0   16G   0% /dev
+tmpfs          tmpfs     3.1G  7.8M  3.1G   1% /run
+/dev/nvme0n1p2 ext4      229G   22G  196G  10% /
+tmpfs          tmpfs      16G  115M   16G   1% /dev/shm
+tmpfs          tmpfs     5.0M     0  5.0M   0% /run/lock
+/dev/nvme0n1p4 ext4      412G   69G  322G  18% /home
+/dev/nvme0n1p1 vfat      487M   12M  475M   3% /boot/efi
+tmpfs          tmpfs     3.1G   24K  3.1G   1% /run/user/1000
+~/leti/sem4/OS/scripts  =lsblk -a>                                                                                                        
+NAME        MAJ:MIN RM   SIZE RO TYPE MOUNTPOINTS
+loop0         7:0    0     0B  0 loop 
+loop1         7:1    0     0B  0 loop 
+loop2         7:2    0     0B  0 loop 
+loop3         7:3    0     0B  0 loop 
+loop4         7:4    0     0B  0 loop 
+loop5         7:5    0     0B  0 loop 
+loop6         7:6    0     0B  0 loop 
+loop7         7:7    0     0B  0 loop 
+nvme0n1     259:0    0 953.9G  0 disk 
+├─nvme0n1p1 259:1    0   487M  0 part /boot/efi
+├─nvme0n1p2 259:2    0 232.8G  0 part /
+├─nvme0n1p3 259:3    0  29.8G  0 part [SWAP]
+├─nvme0n1p4 259:4    0 419.1G  0 part /home
+└─nvme0n1p5 259:5    0 271.7G  0 part 
+~/leti/sem4/OS/scripts  =file /usr/bin/dffile /usr/bin/df>                                                                                
+/usr/bin/df: ELF 64-bit LSB pie executable, x86-64, version 1 (SYSV), dynamically linked, interpreter /lib64/ld-linux-x86-64.so.2, BuildID[sha1]=2e13a8652cd172461bccd7e5f5bd1e4de51d2e9b, for GNU/Linux 3.2.0, stripped
+~/leti/sem4/OS/scripts  =file /usr/bin/lsblkfile /usr/bin/lsblk>                                                                          
+/usr/bin/lsblk: ELF 64-bit LSB pie executable, x86-64, version 1 (SYSV), dynamically linked, interpreter /lib64/ld-linux-x86-64.so.2, BuildID[sha1]=f273ce2244014a4248186f11c1886f2b55cadf86, for GNU/Linux 3.2.0, stripped
+~/leti/sem4/OS/scripts  =>                                                                                                                
+~/leti/sem4/OS/scripts  =>                                                                                                                
+~/leti/sem4/OS/scripts  =>                                                                                                                
+~/leti/sem4/OS/scripts  =df -hT 2>/dev/null                                                                                               
+Filesystem     Type      Size  Used Avail Use% Mounted on
+udev           devtmpfs   16G     0   16G   0% /dev
+tmpfs          tmpfs     3.1G  7.8M  3.1G   1% /run
+/dev/nvme0n1p2 ext4      229G   22G  196G  10% /
+tmpfs          tmpfs      16G  115M   16G   1% /dev/shm
+tmpfs          tmpfs     5.0M     0  5.0M   0% /run/lock
+/dev/nvme0n1p4 ext4      412G   69G  322G  18% /home
+/dev/nvme0n1p1 vfat      487M   12M  475M   3% /boot/efi
+tmpfs          tmpfs     3.1G   24K  3.1G   1% /run/user/1000
+~/leti/sem4/OS/scripts  =cat /etc/mtabcat /etc/mtab>                                                                                      
+sysfs /sys sysfs rw,nosuid,nodev,noexec,relatime 0 0
+proc /proc proc rw,nosuid,nodev,noexec,relatime 0 0
+udev /dev devtmpfs rw,nosuid,relatime,size=16209064k,nr_inodes=4052266,mode=755,inode64 0 0
+devpts /dev/pts devpts rw,nosuid,noexec,relatime,gid=5,mode=620,ptmxmode=000 0 0
+tmpfs /run tmpfs rw,nosuid,nodev,noexec,relatime,size=3246588k,mode=755,inode64 0 0
+/dev/nvme0n1p2 / ext4 rw,relatime,errors=remount-ro 0 0
+securityfs /sys/kernel/security securityfs rw,nosuid,nodev,noexec,relatime 0 0
+tmpfs /dev/shm tmpfs rw,nosuid,nodev,inode64 0 0
+tmpfs /run/lock tmpfs rw,nosuid,nodev,noexec,relatime,size=5120k,inode64 0 0
+cgroup2 /sys/fs/cgroup cgroup2 rw,nosuid,nodev,noexec,relatime,nsdelegate,memory_recursiveprot 0 0
+pstore /sys/fs/pstore pstore rw,nosuid,nodev,noexec,relatime 0 0
+efivarfs /sys/firmware/efi/efivars efivarfs rw,nosuid,nodev,noexec,relatime 0 0
+bpf /sys/fs/bpf bpf rw,nosuid,nodev,noexec,relatime,mode=700 0 0
+systemd-1 /proc/sys/fs/binfmt_misc autofs rw,relatime,fd=30,pgrp=1,timeout=0,minproto=5,maxproto=5,direct,pipe_ino=27848 0 0
+hugetlbfs /dev/hugepages hugetlbfs rw,relatime,pagesize=2M 0 0
+mqueue /dev/mqueue mqueue rw,nosuid,nodev,noexec,relatime 0 0
+debugfs /sys/kernel/debug debugfs rw,nosuid,nodev,noexec,relatime 0 0
+tracefs /sys/kernel/tracing tracefs rw,nosuid,nodev,noexec,relatime 0 0
+configfs /sys/kernel/config configfs rw,nosuid,nodev,noexec,relatime 0 0
+ramfs /run/credentials/systemd-sysctl.service ramfs ro,nosuid,nodev,noexec,relatime,mode=700 0 0
+ramfs /run/credentials/systemd-sysusers.service ramfs ro,nosuid,nodev,noexec,relatime,mode=700 0 0
+fusectl /sys/fs/fuse/connections fusectl rw,nosuid,nodev,noexec,relatime 0 0
+ramfs /run/credentials/systemd-tmpfiles-setup-dev.service ramfs ro,nosuid,nodev,noexec,relatime,mode=700 0 0
+/dev/nvme0n1p4 /home ext4 rw,relatime 0 0
+/dev/nvme0n1p1 /boot/efi vfat rw,relatime,fmask=0077,dmask=0077,codepage=437,iocharset=ascii,shortname=mixed,utf8,errors=remount-ro 0 0
+ramfs /run/credentials/systemd-tmpfiles-setup.service ramfs ro,nosuid,nodev,noexec,relatime,mode=700 0 0
+binfmt_misc /proc/sys/fs/binfmt_misc binfmt_misc rw,nosuid,nodev,noexec,relatime 0 0
+tmpfs /run/user/1000 tmpfs rw,nosuid,nodev,relatime,size=3246584k,nr_inodes=811646,mode=700,uid=1000,gid=1000,inode64 0 0
+hiddify-clash-desktop_13.1.4_amd64.AppImage /tmp/.mount_hiddifNdKCFT fuse.hiddify-clash-desktop_13.1.4_amd64.AppImage ro,nosuid,nodev,relatime,user_id=0,group_id=0 0 0
+portal /run/user/1000/doc fuse.portal rw,nosuid,nodev,relatime,user_id=1000,group_id=1000 0 0
+~/leti/sem4/OS/scripts  =>                                                                                                                
+~/leti/sem4/OS/scripts  =>                                                                                                                
+~/leti/sem4/OS/scripts  =cat /proc/mounts                                                                                                 
+>at /proc/mounts
+sysfs /sys sysfs rw,nosuid,nodev,noexec,relatime 0 0
+proc /proc proc rw,nosuid,nodev,noexec,relatime 0 0
+udev /dev devtmpfs rw,nosuid,relatime,size=16209064k,nr_inodes=4052266,mode=755,inode64 0 0
+devpts /dev/pts devpts rw,nosuid,noexec,relatime,gid=5,mode=620,ptmxmode=000 0 0
+tmpfs /run tmpfs rw,nosuid,nodev,noexec,relatime,size=3246588k,mode=755,inode64 0 0
+/dev/nvme0n1p2 / ext4 rw,relatime,errors=remount-ro 0 0
+securityfs /sys/kernel/security securityfs rw,nosuid,nodev,noexec,relatime 0 0
+tmpfs /dev/shm tmpfs rw,nosuid,nodev,inode64 0 0
+tmpfs /run/lock tmpfs rw,nosuid,nodev,noexec,relatime,size=5120k,inode64 0 0
+cgroup2 /sys/fs/cgroup cgroup2 rw,nosuid,nodev,noexec,relatime,nsdelegate,memory_recursiveprot 0 0
+pstore /sys/fs/pstore pstore rw,nosuid,nodev,noexec,relatime 0 0
+efivarfs /sys/firmware/efi/efivars efivarfs rw,nosuid,nodev,noexec,relatime 0 0
+bpf /sys/fs/bpf bpf rw,nosuid,nodev,noexec,relatime,mode=700 0 0
+systemd-1 /proc/sys/fs/binfmt_misc autofs rw,relatime,fd=30,pgrp=1,timeout=0,minproto=5,maxproto=5,direct,pipe_ino=27848 0 0
+hugetlbfs /dev/hugepages hugetlbfs rw,relatime,pagesize=2M 0 0
+mqueue /dev/mqueue mqueue rw,nosuid,nodev,noexec,relatime 0 0
+debugfs /sys/kernel/debug debugfs rw,nosuid,nodev,noexec,relatime 0 0
+tracefs /sys/kernel/tracing tracefs rw,nosuid,nodev,noexec,relatime 0 0
+configfs /sys/kernel/config configfs rw,nosuid,nodev,noexec,relatime 0 0
+ramfs /run/credentials/systemd-sysctl.service ramfs ro,nosuid,nodev,noexec,relatime,mode=700 0 0
+ramfs /run/credentials/systemd-sysusers.service ramfs ro,nosuid,nodev,noexec,relatime,mode=700 0 0
+fusectl /sys/fs/fuse/connections fusectl rw,nosuid,nodev,noexec,relatime 0 0
+ramfs /run/credentials/systemd-tmpfiles-setup-dev.service ramfs ro,nosuid,nodev,noexec,relatime,mode=700 0 0
+/dev/nvme0n1p4 /home ext4 rw,relatime 0 0
+/dev/nvme0n1p1 /boot/efi vfat rw,relatime,fmask=0077,dmask=0077,codepage=437,iocharset=ascii,shortname=mixed,utf8,errors=remount-ro 0 0
+ramfs /run/credentials/systemd-tmpfiles-setup.service ramfs ro,nosuid,nodev,noexec,relatime,mode=700 0 0
+binfmt_misc /proc/sys/fs/binfmt_misc binfmt_misc rw,nosuid,nodev,noexec,relatime 0 0
+tmpfs /run/user/1000 tmpfs rw,nosuid,nodev,relatime,size=3246584k,nr_inodes=811646,mode=700,uid=1000,gid=1000,inode64 0 0
+hiddify-clash-desktop_13.1.4_amd64.AppImage /tmp/.mount_hiddifNdKCFT fuse.hiddify-clash-desktop_13.1.4_amd64.AppImage ro,nosuid,nodev,relatime,user_id=0,group_id=0 0 0
+portal /run/user/1000/doc fuse.portal rw,nosuid,nodev,relatime,user_id=1000,group_id=1000 0 0
+~/leti/sem4/OS/scripts  =>                                                                                                                
+~/leti/sem4/OS/scripts  =>                                                                                                                
+~/leti/sem4/OS/scripts  =grep PATH_MAX /usr/include/limits.h                                                                              
+>rep PATH_MAX /usr/include/limits.h
+~/leti/sem4/OS/scripts  =cat /usr/src/linux-headers-6.1.0-28-common/include/uapi/linux/limits.h | grep PATH_MAXcat /usr/src/linux-headers-6.1.0-28-common/include/uapi/linux/limits.h | grep PATH_MAX>
+cat: /usr/src/linux-headers-6.1.0-28-common/include/uapi/linux/limits.h: No such file or directory
+~/leti/sem4/OS/scripts  =find /usr/include -name "limits.h" | xargs grep PATH_MAX                                                         
+>ind /usr/include -name "limits.h" | xargs grep PATH_MAX
+/usr/include/linux/limits.h:#define PATH_MAX        4096	/* # chars in a path name including nul */
+~/leti/sem4/OS/scripts  =find / -type d 2>/dev/null | awk '{ print length, $0 }' | sort -n | tail -1                                      
+246 /var/lib/flatpak/runtime/org.gnome.Platform/x86_64/46/d921e2de0d766f0d6e0a57cee65d95aef737398989e2950c91dfedb9874d21ad/files/lib/python3.11/site-packages/pkg_resources/tests/data/my-test-package_unpacked-egg/my_test_package-1.0-py3.7.egg/EGG-INFO
+~/leti/sem4/OS/scripts  =file -i /home/misha/leti/altushka/neural_network/without_learning.pyfile -i /home/misha/leti/altushka/neural_network/without_learning.py>
+/home/misha/leti/altushka/neural_network/without_learning.py: text/x-script.python; charset=utf-8
+~/leti/sem4/OS/scripts  =file -k /home/misha/leti/altushka/neural_network/without_learning.pyfile -k /home/misha/leti/altushka/neural_network/without_learning.py>
+/home/misha/leti/altushka/neural_network/without_learning.py: Python script text executable\012-  Python script text executable\012-  Python script text executable\012-  Python script, Unicode text, UTF-8 text executable
+~/leti/sem4/OS/scripts  =�с�сcd ..>                                                                                                     
+~/leti/sem4/OS  =mkdir magic_experemenmentimen>                                                                                           
+~/leti/sem4/OS  =cd magic_experiment/>                                                                                                    
+~/leti/sem4/OS/magic_experiment  =echo -n "MY_MAGIC" > test_custom_file                                                                   
+echo "Это тестовый файл для расширения базы magic." >> test_custom_file
+~/leti/sem4/OS/magic_experiment  =echo "Это тестовый файл для расширения базы magic." >> test_custom_file 
+~/leti/sem4/OS/magic_experiment  =head -n 1 test_custom_filehead -n 1 test_custom_file>                                                   
+MY_MAGICЭто тестовый файл для расширения базы magic.
+~/leti/sem4/OS/magic_experiment  =echo "MY_MAGIC" > test_custom_file                                                                      
+echo "Это тестовый файл для расширения базы magic." >> test_custom_file
+>cho "Это тестовый файл для расширения базы magic." >> test_custom_file
+~/leti/sem4/OS/magic_experiment  =head -n 1 test_custom_file                                                                              
+>ead -n 1 test_custom_file
+MY_MAGIC
+~/leti/sem4/OS/magic_experiment  =head -n 1 test_custom_file                                                                              
+MY_MAGICcustom_file\ test_custom_file >
+Это тестовый файл для расширения базы magic.
+~/leti/sem4/OS/magic_experiment  =head -n 2 test_custom_fil 3 test_custom_file>                                                           
+MY_MAGIC
+Это тестовый файл для расширения базы magic.
+~/leti/sem4/OS/magic_experiment  =head -n 1 test_custom_file                                                                              
+>ead -n 1 test_custom_file
+MY_MAGIC
+~/leti/sem4/OS/magic_experiment  =sudo nano /usr/share/file/magic                                                                         
+>udo nano /usr/share/file/magic
+==
+~/leti/sem4/OS/magic_experiment  =find /usr/share -type f -name "magic*"                                                                                                            
+/usr/share/mime/magic f -name "magic*"
+/usr/share/man/man5/magic.5.gz
+find: ‘/usr/share/polkit-1/rules.d’: Permission denied
+~/leti/sem4/OS/magic_experiment  =sudo cp /usr/share/mime/magic /usr/share/mime/magic.bak                                                 
+>udo cp /usr/share/mime/magic /usr/share/mime/magic.bak
+~/leti/sem4/OS/magic_experiment  =sudo nano /usr/share/mime/magic                                                                         
+>udo nano /usr/share/mime/magic
+[80:application/x-php]PE-Bookmark-file-1>+65e^J Justify     ^/ Go To Line  M-E RedoM-6 Copy^Q Where WasBracketme/magic                                                          
+*0=^@^A%/x-tex]lica]]ipocket-ebook]utable]�^@^@^@^@^@^@^@^@����@t^@o^@r^@"+39011
+~/leti/sem4/OS/magic_experiment  =sudo file -C -m /usr/share/mime/magic                                                                    [ Writing... ] [ Wrote 1833 lines ]^O Write Out   ^W Where Is    ^K Cut^T Execute     ^C Location    M-U UndoA Set Mark   M-] To BracketX Exit  ^R Read File   ^\ Replace     ^U Paste^J Justify     ^/ Go To Line  M-E RedoM-6 Copy ^Q Where Was
+/usr/share/mime/magic, 1: Warning: offset `MIME-Magic' invalid
+/usr/share/mime/magic, 2: Warning: offset `[90:application/vnd.stardivision.writer]' invalid
+/usr/share/mime/magic, 3: Warning: type `=' invalid
+/usr/share/mime/magic, 4: Warning: offset `StarWriter' invalid
+/usr/share/mime/magic, 5: Warning: offset `[90:application/x-docbook+xml]' invalid
+/usr/share/mime/magic, 6: Warning: type `=' invalid
+/usr/share/mime/magic, 7: Warning: type `>0=' invalid
+/usr/share/mime/magic, 8: Warning: type `>0=' invalid
+/usr/share/mime/magic, 9: Warning: offset `[90:image/x-eps]' invalid
+/usr/share/mime/magic, 10: Warning: type `=' invalid
+/usr/share/mime/magic, 11: Warning: type `>15=' invalid
+/usr/share/mime/magic, 12: Warning: type `=' invalid
+/usr/share/mime/magic, 13: Warning: type `>16=' invalid
+/usr/share/mime/magic, 14: Warning: type `=' invalid
+/usr/share/mime/magic, 15: Warning: offset `[80:application/prs.plucker]' invalid
+/usr/share/mime/magic, 16: Warning: type `=' invalid
+/usr/share/mime/magic, 17: Warning: offset `[80:application/schema+json]' invalid
+/usr/share/mime/magic, 18: Warning: type `=' invalid
+/usr/share/mime/magic, 19: Warning: type `>1=' invalid
+/usr/share/mime/magic, 20: Warning: offset `"$schema":+256' invalid
+/usr/share/mime/magic, 21: Warning: offset `[80:application/vnd.corel-draw]' invalid
+/usr/share/mime/magic, 22: Warning: type `=' invalid
+/usr/share/mime/magic, 23: Warning: offset `[80:application/x-fictionbook+xml]' invalid
+/usr/share/mime/magic, 24: Warning: type `=' invalid
+/usr/share/mime/magic, 25: Warning: offset `[80:application/x-mobipocket-ebook]' invalid
+/usr/share/mime/magic, 26: Warning: type `=' invalid
+/usr/share/mime/magic, 27: Warning: offset `[80:application/x-mozilla-bookmarks]' invalid
+/usr/share/mime/magic, 28: Warning: type `=' invalid
+/usr/share/mime/magic, 29: Warning: offset `[80:application/x-nzb]' invalid
+/usr/share/mime/magic, 30: Warning: type `=' invalid
+/usr/share/mime/magic, 31: Warning: offset `[80:application/x-pak]' invalid
+/usr/share/mime/magic, 32: Warning: type `=' invalid
+/usr/share/mime/magic, 33: Warning: offset `[80:application/x-php]' invalid
+/usr/share/mime/magic, 34: Warning: type `=' invalid
+/usr/share/mime/magic, 35: Warning: offset `[80:application/xliff+xml]' invalid
+/usr/share/mime/magic, 36: Warning: type `=' invalid
+/usr/share/mime/magic, 37: Warning: offset `[80:audio/x-flac+ogg]' invalid
+/usr/share/mime/magic, 38: Warning: type `=' invalid
+/usr/share/mime/magic, 39: Warning: type `>28=' invalid
+/usr/share/mime/magic, 40: Warning: type `=' invalid
+/usr/share/mime/magic, 41: Warning: type `>28=' invalid
+/usr/share/mime/magic, 42: Warning: offset `[80:audio/x-opus+ogg]' invalid
+/usr/share/mime/magic, 43: Warning: type `=' invalid
+/usr/share/mime/magic, 44: Warning: type `>28=' invalid
+/usr/share/mime/magic, 45: Warning: offset `[80:audio/x-speex+ogg]' invalid
+/usr/share/mime/magic, 46: Warning: type `=' invalid
+/usr/share/mime/magic, 47: Warning: type `>28=' invalid
+/usr/share/mime/magic, 48: Warning: offset `[80:audio/x-vorbis+ogg]' invalid
+/usr/share/mime/magic, 49: Warning: type `=' invalid
+/usr/share/mime/magic, 50: Warning: type `>28=' invalid
+/usr/share/mime/magic, 51: Warning: offset `[80:image/astc]' invalid
+/usr/share/mime/magic, 52: Warning: type `=' invalid
+/usr/share/mime/magic, 53: Warning: offset `[80:image/ktx]' invalid
+/usr/share/mime/magic, 54: Warning: type `=' invalid
+/usr/share/mime/magic, 55: Warning: type `>4=' invalid
+/usr/share/mime/magic, 56: Warning: type `>8=' invalid
+/usr/share/mime/magic, 57: Warning: offset `' invalid
+/usr/share/mime/magic, 59: Warning: offset `[80:image/ktx2]' invalid
+/usr/share/mime/magic, 60: Warning: type `=' invalid
+/usr/share/mime/magic, 61: Warning: type `>4=' invalid
+/usr/share/mime/magic, 62: Warning: type `>8=' invalid
+/usr/share/mime/magic, 63: Warning: offset `' invalid
+/usr/share/mime/magic, 65: Warning: offset `[80:image/svg+xml]' invalid
+/usr/share/mime/magic, 66: Warning: type `=' invalid
+/usr/share/mime/magic, 67: Warning: offset `[80:image/svg+xml]' invalid
+/usr/share/mime/magic, 68: Warning: type `=' invalid
+/usr/share/mime/magic, 69: Warning: type `=' invalid
+/usr/share/mime/magic, 70: Warning: offset `[80:image/vnd.djvu]' invalid
+/usr/share/mime/magic, 71: Warning: type `=' invalid
+/usr/share/mime/magic, 72: Warning: type `>12=' invalid
+/usr/share/mime/magic, 73: Warning: type `=' invalid
+/usr/share/mime/magic, 74: Warning: type `>8=' invalid
+/usr/share/mime/magic, 75: Warning: offset `[80:image/vnd.djvu+multipage]' invalid
+/usr/share/mime/magic, 76: Warning: type `=' invalid
+/usr/share/mime/magic, 77: Warning: type `>12=' invalid
+/usr/share/mime/magic, 78: Warning: type `=' invalid
+/usr/share/mime/magic, 79: Warning: type `>8=' invalid
+/usr/share/mime/magic, 80: Warning: offset `[80:image/x-kodak-kdc]' invalid
+/usr/share/mime/magic, 81: Warning: type `=' invalid
+/usr/share/mime/magic, 82: Warning: offset `[80:image/x-niff]' invalid
+/usr/share/mime/magic, 83: Warning: type `=' invalid
+/usr/share/mime/magic, 84: Warning: offset `[80:video/x-ogm+ogg]' invalid
+/usr/share/mime/magic, 85: Warning: type `=' invalid
+/usr/share/mime/magic, 86: Warning: type `>29=' invalid
+/usr/share/mime/magic, 87: Warning: offset `[80:video/x-theora+ogg]' invalid
+/usr/share/mime/magic, 88: Warning: type `=' invalid
+/usr/share/mime/magic, 89: Warning: type `>28=' invalid
+/usr/share/mime/magic, 90: Warning: offset `[75:application/pkcs10+pem]' invalid
+/usr/share/mime/magic, 91: Warning: type `=' invalid
+/usr/share/mime/magic, 92: Warning: type `=' invalid
+/usr/share/mime/magic, 93: Warning: offset `[75:application/pkcs12+pem]' invalid
+/usr/share/mime/magic, 94: Warning: type `=' invalid
+/usr/share/mime/magic, 95: Warning: offset `[75:application/pkcs7-mime+pem]' invalid
+/usr/share/mime/magic, 96: Warning: type `=' invalid
+/usr/share/mime/magic, 97: Warning: offset `[75:application/pkcs8+pem]' invalid
+/usr/share/mime/magic, 98: Warning: type `=' invalid
+/usr/share/mime/magic, 99: Warning: type `=' invalid
+/usr/share/mime/magic, 100: Warning: offset `[75:application/pkix-cert+pem]' invalid
+/usr/share/mime/magic, 101: Warning: type `=' invalid
+/usr/share/mime/magic, 102: Warning: offset `[75:application/pkix-crl+pem]' invalid
+/usr/share/mime/magic, 103: Warning: type `=' invalid
+/usr/share/mime/magic, 104: Warning: offset `[75:application/x-pem-key]' invalid
+/usr/share/mime/magic, 105: Warning: type `=' invalid
+/usr/share/mime/magic, 106: Warning: type `=' invalid
+/usr/share/mime/magic, 107: Warning: type `=' invalid
+/usr/share/mime/magic, 108: Warning: offset `[75:application/x-spkac+base64]' invalid
+/usr/share/mime/magic, 109: Warning: type `=' invalid
+/usr/share/mime/magic, 110: Warning: offset `[70:application/atom+xml]' invalid
+/usr/share/mime/magic, 111: Warning: type `=' invalid
+/usr/share/mime/magic, 112: Warning: offset `[70:application/epub+zip]' invalid
+/usr/share/mime/magic, 113: Warning: type `=' invalid
+/usr/share/mime/magic, 114: Warning: type `>30=' invalid
+/usr/share/mime/magic, 115: Warning: type `>38=' invalid
+/usr/share/mime/magic, 116: Warning: type `>43=' invalid
+/usr/share/mime/magic, 117: Warning: offset `[70:application/rss+xml]' invalid
+/usr/share/mime/magic, 118: Warning: type `=' invalid
+/usr/share/mime/magic, 119: Warning: type `=' invalid
+/usr/share/mime/magic, 120: Warning: offset `[70:application/vnd.apple.keynote]' invalid
+/usr/share/mime/magic, 121: Warning: type `=' invalid
+/usr/share/mime/magic, 122: Warning: type `>30=' invalid
+/usr/share/mime/magic, 123: Warning: offset `index.apxl' invalid
+/usr/share/mime/magic, 124: Warning: offset `[70:application/vnd.apple.mpegurl]' invalid
+/usr/share/mime/magic, 125: Warning: type `=' invalid
+/usr/share/mime/magic, 126: Warning: type `>0=' invalid
+/usr/share/mime/magic, 127: Warning: type `>0=' invalid
+/usr/share/mime/magic, 128: Warning: offset `[70:application/vnd.apple.pages]' invalid
+/usr/share/mime/magic, 129: Warning: type `=' invalid
+/usr/share/mime/magic, 130: Warning: type `>30=' invalid
+/usr/share/mime/magic, 131: Warning: type `>30=' invalid
+/usr/share/mime/magic, 132: Warning: offset `[70:application/vnd.oasis.opendocument.chart]' invalid
+/usr/share/mime/magic, 133: Warning: type `=' invalid
+/usr/share/mime/magic, 134: Warning: type `>30=' invalid
+/usr/share/mime/magic, 135: Warning: type `>38=' invalid
+/usr/share/mime/magic, 136: Warning: offset `[70:application/vnd.oasis.opendocument.chart-template]' invalid
+/usr/share/mime/magic, 137: Warning: type `=' invalid
+/usr/share/mime/magic, 138: Warning: type `>30=' invalid
+/usr/share/mime/magic, 139: Warning: type `>38=' invalid
+/usr/share/mime/magic, 140: Warning: offset `[70:application/vnd.oasis.opendocument.database]' invalid
+/usr/share/mime/magic, 141: Warning: type `=' invalid
+/usr/share/mime/magic, 142: Warning: type `>30=' invalid
+/usr/share/mime/magic, 143: Warning: type `>38=' invalid
+/usr/share/mime/magic, 144: Warning: offset `[70:application/vnd.oasis.opendocument.formula]' invalid
+/usr/share/mime/magic, 145: Warning: type `=' invalid
+/usr/share/mime/magic, 146: Warning: type `>30=' invalid
+/usr/share/mime/magic, 147: Warning: type `>38=' invalid
+/usr/share/mime/magic, 148: Warning: offset `[70:application/vnd.oasis.opendocument.formula-template]' invalid
+/usr/share/mime/magic, 149: Warning: type `=' invalid
+/usr/share/mime/magic, 150: Warning: type `>30=' invalid
+/usr/share/mime/magic, 151: Warning: type `>38=' invalid
+/usr/share/mime/magic, 152: Warning: offset `[70:application/vnd.oasis.opendocument.graphics]' invalid
+/usr/share/mime/magic, 153: Warning: type `=' invalid
+/usr/share/mime/magic, 154: Warning: type `>30=' invalid
+/usr/share/mime/magic, 155: Warning: type `>38=' invalid
+/usr/share/mime/magic, 156: Warning: offset `[70:application/vnd.oasis.opendocument.graphics-template]' invalid
+/usr/share/mime/magic, 157: Warning: type `=' invalid
+/usr/share/mime/magic, 158: Warning: type `>30=' invalid
+/usr/share/mime/magic, 159: Warning: type `>38=' invalid
+/usr/share/mime/magic, 160: Warning: offset `[70:application/vnd.oasis.opendocument.image]' invalid
+/usr/share/mime/magic, 161: Warning: type `=' invalid
+/usr/share/mime/magic, 162: Warning: type `>30=' invalid
+/usr/share/mime/magic, 163: Warning: type `>38=' invalid
+/usr/share/mime/magic, 164: Warning: offset `[70:application/vnd.oasis.opendocument.presentation]' invalid
+/usr/share/mime/magic, 165: Warning: type `=' invalid
+/usr/share/mime/magic, 166: Warning: type `>30=' invalid
+/usr/share/mime/magic, 167: Warning: type `>38=' invalid
+/usr/share/mime/magic, 168: Warning: offset `[70:application/vnd.oasis.opendocument.presentation-template]' invalid
+/usr/share/mime/magic, 169: Warning: type `=' invalid
+/usr/share/mime/magic, 170: Warning: type `>30=' invalid
+/usr/share/mime/magic, 171: Warning: type `>38=' invalid
+/usr/share/mime/magic, 172: Warning: offset `[70:application/vnd.oasis.opendocument.spreadsheet]' invalid
+/usr/share/mime/magic, 173: Warning: type `=' invalid
+/usr/share/mime/magic, 174: Warning: type `>30=' invalid
+/usr/share/mime/magic, 175: Warning: type `>38=' invalid
+/usr/share/mime/magic, 176: Warning: offset `[70:application/vnd.oasis.opendocument.spreadsheet-template]' invalid
+/usr/share/mime/magic, 177: Warning: type `=' invalid
+/usr/share/mime/magic, 178: Warning: type `>30=' invalid
+/usr/share/mime/magic, 179: Warning: type `>38=' invalid
+/usr/share/mime/magic, 180: Warning: offset `[70:application/vnd.oasis.opendocument.text]' invalid
+/usr/share/mime/magic, 181: Warning: type `=' invalid
+/usr/share/mime/magic, 182: Warning: type `>30=' invalid
+/usr/share/mime/magic, 183: Warning: type `>38=' invalid
+/usr/share/mime/magic, 184: Warning: offset `[70:application/vnd.oasis.opendocument.text-master]' invalid
+/usr/share/mime/magic, 185: Warning: type `=' invalid
+/usr/share/mime/magic, 186: Warning: type `>30=' invalid
+/usr/share/mime/magic, 187: Warning: type `>38=' invalid
+/usr/share/mime/magic, 188: Warning: offset `[70:application/vnd.oasis.opendocument.text-template]' invalid
+/usr/share/mime/magic, 189: Warning: type `=' invalid
+/usr/share/mime/magic, 190: Warning: type `>30=' invalid
+/usr/share/mime/magic, 191: Warning: type `>38=' invalid
+/usr/share/mime/magic, 192: Warning: offset `[70:application/vnd.oasis.opendocument.text-web]' invalid
+/usr/share/mime/magic, 193: Warning: type `=' invalid
+/usr/share/mime/magic, 194: Warning: type `>30=' invalid
+/usr/share/mime/magic, 195: Warning: type `>38=' invalid
+/usr/share/mime/magic, 196: Warning: offset `[70:application/vnd.sun.xml.calc]' invalid
+/usr/share/mime/magic, 197: Warning: type `=' invalid
+/usr/share/mime/magic, 198: Warning: type `>30=' invalid
+/usr/share/mime/magic, 199: Warning: type `>38=' invalid
+/usr/share/mime/magic, 200: Warning: offset `[70:application/vnd.sun.xml.calc.template]' invalid
+/usr/share/mime/magic, 201: Warning: type `=' invalid
+/usr/share/mime/magic, 202: Warning: type `>30=' invalid
+/usr/share/mime/magic, 203: Warning: type `>38=' invalid
+/usr/share/mime/magic, 204: Warning: offset `[70:application/vnd.sun.xml.draw]' invalid
+/usr/share/mime/magic, 205: Warning: type `=' invalid
+/usr/share/mime/magic, 206: Warning: type `>30=' invalid
+/usr/share/mime/magic, 207: Warning: type `>38=' invalid
+/usr/share/mime/magic, 208: Warning: offset `[70:application/vnd.sun.xml.draw.template]' invalid
+/usr/share/mime/magic, 209: Warning: type `=' invalid
+/usr/share/mime/magic, 210: Warning: type `>30=' invalid
+/usr/share/mime/magic, 211: Warning: type `>38=' invalid
+/usr/share/mime/magic, 212: Warning: offset `[70:application/vnd.sun.xml.impress]' invalid
+/usr/share/mime/magic, 213: Warning: type `=' invalid
+/usr/share/mime/magic, 214: Warning: type `>30=' invalid
+/usr/share/mime/magic, 215: Warning: type `>38=' invalid
+/usr/share/mime/magic, 216: Warning: offset `[70:application/vnd.sun.xml.impress.template]' invalid
+/usr/share/mime/magic, 217: Warning: type `=' invalid
+/usr/share/mime/magic, 218: Warning: type `>30=' invalid
+/usr/share/mime/magic, 219: Warning: type `>38=' invalid
+/usr/share/mime/magic, 220: Warning: offset `[70:application/vnd.sun.xml.math]' invalid
+/usr/share/mime/magic, 221: Warning: type `=' invalid
+/usr/share/mime/magic, 222: Warning: type `>30=' invalid
+/usr/share/mime/magic, 223: Warning: type `>38=' invalid
+/usr/share/mime/magic, 224: Warning: offset `[70:application/vnd.sun.xml.writer]' invalid
+/usr/share/mime/magic, 225: Warning: type `=' invalid
+/usr/share/mime/magic, 226: Warning: type `>30=' invalid
+/usr/share/mime/magic, 227: Warning: type `>38=' invalid
+/usr/share/mime/magic, 228: Warning: offset `[70:application/vnd.sun.xml.writer.global]' invalid
+/usr/share/mime/magic, 229: Warning: type `=' invalid
+/usr/share/mime/magic, 230: Warning: type `>30=' invalid
+/usr/share/mime/magic, 231: Warning: type `>38=' invalid
+/usr/share/mime/magic, 232: Warning: offset `[70:application/vnd.sun.xml.writer.template]' invalid
+/usr/share/mime/magic, 233: Warning: type `=' invalid
+/usr/share/mime/magic, 234: Warning: type `>30=' invalid
+/usr/share/mime/magic, 235: Warning: type `>38=' invalid
+/usr/share/mime/magic, 236: Warning: offset `[70:application/x-zip-compressed-fb2]' invalid
+/usr/share/mime/magic, 237: Warning: type `=' invalid
+/usr/share/mime/magic, 238: Warning: type `>30=' invalid
+/usr/share/mime/magic, 239: Warning: offset `[70:image/openraster]' invalid
+/usr/share/mime/magic, 240: Warning: type `=' invalid
+/usr/share/mime/magic, 241: Warning: type `>30=' invalid
+/usr/share/mime/magic, 242: Warning: type `>38=' invalid
+/usr/share/mime/magic, 243: Warning: offset `[70:text/x-opml+xml]' invalid
+/usr/share/mime/magic, 244: Warning: type `=' invalid
+/usr/share/mime/magic, 245: Warning: offset `[65:application/vnd.apple.numbers]' invalid
+/usr/share/mime/magic, 246: Warning: type `=' invalid
+/usr/share/mime/magic, 247: Warning: type `>30=' invalid
+/usr/share/mime/magic, 248: Warning: type `>30=' invalid
+/usr/share/mime/magic, 249: Warning: offset `[65:application/vnd.apple.pkpass]' invalid
+/usr/share/mime/magic, 250: Warning: type `=' invalid
+/usr/share/mime/magic, 251: Warning: type `>30=' invalid
+/usr/share/mime/magic, 252: Warning: offset `[60:application/msword]' invalid
+/usr/share/mime/magic, 253: Warning: type `=' invalid
+/usr/share/mime/magic, 254: Warning: type `=' invalid
+/usr/share/mime/magic, 255: Warning: type `=' invalid
+/usr/share/mime/magic, 256: Warning: type `=' invalid
+/usr/share/mime/magic, 257: Warning: type `=' invalid
+/usr/share/mime/magic, 258: Warning: type `=' invalid
+/usr/share/mime/magic, 259: Warning: type `=' invalid
+/usr/share/mime/magic, 260: Warning: type `=' invalid
+/usr/share/mime/magic, 261: Warning: type `=' invalid
+/usr/share/mime/magic, 262: Warning: offset `[60:application/ovf]' invalid
+/usr/share/mime/magic, 263: Warning: type `=' invalid
+/usr/share/mime/magic, 264: Warning: type `>257=' invalid
+/usr/share/mime/magic, 265: Warning: type `>257=' invalid
+/usr/share/mime/magic, 266: Warning: offset `[60:application/vnd.ms-cab-compressed]' invalid
+/usr/share/mime/magic, 267: Warning: type `=' invalid
+/usr/share/mime/magic, 268: Warning: offset `[60:application/vnd.ms-wpl]' invalid
+/usr/share/mime/magic, 269: Warning: type `=' invalid
+/usr/share/mime/magic, 270: Warning: offset `[60:application/vnd.oasis.opendocument.graphics-flat-xml]' invalid
+/usr/share/mime/magic, 271: Warning: type `=' invalid
+/usr/share/mime/magic, 272: Warning: type `>4=' invalid
+/usr/share/mime/magic, 273: Warning: type `>100=' invalid
+/usr/share/mime/magic, 274: Warning: offset `[60:application/vnd.oasis.opendocument.graphics-template]' invalid
+/usr/share/mime/magic, 275: Warning: type `=' invalid
+/usr/share/mime/magic, 276: Warning: type `>30=' invalid
+/usr/share/mime/magic, 277: Warning: type `>38=' invalid
+/usr/share/mime/magic, 278: Warning: offset `[60:application/vnd.oasis.opendocument.presentation-flat-xml]' invalid
+/usr/share/mime/magic, 279: Warning: type `=' invalid
+/usr/share/mime/magic, 280: Warning: type `>4=' invalid
+/usr/share/mime/magic, 281: Warning: type `>100=' invalid
+/usr/share/mime/magic, 282: Warning: offset `[60:application/vnd.oasis.opendocument.presentation-template]' invalid
+/usr/share/mime/magic, 283: Warning: type `=' invalid
+/usr/share/mime/magic, 284: Warning: type `>30=' invalid
+/usr/share/mime/magic, 285: Warning: type `>38=' invalid
+/usr/share/mime/magic, 286: Warning: offset `[60:application/vnd.oasis.opendocument.spreadsheet-flat-xml]' invalid
+/usr/share/mime/magic, 287: Warning: type `=' invalid
+/usr/share/mime/magic, 288: Warning: type `>4=' invalid
+/usr/share/mime/magic, 289: Warning: type `>100=' invalid
+/usr/share/mime/magic, 290: Warning: offset `[60:application/vnd.oasis.opendocument.spreadsheet-template]' invalid
+/usr/share/mime/magic, 291: Warning: type `=' invalid
+/usr/share/mime/magic, 292: Warning: type `>30=' invalid
+/usr/share/mime/magic, 293: Warning: type `>38=' invalid
+/usr/share/mime/magic, 294: Warning: offset `[60:application/vnd.oasis.opendocument.text-flat-xml]' invalid
+/usr/share/mime/magic, 295: Warning: type `=' invalid
+/usr/share/mime/magic, 296: Warning: type `>4=' invalid
+/usr/share/mime/magic, 297: Warning: type `>100=' invalid
+/usr/share/mime/magic, 298: Warning: offset `[60:application/vnd.oasis.opendocument.text-master]' invalid
+/usr/share/mime/magic, 299: Warning: type `=' invalid
+/usr/share/mime/magic, 300: Warning: type `>30=' invalid
+/usr/share/mime/magic, 301: Warning: type `>38=' invalid
+/usr/share/mime/magic, 302: Warning: offset `[60:application/vnd.oasis.opendocument.text-master-template]' invalid
+/usr/share/mime/magic, 303: Warning: type `=' invalid
+/usr/share/mime/magic, 304: Warning: type `>30=' invalid
+/usr/share/mime/magic, 305: Warning: type `>38=' invalid
+/usr/share/mime/magic, 306: Warning: offset `[60:application/vnd.oasis.opendocument.text-template]' invalid
+/usr/share/mime/magic, 307: Warning: type `=' invalid
+/usr/share/mime/magic, 308: Warning: type `>30=' invalid
+/usr/share/mime/magic, 309: Warning: type `>38=' invalid
+/usr/share/mime/magic, 310: Warning: offset `[60:application/vnd.oasis.opendocument.text-web]' invalid
+/usr/share/mime/magic, 311: Warning: type `=' invalid
+/usr/share/mime/magic, 312: Warning: type `>30=' invalid
+/usr/share/mime/magic, 313: Warning: type `>38=' invalid
+/usr/share/mime/magic, 314: Warning: offset `[60:application/vnd.rar]' invalid
+/usr/share/mime/magic, 315: Warning: type `=' invalid
+/usr/share/mime/magic, 316: Warning: offset `[60:application/x-7z-compressed]' invalid
+/usr/share/mime/magic, 317: Warning: type `=' invalid
+/usr/share/mime/magic, 318: Warning: offset `[60:application/x-ace]' invalid
+/usr/share/mime/magic, 319: Warning: type `=' invalid
+/usr/share/mime/magic, 320: Warning: offset `[60:application/x-arc]' invalid
+/usr/share/mime/magic, 321: Warning: type `=' invalid
+/usr/share/mime/magic, 322: Warning: type `=' invalid
+/usr/share/mime/magic, 323: Warning: type `=' invalid
+/usr/share/mime/magic, 324: Warning: type `=' invalid
+/usr/share/mime/magic, 325: Warning: type `=' invalid
+/usr/share/mime/magic, 326: Warning: type `=' invalid
+/usr/share/mime/magic, 327: Warning: offset `[60:application/x-cpio]' invalid
+/usr/share/mime/magic, 328: Warning: type `=' invalid
+/usr/share/mime/magic, 329: Warning: type `=' invalid
+/usr/share/mime/magic, 330: Warning: type `=' invalid
+/usr/share/mime/magic, 331: Warning: type `=' invalid
+/usr/share/mime/magic, 332: Warning: offset `[60:application/x-font-type1]' invalid
+/usr/share/mime/magic, 333: Warning: type `=' invalid
+/usr/share/mime/magic, 334: Warning: type `=' invalid
+/usr/share/mime/magic, 335: Warning: type `=' invalid
+/usr/share/mime/magic, 336: Warning: type `=' invalid
+/usr/share/mime/magic, 337: Warning: type `=' invalid
+/usr/share/mime/magic, 338: Warning: type `=' invalid
+/usr/share/mime/magic, 339: Warning: offset `[60:application/x-java-pack200]' invalid
+/usr/share/mime/magic, 340: Warning: type `=' invalid
+/usr/share/mime/magic, 341: Warning: offset `[60:application/x-karbon]' invalid
+/usr/share/mime/magic, 342: Warning: type `=' invalid
+/usr/share/mime/magic, 343: Warning: type `>10=' invalid
+/usr/share/mime/magic, 344: Warning: type `>18=' invalid
+/usr/share/mime/magic, 345: Warning: type `=' invalid
+/usr/share/mime/magic, 346: Warning: type `>30=' invalid
+/usr/share/mime/magic, 347: Warning: type `>38=' invalid
+/usr/share/mime/magic, 348: Warning: offset `[60:application/x-kchart]' invalid
+/usr/share/mime/magic, 349: Warning: type `=' invalid
+/usr/share/mime/magic, 350: Warning: type `>10=' invalid
+/usr/share/mime/magic, 351: Warning: type `>18=' invalid
+/usr/share/mime/magic, 352: Warning: type `=' invalid
+/usr/share/mime/magic, 353: Warning: type `>30=' invalid
+/usr/share/mime/magic, 354: Warning: type `>38=' invalid
+/usr/share/mime/magic, 355: Warning: offset `[60:application/x-kformula]' invalid
+/usr/share/mime/magic, 356: Warning: type `=' invalid
+/usr/share/mime/magic, 357: Warning: type `>10=' invalid
+/usr/share/mime/magic, 358: Warning: type `>18=' invalid
+/usr/share/mime/magic, 359: Warning: type `=' invalid
+/usr/share/mime/magic, 360: Warning: type `>30=' invalid
+/usr/share/mime/magic, 361: Warning: type `>38=' invalid
+/usr/share/mime/magic, 362: Warning: offset `[60:application/x-killustrator]' invalid
+/usr/share/mime/magic, 363: Warning: type `=' invalid
+/usr/share/mime/magic, 364: Warning: type `>10=' invalid
+/usr/share/mime/magic, 365: Warning: type `>18=' invalid
+/usr/share/mime/magic, 366: Warning: offset `[60:application/x-kivio]' invalid
+/usr/share/mime/magic, 367: Warning: type `=' invalid
+/usr/share/mime/magic, 368: Warning: type `>10=' invalid
+/usr/share/mime/magic, 369: Warning: type `>18=' invalid
+/usr/share/mime/magic, 370: Warning: type `=' invalid
+/usr/share/mime/magic, 371: Warning: type `>30=' invalid
+/usr/share/mime/magic, 372: Warning: type `>38=' invalid
+/usr/share/mime/magic, 373: Warning: offset `[60:application/x-kontour]' invalid
+/usr/share/mime/magic, 374: Warning: type `=' invalid
+/usr/share/mime/magic, 375: Warning: type `>10=' invalid
+/usr/share/mime/magic, 376: Warning: type `>18=' invalid
+/usr/share/mime/magic, 377: Warning: type `=' invalid
+/usr/share/mime/magic, 378: Warning: type `>30=' invalid
+/usr/share/mime/magic, 379: Warning: type `>38=' invalid
+/usr/share/mime/magic, 380: Warning: offset `[60:application/x-kpresenter]' invalid
+/usr/share/mime/magic, 381: Warning: type `=' invalid
+/usr/share/mime/magic, 382: Warning: type `>10=' invalid
+/usr/share/mime/magic, 383: Warning: type `>18=' invalid
+/usr/share/mime/magic, 384: Warning: type `=' invalid
+/usr/share/mime/magic, 385: Warning: type `>30=' invalid
+/usr/share/mime/magic, 386: Warning: type `>38=' invalid
+/usr/share/mime/magic, 387: Warning: offset `[60:application/x-krita]' invalid
+/usr/share/mime/magic, 388: Warning: type `=' invalid
+/usr/share/mime/magic, 389: Warning: type `>10=' invalid
+/usr/share/mime/magic, 390: Warning: type `>18=' invalid
+/usr/share/mime/magic, 391: Warning: type `=' invalid
+/usr/share/mime/magic, 392: Warning: type `>30=' invalid
+/usr/share/mime/magic, 393: Warning: type `>38=' invalid
+/usr/share/mime/magic, 394: Warning: type `>42=' invalid
+/usr/share/mime/magic, 395: Warning: type `>63=' invalid
+/usr/share/mime/magic, 396: Warning: offset `[60:application/x-kspread]' invalid
+/usr/share/mime/magic, 397: Warning: type `=' invalid
+/usr/share/mime/magic, 398: Warning: type `>10=' invalid
+/usr/share/mime/magic, 399: Warning: type `>18=' invalid
+/usr/share/mime/magic, 400: Warning: type `=' invalid
+/usr/share/mime/magic, 401: Warning: type `>30=' invalid
+/usr/share/mime/magic, 402: Warning: type `>38=' invalid
+/usr/share/mime/magic, 403: Warning: offset `[60:application/x-kword]' invalid
+/usr/share/mime/magic, 404: Warning: type `=' invalid
+/usr/share/mime/magic, 405: Warning: type `>10=' invalid
+/usr/share/mime/magic, 406: Warning: type `>18=' invalid
+/usr/share/mime/magic, 407: Warning: type `=' invalid
+/usr/share/mime/magic, 408: Warning: type `>30=' invalid
+/usr/share/mime/magic, 409: Warning: type `>38=' invalid
+/usr/share/mime/magic, 410: Warning: offset `[60:application/x-lha]' invalid
+/usr/share/mime/magic, 411: Warning: type `=' invalid
+/usr/share/mime/magic, 412: Warning: type `=' invalid
+/usr/share/mime/magic, 413: Warning: type `=' invalid
+/usr/share/mime/magic, 414: Warning: type `=' invalid
+/usr/share/mime/magic, 415: Warning: type `=' invalid
+/usr/share/mime/magic, 416: Warning: type `=' invalid
+/usr/share/mime/magic, 417: Warning: type `=' invalid
+/usr/share/mime/magic, 418: Warning: type `=' invalid
+/usr/share/mime/magic, 419: Warning: type `=' invalid
+/usr/share/mime/magic, 420: Warning: type `=' invalid
+/usr/share/mime/magic, 421: Warning: type `=' invalid
+/usr/share/mime/magic, 422: Warning: type `=' invalid
+/usr/share/mime/magic, 423: Warning: offset `[60:application/x-lrzip]' invalid
+/usr/share/mime/magic, 424: Warning: type `=' invalid
+/usr/share/mime/magic, 425: Warning: offset `[60:application/x-lz4]' invalid
+/usr/share/mime/magic, 426: Warning: type `=' invalid
+/usr/share/mime/magic, 427: Warning: type `=' invalid
+/usr/share/mime/magic, 428: Warning: offset `[60:application/x-lzip]' invalid
+/usr/share/mime/magic, 429: Warning: type `=' invalid
+/usr/share/mime/magic, 430: Warning: offset `[60:application/x-lzop]' invalid
+/usr/share/mime/magic, 431: Warning: type `=' invalid
+/usr/share/mime/magic, 432: Warning: offset `' invalid
+/usr/share/mime/magic, 434: Warning: offset `[60:application/x-par2]' invalid
+/usr/share/mime/magic, 435: Warning: type `=' invalid
+/usr/share/mime/magic, 436: Warning: offset `[60:application/x-qpress]' invalid
+/usr/share/mime/magic, 437: Warning: type `=' invalid
+/usr/share/mime/magic, 438: Warning: offset `[60:application/x-quicktime-media-link]' invalid
+/usr/share/mime/magic, 439: Warning: type `=' invalid
+/usr/share/mime/magic, 440: Warning: type `>0=' invalid
+/usr/share/mime/magic, 441: Warning: type `=' invalid
+/usr/share/mime/magic, 442: Warning: type `=' invalid
+/usr/share/mime/magic, 443: Warning: type `=' invalid
+/usr/share/mime/magic, 444: Warning: offset `[60:application/x-sega-cd-rom]' invalid
+/usr/share/mime/magic, 445: Warning: type `=' invalid
+/usr/share/mime/magic, 446: Warning: type `>256=' invalid
+/usr/share/mime/magic, 447: Warning: type `=' invalid
+/usr/share/mime/magic, 448: Warning: type `>272=' invalid
+/usr/share/mime/magic, 449: Warning: offset `[60:application/x-stuffit]' invalid
+/usr/share/mime/magic, 450: Warning: type `=' invalid
+/usr/share/mime/magic, 451: Warning: type `=' invalid
+/usr/share/mime/magic, 452: Warning: offset `[60:application/x-tar]' invalid
+/usr/share/mime/magic, 453: Warning: type `=' invalid
+/usr/share/mime/magic, 454: Warning: type `=' invalid
+/usr/share/mime/magic, 455: Warning: offset `[60:application/x-xar]' invalid
+/usr/share/mime/magic, 456: Warning: type `=' invalid
+/usr/share/mime/magic, 457: Warning: offset `[60:application/x-xz]' invalid
+/usr/share/mime/magic, 458: Warning: type `=' invalid
+/usr/share/mime/magic, 459: Warning: offset `[60:application/x-zoo]' invalid
+/usr/share/mime/magic, 460: Warning: type `=' invalid
+/usr/share/mime/magic, 461: Warning: offset `[60:application/xhtml+xml]' invalid
+/usr/share/mime/magic, 462: Warning: type `=' invalid
+/usr/share/mime/magic, 463: Warning: type `=' invalid
+/usr/share/mime/magic, 464: Warning: type `=' invalid
+/usr/share/mime/magic, 465: Warning: type `=' invalid
+/usr/share/mime/magic, 466: Warning: offset `[60:application/zip]' invalid
+/usr/share/mime/magic, 467: Warning: type `=' invalid
+/usr/share/mime/magic, 468: Warning: offset `[60:application/zstd]' invalid
+/usr/share/mime/magic, 469: Warning: type `=' invalid
+/usr/share/mime/magic, 470: Warning: offset `[60:audio/vnd.dts.hd]' invalid
+/usr/share/mime/magic, 471: Warning: type `=' invalid
+/usr/share/mime/magic, 472: Warning: type `>4=' invalid
+/usr/share/mime/magic, 473: Warning: offset `[60:text/x-python3]' invalid
+/usr/share/mime/magic, 474: Warning: type `=' invalid
+/usr/share/mime/magic, 475: Warning: type `=' invalid
+/usr/share/mime/magic, 476: Warning: type `=' invalid
+/usr/share/mime/magic, 477: Warning: type `=' invalid
+/usr/share/mime/magic, 478: Warning: type `=' invalid
+/usr/share/mime/magic, 479: Warning: type `=' invalid
+/usr/share/mime/magic, 480: Warning: type `=' invalid
+/usr/share/mime/magic, 481: Warning: type `=' invalid
+/usr/share/mime/magic, 482: Warning: type `=' invalid
+/usr/share/mime/magic, 483: Warning: type `=' invalid
+/usr/share/mime/magic, 484: Warning: offset `[60:text/x-txt2tags]' invalid
+/usr/share/mime/magic, 485: Warning: type `=' invalid
+/usr/share/mime/magic, 486: Warning: offset `%!postproc' invalid
+/usr/share/mime/magic, 487: Warning: type `=' invalid
+/usr/share/mime/magic, 488: Warning: offset `%!encoding' invalid
+/usr/share/mime/magic, 489: Warning: offset `[55:application/smil+xml]' invalid
+/usr/share/mime/magic, 490: Warning: type `=' invalid
+/usr/share/mime/magic, 491: Warning: offset `[51:audio/x-ms-asx]' invalid
+/usr/share/mime/magic, 492: Warning: type `=' invalid
+/usr/share/mime/magic, 493: Warning: type `=' invalid
+/usr/share/mime/magic, 494: Warning: type `=' invalid
+/usr/share/mime/magic, 495: Warning: type `=' invalid
+/usr/share/mime/magic, 496: Warning: offset `[50:application/annodex]' invalid
+/usr/share/mime/magic, 497: Warning: type `=' invalid
+/usr/share/mime/magic, 498: Warning: type `>28=' invalid
+/usr/share/mime/magic, 499: Warning: type `>56=' invalid
+/usr/share/mime/magic, 500: Warning: offset `[50:application/dicom]' invalid
+/usr/share/mime/magic, 501: Warning: type `=' invalid
+/usr/share/mime/magic, 502: Warning: offset `[50:application/fits]' invalid
+/usr/share/mime/magic, 503: Warning: type `=' invalid
+/usr/share/mime/magic, 504: Warning: offset `[50:application/gnunet-directory]' invalid
+/usr/share/mime/magic, 505: Warning: type `=' invalid
+/usr/share/mime/magic, 506: Warning: offset `' invalid
+/usr/share/mime/magic, 508: Warning: offset `[50:application/gzip]' invalid
+/usr/share/mime/magic, 509: Warning: type `=' invalid
+/usr/share/mime/magic, 510: Warning: offset `[50:application/javascript]' invalid
+/usr/share/mime/magic, 511: Warning: type `=' invalid
+/usr/share/mime/magic, 513: Warning: type `=' invalid
+/usr/share/mime/magic, 514: Warning: type `=' invalid
+/usr/share/mime/magic, 515: Warning: type `=' invalid
+/usr/share/mime/magic, 516: Warning: type `=' invalid
+/usr/share/mime/magic, 517: Warning: type `=' invalid
+/usr/share/mime/magic, 518: Warning: type `=' invalid
+/usr/share/mime/magic, 519: Warning: type `=' invalid
+/usr/share/mime/magic, 520: Warning: type `=' invalid
+/usr/share/mime/magic, 521: Warning: type `=' invalid
+/usr/share/mime/magic, 522: Warning: offset `[50:application/mac-binhex40]' invalid
+/usr/share/mime/magic, 523: Warning: type `=' invalid
+/usr/share/mime/magic, 524: Warning: offset `[50:application/mathematica]' invalid
+/usr/share/mime/magic, 525: Warning: type `=' invalid
+/usr/share/mime/magic, 526: Warning: type `=' invalid
+/usr/share/mime/magic, 527: Warning: type `=' invalid
+/usr/share/mime/magic, 528: Warning: offset `[50:application/metalink+xml]' invalid
+/usr/share/mime/magic, 529: Warning: type `=' invalid
+/usr/share/mime/magic, 530: Warning: offset `[50:application/metalink4+xml]' invalid
+/usr/share/mime/magic, 531: Warning: type `=' invalid
+/usr/share/mime/magic, 532: Warning: offset `[50:application/mxf]' invalid
+/usr/share/mime/magic, 533: Warning: type `=' invalid
+/usr/share/mime/magic, 534: Warning: offset `[50:application/ogg]' invalid
+/usr/share/mime/magic, 535: Warning: type `=' invalid
+/usr/share/mime/magic, 536: Warning: offset `[50:application/owl+xml]' invalid
+/usr/share/mime/magic, 537: Warning: type `=' invalid
+/usr/share/mime/magic, 538: Warning: offset `[50:application/pdf]' invalid
+/usr/share/mime/magic, 539: Warning: type `=' invalid
+/usr/share/mime/magic, 540: Warning: offset `[50:application/pgp-encrypted]' invalid
+/usr/share/mime/magic, 541: Warning: type `=' invalid
+/usr/share/mime/magic, 542: Warning: offset `[50:application/pgp-keys]' invalid
+/usr/share/mime/magic, 543: Warning: type `=' invalid
+/usr/share/mime/magic, 544: Warning: type `=' invalid
+/usr/share/mime/magic, 545: Warning: type `=' invalid
+/usr/share/mime/magic, 546: Warning: type `=' invalid
+/usr/share/mime/magic, 547: Warning: type `=' invalid
+/usr/share/mime/magic, 548: Warning: type `=' invalid
+/usr/share/mime/magic, 549: Warning: offset `[50:application/pgp-signature]' invalid
+/usr/share/mime/magic, 550: Warning: type `=' invalid
+/usr/share/mime/magic, 551: Warning: offset `[50:application/pkix-cert]' invalid
+/usr/share/mime/magic, 552: Warning: type `=' invalid
+/usr/share/mime/magic, 553: Warning: type `=' invalid
+/usr/share/mime/magic, 554: Warning: offset `[50:application/pkix-crl]' invalid
+/usr/share/mime/magic, 555: Warning: type `=' invalid
+/usr/share/mime/magic, 556: Warning: offset `[50:application/postscript]' invalid
+/usr/share/mime/magic, 557: Warning: type `=' invalid
+/usr/share/mime/magic, 558: Warning: type `=' invalid
+/usr/share/mime/magic, 559: Warning: offset `[50:application/raml+yaml]' invalid
+/usr/share/mime/magic, 560: Warning: type `=' invalid
+/usr/share/mime/magic, 561: Warning: offset `[50:application/rtf]' invalid
+/usr/share/mime/magic, 562: Warning: type `=' invalid
+/usr/share/mime/magic, 563: Warning: offset `[50:application/sdp]' invalid
+/usr/share/mime/magic, 564: Warning: type `=' invalid
+/usr/share/mime/magic, 565: Warning: type `>0=' invalid
+/usr/share/mime/magic, 566: Warning: offset `[50:application/vnd.adobe.flash.movie]' invalid
+/usr/share/mime/magic, 567: Warning: type `=' invalid
+/usr/share/mime/magic, 568: Warning: type `=' invalid
+/usr/share/mime/magic, 569: Warning: offset `[50:application/vnd.appimage]' invalid
+/usr/share/mime/magic, 570: Warning: type `=' invalid
+/usr/share/mime/magic, 571: Warning: type `>8=' invalid
+/usr/share/mime/magic, 572: Warning: type `>9=' invalid
+/usr/share/mime/magic, 573: Warning: type `>10=' invalid
+/usr/share/mime/magic, 574: Warning: offset `[50:application/vnd.chess-pgn]' invalid
+/usr/share/mime/magic, 575: Warning: type `=' invalid
+/usr/share/mime/magic, 576: Warning: offset `[50:application/vnd.debian.binary-package]' invalid
+/usr/share/mime/magic, 577: Warning: type `=' invalid
+/usr/share/mime/magic, 578: Warning: type `>8=' invalid
+/usr/share/mime/magic, 579: Warning: offset `[50:application/vnd.emusic-emusic_package]' invalid
+/usr/share/mime/magic, 580: Warning: type `=' invalid
+/usr/share/mime/magic, 581: Warning: offset `[50:application/vnd.flatpak]' invalid
+/usr/share/mime/magic, 582: Warning: type `=' invalid
+/usr/share/mime/magic, 583: Warning: type `=' invalid
+/usr/share/mime/magic, 584: Warning: offset `[50:application/vnd.flatpak.ref]' invalid
+/usr/share/mime/magic, 585: Warning: type `=' invalid
+/usr/share/mime/magic, 586: Warning: offset `[50:application/vnd.flatpak.repo]' invalid
+/usr/share/mime/magic, 587: Warning: type `=' invalid
+/usr/share/mime/magic, 588: Warning: offset `[50:application/vnd.framemaker]' invalid
+/usr/share/mime/magic, 589: Warning: type `=' invalid
+/usr/share/mime/magic, 590: Warning: offset `<MakerFile' invalid
+/usr/share/mime/magic, 591: Warning: type `=' invalid
+/usr/share/mime/magic, 592: Warning: type `=' invalid
+/usr/share/mime/magic, 593: Warning: type `=' invalid
+/usr/share/mime/magic, 594: Warning: type `=' invalid
+/usr/share/mime/magic, 595: Warning: type `=' invalid
+/usr/share/mime/magic, 596: Warning: type `=' invalid
+/usr/share/mime/magic, 597: Warning: offset `[50:application/vnd.iccprofile]' invalid
+/usr/share/mime/magic, 598: Warning: type `=' invalid
+/usr/share/mime/magic, 599: Warning: offset `[50:application/vnd.lotus-1-2-3]' invalid
+/usr/share/mime/magic, 600: Warning: type `=' invalid
+/usr/share/mime/magic, 601: Warning: offset `[50:application/vnd.lotus-wordpro]' invalid
+/usr/share/mime/magic, 602: Warning: type `=' invalid
+/usr/share/mime/magic, 603: Warning: offset `[50:application/vnd.ms-access]' invalid
+/usr/share/mime/magic, 604: Warning: type `=' invalid
+/usr/share/mime/magic, 605: Warning: offset `[50:application/vnd.ms-asf]' invalid
+/usr/share/mime/magic, 606: Warning: type `=' invalid
+/usr/share/mime/magic, 607: Warning: type `=' invalid
+/usr/share/mime/magic, 608: Warning: offset `[50:application/vnd.ms-excel]' invalid
+/usr/share/mime/magic, 609: Warning: type `=' invalid
+/usr/share/mime/magic, 610: Warning: offset `[50:application/vnd.ms-tnef]' invalid
+/usr/share/mime/magic, 611: Warning: type `=' invalid
+/usr/share/mime/magic, 612: Warning: offset `[50:application/vnd.oasis.opendocument.formula]' invalid
+/usr/share/mime/magic, 613: Warning: type `=' invalid
+/usr/share/mime/magic, 614: Warning: type `>30=' invalid
+/usr/share/mime/magic, 615: Warning: type `>38=' invalid
+/usr/share/mime/magic, 616: Warning: offset `[50:application/vnd.oasis.opendocument.graphics]' invalid
+/usr/share/mime/magic, 617: Warning: type `=' invalid
+/usr/share/mime/magic, 618: Warning: type `>30=' invalid
+/usr/share/mime/magic, 619: Warning: type `>38=' invalid
+/usr/share/mime/magic, 620: Warning: offset `[50:application/vnd.oasis.opendocument.presentation]' invalid
+/usr/share/mime/magic, 621: Warning: type `=' invalid
+/usr/share/mime/magic, 622: Warning: type `>30=' invalid
+/usr/share/mime/magic, 623: Warning: type `>38=' invalid
+/usr/share/mime/magic, 624: Warning: offset `[50:application/vnd.oasis.opendocument.spreadsheet]' invalid
+/usr/share/mime/magic, 625: Warning: type `=' invalid
+/usr/share/mime/magic, 626: Warning: type `>30=' invalid
+/usr/share/mime/magic, 627: Warning: type `>38=' invalid
+/usr/share/mime/magic, 628: Warning: offset `[50:application/vnd.oasis.opendocument.text]' invalid
+/usr/share/mime/magic, 629: Warning: type `=' invalid
+/usr/share/mime/magic, 630: Warning: type `>30=' invalid
+/usr/share/mime/magic, 631: Warning: type `>38=' invalid
+/usr/share/mime/magic, 632: Warning: offset `[50:application/vnd.rn-realmedia]' invalid
+/usr/share/mime/magic, 633: Warning: type `=' invalid
+/usr/share/mime/magic, 634: Warning: offset `[50:application/vnd.smaf]' invalid
+/usr/share/mime/magic, 635: Warning: type `=' invalid
+/usr/share/mime/magic, 636: Warning: offset `[50:application/vnd.sqlite3]' invalid
+/usr/share/mime/magic, 637: Warning: type `=' invalid
+/usr/share/mime/magic, 638: Warning: offset `[50:application/vnd.squashfs]' invalid
+/usr/share/mime/magic, 639: Warning: type `=' invalid
+/usr/share/mime/magic, 640: Warning: type `=' invalid
+/usr/share/mime/magic, 641: Warning: offset `[50:application/vnd.sun.xml.base]' invalid
+/usr/share/mime/magic, 642: Warning: type `=' invalid
+/usr/share/mime/magic, 643: Warning: type `>30=' invalid
+/usr/share/mime/magic, 644: Warning: type `>38=' invalid
+/usr/share/mime/magic, 645: Warning: offset `[50:application/vnd.symbian.install]' invalid
+/usr/share/mime/magic, 646: Warning: type `=' invalid
+/usr/share/mime/magic, 647: Warning: offset `[50:application/vnd.tcpdump.pcap]' invalid
+/usr/share/mime/magic, 648: Warning: type `=' invalid
+/usr/share/mime/magic, 649: Warning: type `=' invalid
+/usr/share/mime/magic, 650: Warning: offset `[50:application/vnd.wordperfect]' invalid
+/usr/share/mime/magic, 651: Warning: type `=' invalid
+/usr/share/mime/magic, 652: Warning: offset `[50:application/winhlp]' invalid
+/usr/share/mime/magic, 653: Warning: type `=' invalid
+/usr/share/mime/magic, 654: Warning: offset `[50:application/x-abiword]' invalid
+/usr/share/mime/magic, 655: Warning: type `=' invalid
+/usr/share/mime/magic, 656: Warning: type `=' invalid
+/usr/share/mime/magic, 657: Warning: offset `[50:application/x-alz]' invalid
+/usr/share/mime/magic, 658: Warning: type `=' invalid
+/usr/share/mime/magic, 659: Warning: offset `[50:application/x-amiga-disk-format]' invalid
+/usr/share/mime/magic, 660: Warning: type `=' invalid
+/usr/share/mime/magic, 661: Warning: offset `[50:application/x-aportisdoc]' invalid
+/usr/share/mime/magic, 662: Warning: type `=' invalid
+/usr/share/mime/magic, 663: Warning: type `=' invalid
+/usr/share/mime/magic, 664: Warning: offset `[50:application/x-apple-systemprofiler+xml]' invalid
+/usr/share/mime/magic, 665: Warning: type `=' invalid
+/usr/share/mime/magic, 666: Warning: type `>34=' invalid
+/usr/share/mime/magic, 667: Warning: offset `[50:application/x-applix-spreadsheet]' invalid
+/usr/share/mime/magic, 668: Warning: type `=' invalid
+/usr/share/mime/magic, 669: Warning: type `=' invalid
+/usr/share/mime/magic, 670: Warning: type `>7=' invalid
+/usr/share/mime/magic, 671: Warning: offset `[50:application/x-applix-word]' invalid
+/usr/share/mime/magic, 672: Warning: type `=' invalid
+/usr/share/mime/magic, 673: Warning: type `>7=' invalid
+/usr/share/mime/magic, 674: Warning: offset `[50:application/x-arj]' invalid
+/usr/share/mime/magic, 675: Warning: type `=' invalid
+/usr/share/mime/magic, 676: Warning: offset `[50:application/x-asar]' invalid
+/usr/share/mime/magic, 677: Warning: type `=' invalid
+/usr/share/mime/magic, 678: Warning: type `>16=' invalid
+/usr/share/mime/magic, 679: Warning: offset `[50:application/x-atari-7800-rom]' invalid
+/usr/share/mime/magic, 680: Warning: type `=' invalid
+/usr/share/mime/magic, 681: Warning: offset `[50:application/x-atari-lynx-rom]' invalid
+/usr/share/mime/magic, 682: Warning: type `=' invalid
+/usr/share/mime/magic, 683: Warning: offset `[50:application/x-awk]' invalid
+/usr/share/mime/magic, 684: Warning: type `=' invalid
+/usr/share/mime/magic, 685: Warning: type `=' invalid
+/usr/share/mime/magic, 686: Warning: type `=' invalid
+/usr/share/mime/magic, 687: Warning: type `=' invalid
+/usr/share/mime/magic, 688: Warning: type `=' invalid
+/usr/share/mime/magic, 689: Warning: type `=' invalid
+/usr/share/mime/magic, 690: Warning: type `=' invalid
+/usr/share/mime/magic, 692: Warning: type `=' invalid
+/usr/share/mime/magic, 693: Warning: type `=' invalid
+/usr/share/mime/magic, 694: Warning: type `=' invalid
+/usr/share/mime/magic, 695: Warning: offset `[50:application/x-bittorrent]' invalid
+/usr/share/mime/magic, 696: Warning: type `=' invalid
+/usr/share/mime/magic, 697: Warning: offset `[50:application/x-blender]' invalid
+/usr/share/mime/magic, 698: Warning: type `=' invalid
+/usr/share/mime/magic, 699: Warning: offset `[50:application/x-bps-patch]' invalid
+/usr/share/mime/magic, 700: Warning: type `=' invalid
+/usr/share/mime/magic, 701: Warning: offset `[50:application/x-bsdiff]' invalid
+/usr/share/mime/magic, 702: Warning: type `=' invalid
+/usr/share/mime/magic, 703: Warning: type `=' invalid
+/usr/share/mime/magic, 704: Warning: offset `[50:application/x-bzip]' invalid
+/usr/share/mime/magic, 705: Warning: type `=' invalid
+/usr/share/mime/magic, 706: Warning: offset `[50:application/x-ccmx]' invalid
+/usr/share/mime/magic, 707: Warning: type `=' invalid
+/usr/share/mime/magic, 708: Warning: offset `[50:application/x-cdrdao-toc]' invalid
+/usr/share/mime/magic, 709: Warning: type `=' invalid
+/usr/share/mime/magic, 711: Warning: type `=' invalid
+/usr/share/mime/magic, 713: Warning: type `=' invalid
+/usr/share/mime/magic, 714: Warning: offset `CD_ROM_XA' invalid
+/usr/share/mime/magic, 716: Warning: type `=' invalid
+/usr/share/mime/magic, 717: Warning: type `=' invalid
+/usr/share/mime/magic, 718: Warning: type `>22=' invalid
+/usr/share/mime/magic, 719: Warning: offset `[50:application/x-cisco-vpn-settings]' invalid
+/usr/share/mime/magic, 720: Warning: type `=' invalid
+/usr/share/mime/magic, 721: Warning: type `>0=' invalid
+/usr/share/mime/magic, 722: Warning: offset `[50:application/x-compress]' invalid
+/usr/share/mime/magic, 723: Warning: type `=' invalid
+/usr/share/mime/magic, 724: Warning: offset `[50:application/x-compressed-iso]' invalid
+/usr/share/mime/magic, 725: Warning: type `=' invalid
+/usr/share/mime/magic, 726: Warning: offset `[50:application/x-core]' invalid
+/usr/share/mime/magic, 727: Warning: type `=' invalid
+/usr/share/mime/magic, 728: Warning: type `=' invalid
+/usr/share/mime/magic, 729: Warning: type `>5=' invalid
+/usr/share/mime/magic, 730: Warning: type `>16=' invalid
+/usr/share/mime/magic, 731: Warning: type `=' invalid
+/usr/share/mime/magic, 732: Warning: type `>5=' invalid
+/usr/share/mime/magic, 733: Warning: type `>16=' invalid
+/usr/share/mime/magic, 734: Warning: type `=' invalid
+/usr/share/mime/magic, 735: Warning: type `=' invalid
+/usr/share/mime/magic, 736: Warning: offset `[50:application/x-csh]' invalid
+/usr/share/mime/magic, 737: Warning: type `=' invalid
+/usr/share/mime/magic, 738: Warning: type `=' invalid
+/usr/share/mime/magic, 739: Warning: type `=' invalid
+/usr/share/mime/magic, 740: Warning: type `=' invalid
+/usr/share/mime/magic, 741: Warning: offset `[50:application/x-dar]' invalid
+/usr/share/mime/magic, 742: Warning: type `=' invalid
+/usr/share/mime/magic, 743: Warning: offset `[50:application/x-designer]' invalid
+/usr/share/mime/magic, 744: Warning: type `=' invalid
+/usr/share/mime/magic, 745: Warning: type `=' invalid
+/usr/share/mime/magic, 746: Warning: offset `[50:application/x-desktop]' invalid
+/usr/share/mime/magic, 747: Warning: type `=' invalid
+/usr/share/mime/magic, 748: Warning: type `=' invalid
+/usr/share/mime/magic, 749: Warning: type `=' invalid
+/usr/share/mime/magic, 750: Warning: type `=' invalid
+/usr/share/mime/magic, 751: Warning: type `=' invalid
+/usr/share/mime/magic, 752: Warning: offset `[50:application/x-dia-diagram]' invalid
+/usr/share/mime/magic, 753: Warning: type `=' invalid
+/usr/share/mime/magic, 754: Warning: offset `[50:application/x-dia-shape]' invalid
+/usr/share/mime/magic, 755: Warning: type `=' invalid
+/usr/share/mime/magic, 756: Warning: offset `[50:application/x-doom-wad]' invalid
+/usr/share/mime/magic, 757: Warning: type `=' invalid
+/usr/share/mime/magic, 758: Warning: type `=' invalid
+/usr/share/mime/magic, 759: Warning: offset `[50:application/x-dreamcast-rom]' invalid
+/usr/share/mime/magic, 760: Warning: type `=' invalid
+/usr/share/mime/magic, 761: Warning: offset `[50:application/x-dvi]' invalid
+/usr/share/mime/magic, 762: Warning: type `=' invalid
+/usr/share/mime/magic, 763: Warning: offset `[50:application/x-fds-disk]' invalid
+/usr/share/mime/magic, 764: Warning: type `=' invalid
+/usr/share/mime/magic, 765: Warning: offset `[50:application/x-fluid]' invalid
+/usr/share/mime/magic, 766: Warning: type `=' invalid
+/usr/share/mime/magic, 767: Warning: offset `[50:application/x-font-bdf]' invalid
+/usr/share/mime/magic, 768: Warning: type `=' invalid
+/usr/share/mime/magic, 769: Warning: offset `STARTFONT ' invalid
+/usr/share/mime/magic, 770: Warning: offset `[50:application/x-font-dos]' invalid
+/usr/share/mime/magic, 771: Warning: type `=' invalid
+/usr/share/mime/magic, 772: Warning: type `=' invalid
+/usr/share/mime/magic, 773: Warning: type `=' invalid
+/usr/share/mime/magic, 774: Warning: offset `[50:application/x-font-framemaker]' invalid
+/usr/share/mime/magic, 775: Warning: type `=' invalid
+/usr/share/mime/magic, 776: Warning: offset `[50:application/x-font-libgrx]' invalid
+/usr/share/mime/magic, 777: Warning: type `=' invalid
+/usr/share/mime/magic, 778: Warning: offset `[50:application/x-font-linux-psf]' invalid
+/usr/share/mime/magic, 779: Warning: type `=' invalid
+/usr/share/mime/magic, 780: Warning: offset `[50:application/x-font-pcf]' invalid
+/usr/share/mime/magic, 781: Warning: type `=' invalid
+/usr/share/mime/magic, 782: Warning: offset `[50:application/x-font-speedo]' invalid
+/usr/share/mime/magic, 783: Warning: type `=' invalid
+/usr/share/mime/magic, 784: Warning: offset `[50:application/x-font-sunos-news]' invalid
+/usr/share/mime/magic, 785: Warning: type `=' invalid
+/usr/share/mime/magic, 786: Warning: type `=' invalid
+/usr/share/mime/magic, 787: Warning: type `=' invalid
+/usr/share/mime/magic, 788: Warning: offset `[50:application/x-font-tex]' invalid
+/usr/share/mime/magic, 789: Warning: type `=' invalid
+/usr/share/mime/magic, 790: Warning: type `=' invalid
+/usr/share/mime/magic, 791: Warning: type `=' invalid
+/usr/share/mime/magic, 792: Warning: offset `[50:application/x-font-tex-tfm]' invalid
+/usr/share/mime/magic, 793: Warning: type `=' invalid
+/usr/share/mime/magic, 794: Warning: type `=' invalid
+/usr/share/mime/magic, 795: Warning: offset `[50:application/x-font-ttx]' invalid
+/usr/share/mime/magic, 796: Warning: type `=' invalid
+/usr/share/mime/magic, 797: Warning: offset `[50:application/x-font-vfont]' invalid
+/usr/share/mime/magic, 798: Warning: type `=' invalid
+/usr/share/mime/magic, 799: Warning: offset `[50:application/x-gameboy-color-rom]' invalid
+/usr/share/mime/magic, 800: Warning: type `=' invalid
+/usr/share/mime/magic, 801: Warning: type `>323=' invalid
+/usr/share/mime/magic, 802: Warning: offset `[50:application/x-gameboy-rom]' invalid
+/usr/share/mime/magic, 803: Warning: type `=' invalid
+/usr/share/mime/magic, 804: Warning: type `>323=' invalid
+/usr/share/mime/magic, 805: Warning: offset `[50:application/x-gamecube-rom]' invalid
+/usr/share/mime/magic, 806: Warning: type `=' invalid
+/usr/share/mime/magic, 807: Warning: offset `[50:application/x-gdbm]' invalid
+/usr/share/mime/magic, 808: Warning: type `=' invalid
+/usr/share/mime/magic, 809: Warning: type `=' invalid
+/usr/share/mime/magic, 810: Warning: type `=' invalid
+/usr/share/mime/magic, 811: Warning: offset `[50:application/x-gedcom]' invalid
+/usr/share/mime/magic, 812: Warning: type `=' invalid
+/usr/share/mime/magic, 813: Warning: offset `[50:application/x-genesis-32x-rom]' invalid
+/usr/share/mime/magic, 814: Warning: type `=' invalid
+/usr/share/mime/magic, 815: Warning: offset `[50:application/x-genesis-rom]' invalid
+/usr/share/mime/magic, 816: Warning: type `=' invalid
+/usr/share/mime/magic, 817: Warning: type `=' invalid
+/usr/share/mime/magic, 818: Warning: type `=' invalid
+/usr/share/mime/magic, 819: Warning: type `=' invalid
+/usr/share/mime/magic, 820: Warning: type `=' invalid
+/usr/share/mime/magic, 821: Warning: offset `[50:application/x-gettext-translation]' invalid
+/usr/share/mime/magic, 822: Warning: type `=' invalid
+/usr/share/mime/magic, 823: Warning: type `=' invalid
+/usr/share/mime/magic, 824: Warning: offset `[50:application/x-glade]' invalid
+/usr/share/mime/magic, 825: Warning: type `=' invalid
+/usr/share/mime/magic, 826: Warning: offset `[50:application/x-gnumeric]' invalid
+/usr/share/mime/magic, 827: Warning: type `=' invalid
+/usr/share/mime/magic, 828: Warning: type `=' invalid
+/usr/share/mime/magic, 829: Warning: offset `[50:application/x-go-sgf]' invalid
+/usr/share/mime/magic, 830: Warning: type `=' invalid
+/usr/share/mime/magic, 831: Warning: type `=' invalid
+/usr/share/mime/magic, 832: Warning: offset `[50:application/x-godot-resource]' invalid
+/usr/share/mime/magic, 833: Warning: type `=' invalid
+/usr/share/mime/magic, 834: Warning: offset `[50:application/x-godot-scene]' invalid
+/usr/share/mime/magic, 835: Warning: type `=' invalid
+/usr/share/mime/magic, 836: Warning: offset `[gd_scene ' invalid
+/usr/share/mime/magic, 837: Warning: offset `[50:application/x-gtk-builder]' invalid
+/usr/share/mime/magic, 838: Warning: type `=' invalid
+/usr/share/mime/magic, 839: Warning: offset `<interface+257' invalid
+/usr/share/mime/magic, 840: Warning: offset `[50:application/x-gtktalog]' invalid
+/usr/share/mime/magic, 841: Warning: type `=' invalid
+/usr/share/mime/magic, 842: Warning: offset `[50:application/x-hdf]' invalid
+/usr/share/mime/magic, 843: Warning: type `=' invalid
+/usr/share/mime/magic, 844: Warning: offset `' invalid
+/usr/share/mime/magic, 846: Warning: type `=' invalid
+/usr/share/mime/magic, 847: Warning: offset `[50:application/x-hfe-floppy-image]' invalid
+/usr/share/mime/magic, 848: Warning: type `=' invalid
+/usr/share/mime/magic, 849: Warning: offset `[50:application/x-hwp]' invalid
+/usr/share/mime/magic, 850: Warning: type `=' invalid
+/usr/share/mime/magic, 851: Warning: offset `[50:application/x-ipod-firmware]' invalid
+/usr/share/mime/magic, 852: Warning: type `=' invalid
+/usr/share/mime/magic, 853: Warning: offset `[50:application/x-ips-patch]' invalid
+/usr/share/mime/magic, 854: Warning: type `=' invalid
+/usr/share/mime/magic, 855: Warning: offset `[50:application/x-ipynb+json]' invalid
+/usr/share/mime/magic, 856: Warning: type `=' invalid
+/usr/share/mime/magic, 857: Warning: type `>1=' invalid
+/usr/share/mime/magic, 858: Warning: offset `[50:application/x-iso9660-appimage]' invalid
+/usr/share/mime/magic, 859: Warning: type `=' invalid
+/usr/share/mime/magic, 860: Warning: type `>8=' invalid
+/usr/share/mime/magic, 861: Warning: type `>9=' invalid
+/usr/share/mime/magic, 862: Warning: type `>10=' invalid
+/usr/share/mime/magic, 863: Warning: offset `[50:application/x-it87]' invalid
+/usr/share/mime/magic, 864: Warning: type `=' invalid
+/usr/share/mime/magic, 865: Warning: offset `[50:application/x-java]' invalid
+/usr/share/mime/magic, 866: Warning: type `=' invalid
+/usr/share/mime/magic, 867: Warning: offset `[50:application/x-java-jce-keystore]' invalid
+/usr/share/mime/magic, 868: Warning: type `=' invalid
+/usr/share/mime/magic, 869: Warning: offset `[50:application/x-java-jnlp-file]' invalid
+/usr/share/mime/magic, 870: Warning: type `=' invalid
+/usr/share/mime/magic, 871: Warning: offset `[50:application/x-java-keystore]' invalid
+/usr/share/mime/magic, 872: Warning: type `=' invalid
+/usr/share/mime/magic, 873: Warning: offset `[50:application/x-kspread-crypt]' invalid
+/usr/share/mime/magic, 874: Warning: type `=' invalid
+/usr/share/mime/magic, 875: Warning: offset `[50:application/x-ksysv-package]' invalid
+/usr/share/mime/magic, 876: Warning: type `=' invalid
+/usr/share/mime/magic, 877: Warning: type `>15=' invalid
+/usr/share/mime/magic, 878: Warning: offset `[50:application/x-kword-crypt]' invalid
+/usr/share/mime/magic, 879: Warning: type `=' invalid
+/usr/share/mime/magic, 880: Warning: offset `[50:application/x-lyx]' invalid
+/usr/share/mime/magic, 881: Warning: type `=' invalid
+/usr/share/mime/magic, 882: Warning: offset `[50:application/x-macbinary]' invalid
+/usr/share/mime/magic, 883: Warning: type `=' invalid
+/usr/share/mime/magic, 884: Warning: offset `[50:application/x-mame-chd]' invalid
+/usr/share/mime/magic, 885: Warning: type `=' invalid
+/usr/share/mime/magic, 886: Warning: offset `[50:application/x-matroska]' invalid
+/usr/share/mime/magic, 887: Warning: type `=' invalid
+/usr/share/mime/magic, 888: Warning: type `>5=' invalid
+/usr/share/mime/magic, 889: Warning: type `>8=' invalid
+/usr/share/mime/magic, 890: Warning: offset `[50:application/x-ms-dos-executable]' invalid
+/usr/share/mime/magic, 891: Warning: type `=' invalid
+/usr/share/mime/magic, 892: Warning: offset `[50:application/x-ms-wim]' invalid
+/usr/share/mime/magic, 893: Warning: type `=' invalid
+/usr/share/mime/magic, 894: Warning: offset `[50:application/x-mswinurl]' invalid
+/usr/share/mime/magic, 895: Warning: type `=' invalid
+/usr/share/mime/magic, 896: Warning: type `=' invalid
+/usr/share/mime/magic, 897: Warning: type `>11=' invalid
+/usr/share/mime/magic, 898: Warning: offset `[50:application/x-n64-rom]' invalid
+/usr/share/mime/magic, 899: Warning: type `=' invalid
+/usr/share/mime/magic, 900: Warning: type `=' invalid
+/usr/share/mime/magic, 901: Warning: type `=' invalid
+/usr/share/mime/magic, 902: Warning: offset `[50:application/x-nautilus-link]' invalid
+/usr/share/mime/magic, 903: Warning: type `=' invalid
+/usr/share/mime/magic, 904: Warning: offset `[50:application/x-navi-animation]' invalid
+/usr/share/mime/magic, 905: Warning: type `=' invalid
+/usr/share/mime/magic, 906: Warning: type `>8=' invalid
+/usr/share/mime/magic, 907: Warning: offset `[50:application/x-neo-geo-pocket-color-rom]' invalid
+/usr/share/mime/magic, 908: Warning: type `=' invalid
+/usr/share/mime/magic, 909: Warning: type `>0=' invalid
+/usr/share/mime/magic, 910: Warning: type `>0=' invalid
+/usr/share/mime/magic, 911: Warning: offset `[50:application/x-neo-geo-pocket-rom]' invalid
+/usr/share/mime/magic, 912: Warning: type `=' invalid
+/usr/share/mime/magic, 913: Warning: type `>0=' invalid
+/usr/share/mime/magic, 914: Warning: type `>0=' invalid
+/usr/share/mime/magic, 915: Warning: offset `[50:application/x-netshow-channel]' invalid
+/usr/share/mime/magic, 916: Warning: type `=' invalid
+/usr/share/mime/magic, 917: Warning: offset `[50:application/x-nintendo-3ds-rom]' invalid
+/usr/share/mime/magic, 918: Warning: type `=' invalid
+/usr/share/mime/magic, 919: Warning: offset `[50:application/x-object]' invalid
+/usr/share/mime/magic, 920: Warning: type `=' invalid
+/usr/share/mime/magic, 921: Warning: type `>5=' invalid
+/usr/share/mime/magic, 922: Warning: type `>16=' invalid
+/usr/share/mime/magic, 923: Warning: type `=' invalid
+/usr/share/mime/magic, 924: Warning: type `>5=' invalid
+/usr/share/mime/magic, 925: Warning: type `>16=' invalid
+/usr/share/mime/magic, 926: Warning: offset `[50:application/x-ole-storage]' invalid
+/usr/share/mime/magic, 927: Warning: type `=' invalid
+/usr/share/mime/magic, 928: Warning: type `=' invalid
+/usr/share/mime/magic, 929: Warning: offset `[50:application/x-oleo]' invalid
+/usr/share/mime/magic, 930: Warning: type `=' invalid
+/usr/share/mime/magic, 931: Warning: offset `[50:application/x-openzim]' invalid
+/usr/share/mime/magic, 932: Warning: type `=' invalid
+/usr/share/mime/magic, 933: Warning: offset `[50:application/x-pef-executable]' invalid
+/usr/share/mime/magic, 934: Warning: type `=' invalid
+/usr/share/mime/magic, 935: Warning: offset `[50:application/x-perl]' invalid
+/usr/share/mime/magic, 936: Warning: type `=' invalid
+/usr/share/mime/magic, 937: Warning: type `=' invalid
+/usr/share/mime/magic, 938: Warning: type `=' invalid
+/usr/share/mime/magic, 939: Warning: type `=' invalid
+/usr/share/mime/magic, 940: Warning: offset `use Test::+257' invalid
+/usr/share/mime/magic, 941: Warning: offset `[50:application/x-pocket-word]' invalid
+/usr/share/mime/magic, 942: Warning: type `=' invalid
+/usr/share/mime/magic, 943: Warning: offset `[50:application/x-pyspread-spreadsheet]' invalid
+/usr/share/mime/magic, 944: Warning: type `=' invalid
+/usr/share/mime/magic, 945: Warning: offset `[50:application/x-python-bytecode]' invalid
+/usr/share/mime/magic, 946: Warning: type `=' invalid
+/usr/share/mime/magic, 948: Warning: offset `[50:application/x-qed-disk]' invalid
+/usr/share/mime/magic, 949: Warning: type `=' invalid
+/usr/share/mime/magic, 950: Warning: offset `[50:application/x-qemu-disk]' invalid
+/usr/share/mime/magic, 951: Warning: type `=' invalid
+/usr/share/mime/magic, 952: Warning: type `>3=' invalid
+/usr/share/mime/magic, 953: Warning: offset `[50:application/x-qtiplot]' invalid
+/usr/share/mime/magic, 954: Warning: type `=' invalid
+/usr/share/mime/magic, 955: Warning: offset `[50:application/x-rpm]' invalid
+/usr/share/mime/magic, 956: Warning: type `=' invalid
+/usr/share/mime/magic, 957: Warning: offset `[50:application/x-ruby]' invalid
+/usr/share/mime/magic, 958: Warning: type `=' invalid
+/usr/share/mime/magic, 959: Warning: type `=' invalid
+/usr/share/mime/magic, 960: Warning: offset `[50:application/x-sami]' invalid
+/usr/share/mime/magic, 961: Warning: type `=' invalid
+/usr/share/mime/magic, 962: Warning: offset `[50:application/x-saturn-rom]' invalid
+/usr/share/mime/magic, 963: Warning: type `=' invalid
+/usr/share/mime/magic, 964: Warning: type `=' invalid
+/usr/share/mime/magic, 965: Warning: offset `[50:application/x-sc]' invalid
+/usr/share/mime/magic, 966: Warning: type `=' invalid
+/usr/share/mime/magic, 967: Warning: offset `[50:application/x-sega-pico-rom]' invalid
+/usr/share/mime/magic, 968: Warning: type `=' invalid
+/usr/share/mime/magic, 969: Warning: offset `[50:application/x-sharedlib]' invalid
+/usr/share/mime/magic, 970: Warning: type `=' invalid
+/usr/share/mime/magic, 971: Warning: type `>22=' invalid
+/usr/share/mime/magic, 972: Warning: offset `[50:application/x-shellscript]' invalid
+/usr/share/mime/magic, 973: Warning: type `=' invalid
+/usr/share/mime/magic, 974: Warning: type `=' invalid
+/usr/share/mime/magic, 975: Warning: type `=' invalid
+/usr/share/mime/magic, 976: Warning: type `=' invalid
+/usr/share/mime/magic, 977: Warning: type `=' invalid
+/usr/share/mime/magic, 978: Warning: type `=' invalid
+/usr/share/mime/magic, 979: Warning: type `=' invalid
+/usr/share/mime/magic, 980: Warning: type `=' invalid
+/usr/share/mime/magic, 981: Warning: type `=' invalid
+/usr/share/mime/magic, 982: Warning: type `=' invalid
+/usr/share/mime/magic, 983: Warning: type `=' invalid
+/usr/share/mime/magic, 984: Warning: offset `[50:application/x-shorten]' invalid
+/usr/share/mime/magic, 985: Warning: type `=' invalid
+/usr/share/mime/magic, 986: Warning: offset `[50:application/x-spss-por]' invalid
+/usr/share/mime/magic, 987: Warning: type `=' invalid
+/usr/share/mime/magic, 988: Warning: offset `[50:application/x-spss-sav]' invalid
+/usr/share/mime/magic, 989: Warning: type `=' invalid
+/usr/share/mime/magic, 990: Warning: type `=' invalid
+/usr/share/mime/magic, 991: Warning: offset `[50:application/x-sqlite2]' invalid
+/usr/share/mime/magic, 992: Warning: type `=' invalid
+/usr/share/mime/magic, 993: Warning: offset `[50:application/x-subrip]' invalid
+/usr/share/mime/magic, 994: Warning: type `=' invalid
+/usr/share/mime/magic, 995: Warning: type `>0=' invalid
+/usr/share/mime/magic, 996: Warning: offset `[50:application/x-t602]' invalid
+/usr/share/mime/magic, 997: Warning: type `=' invalid
+/usr/share/mime/magic, 998: Warning: type `=' invalid
+/usr/share/mime/magic, 999: Warning: type `=' invalid
+/usr/share/mime/magic, 1000: Warning: offset `[50:application/x-tgif]' invalid
+/usr/share/mime/magic, 1001: Warning: type `=' invalid
+/usr/share/mime/magic, 1002: Warning: offset `[50:application/x-thomson-sap-image]' invalid
+/usr/share/mime/magic, 1003: Warning: type `=' invalid
+/usr/share/mime/magic, 1004: Warning: offset `[50:application/x-vdi-disk]' invalid
+/usr/share/mime/magic, 1005: Warning: type `=' invalid
+/usr/share/mime/magic, 1007: Warning: type `=' invalid
+/usr/share/mime/magic, 1009: Warning: type `=' invalid
+/usr/share/mime/magic, 1011: Warning: type `=' invalid
+/usr/share/mime/magic, 1013: Warning: type `=' invalid
+/usr/share/mime/magic, 1014: Warning: type `=' invalid
+/usr/share/mime/magic, 1016: Warning: offset `[50:application/x-vhd-disk]' invalid
+/usr/share/mime/magic, 1017: Warning: type `=' invalid
+/usr/share/mime/magic, 1018: Warning: offset `[50:application/x-vhdx-disk]' invalid
+/usr/share/mime/magic, 1019: Warning: type `=' invalid
+/usr/share/mime/magic, 1020: Warning: offset `[50:application/x-vmdk-disk]' invalid
+/usr/share/mime/magic, 1021: Warning: type `=' invalid
+/usr/share/mime/magic, 1022: Warning: type `=' invalid
+/usr/share/mime/magic, 1023: Warning: offset `[50:application/x-wii-rom]' invalid
+/usr/share/mime/magic, 1024: Warning: type `=' invalid
+/usr/share/mime/magic, 1025: Warning: type `=' invalid
+/usr/share/mime/magic, 1026: Warning: type `=' invalid
+/usr/share/mime/magic, 1027: Warning: offset `[50:application/x-wii-wad]' invalid
+/usr/share/mime/magic, 1028: Warning: type `=' invalid
+/usr/share/mime/magic, 1029: Warning: type `=' invalid
+/usr/share/mime/magic, 1030: Warning: type `=' invalid
+/usr/share/mime/magic, 1031: Warning: offset `[50:application/x-x509-ca-cert]' invalid
+/usr/share/mime/magic, 1032: Warning: type `=' invalid
+/usr/share/mime/magic, 1033: Warning: type `=' invalid
+/usr/share/mime/magic, 1034: Warning: offset `[50:application/x-xbel]' invalid
+/usr/share/mime/magic, 1035: Warning: type `=' invalid
+/usr/share/mime/magic, 1036: Warning: offset `[50:application/x-yaml]' invalid
+/usr/share/mime/magic, 1037: Warning: type `=' invalid
+/usr/share/mime/magic, 1038: Warning: offset `[50:application/xslt+xml]' invalid
+/usr/share/mime/magic, 1039: Warning: type `=' invalid
+/usr/share/mime/magic, 1040: Warning: offset `[50:application/xspf+xml]' invalid
+/usr/share/mime/magic, 1041: Warning: type `=' invalid
+/usr/share/mime/magic, 1042: Warning: type `=' invalid
+/usr/share/mime/magic, 1043: Warning: offset `[50:audio/AMR]' invalid
+/usr/share/mime/magic, 1044: Warning: type `=' invalid
+/usr/share/mime/magic, 1046: Warning: type `=' invalid
+/usr/share/mime/magic, 1048: Warning: offset `[50:audio/AMR-WB]' invalid
+/usr/share/mime/magic, 1049: Warning: type `=' invalid
+/usr/share/mime/magic, 1051: Warning: type `=' invalid
+/usr/share/mime/magic, 1053: Warning: offset `[50:audio/aac]' invalid
+/usr/share/mime/magic, 1054: Warning: type `=' invalid
+/usr/share/mime/magic, 1055: Warning: type `=' invalid
+/usr/share/mime/magic, 1056: Warning: offset `[50:audio/ac3]' invalid
+/usr/share/mime/magic, 1057: Warning: type `=' invalid
+/usr/share/mime/magic, 1058: Warning: offset `[50:audio/annodex]' invalid
+/usr/share/mime/magic, 1059: Warning: type `=' invalid
+/usr/share/mime/magic, 1060: Warning: type `>28=' invalid
+/usr/share/mime/magic, 1061: Warning: type `>56=' invalid
+/usr/share/mime/magic, 1062: Warning: offset `[50:audio/flac]' invalid
+/usr/share/mime/magic, 1063: Warning: type `=' invalid
+/usr/share/mime/magic, 1064: Warning: offset `[50:audio/midi]' invalid
+/usr/share/mime/magic, 1065: Warning: type `=' invalid
+/usr/share/mime/magic, 1066: Warning: offset `[50:audio/mobile-xmf]' invalid
+/usr/share/mime/magic, 1067: Warning: type `=' invalid
+/usr/share/mime/magic, 1068: Warning: offset `[50:audio/mp4]' invalid
+/usr/share/mime/magic, 1069: Warning: type `=' invalid
+/usr/share/mime/magic, 1070: Warning: offset `[50:audio/mpeg]' invalid
+/usr/share/mime/magic, 1071: Warning: type `=' invalid
+/usr/share/mime/magic, 1072: Warning: type `=' invalid
+/usr/share/mime/magic, 1073: Warning: type `=' invalid
+/usr/share/mime/magic, 1074: Warning: type `=' invalid
+/usr/share/mime/magic, 1075: Warning: type `=' invalid
+/usr/share/mime/magic, 1076: Warning: type `=' invalid
+/usr/share/mime/magic, 1077: Warning: type `=' invalid
+/usr/share/mime/magic, 1078: Warning: offset `[50:audio/ogg]' invalid
+/usr/share/mime/magic, 1079: Warning: type `=' invalid
+/usr/share/mime/magic, 1080: Warning: offset `[50:audio/prs.sid]' invalid
+/usr/share/mime/magic, 1081: Warning: type `=' invalid
+/usr/share/mime/magic, 1082: Warning: offset `[50:audio/vnd.audible.aax]' invalid
+/usr/share/mime/magic, 1083: Warning: type `=' invalid
+/usr/share/mime/magic, 1084: Warning: offset `[50:audio/vnd.dts]' invalid
+/usr/share/mime/magic, 1085: Warning: type `=' invalid
+/usr/share/mime/magic, 1086: Warning: type `=' invalid
+/usr/share/mime/magic, 1087: Warning: type `=' invalid
+/usr/share/mime/magic, 1088: Warning: type `=' invalid
+/usr/share/mime/magic, 1089: Warning: offset `[50:audio/x-adpcm]' invalid
+/usr/share/mime/magic, 1090: Warning: type `=' invalid
+/usr/share/mime/magic, 1091: Warning: type `>12=' invalid
+/usr/share/mime/magic, 1092: Warning: type `=' invalid
+/usr/share/mime/magic, 1093: Warning: type `>12=' invalid
+/usr/share/mime/magic, 1094: Warning: type `>12=' invalid
+/usr/share/mime/magic, 1095: Warning: type `>12=' invalid
+/usr/share/mime/magic, 1096: Warning: type `>12=' invalid
+/usr/share/mime/magic, 1097: Warning: type `>12=' invalid
+/usr/share/mime/magic, 1098: Warning: type `>12=' invalid
+/usr/share/mime/magic, 1099: Warning: type `>12=' invalid
+/usr/share/mime/magic, 1100: Warning: type `>12=' invalid
+/usr/share/mime/magic, 1101: Warning: offset `[50:audio/x-aifc]' invalid
+/usr/share/mime/magic, 1102: Warning: type `=' invalid
+/usr/share/mime/magic, 1103: Warning: offset `[50:audio/x-aiff]' invalid
+/usr/share/mime/magic, 1104: Warning: type `=' invalid
+/usr/share/mime/magic, 1105: Warning: type `=' invalid
+/usr/share/mime/magic, 1106: Warning: offset `[50:audio/x-ape]' invalid
+/usr/share/mime/magic, 1107: Warning: type `=' invalid
+/usr/share/mime/magic, 1108: Warning: offset `[50:audio/x-dff]' invalid
+/usr/share/mime/magic, 1109: Warning: type `=' invalid
+/usr/share/mime/magic, 1110: Warning: type `>12=' invalid
+/usr/share/mime/magic, 1111: Warning: offset `[50:audio/x-dsf]' invalid
+/usr/share/mime/magic, 1112: Warning: type `=' invalid
+/usr/share/mime/magic, 1113: Warning: type `>28=' invalid
+/usr/share/mime/magic, 1114: Warning: type `>80=' invalid
+/usr/share/mime/magic, 1115: Warning: offset `[50:audio/x-iriver-pla]' invalid
+/usr/share/mime/magic, 1116: Warning: type `=' invalid
+/usr/share/mime/magic, 1117: Warning: offset `[50:audio/x-it]' invalid
+/usr/share/mime/magic, 1118: Warning: type `=' invalid
+/usr/share/mime/magic, 1119: Warning: offset `[50:audio/x-m4b]' invalid
+/usr/share/mime/magic, 1120: Warning: type `=' invalid
+/usr/share/mime/magic, 1121: Warning: offset `[50:audio/x-mo3]' invalid
+/usr/share/mime/magic, 1122: Warning: type `=' invalid
+/usr/share/mime/magic, 1123: Warning: offset `[50:audio/x-mpegurl]' invalid
+/usr/share/mime/magic, 1124: Warning: type `=' invalid
+/usr/share/mime/magic, 1125: Warning: offset `[50:audio/x-musepack]' invalid
+/usr/share/mime/magic, 1126: Warning: type `=' invalid
+/usr/share/mime/magic, 1127: Warning: type `=' invalid
+/usr/share/mime/magic, 1128: Warning: offset `[50:audio/x-pn-audibleaudio]' invalid
+/usr/share/mime/magic, 1129: Warning: type `=' invalid
+/usr/share/mime/magic, 1130: Warning: offset `[50:audio/x-psf]' invalid
+/usr/share/mime/magic, 1131: Warning: type `=' invalid
+/usr/share/mime/magic, 1132: Warning: offset `[50:audio/x-s3m]' invalid
+/usr/share/mime/magic, 1133: Warning: type `=' invalid
+/usr/share/mime/magic, 1134: Warning: offset `[50:audio/x-scpls]' invalid
+/usr/share/mime/magic, 1135: Warning: type `=' invalid
+/usr/share/mime/magic, 1136: Warning: offset `[playlist]' invalid
+/usr/share/mime/magic, 1137: Warning: type `=' invalid
+/usr/share/mime/magic, 1138: Warning: offset `[Playlist]' invalid
+/usr/share/mime/magic, 1139: Warning: type `=' invalid
+/usr/share/mime/magic, 1140: Warning: offset `[PLAYLIST]' invalid
+/usr/share/mime/magic, 1141: Warning: offset `[50:audio/x-speex]' invalid
+/usr/share/mime/magic, 1142: Warning: type `=' invalid
+/usr/share/mime/magic, 1143: Warning: offset `[50:audio/x-stm]' invalid
+/usr/share/mime/magic, 1144: Warning: type `=' invalid
+/usr/share/mime/magic, 1145: Warning: type `=' invalid
+/usr/share/mime/magic, 1146: Warning: type `=' invalid
+/usr/share/mime/magic, 1147: Warning: offset `[50:audio/x-tta]' invalid
+/usr/share/mime/magic, 1148: Warning: type `=' invalid
+/usr/share/mime/magic, 1149: Warning: offset `[50:audio/x-wav]' invalid
+/usr/share/mime/magic, 1150: Warning: type `=' invalid
+/usr/share/mime/magic, 1151: Warning: type `=' invalid
+/usr/share/mime/magic, 1152: Warning: offset `[50:audio/x-wavpack]' invalid
+/usr/share/mime/magic, 1153: Warning: type `=' invalid
+/usr/share/mime/magic, 1154: Warning: offset `[50:audio/x-wavpack-correction]' invalid
+/usr/share/mime/magic, 1155: Warning: type `=' invalid
+/usr/share/mime/magic, 1156: Warning: offset `[50:audio/x-xi]' invalid
+/usr/share/mime/magic, 1157: Warning: type `=' invalid
+/usr/share/mime/magic, 1158: Warning: offset `[50:audio/x-xm]' invalid
+/usr/share/mime/magic, 1159: Warning: type `=' invalid
+/usr/share/mime/magic, 1160: Warning: offset `[50:audio/x-xmf]' invalid
+/usr/share/mime/magic, 1161: Warning: type `=' invalid
+/usr/share/mime/magic, 1162: Warning: offset `[50:font/otf]' invalid
+/usr/share/mime/magic, 1163: Warning: type `=' invalid
+/usr/share/mime/magic, 1164: Warning: offset `[50:font/ttf]' invalid
+/usr/share/mime/magic, 1165: Warning: type `=' invalid
+/usr/share/mime/magic, 1166: Warning: type `=' invalid
+/usr/share/mime/magic, 1167: Warning: type `=' invalid
+/usr/share/mime/magic, 1168: Warning: offset `[50:font/woff]' invalid
+/usr/share/mime/magic, 1169: Warning: type `=' invalid
+/usr/share/mime/magic, 1170: Warning: offset `[50:font/woff2]' invalid
+/usr/share/mime/magic, 1171: Warning: type `=' invalid
+/usr/share/mime/magic, 1172: Warning: offset `[50:image/avif]' invalid
+/usr/share/mime/magic, 1173: Warning: type `=' invalid
+/usr/share/mime/magic, 1174: Warning: type `=' invalid
+/usr/share/mime/magic, 1175: Warning: type `=' invalid
+/usr/share/mime/magic, 1176: Warning: type `>16=' invalid
+/usr/share/mime/magic, 1177: Warning: type `>20=' invalid
+/usr/share/mime/magic, 1178: Warning: type `>24=' invalid
+/usr/share/mime/magic, 1179: Warning: offset `[50:image/bmp]' invalid
+/usr/share/mime/magic, 1180: Warning: type `=' invalid
+/usr/share/mime/magic, 1181: Warning: type `=' invalid
+/usr/share/mime/magic, 1182: Warning: type `>14=' invalid
+/usr/share/mime/magic, 1183: Warning: type `>14=' invalid
+/usr/share/mime/magic, 1184: Warning: type `>14=' invalid
+/usr/share/mime/magic, 1185: Warning: offset `[50:image/dpx]' invalid
+/usr/share/mime/magic, 1186: Warning: type `=' invalid
+/usr/share/mime/magic, 1187: Warning: offset `[50:image/emf]' invalid
+/usr/share/mime/magic, 1188: Warning: type `=' invalid
+/usr/share/mime/magic, 1189: Warning: type `>40=' invalid
+/usr/share/mime/magic, 1190: Warning: type `>44=' invalid
+/usr/share/mime/magic, 1191: Warning: type `>58=' invalid
+/usr/share/mime/magic, 1192: Warning: offset `[50:image/gif]' invalid
+/usr/share/mime/magic, 1193: Warning: type `=' invalid
+/usr/share/mime/magic, 1194: Warning: offset `[50:image/jp2]' invalid
+/usr/share/mime/magic, 1195: Warning: type `=' invalid
+/usr/share/mime/magic, 1196: Warning: offset `�' invalid
+/usr/share/mime/magic, 1197: Warning: offset `        jp2 &������������' invalid
+/usr/share/mime/magic, 1198: Warning: offset `[50:image/jpeg]' invalid
+/usr/share/mime/magic, 1199: Warning: type `=' invalid
+/usr/share/mime/magic, 1200: Warning: type `=' invalid
+/usr/share/mime/magic, 1201: Warning: offset `[50:image/jpm]' invalid
+/usr/share/mime/magic, 1202: Warning: type `=' invalid
+/usr/share/mime/magic, 1203: Warning: offset `�' invalid
+/usr/share/mime/magic, 1204: Warning: offset `        jpm &������������' invalid
+/usr/share/mime/magic, 1205: Warning: offset `[50:image/jpx]' invalid
+/usr/share/mime/magic, 1206: Warning: type `=' invalid
+/usr/share/mime/magic, 1207: Warning: offset `�' invalid
+/usr/share/mime/magic, 1208: Warning: offset `        jpx &������������' invalid
+/usr/share/mime/magic, 1209: Warning: offset `[50:image/jxl]' invalid
+/usr/share/mime/magic, 1210: Warning: type `=' invalid
+/usr/share/mime/magic, 1212: Warning: type `=' invalid
+/usr/share/mime/magic, 1213: Warning: offset `�' invalid
+/usr/share/mime/magic, 1215: Warning: offset `[50:image/png]' invalid
+/usr/share/mime/magic, 1216: Warning: type `=' invalid
+/usr/share/mime/magic, 1217: Warning: offset `[50:image/tiff]' invalid
+/usr/share/mime/magic, 1218: Warning: type `=' invalid
+/usr/share/mime/magic, 1219: Warning: type `=' invalid
+/usr/share/mime/magic, 1220: Warning: offset `[50:image/vnd.adobe.photoshop]' invalid
+/usr/share/mime/magic, 1221: Warning: type `=' invalid
+/usr/share/mime/magic, 1222: Warning: type `BPS  ' invalid
+/usr/share/mime/magic, 1223: Warning: offset `[50:image/vnd.dxf]' invalid
+/usr/share/mime/magic, 1224: Warning: type `=' invalid
+/usr/share/mime/magic, 1225: Warning: offset `HEADER' invalid
+/usr/share/mime/magic, 1226: Warning: type `' invalid
+/usr/share/mime/magic, 1227: Warning: type `=' invalid
+/usr/share/mime/magic, 1229: Warning: offset `HEADER' invalid
+/usr/share/mime/magic, 1230: Warning: type `' invalid
+/usr/share/mime/magic, 1231: Warning: offset `[50:image/vnd.microsoft.icon]' invalid
+/usr/share/mime/magic, 1232: Warning: type `=' invalid
+/usr/share/mime/magic, 1233: Warning: type `>5=' invalid
+/usr/share/mime/magic, 1234: Warning: offset `[50:image/vnd.ms-modi]' invalid
+/usr/share/mime/magic, 1235: Warning: type `=' invalid
+/usr/share/mime/magic, 1236: Warning: offset `[50:image/vnd.zbrush.pcx]' invalid
+/usr/share/mime/magic, 1237: Warning: type `=' invalid
+/usr/share/mime/magic, 1239: Warning: type `>1=' invalid
+/usr/share/mime/magic, 1240: Warning: type `>1=' invalid
+/usr/share/mime/magic, 1241: Warning: type `>1=' invalid
+/usr/share/mime/magic, 1242: Warning: type `>1=' invalid
+/usr/share/mime/magic, 1243: Warning: offset `[50:image/webp]' invalid
+/usr/share/mime/magic, 1244: Warning: type `=' invalid
+/usr/share/mime/magic, 1245: Warning: type `>8=' invalid
+/usr/share/mime/magic, 1246: Warning: offset `[50:image/wmf]' invalid
+/usr/share/mime/magic, 1247: Warning: type `=' invalid
+/usr/share/mime/magic, 1248: Warning: type `>22=' invalid
+/usr/share/mime/magic, 1249: Warning: type `>24=' invalid
+/usr/share/mime/magic, 1250: Warning: type `=' invalid
+/usr/share/mime/magic, 1251: Warning: type `>2=' invalid
+/usr/share/mime/magic, 1252: Warning: offset `[50:image/x-applix-graphics]' invalid
+/usr/share/mime/magic, 1253: Warning: type `=' invalid
+/usr/share/mime/magic, 1254: Warning: type `>7=' invalid
+/usr/share/mime/magic, 1255: Warning: offset `[50:image/x-canon-crw]' invalid
+/usr/share/mime/magic, 1256: Warning: type `=' invalid
+/usr/share/mime/magic, 1257: Warning: offset `[50:image/x-dds]' invalid
+/usr/share/mime/magic, 1258: Warning: type `=' invalid
+/usr/share/mime/magic, 1259: Warning: offset `[50:image/x-dib]' invalid
+/usr/share/mime/magic, 1260: Warning: type `=' invalid
+/usr/share/mime/magic, 1261: Warning: offset `[50:image/x-exr]' invalid
+/usr/share/mime/magic, 1262: Warning: type `=' invalid
+/usr/share/mime/magic, 1263: Warning: offset `[50:image/x-fpx]' invalid
+/usr/share/mime/magic, 1264: Warning: type `=' invalid
+/usr/share/mime/magic, 1265: Warning: offset `[50:image/x-fuji-raf]' invalid
+/usr/share/mime/magic, 1266: Warning: type `=' invalid
+/usr/share/mime/magic, 1267: Warning: offset `[50:image/x-gimp-gbr]' invalid
+/usr/share/mime/magic, 1268: Warning: type `=' invalid
+/usr/share/mime/magic, 1269: Warning: offset `[50:image/x-gimp-pat]' invalid
+/usr/share/mime/magic, 1270: Warning: type `=' invalid
+/usr/share/mime/magic, 1271: Warning: offset `[50:image/x-icns]' invalid
+/usr/share/mime/magic, 1272: Warning: type `=' invalid
+/usr/share/mime/magic, 1273: Warning: offset `[50:image/x-ilbm]' invalid
+/usr/share/mime/magic, 1274: Warning: type `=' invalid
+/usr/share/mime/magic, 1275: Warning: type `=' invalid
+/usr/share/mime/magic, 1276: Warning: offset `[50:image/x-jp2-codestream]' invalid
+/usr/share/mime/magic, 1277: Warning: type `=' invalid
+/usr/share/mime/magic, 1278: Warning: offset `[50:image/x-minolta-mrw]' invalid
+/usr/share/mime/magic, 1279: Warning: type `=' invalid
+/usr/share/mime/magic, 1280: Warning: offset `[50:image/x-olympus-orf]' invalid
+/usr/share/mime/magic, 1281: Warning: type `=' invalid
+/usr/share/mime/magic, 1282: Warning: offset `[50:image/x-panasonic-rw]' invalid
+/usr/share/mime/magic, 1283: Warning: type `=' invalid
+/usr/share/mime/magic, 1284: Warning: offset `[50:image/x-panasonic-rw2]' invalid
+/usr/share/mime/magic, 1285: Warning: type `=' invalid
+/usr/share/mime/magic, 1286: Warning: offset `[50:image/x-pict]' invalid
+/usr/share/mime/magic, 1287: Warning: type `=' invalid
+/usr/share/mime/magic, 1288: Warning: type `>12=' invalid
+/usr/share/mime/magic, 1289: Warning: type `>14=' invalid
+/usr/share/mime/magic, 1290: Warning: type `>16=' invalid
+/usr/share/mime/magic, 1291: Warning: offset `[50:image/x-pict]' invalid
+/usr/share/mime/magic, 1292: Warning: type `=' invalid
+/usr/share/mime/magic, 1293: Warning: type `>524=' invalid
+/usr/share/mime/magic, 1294: Warning: type `>526=' invalid
+/usr/share/mime/magic, 1295: Warning: type `>528=' invalid
+/usr/share/mime/magic, 1296: Warning: offset `[50:image/x-portable-bitmap]' invalid
+/usr/share/mime/magic, 1297: Warning: type `=' invalid
+/usr/share/mime/magic, 1298: Warning: type `>2=' invalid
+/usr/share/mime/magic, 1300: Warning: type `>2=' invalid
+/usr/share/mime/magic, 1301: Warning: type `>2=' invalid
+/usr/share/mime/magic, 1302: Warning: type `>2=' invalid
+/usr/share/mime/magic, 1303: Warning: type `=' invalid
+/usr/share/mime/magic, 1304: Warning: type `>2=' invalid
+/usr/share/mime/magic, 1306: Warning: type `>2=' invalid
+/usr/share/mime/magic, 1307: Warning: type `>2=' invalid
+/usr/share/mime/magic, 1308: Warning: type `>2=' invalid
+/usr/share/mime/magic, 1309: Warning: offset `[50:image/x-portable-graymap]' invalid
+/usr/share/mime/magic, 1310: Warning: type `=' invalid
+/usr/share/mime/magic, 1311: Warning: type `>2=' invalid
+/usr/share/mime/magic, 1313: Warning: type `>2=' invalid
+/usr/share/mime/magic, 1314: Warning: type `>2=' invalid
+/usr/share/mime/magic, 1315: Warning: type `>2=' invalid
+/usr/share/mime/magic, 1316: Warning: type `=' invalid
+/usr/share/mime/magic, 1317: Warning: type `>2=' invalid
+/usr/share/mime/magic, 1319: Warning: type `>2=' invalid
+/usr/share/mime/magic, 1320: Warning: type `>2=' invalid
+/usr/share/mime/magic, 1321: Warning: type `>2=' invalid
+/usr/share/mime/magic, 1322: Warning: offset `[50:image/x-portable-pixmap]' invalid
+/usr/share/mime/magic, 1323: Warning: type `=' invalid
+/usr/share/mime/magic, 1324: Warning: type `>2=' invalid
+/usr/share/mime/magic, 1326: Warning: type `>2=' invalid
+/usr/share/mime/magic, 1327: Warning: type `>2=' invalid
+/usr/share/mime/magic, 1328: Warning: type `>2=' invalid
+/usr/share/mime/magic, 1329: Warning: type `=' invalid
+/usr/share/mime/magic, 1330: Warning: type `>2=' invalid
+/usr/share/mime/magic, 1332: Warning: type `>2=' invalid
+/usr/share/mime/magic, 1333: Warning: type `>2=' invalid
+/usr/share/mime/magic, 1334: Warning: type `>2=' invalid
+/usr/share/mime/magic, 1335: Warning: offset `[50:image/x-quicktime]' invalid
+/usr/share/mime/magic, 1336: Warning: type `=' invalid
+/usr/share/mime/magic, 1337: Warning: offset `[50:image/x-sigma-x3f]' invalid
+/usr/share/mime/magic, 1338: Warning: type `=' invalid
+/usr/share/mime/magic, 1339: Warning: type `>4=' invalid
+/usr/share/mime/magic, 1340: Warning: offset `[50:image/x-skencil]' invalid
+/usr/share/mime/magic, 1341: Warning: type `=' invalid
+/usr/share/mime/magic, 1342: Warning: offset `[50:image/x-sun-raster]' invalid
+/usr/share/mime/magic, 1343: Warning: type `=' invalid
+/usr/share/mime/magic, 1344: Warning: offset `[50:image/x-tga]' invalid
+/usr/share/mime/magic, 1345: Warning: type `=' invalid
+/usr/share/mime/magic, 1346: Warning: type `>16=' invalid
+/usr/share/mime/magic, 1347: Warning: type `>16=' invalid
+/usr/share/mime/magic, 1348: Warning: type `>16=' invalid
+/usr/share/mime/magic, 1349: Warning: type `>16=' invalid
+/usr/share/mime/magic, 1350: Warning: offset `[50:image/x-win-bitmap]' invalid
+/usr/share/mime/magic, 1351: Warning: type `=' invalid
+/usr/share/mime/magic, 1352: Warning: type `>5=' invalid
+/usr/share/mime/magic, 1353: Warning: offset `[50:image/x-xcf]' invalid
+/usr/share/mime/magic, 1354: Warning: type `=' invalid
+/usr/share/mime/magic, 1355: Warning: type `=' invalid
+/usr/share/mime/magic, 1356: Warning: offset `gimp xcf v' invalid
+/usr/share/mime/magic, 1357: Warning: offset `[50:image/x-xcursor]' invalid
+/usr/share/mime/magic, 1358: Warning: type `=' invalid
+/usr/share/mime/magic, 1359: Warning: offset `[50:image/x-xfig]' invalid
+/usr/share/mime/magic, 1360: Warning: type `=' invalid
+/usr/share/mime/magic, 1361: Warning: offset `[50:image/x-xpixmap]' invalid
+/usr/share/mime/magic, 1362: Warning: type `=' invalid
+/usr/share/mime/magic, 1363: Warning: type `=' invalid
+/usr/share/mime/magic, 1365: Warning: offset `[50:message/news]' invalid
+/usr/share/mime/magic, 1366: Warning: type `=' invalid
+/usr/share/mime/magic, 1367: Warning: type `=' invalid
+/usr/share/mime/magic, 1368: Warning: type `=' invalid
+/usr/share/mime/magic, 1369: Warning: offset `[50:message/rfc822]' invalid
+/usr/share/mime/magic, 1370: Warning: type `=' invalid
+/usr/share/mime/magic, 1371: Warning: type `=' invalid
+/usr/share/mime/magic, 1372: Warning: offset `Forward to' invalid
+/usr/share/mime/magic, 1373: Warning: type `=' invalid
+/usr/share/mime/magic, 1374: Warning: type `=' invalid
+/usr/share/mime/magic, 1375: Warning: type `=' invalid
+/usr/share/mime/magic, 1376: Warning: type `=' invalid
+/usr/share/mime/magic, 1377: Warning: type `=' invalid
+/usr/share/mime/magic, 1378: Warning: type `=' invalid
+/usr/share/mime/magic, 1379: Warning: type `=' invalid
+/usr/share/mime/magic, 1380: Warning: type `=' invalid
+/usr/share/mime/magic, 1381: Warning: offset `[50:model/gltf-binary]' invalid
+/usr/share/mime/magic, 1382: Warning: type `=' invalid
+/usr/share/mime/magic, 1383: Warning: offset `[50:model/iges]' invalid
+/usr/share/mime/magic, 1384: Warning: type `=' invalid
+/usr/share/mime/magic, 1386: Warning: type `=' invalid
+/usr/share/mime/magic, 1388: Warning: offset `[50:model/mtl]' invalid
+/usr/share/mime/magic, 1389: Warning: type `=' invalid
+/usr/share/mime/magic, 1390: Warning: type `=' invalid
+/usr/share/mime/magic, 1391: Warning: offset `[50:model/obj]' invalid
+/usr/share/mime/magic, 1392: Warning: type `=' invalid
+/usr/share/mime/magic, 1393: Warning: type `=' invalid
+/usr/share/mime/magic, 1394: Warning: offset `[50:model/stl]' invalid
+/usr/share/mime/magic, 1395: Warning: type `=' invalid
+/usr/share/mime/magic, 1396: Warning: type `=' invalid
+/usr/share/mime/magic, 1397: Warning: offset `[50:model/vrml]' invalid
+/usr/share/mime/magic, 1398: Warning: type `=' invalid
+/usr/share/mime/magic, 1399: Warning: offset `[50:text/cache-manifest]' invalid
+/usr/share/mime/magic, 1400: Warning: type `=' invalid
+/usr/share/mime/magic, 1401: Warning: type `>14=' invalid
+/usr/share/mime/magic, 1402: Warning: type `>14=' invalid
+/usr/share/mime/magic, 1403: Warning: type `>14=' invalid
+/usr/share/mime/magic, 1405: Warning: type `>14=' invalid
+/usr/share/mime/magic, 1406: Warning: offset `[50:text/calendar]' invalid
+/usr/share/mime/magic, 1407: Warning: type `=' invalid
+/usr/share/mime/magic, 1408: Warning: type `=' invalid
+/usr/share/mime/magic, 1409: Warning: offset `[50:text/html]' invalid
+/usr/share/mime/magic, 1410: Warning: type `=' invalid
+/usr/share/mime/magic, 1411: Warning: type `=' invalid
+/usr/share/mime/magic, 1412: Warning: type `=' invalid
+/usr/share/mime/magic, 1413: Warning: type `=' invalid
+/usr/share/mime/magic, 1414: Warning: type `=' invalid
+/usr/share/mime/magic, 1415: Warning: type `=' invalid
+/usr/share/mime/magic, 1416: Warning: type `=' invalid
+/usr/share/mime/magic, 1417: Warning: type `=' invalid
+/usr/share/mime/magic, 1418: Warning: type `=' invalid
+/usr/share/mime/magic, 1419: Warning: type `=' invalid
+/usr/share/mime/magic, 1420: Warning: type `=' invalid
+/usr/share/mime/magic, 1421: Warning: type `=' invalid
+/usr/share/mime/magic, 1422: Warning: type `=' invalid
+/usr/share/mime/magic, 1423: Warning: type `=' invalid
+/usr/share/mime/magic, 1424: Warning: offset `[50:text/plain]' invalid
+/usr/share/mime/magic, 1425: Warning: type `=' invalid
+/usr/share/mime/magic, 1426: Warning: type `=' invalid
+/usr/share/mime/magic, 1427: Warning: offset `[50:text/spreadsheet]' invalid
+/usr/share/mime/magic, 1428: Warning: type `=' invalid
+/usr/share/mime/magic, 1429: Warning: offset `[50:text/troff]' invalid
+/usr/share/mime/magic, 1430: Warning: type `=' invalid
+/usr/share/mime/magic, 1431: Warning: type `=' invalid
+/usr/share/mime/magic, 1432: Warning: type `=' invalid
+/usr/share/mime/magic, 1433: Warning: type `=' invalid
+/usr/share/mime/magic, 1434: Warning: offset `[50:text/vcard]' invalid
+/usr/share/mime/magic, 1435: Warning: type `=' invalid
+/usr/share/mime/magic, 1436: Warning: type `=' invalid
+/usr/share/mime/magic, 1437: Warning: offset `[50:text/vnd.graphviz]' invalid
+/usr/share/mime/magic, 1438: Warning: type `=' invalid
+/usr/share/mime/magic, 1439: Warning: type `=' invalid
+/usr/share/mime/magic, 1440: Warning: type `=' invalid
+/usr/share/mime/magic, 1441: Warning: type `=' invalid
+/usr/share/mime/magic, 1442: Warning: offset `[50:text/vnd.sun.j2me.app-descriptor]' invalid
+/usr/share/mime/magic, 1443: Warning: type `=' invalid
+/usr/share/mime/magic, 1444: Warning: offset `[50:text/vnd.trolltech.linguist]' invalid
+/usr/share/mime/magic, 1445: Warning: type `=' invalid
+/usr/share/mime/magic, 1446: Warning: type `=' invalid
+/usr/share/mime/magic, 1447: Warning: offset `[50:text/vtt]' invalid
+/usr/share/mime/magic, 1448: Warning: type `=' invalid
+/usr/share/mime/magic, 1449: Warning: offset `[50:text/x-bibtex]' invalid
+/usr/share/mime/magic, 1450: Warning: type `=' invalid
+/usr/share/mime/magic, 1451: Warning: offset `[50:text/x-dbus-service]' invalid
+/usr/share/mime/magic, 1452: Warning: type `=' invalid
+/usr/share/mime/magic, 1453: Warning: offset `[D-BUS Service]' invalid
+/usr/share/mime/magic, 1454: Warning: type `' invalid
+/usr/share/mime/magic, 1455: Warning: type `=' invalid
+/usr/share/mime/magic, 1457: Warning: offset `[50:text/x-emacs-lisp]' invalid
+/usr/share/mime/magic, 1458: Warning: type `=' invalid
+/usr/share/mime/magic, 1459: Warning: offset `' invalid
+/usr/share/mime/magic, 1460: Warning: type `=' invalid
+/usr/share/mime/magic, 1461: Warning: offset `[50:text/x-gcode-gx]' invalid
+/usr/share/mime/magic, 1462: Warning: type `=' invalid
+/usr/share/mime/magic, 1463: Warning: offset `xgcode 1.0' invalid
+/usr/share/mime/magic, 1464: Warning: offset `[50:text/x-gettext-translation-template]' invalid
+/usr/share/mime/magic, 1465: Warning: type `=' invalid
+/usr/share/mime/magic, 1466: Warning: offset `msgid ""' invalid
+/usr/share/mime/magic, 1467: Warning: offset `msgstr ""' invalid
+/usr/share/mime/magic, 1468: Warning: offset `"Project-Id-Version:+257' invalid
+/usr/share/mime/magic, 1469: Warning: offset `[50:text/x-google-video-pointer]' invalid
+/usr/share/mime/magic, 1470: Warning: type `=' invalid
+/usr/share/mime/magic, 1471: Warning: type `=' invalid
+/usr/share/mime/magic, 1472: Warning: offset `[50:text/x-iMelody]' invalid
+/usr/share/mime/magic, 1473: Warning: type `=' invalid
+/usr/share/mime/magic, 1474: Warning: offset `[50:text/x-iptables]' invalid
+/usr/share/mime/magic, 1475: Warning: type `=' invalid
+/usr/share/mime/magic, 1476: Warning: type `=' invalid
+/usr/share/mime/magic, 1477: Warning: type `>0=' invalid
+/usr/share/mime/magic, 1478: Warning: type `>0=' invalid
+/usr/share/mime/magic, 1479: Warning: type `>0=' invalid
+/usr/share/mime/magic, 1480: Warning: type `=' invalid
+/usr/share/mime/magic, 1481: Warning: type `>0=' invalid
+/usr/share/mime/magic, 1482: Warning: offset `A FORWARD+257' invalid
+/usr/share/mime/magic, 1483: Warning: type `>0=' invalid
+/usr/share/mime/magic, 1484: Warning: type `=' invalid
+/usr/share/mime/magic, 1485: Warning: type `>0=' invalid
+/usr/share/mime/magic, 1486: Warning: offset `P FORWARD+257' invalid
+/usr/share/mime/magic, 1487: Warning: type `>0=' invalid
+/usr/share/mime/magic, 1488: Warning: offset `[50:text/x-ldif]' invalid
+/usr/share/mime/magic, 1489: Warning: type `=' invalid
+/usr/share/mime/magic, 1490: Warning: type `=' invalid
+/usr/share/mime/magic, 1491: Warning: offset `[50:text/x-lua]' invalid
+/usr/share/mime/magic, 1492: Warning: type `=' invalid
+/usr/share/mime/magic, 1493: Warning: type `=' invalid
+/usr/share/mime/magic, 1494: Warning: type `=' invalid
+/usr/share/mime/magic, 1495: Warning: type `=' invalid
+/usr/share/mime/magic, 1496: Warning: offset `[50:text/x-makefile]' invalid
+/usr/share/mime/magic, 1497: Warning: type `=' invalid
+/usr/share/mime/magic, 1498: Warning: type `=' invalid
+/usr/share/mime/magic, 1499: Warning: offset `[50:text/x-matlab]' invalid
+/usr/share/mime/magic, 1500: Warning: type `=' invalid
+/usr/share/mime/magic, 1501: Warning: offset `[50:text/x-microdvd]' invalid
+/usr/share/mime/magic, 1502: Warning: type `=' invalid
+/usr/share/mime/magic, 1503: Warning: type `=' invalid
+/usr/share/mime/magic, 1504: Warning: type `=' invalid
+/usr/share/mime/magic, 1505: Warning: offset `[50:text/x-modelica]' invalid
+/usr/share/mime/magic, 1506: Warning: type `=' invalid
+/usr/share/mime/magic, 1507: Warning: offset `[50:text/x-modelica]' invalid
+/usr/share/mime/magic, 1508: Warning: type `=' invalid
+/usr/share/mime/magic, 1509: Warning: offset `[50:text/x-modelica]' invalid
+/usr/share/mime/magic, 1510: Warning: type `=' invalid
+/usr/share/mime/magic, 1511: Warning: offset `[50:text/x-modelica]' invalid
+/usr/share/mime/magic, 1512: Warning: type `=' invalid
+/usr/share/mime/magic, 1513: Warning: offset `[50:text/x-mpl2]' invalid
+/usr/share/mime/magic, 1514: Warning: type `=' invalid
+/usr/share/mime/magic, 1515: Warning: type `=' invalid
+/usr/share/mime/magic, 1516: Warning: type `=' invalid
+/usr/share/mime/magic, 1517: Warning: offset `[50:text/x-mpsub]' invalid
+/usr/share/mime/magic, 1518: Warning: type `=' invalid
+/usr/share/mime/magic, 1519: Warning: offset `[50:text/x-mrml]' invalid
+/usr/share/mime/magic, 1520: Warning: type `=' invalid
+/usr/share/mime/magic, 1521: Warning: offset `[50:text/x-ms-regedit]' invalid
+/usr/share/mime/magic, 1522: Warning: type `=' invalid
+/usr/share/mime/magic, 1523: Warning: type `=' invalid
+/usr/share/mime/magic, 1524: Warning: type `=' invalid
+/usr/share/mime/magic, 1525: Warning: offset `[50:text/x-mup]' invalid
+/usr/share/mime/magic, 1526: Warning: type `=' invalid
+/usr/share/mime/magic, 1527: Warning: offset `[50:text/x-patch]' invalid
+/usr/share/mime/magic, 1528: Warning: type `=' invalid
+/usr/share/mime/magic, 1529: Warning: type `=' invalid
+/usr/share/mime/magic, 1530: Warning: type `=' invalid
+/usr/share/mime/magic, 1531: Warning: type `=' invalid
+/usr/share/mime/magic, 1532: Warning: type `=' invalid
+/usr/share/mime/magic, 1533: Warning: type `=' invalid
+/usr/share/mime/magic, 1534: Warning: type `=' invalid
+/usr/share/mime/magic, 1535: Warning: type `=' invalid
+/usr/share/mime/magic, 1536: Warning: type `=' invalid
+/usr/share/mime/magic, 1537: Warning: type `=' invalid
+/usr/share/mime/magic, 1538: Warning: offset `[50:text/x-python]' invalid
+/usr/share/mime/magic, 1539: Warning: type `=' invalid
+/usr/share/mime/magic, 1540: Warning: type `=' invalid
+/usr/share/mime/magic, 1541: Warning: type `=' invalid
+/usr/share/mime/magic, 1542: Warning: type `=' invalid
+/usr/share/mime/magic, 1543: Warning: type `=' invalid
+/usr/share/mime/magic, 1544: Warning: type `=' invalid
+/usr/share/mime/magic, 1545: Warning: type `=' invalid
+/usr/share/mime/magic, 1546: Warning: type `=' invalid
+/usr/share/mime/magic, 1547: Warning: type `=' invalid
+/usr/share/mime/magic, 1548: Warning: type `=' invalid
+/usr/share/mime/magic, 1549: Warning: offset `[50:text/x-qml]' invalid
+/usr/share/mime/magic, 1550: Warning: type `=' invalid
+/usr/share/mime/magic, 1551: Warning: type `=' invalid
+/usr/share/mime/magic, 1552: Warning: type `>9=' invalid
+/usr/share/mime/magic, 1553: Warning: type `=' invalid
+/usr/share/mime/magic, 1554: Warning: offset `import Qml+3001' invalid
+/usr/share/mime/magic, 1555: Warning: type `>9=' invalid
+/usr/share/mime/magic, 1556: Warning: offset `[50:text/x-rpm-spec]' invalid
+/usr/share/mime/magic, 1557: Warning: type `=' invalid
+/usr/share/mime/magic, 1558: Warning: type `=' invalid
+/usr/share/mime/magic, 1559: Warning: offset `[50:text/x-ssa]' invalid
+/usr/share/mime/magic, 1560: Warning: type `=' invalid
+/usr/share/mime/magic, 1561: Warning: type `=' invalid
+/usr/share/mime/magic, 1562: Warning: offset `Dialogue: +257' invalid
+/usr/share/mime/magic, 1563: Warning: offset `[50:text/x-subviewer]' invalid
+/usr/share/mime/magic, 1564: Warning: type `=' invalid
+/usr/share/mime/magic, 1565: Warning: offset `[50:text/x-systemd-unit]' invalid
+/usr/share/mime/magic, 1566: Warning: type `=' invalid
+/usr/share/mime/magic, 1567: Warning: offset `[Unit]' invalid
+/usr/share/mime/magic, 1568: Warning: type `' invalid
+/usr/share/mime/magic, 1569: Warning: type `=' invalid
+/usr/share/mime/magic, 1570: Warning: offset `[Install]' invalid
+/usr/share/mime/magic, 1571: Warning: type `' invalid
+/usr/share/mime/magic, 1572: Warning: type `=' invalid
+/usr/share/mime/magic, 1573: Warning: offset `[Automount]' invalid
+/usr/share/mime/magic, 1574: Warning: type `' invalid
+/usr/share/mime/magic, 1575: Warning: type `=' invalid
+/usr/share/mime/magic, 1576: Warning: offset `[Mount]' invalid
+/usr/share/mime/magic, 1577: Warning: type `' invalid
+/usr/share/mime/magic, 1578: Warning: type `=' invalid
+/usr/share/mime/magic, 1579: Warning: offset `[Path]' invalid
+/usr/share/mime/magic, 1580: Warning: type `' invalid
+/usr/share/mime/magic, 1581: Warning: type `=' invalid
+/usr/share/mime/magic, 1582: Warning: offset `[Scope]' invalid
+/usr/share/mime/magic, 1583: Warning: type `' invalid
+/usr/share/mime/magic, 1584: Warning: type `=' invalid
+/usr/share/mime/magic, 1585: Warning: offset `[Service]' invalid
+/usr/share/mime/magic, 1586: Warning: type `' invalid
+/usr/share/mime/magic, 1587: Warning: type `=' invalid
+/usr/share/mime/magic, 1588: Warning: offset `[Slice]' invalid
+/usr/share/mime/magic, 1589: Warning: type `' invalid
+/usr/share/mime/magic, 1590: Warning: type `=' invalid
+/usr/share/mime/magic, 1592: Warning: offset `[Socket]' invalid
+/usr/share/mime/magic, 1593: Warning: type `' invalid
+/usr/share/mime/magic, 1594: Warning: type `=' invalid
+/usr/share/mime/magic, 1595: Warning: offset `[Swap]' invalid
+/usr/share/mime/magic, 1596: Warning: type `' invalid
+/usr/share/mime/magic, 1597: Warning: type `=' invalid
+/usr/share/mime/magic, 1598: Warning: offset `[Timer]' invalid
+/usr/share/mime/magic, 1599: Warning: type `' invalid
+/usr/share/mime/magic, 1600: Warning: type `=' invalid
+/usr/share/mime/magic, 1602: Warning: type `=' invalid
+/usr/share/mime/magic, 1603: Warning: offset `[Install]' invalid
+/usr/share/mime/magic, 1605: Warning: type `=' invalid
+/usr/share/mime/magic, 1607: Warning: type `=' invalid
+/usr/share/mime/magic, 1609: Warning: type `=' invalid
+/usr/share/mime/magic, 1611: Warning: type `=' invalid
+/usr/share/mime/magic, 1613: Warning: type `=' invalid
+/usr/share/mime/magic, 1614: Warning: offset `[Service]' invalid
+/usr/share/mime/magic, 1616: Warning: type `=' invalid
+/usr/share/mime/magic, 1618: Warning: type `=' invalid
+/usr/share/mime/magic, 1620: Warning: type `=' invalid
+/usr/share/mime/magic, 1622: Warning: type `=' invalid
+/usr/share/mime/magic, 1624: Warning: offset `[50:text/x-tex]' invalid
+/usr/share/mime/magic, 1625: Warning: type `=' invalid
+/usr/share/mime/magic, 1626: Warning: offset `[50:text/x-uuencode]' invalid
+/usr/share/mime/magic, 1627: Warning: type `=' invalid
+/usr/share/mime/magic, 1628: Warning: offset `[50:text/xmcd]' invalid
+/usr/share/mime/magic, 1629: Warning: type `=' invalid
+/usr/share/mime/magic, 1630: Warning: offset `[50:video/3gpp]' invalid
+/usr/share/mime/magic, 1631: Warning: type `=' invalid
+/usr/share/mime/magic, 1632: Warning: type `=' invalid
+/usr/share/mime/magic, 1633: Warning: type `=' invalid
+/usr/share/mime/magic, 1634: Warning: type `=' invalid
+/usr/share/mime/magic, 1635: Warning: offset `[50:video/3gpp2]' invalid
+/usr/share/mime/magic, 1636: Warning: type `=' invalid
+/usr/share/mime/magic, 1637: Warning: offset `[50:video/annodex]' invalid
+/usr/share/mime/magic, 1638: Warning: type `=' invalid
+/usr/share/mime/magic, 1639: Warning: type `>28=' invalid
+/usr/share/mime/magic, 1640: Warning: type `>56=' invalid
+/usr/share/mime/magic, 1641: Warning: offset `[50:video/dv]' invalid
+/usr/share/mime/magic, 1642: Warning: type `=' invalid
+/usr/share/mime/magic, 1643: Warning: offset `[50:video/mj2]' invalid
+/usr/share/mime/magic, 1644: Warning: type `=' invalid
+/usr/share/mime/magic, 1645: Warning: offset `�' invalid
+/usr/share/mime/magic, 1646: Warning: offset `        mjp2&������������' invalid
+/usr/share/mime/magic, 1647: Warning: offset `[50:video/mp2t]' invalid
+/usr/share/mime/magic, 1648: Warning: type `=' invalid
+/usr/share/mime/magic, 1649: Warning: type `>188=' invalid
+/usr/share/mime/magic, 1650: Warning: type `>376=' invalid
+/usr/share/mime/magic, 1651: Warning: type `>564=' invalid
+/usr/share/mime/magic, 1652: Warning: type `>752=' invalid
+/usr/share/mime/magic, 1653: Warning: type `=' invalid
+/usr/share/mime/magic, 1654: Warning: type `>196=' invalid
+/usr/share/mime/magic, 1655: Warning: type `>388=' invalid
+/usr/share/mime/magic, 1656: Warning: type `>580=' invalid
+/usr/share/mime/magic, 1657: Warning: type `>772=' invalid
+/usr/share/mime/magic, 1658: Warning: offset `[50:video/mp4]' invalid
+/usr/share/mime/magic, 1659: Warning: type `=' invalid
+/usr/share/mime/magic, 1660: Warning: type `=' invalid
+/usr/share/mime/magic, 1661: Warning: type `=' invalid
+/usr/share/mime/magic, 1662: Warning: type `=' invalid
+/usr/share/mime/magic, 1663: Warning: type `=' invalid
+/usr/share/mime/magic, 1664: Warning: type `=' invalid
+/usr/share/mime/magic, 1665: Warning: offset `[50:video/mpeg]' invalid
+/usr/share/mime/magic, 1666: Warning: type `=' invalid
+/usr/share/mime/magic, 1667: Warning: type `=' invalid
+/usr/share/mime/magic, 1668: Warning: type `=' invalid
+/usr/share/mime/magic, 1669: Warning: offset `[50:video/ogg]' invalid
+/usr/share/mime/magic, 1670: Warning: type `=' invalid
+/usr/share/mime/magic, 1671: Warning: offset `[50:video/quicktime]' invalid
+/usr/share/mime/magic, 1672: Warning: type `=' invalid
+/usr/share/mime/magic, 1673: Warning: type `=' invalid
+/usr/share/mime/magic, 1674: Warning: type `=' invalid
+/usr/share/mime/magic, 1675: Warning: type `=' invalid
+/usr/share/mime/magic, 1676: Warning: offset `[50:video/vnd.mpegurl]' invalid
+/usr/share/mime/magic, 1677: Warning: type `=' invalid
+/usr/share/mime/magic, 1678: Warning: offset `[50:video/vnd.radgamettools.bink]' invalid
+/usr/share/mime/magic, 1679: Warning: type `=' invalid
+/usr/share/mime/magic, 1680: Warning: type `>3=' invalid
+/usr/share/mime/magic, 1681: Warning: type `>3=' invalid
+/usr/share/mime/magic, 1682: Warning: type `>3=' invalid
+/usr/share/mime/magic, 1683: Warning: type `>3=' invalid
+/usr/share/mime/magic, 1684: Warning: type `>3=' invalid
+/usr/share/mime/magic, 1685: Warning: type `=' invalid
+/usr/share/mime/magic, 1686: Warning: type `>3=' invalid
+/usr/share/mime/magic, 1687: Warning: type `>3=' invalid
+/usr/share/mime/magic, 1688: Warning: type `>3=' invalid
+/usr/share/mime/magic, 1689: Warning: type `>3=' invalid
+/usr/share/mime/magic, 1690: Warning: type `>3=' invalid
+/usr/share/mime/magic, 1691: Warning: type `>3=' invalid
+/usr/share/mime/magic, 1692: Warning: type `>3=' invalid
+/usr/share/mime/magic, 1693: Warning: type `>3=' invalid
+/usr/share/mime/magic, 1694: Warning: offset `[50:video/vnd.radgamettools.smacker]' invalid
+/usr/share/mime/magic, 1695: Warning: type `=' invalid
+/usr/share/mime/magic, 1696: Warning: type `>3=' invalid
+/usr/share/mime/magic, 1697: Warning: type `>3=' invalid
+/usr/share/mime/magic, 1698: Warning: offset `[50:video/webm]' invalid
+/usr/share/mime/magic, 1699: Warning: type `=' invalid
+/usr/share/mime/magic, 1700: Warning: type `>5=' invalid
+/usr/share/mime/magic, 1701: Warning: type `>8=' invalid
+/usr/share/mime/magic, 1702: Warning: offset `[50:video/x-flic]' invalid
+/usr/share/mime/magic, 1703: Warning: type `=' invalid
+/usr/share/mime/magic, 1704: Warning: type `=' invalid
+/usr/share/mime/magic, 1705: Warning: offset `[50:video/x-flv]' invalid
+/usr/share/mime/magic, 1706: Warning: type `=' invalid
+/usr/share/mime/magic, 1707: Warning: offset `[50:video/x-mng]' invalid
+/usr/share/mime/magic, 1708: Warning: type `=' invalid
+/usr/share/mime/magic, 1709: Warning: offset `' invalid
+/usr/share/mime/magic, 1711: Warning: offset `[50:video/x-msvideo]' invalid
+/usr/share/mime/magic, 1712: Warning: type `=' invalid
+/usr/share/mime/magic, 1713: Warning: type `>8=' invalid
+/usr/share/mime/magic, 1714: Warning: type `=' invalid
+/usr/share/mime/magic, 1715: Warning: type `>8=' invalid
+/usr/share/mime/magic, 1716: Warning: offset `[50:video/x-nsv]' invalid
+/usr/share/mime/magic, 1717: Warning: type `=' invalid
+/usr/share/mime/magic, 1718: Warning: offset `[50:video/x-sgi-movie]' invalid
+/usr/share/mime/magic, 1719: Warning: type `=' invalid
+/usr/share/mime/magic, 1720: Warning: offset `[50:x-epoc/x-sisx-app]' invalid
+/usr/share/mime/magic, 1721: Warning: type `=' invalid
+/usr/share/mime/magic, 1722: Warning: offset `[45:application/x-archive]' invalid
+/usr/share/mime/magic, 1723: Warning: type `=' invalid
+/usr/share/mime/magic, 1724: Warning: type `=' invalid
+/usr/share/mime/magic, 1725: Warning: offset `[45:application/x-riff]' invalid
+/usr/share/mime/magic, 1726: Warning: type `=' invalid
+/usr/share/mime/magic, 1727: Warning: offset `[45:image/svg+xml]' invalid
+/usr/share/mime/magic, 1728: Warning: type `=' invalid
+/usr/share/mime/magic, 1729: Warning: offset `[40:application/sparql-query]' invalid
+/usr/share/mime/magic, 1730: Warning: type `=' invalid
+/usr/share/mime/magic, 1731: Warning: offset `[40:application/x-executable]' invalid
+/usr/share/mime/magic, 1732: Warning: type `=' invalid
+/usr/share/mime/magic, 1733: Warning: type `>5=' invalid
+/usr/share/mime/magic, 1734: Warning: type `=' invalid
+/usr/share/mime/magic, 1735: Warning: type `>5=' invalid
+/usr/share/mime/magic, 1736: Warning: type `=' invalid
+/usr/share/mime/magic, 1737: Warning: type `=' invalid
+/usr/share/mime/magic, 1738: Warning: type `=' invalid
+/usr/share/mime/magic, 1739: Warning: type `=' invalid
+/usr/share/mime/magic, 1740: Warning: type `=' invalid
+/usr/share/mime/magic, 1741: Warning: offset `[40:application/x-iff]' invalid
+/usr/share/mime/magic, 1742: Warning: type `=' invalid
+/usr/share/mime/magic, 1743: Warning: offset `[40:application/x-nintendo-3ds-executable]' invalid
+/usr/share/mime/magic, 1744: Warning: type `=' invalid
+/usr/share/mime/magic, 1745: Warning: offset `[40:application/x-perl]' invalid
+/usr/share/mime/magic, 1746: Warning: type `=' invalid
+/usr/share/mime/magic, 1747: Warning: offset `use strict+257' invalid
+/usr/share/mime/magic, 1748: Warning: type `=' invalid
+/usr/share/mime/magic, 1749: Warning: type `=' invalid
+/usr/share/mime/magic, 1750: Warning: type `=' invalid
+/usr/share/mime/magic, 1751: Warning: offset `=pod+257' invalid
+/usr/share/mime/magic, 1752: Warning: type `=' invalid
+/usr/share/mime/magic, 1753: Warning: offset `=head1 NAME+257' invalid
+/usr/share/mime/magic, 1754: Warning: type `=' invalid
+/usr/share/mime/magic, 1755: Warning: offset `=head1 DESCRIPTION+257' invalid
+/usr/share/mime/magic, 1756: Warning: type `=' invalid
+/usr/share/mime/magic, 1757: Warning: offset `[40:application/xml]' invalid
+/usr/share/mime/magic, 1758: Warning: type `=' invalid
+/usr/share/mime/magic, 1759: Warning: offset `[40:audio/basic]' invalid
+/usr/share/mime/magic, 1760: Warning: type `=' invalid
+/usr/share/mime/magic, 1761: Warning: offset `[40:audio/x-mod]' invalid
+/usr/share/mime/magic, 1762: Warning: type `=' invalid
+/usr/share/mime/magic, 1763: Warning: type `=' invalid
+/usr/share/mime/magic, 1764: Warning: type `=' invalid
+/usr/share/mime/magic, 1765: Warning: type `=' invalid
+/usr/share/mime/magic, 1766: Warning: type `>0=' invalid
+/usr/share/mime/magic, 1767: Warning: type `>368=' invalid
+/usr/share/mime/magic, 1768: Warning: type `>110=' invalid
+/usr/share/mime/magic, 1769: Warning: type `>111=' invalid
+/usr/share/mime/magic, 1770: Warning: type `>111=' invalid
+/usr/share/mime/magic, 1771: Warning: type `>110=' invalid
+/usr/share/mime/magic, 1772: Warning: type `>111=' invalid
+/usr/share/mime/magic, 1773: Warning: type `>111=' invalid
+/usr/share/mime/magic, 1774: Warning: type `>368=' invalid
+/usr/share/mime/magic, 1775: Warning: type `>110=' invalid
+/usr/share/mime/magic, 1776: Warning: type `>111=' invalid
+/usr/share/mime/magic, 1777: Warning: type `>111=' invalid
+/usr/share/mime/magic, 1778: Warning: type `>110=' invalid
+/usr/share/mime/magic, 1779: Warning: type `>111=' invalid
+/usr/share/mime/magic, 1780: Warning: type `>111=' invalid
+/usr/share/mime/magic, 1781: Warning: type `>0=' invalid
+/usr/share/mime/magic, 1782: Warning: type `>368=' invalid
+/usr/share/mime/magic, 1783: Warning: type `>110=' invalid
+/usr/share/mime/magic, 1784: Warning: type `>111=' invalid
+/usr/share/mime/magic, 1785: Warning: type `>111=' invalid
+/usr/share/mime/magic, 1786: Warning: type `>368=' invalid
+/usr/share/mime/magic, 1787: Warning: type `>110=' invalid
+/usr/share/mime/magic, 1788: Warning: type `>111=' invalid
+/usr/share/mime/magic, 1789: Warning: type `>111=' invalid
+/usr/share/mime/magic, 1790: Warning: type `=' invalid
+/usr/share/mime/magic, 1791: Warning: type `=' invalid
+/usr/share/mime/magic, 1792: Warning: type `=' invalid
+/usr/share/mime/magic, 1793: Warning: offset `[40:image/heif]' invalid
+/usr/share/mime/magic, 1794: Warning: type `=' invalid
+/usr/share/mime/magic, 1795: Warning: type `=' invalid
+/usr/share/mime/magic, 1796: Warning: type `=' invalid
+/usr/share/mime/magic, 1797: Warning: type `=' invalid
+/usr/share/mime/magic, 1798: Warning: type `=' invalid
+/usr/share/mime/magic, 1799: Warning: type `=' invalid
+/usr/share/mime/magic, 1800: Warning: offset `[40:text/html]' invalid
+/usr/share/mime/magic, 1801: Warning: type `=' invalid
+/usr/share/mime/magic, 1802: Warning: type `=' invalid
+/usr/share/mime/magic, 1803: Warning: type `=' invalid
+/usr/share/mime/magic, 1804: Warning: offset `[40:video/x-javafx]' invalid
+/usr/share/mime/magic, 1805: Warning: type `=' invalid
+/usr/share/mime/magic, 1806: Warning: offset `[30:application/x-mobipocket-ebook]' invalid
+/usr/share/mime/magic, 1807: Warning: type `=' invalid
+/usr/share/mime/magic, 1808: Warning: offset `[30:image/x-3ds]' invalid
+/usr/share/mime/magic, 1809: Warning: type `=' invalid
+/usr/share/mime/magic, 1810: Warning: offset `[30:text/x-csrc]' invalid
+/usr/share/mime/magic, 1811: Warning: type `=' invalid
+/usr/share/mime/magic, 1812: Warning: type `=' invalid
+/usr/share/mime/magic, 1813: Warning: type `=' invalid
+/usr/share/mime/magic, 1814: Warning: offset `[30:text/x-objcsrc]' invalid
+/usr/share/mime/magic, 1815: Warning: type `=' invalid
+/usr/share/mime/magic, 1816: Warning: offset `[20:application/mbox]' invalid
+/usr/share/mime/magic, 1817: Warning: type `=' invalid
+/usr/share/mime/magic, 1818: Warning: offset `[10:image/x-tga]' invalid
+/usr/share/mime/magic, 1819: Warning: type `=' invalid
+/usr/share/mime/magic, 1820: Warning: type `=' invalid
+/usr/share/mime/magic, 1821: Warning: type `=' invalid
+/usr/share/mime/magic, 1822: Warning: type `=' invalid
+/usr/share/mime/magic, 1824: Warning: type `=' invalid
+/usr/share/mime/magic, 1825: Warning: offset `[10:text/x-matlab]' invalid
+/usr/share/mime/magic, 1826: Warning: type `=' invalid
+/usr/share/mime/magic, 1827: Warning: offset `[10:text/x-matlab]' invalid
+/usr/share/mime/magic, 1828: Warning: type `=' invalid
+/usr/share/mime/magic, 1829: Warning: offset `[10:text/x-modelica]' invalid
+/usr/share/mime/magic, 1830: Warning: type `=' invalid
+/usr/share/mime/magic, 1831: Warning: offset `[10:text/x-tex]' invalid
+/usr/share/mime/magic, 1832: Warning: type `=' invalid
+file: could not find any valid magic files!
+~/leti/sem4/OS/magic_experiment  =sudo cp /usr/share/mime/magic.bak /usr/share/mime/magic                                                 
+~/leti/sem4/OS/magic_experiment  =echo '0    string    MY_MAGIC    My Custom File Type' > my_magic                                        
+>cho '0    string    MY_MAGIC    My Custom File Type' > my_magic
+~/leti/sem4/OS/magic_experiment  =file -m ./my_magic test_custom_file                                                                     
+>ile -m ./my_magic test_custom_file
+test_custom_file: My Custom File Type
+~/leti/sem4/OS/magic_experiment  =�св ю�сcd ..>                                                                                       
+~/leti/sem4/OS  =that is all>                                                                                                             
+zsh: command not found: that
+~/leti/sem4/OS  =��учш�уexit>                                                                                                         
+
+Script done on 2025-03-09 23:47:55+03:00 [COMMAND_EXIT_CODE="127"]
