@@ -1,0 +1,809 @@
+Script started on 2025-03-09 22:36:04+03:00 [TERM="alacritty" TTY="/dev/pts/2" COLUMNS="141" LINES="37"]
+~/leti/sem4/OS -> =ls>                                                                                                                      
+1_lab.pdf  dir_before.txt  lab1_2.log  lab1.log  lab1.log.save	scripts  test_os_2  test_os_7
+~/leti/sem4/OS -> =cd test_os_7>                                                                                                            
+~/leti/sem4/OS/test_os_7 -> =ls>                                                                                                            
+~/leti/sem4/OS/test_os_7 -> =stat te                                                                                                        
+scd ..>
+~/leti/sem4/OS -> =stat test_os_7>                                                                                                          
+  File: test_os_7
+  Size: 4096      	Blocks: 8          IO Block: 4096   directory
+Device: 259,4	Inode: 3539367     Links: 2
+Access: (0755/drwxr-xr-x)  Uid: ( 1000/   misha)   Gid: ( 1000/   misha)
+Access: 2025-03-09 22:30:36.694728445 +0300
+Modify: 2025-03-09 22:16:43.980407553 +0300
+Change: 2025-03-09 22:16:43.980407553 +0300
+ Birth: 2025-03-09 22:16:43.980407553 +0300
+~/leti/sem4/OS -> =ccccd test_os_7>                                                                                                         
+~/leti/sem4/OS/test_os_7 -> =touch filler_{1..10}touch filler_{1..10}>                                                                      
+~/leti/sem4/OS/test_os_7 -> =ls>                                                                                                            
+filler_1  filler_10  filler_2  filler_3  filler_4  filler_5  filler_6  filler_7  filler_8  filler_9
+~/leti/sem4/OS/test_os_7 -> =cdcstat .>                                                                                                     
+  File: .
+  Size: 4096      	Blocks: 8          IO Block: 4096   directory
+Device: 259,4	Inode: 3539367     Links: 2
+Access: (0755/drwxr-xr-x)  Uid: ( 1000/   misha)   Gid: ( 1000/   misha)
+Access: 2025-03-09 22:36:54.567965096 +0300
+Modify: 2025-03-09 22:36:52.803926173 +0300
+Change: 2025-03-09 22:36:52.803926173 +0300
+ Birth: 2025-03-09 22:16:43.980407553 +0300
+~/leti/sem4/OS/test_os_7 -> =cd .ccscsta                                                                                                    
+
+stat tstop-daemon  startx             stat
+
+
+scd ..>
+~/leti/sem4/OS -> =stat test_os_7>                                                                                                          
+  File: test_os_7
+  Size: 4096      	Blocks: 8          IO Block: 4096   directory
+Device: 259,4	Inode: 3539367     Links: 2
+Access: (0755/drwxr-xr-x)  Uid: ( 1000/   misha)   Gid: ( 1000/   misha)
+Access: 2025-03-09 22:36:54.567965096 +0300
+Modify: 2025-03-09 22:36:52.803926173 +0300
+Change: 2025-03-09 22:36:52.803926173 +0300
+ Birth: 2025-03-09 22:16:43.980407553 +0300
+~/leti/sem4/OS -> =cd test_os_7>                                                                                                            
+~/leti/sem4/OS/test_os_7 -> =touch filler_{11..1000}touch filler_{11..1000}>                                                                
+~/leti/sem4/OS/test_os_7 -> =ls>                                                                                                            
+filler_1     filler_180  filler_262  filler_344  filler_426  filler_508  filler_590  filler_672  filler_754  filler_836  filler_918
+filler_10    filler_181  filler_263  filler_345  filler_427  filler_509  filler_591  filler_673  filler_755  filler_837  filler_919
+filler_100   filler_182  filler_264  filler_346  filler_428  filler_51	 filler_592  filler_674  filler_756  filler_838  filler_92
+filler_1000  filler_183  filler_265  filler_347  filler_429  filler_510  filler_593  filler_675  filler_757  filler_839  filler_920
+filler_101   filler_184  filler_266  filler_348  filler_43   filler_511  filler_594  filler_676  filler_758  filler_84	 filler_921
+filler_102   filler_185  filler_267  filler_349  filler_430  filler_512  filler_595  filler_677  filler_759  filler_840  filler_922
+filler_103   filler_186  filler_268  filler_35	 filler_431  filler_513  filler_596  filler_678  filler_76   filler_841  filler_923
+filler_104   filler_187  filler_269  filler_350  filler_432  filler_514  filler_597  filler_679  filler_760  filler_842  filler_924
+filler_105   filler_188  filler_27   filler_351  filler_433  filler_515  filler_598  filler_68	 filler_761  filler_843  filler_925
+filler_106   filler_189  filler_270  filler_352  filler_434  filler_516  filler_599  filler_680  filler_762  filler_844  filler_926
+filler_107   filler_19	 filler_271  filler_353  filler_435  filler_517  filler_6    filler_681  filler_763  filler_845  filler_927
+filler_108   filler_190  filler_272  filler_354  filler_436  filler_518  filler_60   filler_682  filler_764  filler_846  filler_928
+filler_109   filler_191  filler_273  filler_355  filler_437  filler_519  filler_600  filler_683  filler_765  filler_847  filler_929
+filler_11    filler_192  filler_274  filler_356  filler_438  filler_52	 filler_601  filler_684  filler_766  filler_848  filler_93
+filler_110   filler_193  filler_275  filler_357  filler_439  filler_520  filler_602  filler_685  filler_767  filler_849  filler_930
+filler_111   filler_194  filler_276  filler_358  filler_44   filler_521  filler_603  filler_686  filler_768  filler_85	 filler_931
+filler_112   filler_195  filler_277  filler_359  filler_440  filler_522  filler_604  filler_687  filler_769  filler_850  filler_932
+filler_113   filler_196  filler_278  filler_36	 filler_441  filler_523  filler_605  filler_688  filler_77   filler_851  filler_933
+filler_114   filler_197  filler_279  filler_360  filler_442  filler_524  filler_606  filler_689  filler_770  filler_852  filler_934
+filler_115   filler_198  filler_28   filler_361  filler_443  filler_525  filler_607  filler_69	 filler_771  filler_853  filler_935
+filler_116   filler_199  filler_280  filler_362  filler_444  filler_526  filler_608  filler_690  filler_772  filler_854  filler_936
+filler_117   filler_2	 filler_281  filler_363  filler_445  filler_527  filler_609  filler_691  filler_773  filler_855  filler_937
+filler_118   filler_20	 filler_282  filler_364  filler_446  filler_528  filler_61   filler_692  filler_774  filler_856  filler_938
+filler_119   filler_200  filler_283  filler_365  filler_447  filler_529  filler_610  filler_693  filler_775  filler_857  filler_939
+filler_12    filler_201  filler_284  filler_366  filler_448  filler_53	 filler_611  filler_694  filler_776  filler_858  filler_94
+filler_120   filler_202  filler_285  filler_367  filler_449  filler_530  filler_612  filler_695  filler_777  filler_859  filler_940
+filler_121   filler_203  filler_286  filler_368  filler_45   filler_531  filler_613  filler_696  filler_778  filler_86	 filler_941
+filler_122   filler_204  filler_287  filler_369  filler_450  filler_532  filler_614  filler_697  filler_779  filler_860  filler_942
+filler_123   filler_205  filler_288  filler_37	 filler_451  filler_533  filler_615  filler_698  filler_78   filler_861  filler_943
+filler_124   filler_206  filler_289  filler_370  filler_452  filler_534  filler_616  filler_699  filler_780  filler_862  filler_944
+filler_125   filler_207  filler_29   filler_371  filler_453  filler_535  filler_617  filler_7	 filler_781  filler_863  filler_945
+filler_126   filler_208  filler_290  filler_372  filler_454  filler_536  filler_618  filler_70	 filler_782  filler_864  filler_946
+filler_127   filler_209  filler_291  filler_373  filler_455  filler_537  filler_619  filler_700  filler_783  filler_865  filler_947
+filler_128   filler_21	 filler_292  filler_374  filler_456  filler_538  filler_62   filler_701  filler_784  filler_866  filler_948
+filler_129   filler_210  filler_293  filler_375  filler_457  filler_539  filler_620  filler_702  filler_785  filler_867  filler_949
+filler_13    filler_211  filler_294  filler_376  filler_458  filler_54	 filler_621  filler_703  filler_786  filler_868  filler_95
+filler_130   filler_212  filler_295  filler_377  filler_459  filler_540  filler_622  filler_704  filler_787  filler_869  filler_950
+filler_131   filler_213  filler_296  filler_378  filler_46   filler_541  filler_623  filler_705  filler_788  filler_87	 filler_951
+filler_132   filler_214  filler_297  filler_379  filler_460  filler_542  filler_624  filler_706  filler_789  filler_870  filler_952
+filler_133   filler_215  filler_298  filler_38	 filler_461  filler_543  filler_625  filler_707  filler_79   filler_871  filler_953
+filler_134   filler_216  filler_299  filler_380  filler_462  filler_544  filler_626  filler_708  filler_790  filler_872  filler_954
+filler_135   filler_217  filler_3    filler_381  filler_463  filler_545  filler_627  filler_709  filler_791  filler_873  filler_955
+filler_136   filler_218  filler_30   filler_382  filler_464  filler_546  filler_628  filler_71	 filler_792  filler_874  filler_956
+filler_137   filler_219  filler_300  filler_383  filler_465  filler_547  filler_629  filler_710  filler_793  filler_875  filler_957
+filler_138   filler_22	 filler_301  filler_384  filler_466  filler_548  filler_63   filler_711  filler_794  filler_876  filler_958
+filler_139   filler_220  filler_302  filler_385  filler_467  filler_549  filler_630  filler_712  filler_795  filler_877  filler_959
+filler_14    filler_221  filler_303  filler_386  filler_468  filler_55	 filler_631  filler_713  filler_796  filler_878  filler_96
+filler_140   filler_222  filler_304  filler_387  filler_469  filler_550  filler_632  filler_714  filler_797  filler_879  filler_960
+filler_141   filler_223  filler_305  filler_388  filler_47   filler_551  filler_633  filler_715  filler_798  filler_88	 filler_961
+filler_142   filler_224  filler_306  filler_389  filler_470  filler_552  filler_634  filler_716  filler_799  filler_880  filler_962
+filler_143   filler_225  filler_307  filler_39	 filler_471  filler_553  filler_635  filler_717  filler_8    filler_881  filler_963
+filler_144   filler_226  filler_308  filler_390  filler_472  filler_554  filler_636  filler_718  filler_80   filler_882  filler_964
+filler_145   filler_227  filler_309  filler_391  filler_473  filler_555  filler_637  filler_719  filler_800  filler_883  filler_965
+filler_146   filler_228  filler_31   filler_392  filler_474  filler_556  filler_638  filler_72	 filler_801  filler_884  filler_966
+filler_147   filler_229  filler_310  filler_393  filler_475  filler_557  filler_639  filler_720  filler_802  filler_885  filler_967
+filler_148   filler_23	 filler_311  filler_394  filler_476  filler_558  filler_64   filler_721  filler_803  filler_886  filler_968
+filler_149   filler_230  filler_312  filler_395  filler_477  filler_559  filler_640  filler_722  filler_804  filler_887  filler_969
+filler_15    filler_231  filler_313  filler_396  filler_478  filler_56	 filler_641  filler_723  filler_805  filler_888  filler_97
+filler_150   filler_232  filler_314  filler_397  filler_479  filler_560  filler_642  filler_724  filler_806  filler_889  filler_970
+filler_151   filler_233  filler_315  filler_398  filler_48   filler_561  filler_643  filler_725  filler_807  filler_89	 filler_971
+filler_152   filler_234  filler_316  filler_399  filler_480  filler_562  filler_644  filler_726  filler_808  filler_890  filler_972
+filler_153   filler_235  filler_317  filler_4	 filler_481  filler_563  filler_645  filler_727  filler_809  filler_891  filler_973
+filler_154   filler_236  filler_318  filler_40	 filler_482  filler_564  filler_646  filler_728  filler_81   filler_892  filler_974
+filler_155   filler_237  filler_319  filler_400  filler_483  filler_565  filler_647  filler_729  filler_810  filler_893  filler_975
+filler_156   filler_238  filler_32   filler_401  filler_484  filler_566  filler_648  filler_73	 filler_811  filler_894  filler_976
+filler_157   filler_239  filler_320  filler_402  filler_485  filler_567  filler_649  filler_730  filler_812  filler_895  filler_977
+filler_158   filler_24	 filler_321  filler_403  filler_486  filler_568  filler_65   filler_731  filler_813  filler_896  filler_978
+filler_159   filler_240  filler_322  filler_404  filler_487  filler_569  filler_650  filler_732  filler_814  filler_897  filler_979
+filler_16    filler_241  filler_323  filler_405  filler_488  filler_57	 filler_651  filler_733  filler_815  filler_898  filler_98
+filler_160   filler_242  filler_324  filler_406  filler_489  filler_570  filler_652  filler_734  filler_816  filler_899  filler_980
+filler_161   filler_243  filler_325  filler_407  filler_49   filler_571  filler_653  filler_735  filler_817  filler_9	 filler_981
+filler_162   filler_244  filler_326  filler_408  filler_490  filler_572  filler_654  filler_736  filler_818  filler_90	 filler_982
+filler_163   filler_245  filler_327  filler_409  filler_491  filler_573  filler_655  filler_737  filler_819  filler_900  filler_983
+filler_164   filler_246  filler_328  filler_41	 filler_492  filler_574  filler_656  filler_738  filler_82   filler_901  filler_984
+filler_165   filler_247  filler_329  filler_410  filler_493  filler_575  filler_657  filler_739  filler_820  filler_902  filler_985
+filler_166   filler_248  filler_33   filler_411  filler_494  filler_576  filler_658  filler_74	 filler_821  filler_903  filler_986
+filler_167   filler_249  filler_330  filler_412  filler_495  filler_577  filler_659  filler_740  filler_822  filler_904  filler_987
+filler_168   filler_25	 filler_331  filler_413  filler_496  filler_578  filler_66   filler_741  filler_823  filler_905  filler_988
+filler_169   filler_250  filler_332  filler_414  filler_497  filler_579  filler_660  filler_742  filler_824  filler_906  filler_989
+filler_17    filler_251  filler_333  filler_415  filler_498  filler_58	 filler_661  filler_743  filler_825  filler_907  filler_99
+filler_170   filler_252  filler_334  filler_416  filler_499  filler_580  filler_662  filler_744  filler_826  filler_908  filler_990
+filler_171   filler_253  filler_335  filler_417  filler_5    filler_581  filler_663  filler_745  filler_827  filler_909  filler_991
+filler_172   filler_254  filler_336  filler_418  filler_50   filler_582  filler_664  filler_746  filler_828  filler_91	 filler_992
+filler_173   filler_255  filler_337  filler_419  filler_500  filler_583  filler_665  filler_747  filler_829  filler_910  filler_993
+filler_174   filler_256  filler_338  filler_42	 filler_501  filler_584  filler_666  filler_748  filler_83   filler_911  filler_994
+filler_175   filler_257  filler_339  filler_420  filler_502  filler_585  filler_667  filler_749  filler_830  filler_912  filler_995
+filler_176   filler_258  filler_34   filler_421  filler_503  filler_586  filler_668  filler_75	 filler_831  filler_913  filler_996
+filler_177   filler_259  filler_340  filler_422  filler_504  filler_587  filler_669  filler_750  filler_832  filler_914  filler_997
+filler_178   filler_26	 filler_341  filler_423  filler_505  filler_588  filler_67   filler_751  filler_833  filler_915  filler_998
+filler_179   filler_260  filler_342  filler_424  filler_506  filler_589  filler_670  filler_752  filler_834  filler_916  filler_999
+filler_18    filler_261  filler_343  filler_425  filler_507  filler_59	 filler_671  filler_753  filler_835  filler_917
+~/leti/sem4/OS/test_os_7 -> =cccd ..>                                                                                                       
+~/leti/sem4/OS -> =cd .ls  touch filler_{11..1000}cd test_os_7           stat test_os_7>                                                    
+  File: test_os_7
+  Size: 36864     	Blocks: 72         IO Block: 4096   directory
+Device: 259,4	Inode: 3539367     Links: 2
+Access: (0755/drwxr-xr-x)  Uid: ( 1000/   misha)   Gid: ( 1000/   misha)
+Access: 2025-03-09 22:37:48.937164021 +0300
+Modify: 2025-03-09 22:37:47.005121435 +0300
+Change: 2025-03-09 22:37:47.005121435 +0300
+ Birth: 2025-03-09 22:16:43.980407553 +0300
+~/leti/sem4/OS -> =cd scripts/>                                                                                                             
+~/leti/sem4/OS/scripts -> =nano lab1_task7.sh>                                                                                              
+~/leti/sem4/OS/scripts -> =,,./lab1_task                                                                                                     [ Writing... ] [ Wrote 29 lines ]^O Write Out   ^W Where Is    ^K Cut^T Execute     ^C Location    M-U UndoA Set Mark   M-] To BracketX Exit  ^R Read File   ^\ Replace     ^U Paste^J Justify     ^/ Go To Line  M-E RedoM-6 Copy ^Q Where Was
+
+./lab1_tasksh*  lab1_task2.sh*  lab1_task3.sh*
+1.s231231.LS>
+zsh: command not found: LS
+~/leti/sem4/OS/scripts -> =kkls>                                                                                                            
+lab1_task1.sh  lab1_task2.sh  lab1_task3.sh  lab1_task7.sh  test_os_1
+~/leti/sem4/OS/scripts -> =./lab1_task                                                                                                      
+
+./lab1_task7.sh >ab1_task2.sh*  lab1_task3.sh*
+zsh: permission denied: ./lab1_task7.sh
+~/leti/sem4/OS/scripts -> =chmod +x lab1_task7.sh >                                                                                         
+~/leti/sem4/OS/scripts -> =chmod +x lab1_task7.sh./      >                                                                                  
+Created directory: test_os_7
+Initial stat:
+  File: test_os_7
+  Size: 4096      	Blocks: 8          IO Block: 4096   directory
+Device: 259,4	Inode: 3540708     Links: 2
+Access: (0755/drwxr-xr-x)  Uid: ( 1000/   misha)   Gid: ( 1000/   misha)
+Access: 2025-03-09 22:39:26.703318189 +0300
+Modify: 2025-03-09 22:39:26.703318189 +0300
+Change: 2025-03-09 22:39:26.703318189 +0300
+ Birth: 2025-03-09 22:39:26.703318189 +0300
+
+After creating 1000 files:
+  File: test_os_7
+  Size: 36864     	Blocks: 72         IO Block: 4096   directory
+Device: 259,4	Inode: 3540708     Links: 2
+Access: (0755/drwxr-xr-x)  Uid: ( 1000/   misha)   Gid: ( 1000/   misha)
+Access: 2025-03-09 22:39:26.703318189 +0300
+Modify: 2025-03-09 22:39:26.711318366 +0300
+Change: 2025-03-09 22:39:26.711318366 +0300
+ Birth: 2025-03-09 22:39:26.703318189 +0300
+
+After removing files:
+  File: test_os_7
+  Size: 36864     	Blocks: 72         IO Block: 4096   directory
+Device: 259,4	Inode: 3540708     Links: 2
+Access: (0755/drwxr-xr-x)  Uid: ( 1000/   misha)   Gid: ( 1000/   misha)
+Access: 2025-03-09 22:39:26.715318453 +0300
+Modify: 2025-03-09 22:39:26.719318542 +0300
+Change: 2025-03-09 22:39:26.719318542 +0300
+ Birth: 2025-03-09 22:39:26.703318189 +0300
+
+Experiment completed.
+~/leti/sem4/OS/scripts -> =��ссвсcd ..>                                                                                                 
+~/leti/sem4/OS -> =ls>                                                                                                                      
+1_lab.pdf  dir_before.txt  lab1_2.log  lab1.log  lab1.log.save	scripts  test_os_2  test_os_7
+~/leti/sem4/OS -> =cd tr                                                                                                                    
+est_os_
+
+cd test_os_7>est_os_7/
+~/leti/sem4/OS/test_os_7 -> =ls>                                                                                                            
+filler_1     filler_180  filler_262  filler_344  filler_426  filler_508  filler_590  filler_672  filler_754  filler_836  filler_918
+filler_10    filler_181  filler_263  filler_345  filler_427  filler_509  filler_591  filler_673  filler_755  filler_837  filler_919
+filler_100   filler_182  filler_264  filler_346  filler_428  filler_51	 filler_592  filler_674  filler_756  filler_838  filler_92
+filler_1000  filler_183  filler_265  filler_347  filler_429  filler_510  filler_593  filler_675  filler_757  filler_839  filler_920
+filler_101   filler_184  filler_266  filler_348  filler_43   filler_511  filler_594  filler_676  filler_758  filler_84	 filler_921
+filler_102   filler_185  filler_267  filler_349  filler_430  filler_512  filler_595  filler_677  filler_759  filler_840  filler_922
+filler_103   filler_186  filler_268  filler_35	 filler_431  filler_513  filler_596  filler_678  filler_76   filler_841  filler_923
+filler_104   filler_187  filler_269  filler_350  filler_432  filler_514  filler_597  filler_679  filler_760  filler_842  filler_924
+filler_105   filler_188  filler_27   filler_351  filler_433  filler_515  filler_598  filler_68	 filler_761  filler_843  filler_925
+filler_106   filler_189  filler_270  filler_352  filler_434  filler_516  filler_599  filler_680  filler_762  filler_844  filler_926
+filler_107   filler_19	 filler_271  filler_353  filler_435  filler_517  filler_6    filler_681  filler_763  filler_845  filler_927
+filler_108   filler_190  filler_272  filler_354  filler_436  filler_518  filler_60   filler_682  filler_764  filler_846  filler_928
+filler_109   filler_191  filler_273  filler_355  filler_437  filler_519  filler_600  filler_683  filler_765  filler_847  filler_929
+filler_11    filler_192  filler_274  filler_356  filler_438  filler_52	 filler_601  filler_684  filler_766  filler_848  filler_93
+filler_110   filler_193  filler_275  filler_357  filler_439  filler_520  filler_602  filler_685  filler_767  filler_849  filler_930
+filler_111   filler_194  filler_276  filler_358  filler_44   filler_521  filler_603  filler_686  filler_768  filler_85	 filler_931
+filler_112   filler_195  filler_277  filler_359  filler_440  filler_522  filler_604  filler_687  filler_769  filler_850  filler_932
+filler_113   filler_196  filler_278  filler_36	 filler_441  filler_523  filler_605  filler_688  filler_77   filler_851  filler_933
+filler_114   filler_197  filler_279  filler_360  filler_442  filler_524  filler_606  filler_689  filler_770  filler_852  filler_934
+filler_115   filler_198  filler_28   filler_361  filler_443  filler_525  filler_607  filler_69	 filler_771  filler_853  filler_935
+filler_116   filler_199  filler_280  filler_362  filler_444  filler_526  filler_608  filler_690  filler_772  filler_854  filler_936
+filler_117   filler_2	 filler_281  filler_363  filler_445  filler_527  filler_609  filler_691  filler_773  filler_855  filler_937
+filler_118   filler_20	 filler_282  filler_364  filler_446  filler_528  filler_61   filler_692  filler_774  filler_856  filler_938
+filler_119   filler_200  filler_283  filler_365  filler_447  filler_529  filler_610  filler_693  filler_775  filler_857  filler_939
+filler_12    filler_201  filler_284  filler_366  filler_448  filler_53	 filler_611  filler_694  filler_776  filler_858  filler_94
+filler_120   filler_202  filler_285  filler_367  filler_449  filler_530  filler_612  filler_695  filler_777  filler_859  filler_940
+filler_121   filler_203  filler_286  filler_368  filler_45   filler_531  filler_613  filler_696  filler_778  filler_86	 filler_941
+filler_122   filler_204  filler_287  filler_369  filler_450  filler_532  filler_614  filler_697  filler_779  filler_860  filler_942
+filler_123   filler_205  filler_288  filler_37	 filler_451  filler_533  filler_615  filler_698  filler_78   filler_861  filler_943
+filler_124   filler_206  filler_289  filler_370  filler_452  filler_534  filler_616  filler_699  filler_780  filler_862  filler_944
+filler_125   filler_207  filler_29   filler_371  filler_453  filler_535  filler_617  filler_7	 filler_781  filler_863  filler_945
+filler_126   filler_208  filler_290  filler_372  filler_454  filler_536  filler_618  filler_70	 filler_782  filler_864  filler_946
+filler_127   filler_209  filler_291  filler_373  filler_455  filler_537  filler_619  filler_700  filler_783  filler_865  filler_947
+filler_128   filler_21	 filler_292  filler_374  filler_456  filler_538  filler_62   filler_701  filler_784  filler_866  filler_948
+filler_129   filler_210  filler_293  filler_375  filler_457  filler_539  filler_620  filler_702  filler_785  filler_867  filler_949
+filler_13    filler_211  filler_294  filler_376  filler_458  filler_54	 filler_621  filler_703  filler_786  filler_868  filler_95
+filler_130   filler_212  filler_295  filler_377  filler_459  filler_540  filler_622  filler_704  filler_787  filler_869  filler_950
+filler_131   filler_213  filler_296  filler_378  filler_46   filler_541  filler_623  filler_705  filler_788  filler_87	 filler_951
+filler_132   filler_214  filler_297  filler_379  filler_460  filler_542  filler_624  filler_706  filler_789  filler_870  filler_952
+filler_133   filler_215  filler_298  filler_38	 filler_461  filler_543  filler_625  filler_707  filler_79   filler_871  filler_953
+filler_134   filler_216  filler_299  filler_380  filler_462  filler_544  filler_626  filler_708  filler_790  filler_872  filler_954
+filler_135   filler_217  filler_3    filler_381  filler_463  filler_545  filler_627  filler_709  filler_791  filler_873  filler_955
+filler_136   filler_218  filler_30   filler_382  filler_464  filler_546  filler_628  filler_71	 filler_792  filler_874  filler_956
+filler_137   filler_219  filler_300  filler_383  filler_465  filler_547  filler_629  filler_710  filler_793  filler_875  filler_957
+filler_138   filler_22	 filler_301  filler_384  filler_466  filler_548  filler_63   filler_711  filler_794  filler_876  filler_958
+filler_139   filler_220  filler_302  filler_385  filler_467  filler_549  filler_630  filler_712  filler_795  filler_877  filler_959
+filler_14    filler_221  filler_303  filler_386  filler_468  filler_55	 filler_631  filler_713  filler_796  filler_878  filler_96
+filler_140   filler_222  filler_304  filler_387  filler_469  filler_550  filler_632  filler_714  filler_797  filler_879  filler_960
+filler_141   filler_223  filler_305  filler_388  filler_47   filler_551  filler_633  filler_715  filler_798  filler_88	 filler_961
+filler_142   filler_224  filler_306  filler_389  filler_470  filler_552  filler_634  filler_716  filler_799  filler_880  filler_962
+filler_143   filler_225  filler_307  filler_39	 filler_471  filler_553  filler_635  filler_717  filler_8    filler_881  filler_963
+filler_144   filler_226  filler_308  filler_390  filler_472  filler_554  filler_636  filler_718  filler_80   filler_882  filler_964
+filler_145   filler_227  filler_309  filler_391  filler_473  filler_555  filler_637  filler_719  filler_800  filler_883  filler_965
+filler_146   filler_228  filler_31   filler_392  filler_474  filler_556  filler_638  filler_72	 filler_801  filler_884  filler_966
+filler_147   filler_229  filler_310  filler_393  filler_475  filler_557  filler_639  filler_720  filler_802  filler_885  filler_967
+filler_148   filler_23	 filler_311  filler_394  filler_476  filler_558  filler_64   filler_721  filler_803  filler_886  filler_968
+filler_149   filler_230  filler_312  filler_395  filler_477  filler_559  filler_640  filler_722  filler_804  filler_887  filler_969
+filler_15    filler_231  filler_313  filler_396  filler_478  filler_56	 filler_641  filler_723  filler_805  filler_888  filler_97
+filler_150   filler_232  filler_314  filler_397  filler_479  filler_560  filler_642  filler_724  filler_806  filler_889  filler_970
+filler_151   filler_233  filler_315  filler_398  filler_48   filler_561  filler_643  filler_725  filler_807  filler_89	 filler_971
+filler_152   filler_234  filler_316  filler_399  filler_480  filler_562  filler_644  filler_726  filler_808  filler_890  filler_972
+filler_153   filler_235  filler_317  filler_4	 filler_481  filler_563  filler_645  filler_727  filler_809  filler_891  filler_973
+filler_154   filler_236  filler_318  filler_40	 filler_482  filler_564  filler_646  filler_728  filler_81   filler_892  filler_974
+filler_155   filler_237  filler_319  filler_400  filler_483  filler_565  filler_647  filler_729  filler_810  filler_893  filler_975
+filler_156   filler_238  filler_32   filler_401  filler_484  filler_566  filler_648  filler_73	 filler_811  filler_894  filler_976
+filler_157   filler_239  filler_320  filler_402  filler_485  filler_567  filler_649  filler_730  filler_812  filler_895  filler_977
+filler_158   filler_24	 filler_321  filler_403  filler_486  filler_568  filler_65   filler_731  filler_813  filler_896  filler_978
+filler_159   filler_240  filler_322  filler_404  filler_487  filler_569  filler_650  filler_732  filler_814  filler_897  filler_979
+filler_16    filler_241  filler_323  filler_405  filler_488  filler_57	 filler_651  filler_733  filler_815  filler_898  filler_98
+filler_160   filler_242  filler_324  filler_406  filler_489  filler_570  filler_652  filler_734  filler_816  filler_899  filler_980
+filler_161   filler_243  filler_325  filler_407  filler_49   filler_571  filler_653  filler_735  filler_817  filler_9	 filler_981
+filler_162   filler_244  filler_326  filler_408  filler_490  filler_572  filler_654  filler_736  filler_818  filler_90	 filler_982
+filler_163   filler_245  filler_327  filler_409  filler_491  filler_573  filler_655  filler_737  filler_819  filler_900  filler_983
+filler_164   filler_246  filler_328  filler_41	 filler_492  filler_574  filler_656  filler_738  filler_82   filler_901  filler_984
+filler_165   filler_247  filler_329  filler_410  filler_493  filler_575  filler_657  filler_739  filler_820  filler_902  filler_985
+filler_166   filler_248  filler_33   filler_411  filler_494  filler_576  filler_658  filler_74	 filler_821  filler_903  filler_986
+filler_167   filler_249  filler_330  filler_412  filler_495  filler_577  filler_659  filler_740  filler_822  filler_904  filler_987
+filler_168   filler_25	 filler_331  filler_413  filler_496  filler_578  filler_66   filler_741  filler_823  filler_905  filler_988
+filler_169   filler_250  filler_332  filler_414  filler_497  filler_579  filler_660  filler_742  filler_824  filler_906  filler_989
+filler_17    filler_251  filler_333  filler_415  filler_498  filler_58	 filler_661  filler_743  filler_825  filler_907  filler_99
+filler_170   filler_252  filler_334  filler_416  filler_499  filler_580  filler_662  filler_744  filler_826  filler_908  filler_990
+filler_171   filler_253  filler_335  filler_417  filler_5    filler_581  filler_663  filler_745  filler_827  filler_909  filler_991
+filler_172   filler_254  filler_336  filler_418  filler_50   filler_582  filler_664  filler_746  filler_828  filler_91	 filler_992
+filler_173   filler_255  filler_337  filler_419  filler_500  filler_583  filler_665  filler_747  filler_829  filler_910  filler_993
+filler_174   filler_256  filler_338  filler_42	 filler_501  filler_584  filler_666  filler_748  filler_83   filler_911  filler_994
+filler_175   filler_257  filler_339  filler_420  filler_502  filler_585  filler_667  filler_749  filler_830  filler_912  filler_995
+filler_176   filler_258  filler_34   filler_421  filler_503  filler_586  filler_668  filler_75	 filler_831  filler_913  filler_996
+filler_177   filler_259  filler_340  filler_422  filler_504  filler_587  filler_669  filler_750  filler_832  filler_914  filler_997
+filler_178   filler_26	 filler_341  filler_423  filler_505  filler_588  filler_67   filler_751  filler_833  filler_915  filler_998
+filler_179   filler_260  filler_342  filler_424  filler_506  filler_589  filler_670  filler_752  filler_834  filler_916  filler_999
+filler_18    filler_261  filler_343  filler_425  filler_507  filler_59	 filler_671  filler_753  filler_835  filler_917
+~/leti/sem4/OS/test_os_7 -> =cd ..>                                                                                                         
+~/leti/sem4/OS -> =rm test_os_7>                                                                                                            
+rm: cannot remove 'test_os_7': Is a directory
+~/leti/sem4/OS -> =�кькrm -f test_os_7>                                                                                                  
+rm: cannot remove 'test_os_7': Is a directory
+~/leti/sem4/OS -> =rm -rf test_os_7                                                                                                         
+~/leti/sem4/OS -> =ls>                                                                                                                      
+1_lab.pdf  dir_before.txt  lab1_2.log  lab1.log  lab1.log.save	scripts  test_os_2
+~/leti/sem4/OS -> =mkdir test_os_2/7>                                                                                                       
+~/leti/sem4/OS -> =ls>                                                                                                                      
+1_lab.pdf  dir_before.txt  lab1_2.log  lab1.log  lab1.log.save	scripts  test_os_2  test_os_7
+~/leti/sem4/OS -> =lmkdir test_os_7ls             rm -rf test_os_7  cd ..      ls  cd test_os_7ls          cd ../lab1_task7.sh>             
+zsh: no such file or directory: ./lab1_task7.sh
+~/leti/sem4/OS -> =cdccd scripts/>                                                                                                          
+~/leti/sem4/OS/scripts -> =cd scripts./lab1_task7.sh>                                                                                       
+Created directory: test_os_7
+Initial stat:
+  File: test_os_7
+  Size: 36864     	Blocks: 72         IO Block: 4096   directory
+Device: 259,4	Inode: 3540708     Links: 2
+Access: (0755/drwxr-xr-x)  Uid: ( 1000/   misha)   Gid: ( 1000/   misha)
+Access: 2025-03-09 22:39:26.715318453 +0300
+Modify: 2025-03-09 22:39:26.719318542 +0300
+Change: 2025-03-09 22:39:26.719318542 +0300
+ Birth: 2025-03-09 22:39:26.703318189 +0300
+
+After creating 1000 files:
+  File: test_os_7
+  Size: 36864     	Blocks: 72         IO Block: 4096   directory
+Device: 259,4	Inode: 3540708     Links: 2
+Access: (0755/drwxr-xr-x)  Uid: ( 1000/   misha)   Gid: ( 1000/   misha)
+Access: 2025-03-09 22:39:26.715318453 +0300
+Modify: 2025-03-09 22:41:37.910208387 +0300
+Change: 2025-03-09 22:41:37.910208387 +0300
+ Birth: 2025-03-09 22:39:26.703318189 +0300
+
+After removing files:
+  File: test_os_7
+  Size: 36864     	Blocks: 72         IO Block: 4096   directory
+Device: 259,4	Inode: 3540708     Links: 2
+Access: (0755/drwxr-xr-x)  Uid: ( 1000/   misha)   Gid: ( 1000/   misha)
+Access: 2025-03-09 22:41:37.914208475 +0300
+Modify: 2025-03-09 22:41:37.918208563 +0300
+Change: 2025-03-09 22:41:37.918208563 +0300
+ Birth: 2025-03-09 22:39:26.703318189 +0300
+
+Experiment completed.
+~/leti/sem4/OS/scripts -> =cd .cls>                                                                                                         
+lab1_task1.sh  lab1_task2.sh  lab1_task3.sh  lab1_task7.sh  test_os_1  test_os_7
+~/leti/sem4/OS/scripts -> =cd ..>                                                                                                           
+~/leti/sem4/OS -> =ls>                                                                                                                      
+1_lab.pdf  dir_before.txt  lab1_2.log  lab1.log  lab1.log.save	scripts  test_os_2  test_os_7
+~/leti/sem4/OS -> =rrrm test_os_                                                                                                            
+
+rm test_os_7>est_os_7/
+rm: cannot remove 'test_os_7': Is a directory
+~/leti/sem4/OS -> =rm test_os_-test_os_7ftest_os_7 test_os_7>                                                                               
+rm: cannot remove 'test_os_7': Is a directory
+~/leti/sem4/OS -> =rm -f test_os_rf test_os_7rrm test_os_7ls          cd .ls  ./lab1_task7.shcd scripts    ./lab1_task7.shls             mkdir test_os_7ls             rm -rf test_os_7>
+~/leti/sem4/OS -> =ls>                                                                                                                      
+1_lab.pdf  dir_before.txt  lab1_2.log  lab1.log  lab1.log.save	scripts  test_os_2
+~/leti/sem4/OS -> =cd scripts/>                                                                                                             
+~/leti/sem4/OS/scripts -> =cd scriptsls        rm -rf test_os_7>                                                                            
+~/leti/sem4/OS/scripts -> =rm -rf test_os_7cd scripts     ls        rm -rf test_os_7  ls          cd .ls  ./lab1_task7.sh>                  
+Created directory: test_os_7
+Initial stat:
+  File: test_os_7
+  Size: 4096      	Blocks: 8          IO Block: 4096   directory
+Device: 259,4	Inode: 3539710     Links: 2
+Access: (0755/drwxr-xr-x)  Uid: ( 1000/   misha)   Gid: ( 1000/   misha)
+Access: 2025-03-09 22:42:30.739372013 +0300
+Modify: 2025-03-09 22:42:30.739372013 +0300
+Change: 2025-03-09 22:42:30.739372013 +0300
+ Birth: 2025-03-09 22:42:30.739372013 +0300
+
+After creating 1000 files:
+  File: test_os_7
+  Size: 36864     	Blocks: 72         IO Block: 4096   directory
+Device: 259,4	Inode: 3539710     Links: 2
+Access: (0755/drwxr-xr-x)  Uid: ( 1000/   misha)   Gid: ( 1000/   misha)
+Access: 2025-03-09 22:42:30.739372013 +0300
+Modify: 2025-03-09 22:42:30.747372189 +0300
+Change: 2025-03-09 22:42:30.747372189 +0300
+ Birth: 2025-03-09 22:42:30.739372013 +0300
+
+After removing files:
+  File: test_os_7
+  Size: 36864     	Blocks: 72         IO Block: 4096   directory
+Device: 259,4	Inode: 3539710     Links: 2
+Access: (0755/drwxr-xr-x)  Uid: ( 1000/   misha)   Gid: ( 1000/   misha)
+Access: 2025-03-09 22:42:30.751372277 +0300
+Modify: 2025-03-09 22:42:30.755372366 +0300
+Change: 2025-03-09 22:42:30.755372366 +0300
+ Birth: 2025-03-09 22:42:30.739372013 +0300
+
+Experiment completed.
+~/leti/sem4/OS/scripts -> =ls>                                                                                                              
+lab1_task1.sh  lab1_task2.sh  lab1_task3.sh  lab1_task7.sh  test_os_1  test_os_7
+~/leti/sem4/OS/scripts -> =cd test_os_                                                                                                      
+
+cd test_os_7>est_os_7/
+~/leti/sem4/OS/scripts/test_os_7 -> =ls>                                                                                                    
+~/leti/sem4/OS/scripts/test_os_7 -> =cd ..>                                                                                                 
+~/leti/sem4/OS/scripts -> =cd ..>                                                                                                           
+~/leti/sem4/OS -> =ls>                                                                                                                      
+1_lab.pdf  dir_before.txt  lab1_2.log  lab1.log  lab1.log.save	scripts  test_os_2
+~/leti/sem4/OS -> =cd scripts/>                                                                                                             
+~/leti/sem4/OS/scripts -> =ls>                                                                                                              
+lab1_task1.sh  lab1_task2.sh  lab1_task3.sh  lab1_task7.sh  test_os_1  test_os_7
+~/leti/sem4/OS/scripts -> =nano lab1_task7.sh >                                                                                             
+~/leti/sem4/OS/scripts -> =cd test_os_                                                                                                                                       
+
+cd test_os_7>est_os_7/
+~/leti/sem4/OS/scripts/test_os_7 -> =ls>                                                                                                    
+~/leti/sem4/OS/scripts/test_os_7 -> =cd .ccd ..>                                                                                            
+~/leti/sem4/OS/scripts -> =nano                                                                                                             
+ 
+nanolaask1.sh*  lab1_task2.sh*  lab1_task3.sh*  lab1_task7.sh*  test_os_1/      test_os_7/
+b1_task7.sh >
+~/leti/sem4/OS/scripts -> =ls -l /etc/passwdls -l /etc/passwd>                                                                                                               
+-rw-r--r-- 1 root root 1512 Feb  5 12:42 /etc/passwd
+~/leti/sem4/OS/scripts -> =ls -l /etc/shadowls -l /etc/shadow>                                                                              
+-rw-r----- 1 root shadow 798 Feb  5 12:42 /etc/shadow
+~/leti/sem4/OS/scripts -> =ls -l /usr/bin/passwdls -l /usr/bin/passwd>                                                                      
+-rwsr-xr-x 1 root root 68248 Mar 23  2023 /usr/bin/passwd
+~/leti/sem4/OS/scripts -> =cat /etc/passwd | head -n 5cat /etc/passwd | head -n 5>                                                          
+root:x:0:0:root:/root:/bin/bash
+daemon:x:1:1:daemon:/usr/sbin:/usr/sbin/nologin
+bin:x:2:2:bin:/bin:/usr/sbin/nologin
+sys:x:3:3:sys:/dev:/usr/sbin/nologin
+sync:x:4:65534:sync:/bin:/bin/sync
+~/leti/sem4/OS/scripts -> =cat /etc/passwd | head -n ccat /etc/shadow | head -n 5cat /etc/shadow | head -n 5>                               
+cat: /etc/shadow: Permission denied
+~/leti/sem4/OS/scripts -> =�св ъъ�с�св �с�яяcd ..>                                                                                
+~/leti/sem4/OS -> =llls>                                                                                                                    
+1_lab.pdf  dir_before.txt  lab1_2.log  lab1.log  lab1.log.save	scripts  test_os_2
+~/leti/sem4/OS -> =cdcmkdir rtest_os_9>                                                                                                     
+~/leti/sem4/OS -> =cd test-                                                                                                                 
+_os_9>
+~/leti/sem4/OS/test_os_9 -> =touch file1 file2touch file1 file2>                                                                            
+~/leti/sem4/OS/test_os_9 -> =mkdir testdirmkdir testdianothefgr_die>                                                                        
+~/leti/sem4/OS/test_os_9 -> =rm another_die/>                                                                                               
+rm: cannot remove 'another_die': Is a directory
+~/leti/sem4/OS/test_os_9 -> =rm -f another_die/>                                                                                            
+rm: cannot remove 'another_die': Is a directory
+~/leti/sem4/OS/test_os_9 -> =rm -f another_dirf another_die>                                                                                
+~/leti/sem4/OS/test_os_9 -> =mmrm -rf another_die  mkdir another_dir>                                                                       
+~/leti/sem4/OS/test_os_9 -> =touch testdir/file3 testdir/file4touch testdir/file3 testdir/file/file4/file4/file4/file4/file4/file4/file4a/filen/fileo/filet/fileh/filee/filer/file_/filed/filef/file/file4i/filer/file       a/file3 another_dir/file4n/file3 another_dir/file4o/file3 another_dir/file4t/file3 another_dir/file4h/file3 another_dir/file4e/file3 another_dir/file4r/file3 another_dir/file4_/file3 another_dir/file4d/file3 another_dir/file4i/file3 another_dir/file4r/file3 another_dir/file4>
+~/leti/sem4/OS/test_os_9 -> =tree>                                                                                                          
+zsh: command not found: tree
+~/leti/sem4/OS/test_os_9 -> =sudo aptr intall tree>                                                                                         
+E: Invalid operation intall
+~/leti/sem4/OS/test_os_9 -> =sudo apt intall trestall tree>                                                                                 
+Reading package lists... Done
+Building dependency tree... Done
+Reading state information... Done
+The following NEW packages will be installed:
+  tree
+0 upgraded, 1 newly installed, 0 to remove and 6 not upgraded.
+Need to get 52.5 kB of archives.
+After this operation, 116 kB of additional disk space will be used.
+Get:1 http://deb.debian.org/debian bookworm/main amd64 tree amd64 2.1.0-1 [52.5 kB]
+Fetched 52.5 kB in 1s (92.4 kB/s)
+
+Selecting previously unselected package tree.
+(Reading database ... 152544 files and directories currently installed.)
+Preparing to unpack .../tree_2.1.0-1_amd64.deb ...
+Progress: [  0%] [.......................................................................................................................] 87Progress: [ 20%] [#######################................................................................................................] 8Unpacking tree (2.1.0-1) ...
+Progress: [ 40%] [###############################################........................................................................] 8Setting up tree (2.1.0-1) ...
+Progress: [ 60%] [#######################################################################................................................] 87Progress: [ 80%] [###############################################################################################........................] 8Processing triggers for man-db (2.11.2-2) ...
+
+~/leti/sem4/OS/test_os_9 -> =sudo apt install treetree                >                                                                     
+.
+├── another_dir
+│   ├── file3
+│   └── file4
+├── file1
+└── file2
+
+2 directories, 4 files
+~/leti/sem4/OS/test_os_9 -> =chmod a+x file1 chmod a+x file1 >                                                                              
+~/leti/sem4/OS/test_os_9 -> =chmod g+w file2 chmod g+w file2 >                                                                              
+~/leti/sem4/OS/test_os_9 -> =chown root:q file1chown root:q file1>                                                                          
+chown: invalid group: ‘root:q’
+~/leti/sem4/OS/test_os_9 -> =chown root:q fileschown root:q file1suchown root:q file1dchown root:q file1ochown root:q file1 chown root:q file1>
+chown: invalid group: ‘root:q’
+~/leti/sem4/OS/test_os_9 -> =grep '^q:' /etc/group                                                                                          
+~/leti/sem4/OS/test_os_9 -> =ls -LlR>                                                                                                       
+.:
+total 4
+drwxr-xr-x 2 misha misha 4096 Mar  9 22:52 another_dir
+-rwxr-xr-x 1 misha misha    0 Mar  9 22:51 file1
+-rw-rw-r-- 1 misha misha    0 Mar  9 22:51 file2
+
+./another_dir:
+total 0
+-rw-r--r-- 1 misha misha 0 Mar  9 22:52 file3
+-rw-r--r-- 1 misha misha 0 Mar  9 22:52 file4
+~/leti/sem4/OS/test_os_9 -> =ls -lgrep '^q:' /etc/groupsudo chown root:q file1grep '^q:' /etc/group  m:' /etc/groupi:' /etc/groups:' /etc/grouph:' /etc/groupa:' /etc/group>
+misha:x:1000:
+~/leti/sem4/OS/test_os_9 -> =grep '^misha:' /etc/groupls -lR                   grep '^q:' /etc/groupsudo chown root:q file file1m filei files fileh filea file>
+~/leti/sem4/OS/test_os_9 -> =chmod 777 -R testdirchmod 777 -R testdidirdirdirdiradindioditdihdiedirdi_di>                                   
+~/leti/sem4/OS/test_os_9 -> =>                                                                                                              
+~/leti/sem4/OS/test_os_9 -> =>                                                                                                              
+~/leti/sem4/OS/test_os_9 -> =cd ..>                                                                                                         
+~/leti/sem4/OS -> =cd scripts/>                                                                                                             
+~/leti/sem4/OS/scripts -> =nanio suid_test._test.c _test.c _test.c _test.c S_test.U_test.I_test.D_test..c.c.c.cT.E.S.T.>                    
+~/leti/sem4/OS/scripts -> =gcc suid_test.c -o suid_test_program                                                                              [ Writing... ] [ Wrote 8 lines ]^O Write Out   ^W Where Is    ^K Cut^T Execute     ^C Location    M-U UndoA Set Mark   M-] To BracketX Exit  ^R Read File   ^\ Replace     ^U Paste^J Justify     ^/ Go To Line  M-E RedoM-6 Copy ^Q Where Was
+    T.c -o suid_test_programE.c -o suid_test_programS.c -o suid_test_programT.c -o suid_test_program    S_TEST.c -o suid_test_programU_TEST.c -o suid_test_programI_TEST.c -o suid_test_programD_TEST.c -o suid_test_program>
+~/leti/sem4/OS/scripts -> =./suid_test_program./suid_test_program>                                                                          
+~/leti/sem4/OS/scripts -> =sudo chown root:root suid_test_programsudo chown root:root suid_test_program>                                    
+~/leti/sem4/OS/scripts -> =sudo chmod u+s suid_test_programsudo chmod u+s suid_test_program>                                                
+~/leti/sem4/OS/scripts -> =./suid_test_program./suid_test_program>                                                                          
+~/leti/sem4/OS/scripts -> =ls -l suid_test_filels -l suid_test_file>                                                                        
+-rw-r--r-- 1 misha misha 0 Mar  9 22:58 suid_test_file
+~/leti/sem4/OS/scripts -> =cd ..>                                                                                                           
+~/leti/sem4/OS -> =cdcls>                                                                                                                   
+1_lab.pdf  dir_before.txt  lab1_2.log  lab1.log  lab1.log.save	scripts  test_os_2  test_os_9
+~/leti/sem4/OS -> =cd test_os_9/>                                                                                                           
+~/leti/sem4/OS/test_os_9 -> =touch testfiletouch testfil9__(-9_3>                                                                           
+~/leti/sem4/OS/test_os_9 -> =chmod 754 testfilechmod 754 testfil_9_3>                                                                       
+~/leti/sem4/OS/test_os_9 -> =sudo chown root:staff testfilesudo chown root:staff testfile_9_3>                                              
+~/leti/sem4/OS/test_os_9 -> =ls -l testfilels -l testfile>                                                                                  
+ls: cannot access 'testfile': No such file or directory
+~/leti/sem4/OS/test_os_9 -> =ls -l testfile_9_3>                                                                                            
+-rwxr-xr-- 1 root staff 0 Mar  9 23:00 testfile_9_3
+~/leti/sem4/OS/test_os_9 -> =>                                                                                                              
+~/leti/sem4/OS/test_os_9 -> =>                                                                                                              
+~/leti/sem4/OS/test_os_9 -> =mkdir exec_testmkdir exec_test>                                                                                
+~/leti/sem4/OS/test_os_9 -> =cd exec_testcd exec_test>                                                                                      
+~/leti/sem4/OS/test_os_9/exec_test -> =touch script.shtouch script.sh>                                                                      
+~/leti/sem4/OS/test_os_9/exec_test -> =chmod 755 script.shchmod 755 script.sh>                                                              
+~/leti/sem4/OS/test_os_9/exec_test -> =./script.sh./script.sh>                                                                              
+~/leti/sem4/OS/test_os_9/exec_test -> =chmod 700 ..                                                                                         
+>hmod 700 ..
+~/leti/sem4/OS/test_os_9/exec_test -> =�тфтщтnano script.sh >                                                                          
+~/leti/sem4/OS/test_os_9/exec_test -> =nano script.shchmod 700 ..                                                                            [ Writing... ] [ Wrote 2 lines ]^O Write Out   ^W Where Is    ^K Cut^T Execute     ^C Location    M-U UndoA Set Mark   M-] To BracketX Exit  ^R Read File   ^\ Replace     ^U Paste^J Justify     ^/ Go To Line  M-E RedoM-6 Copy ^Q Where Was
+Hello, World!
+~/leti/sem4/OS/test_os_9/exec_test -> =./script.shnano script.shchmod 700 ..                                                                
+~/leti/sem4/OS/test_os_9/exec_test -> =chmod 700 .../script.shnano script.sh./  >                                                           
+Hello, World!
+~/leti/sem4/OS/test_os_9/exec_test -> =cd ~>                                                                                                
+~ -> =/home/misha/leti/OS/test_os_9/exec_test/script.sh                                                                                     
+>home/misha/leti/OS/test_os_9/exec_test/script.sh
+zsh: no such file or directory: /home/misha/leti/OS/test_os_9/exec_test/script.sh
+~ -> =>                                                                                                                                     
+~ -> =>                                                                                                                                     
+~ -> =>                                                                                                                                     
+~ -> =�с�сcd leti//sem4//OS/>                                                                                                             
+~/leti/sem4/OS -> =llls>                                                                                                                    
+1_lab.pdf  dir_before.txt  lab1_2.log  lab1.log  lab1.log.save	scripts  test_os_2  test_os_9
+~/leti/sem4/OS -> =cd scripts/>                                                                                                             
+~/leti/sem4/OS/scripts -> =lslcd s                                                                                                          
+cls>
+lab1_task1.sh  lab1_task2.sh  lab1_task3.sh  lab1_task7.sh  SUID_TEST.c  suid_test_file  suid_test_program  test_os_1  test_os_7
+~/leti/sem4/OS/scripts -> =cd A                                                                                                             
+S
+
+
+
+U
+
+
+
+ID_TEST
+.c>
+cd: not a directory: SUID_TEST.c
+~/leti/sem4/OS/scripts -> =cd SUID_TEST. c  nSUID_TEST.cnaSUID_TEST.cnSUID_TEST.coSUID_TEST.c SUID_TEST.c>                                  
+~/leti/sem4/OS/scripts -> =ccnano lavb1_rtask10.c>                                                                                                                          
+~/leti/sem4/OS/scripts -> =gcc gateway.c -o gateway                                                                                          [ Writing... ] [ Wrote 64 lines ]^O Write Out   ^W Where Is    ^K Cut^T Execute     ^C Location    M-U UndoA Set Mark   M-] To BracketX Exit  ^R Read File   ^\ Replace     ^U Paste^J Justify     ^/ Go To Line  M-E RedoM-6 Copy ^Q Where Wasperror("read");exit(EXIT_FAILURE);}close(fd);return 0;
+lab1_task10.c:38:5: error: redefinition of ‘main’c -o gatewayb.c -o gateway1.c -o gateway+.c -o gateway _.c -o gatewayt.c -o gatewaya.c -o gateways.c -o gatewayl.c -o gateway k.c -o gateway1.c -o gateway0.c -o gatewaytask10>
+   38 | int main(int argc, char *argv[]) {
+      |     ^~~~
+lab1_task10.c:6:5: note: previous definition of ‘main’ with type ‘int(int,  char **)’
+    6 | int main(int argc, char *argv[]) {
+      |     ^~~~
+~/leti/sem4/OS/scripts -> =gcc lab1_task10.c -o task10nano lab1_task10.c         >                                                          
+}#include <stdio.h>char *argv[]) {if (argc != 2) {fprintf(stderr, "Usage: %s <target_file>\n", argv[0]);exit(EXIT_FAILURE);}int fd = open(argv[1], O_RDONLY);if (fd == -1) {perror("open");exit(EXIT_FAILURE);}char buffer[1024];ssize_t n;while ((n = read(fd, buffer, sizeof(buffer))) > 0) {if (write(STDOUT_FILENO, buffer, n) != n) {perror("write");exit(EXIT_FAILURE);}}if (n == -1) {perror("read");exit(EXIT_FAILURE);}close(fd);return 0;
+close(fd);return 0;ror("read");exit(EXIT_FAILURE);}write");exit(EXIT_FAILURE); {rget_file>\n", argv[0]);
+~/leti/sem4/OS/scripts -> =nano lab1_task10.cgcc -o task10>                                                                                  [ Writing... ] [ Wrote 33 lines ]^O Write Out   ^W Where Is    ^K Cut^T Execute     ^C Location    M-U UndoA Set Mark   M-] To BracketX Exit  ^R Read File   ^\ Replace     ^U Paste^J Justify     ^/ Go To Line  M-E RedoM-6 Copy ^Q Where Was
+~/leti/sem4/OS/scripts -> =sudo chown root:root gateway                                                                                     
+tatask10>n root:root gatewaycc -o task10                           
+~/leti/sem4/OS/scripts -> =sudo chmod u+s gateway                                                                                           
+~/leti/sem4/OS/scripts -> =sudo sh -c 'echo "Секретное содержимое" > /home/misha/leti/OS/secret.txt'sudo sh -c 'echo "Секретное содержимое" > /home/misha/leti/OS/secret.txt'>
+sh: 1: cannot create /home/misha/leti/OS/secret.txt: Directory nonexistent
+~/leti/sem4/OS/scripts -> =sudo sh -c 'echo "Секретное содержимое" > /home/misha/leti/sem4/OS/secret.txt'                
+~/leti/sem4/OS/scripts -> =sudo chmod 600 /home/misha/leti/sem4/OS/secret.txtsudo chmod 600 /home/misha/leti/sem4/OS/secret.txt>            
+~/leti/sem4/OS/scripts -> =sudo chown root:root /home/misha/leti/sem4/OS/secret.txtsudo chown root:root /home/misha/leti/sem4/OS/secret.txt>
+~/leti/sem4/OS/scripts -> =./task10 /home/misha/leti/sem4/OS/secret.txt                                                                     
+Секретное содержимоеt.txt
+~/leti/sem4/OS/scripts -> =sudo chown root:misha /home/misha/leti/sem4/OS/secret.txtsudo chown root:misha /home/misha/leti/sem4/OS/secret.txt>
+~/leti/sem4/OS/scripts -> =sudo chmod 600 /home/misha/leti/sem4/OS/secret.txtsudo chmod 600 /home/misha/leti/sem4/OS/secret.txt>            
+~/leti/sem4/OS/scripts -> =./task10 /home/misha/leti/sem4/OS/secret.txt./task10 /home/misha/leti/sem4/OS/secret.txt>                        
+Секретное содержимое
+~/leti/sem4/OS/scripts -> =./task10 /home/misha/leti/sem4/OS/secret.txt./task10 /home/misha/leti/sem4/OS/secret.txt>                        
+Секретное содержимое
+~/leti/sem4/OS/scripts -> =sudo chmod 600 /home/misha/leti/sem4/OS/secret.txtsudo chmod 600 /home/misha/leti/sem4/OS/secret.txt>            
+~/leti/sem4/OS/scripts -> =./task10 /home/misha/leti/sem4/OS/secret.txt./task10 /home/misha/leti/sem4/OS/secret.txt>                        
+Секретное содержимое
+~/leti/sem4/OS/scripts -> =>                                                                                                                
+~/leti/sem4/OS/scripts -> =>                                                                                                                
+~/leti/sem4/OS/scripts -> =>                                                                                                                
+~/leti/sem4/OS/scripts -> =�ва -�вdddf -h>                                                                                               
+Filesystem      Size  Used Avail Use% Mounted on
+udev             16G     0   16G   0% /dev
+tmpfs           3.1G  7.8M  3.1G   1% /run
+/dev/nvme0n1p2  229G   22G  196G  10% /
+tmpfs            16G  114M   16G   1% /dev/shm
+tmpfs           5.0M     0  5.0M   0% /run/lock
+/dev/nvme0n1p4  412G   69G  322G  18% /home
+/dev/nvme0n1p1  487M   12M  475M   3% /boot/efi
+tmpfs           3.1G   24K  3.1G   1% /run/user/1000
+~/leti/sem4/OS/scripts -> =df -a>                                                                                                           
+df: /run/user/1000/doc: Operation not permitted
+Filesystem                                  1K-blocks     Used Available Use% Mounted on
+sysfs                                               0        0         0    - /sys
+proc                                                0        0         0    - /proc
+udev                                         16209064        0  16209064   0% /dev
+devpts                                              0        0         0    - /dev/pts
+tmpfs                                         3246588     7952   3238636   1% /run
+/dev/nvme0n1p2                              239198852 22124020 204851396  10% /
+securityfs                                          0        0         0    - /sys/kernel/security
+tmpfs                                        16232932   117120  16115812   1% /dev/shm
+tmpfs                                            5120        0      5120   0% /run/lock
+cgroup2                                             0        0         0    - /sys/fs/cgroup
+pstore                                              0        0         0    - /sys/fs/pstore
+efivarfs                                            0        0         0    - /sys/firmware/efi/efivars
+bpf                                                 0        0         0    - /sys/fs/bpf
+systemd-1                                           -        -         -    - /proc/sys/fs/binfmt_misc
+hugetlbfs                                           0        0         0    - /dev/hugepages
+mqueue                                              0        0         0    - /dev/mqueue
+debugfs                                             0        0         0    - /sys/kernel/debug
+tracefs                                             0        0         0    - /sys/kernel/tracing
+configfs                                            0        0         0    - /sys/kernel/config
+ramfs                                               0        0         0    - /run/credentials/systemd-sysctl.service
+ramfs                                               0        0         0    - /run/credentials/systemd-sysusers.service
+fusectl                                             0        0         0    - /sys/fs/fuse/connections
+ramfs                                               0        0         0    - /run/credentials/systemd-tmpfiles-setup-dev.service
+/dev/nvme0n1p4                              431433164 72055308 337388820  18% /home
+/dev/nvme0n1p1                                 497696    12204    485492   3% /boot/efi
+ramfs                                               0        0         0    - /run/credentials/systemd-tmpfiles-setup.service
+binfmt_misc                                         0        0         0    - /proc/sys/fs/binfmt_misc
+tmpfs                                         3246584       24   3246560   1% /run/user/1000
+hiddify-clash-desktop_13.1.4_amd64.AppImage         0        0         0    - /tmp/.mount_hiddifNdKCFT
+~/leti/sem4/OS/scripts -> =df -Th>                                                                                                          
+Filesystem     Type      Size  Used Avail Use% Mounted on
+udev           devtmpfs   16G     0   16G   0% /dev
+tmpfs          tmpfs     3.1G  7.8M  3.1G   1% /run
+/dev/nvme0n1p2 ext4      229G   22G  196G  10% /
+tmpfs          tmpfs      16G  115M   16G   1% /dev/shm
+tmpfs          tmpfs     5.0M     0  5.0M   0% /run/lock
+/dev/nvme0n1p4 ext4      412G   69G  322G  18% /home
+/dev/nvme0n1p1 vfat      487M   12M  475M   3% /boot/efi
+tmpfs          tmpfs     3.1G   24K  3.1G   1% /run/user/1000
+~/leti/sem4/OS/scripts -> =lsblk -a>                                                                                                        
+NAME        MAJ:MIN RM   SIZE RO TYPE MOUNTPOINTS
+loop0         7:0    0     0B  0 loop 
+loop1         7:1    0     0B  0 loop 
+loop2         7:2    0     0B  0 loop 
+loop3         7:3    0     0B  0 loop 
+loop4         7:4    0     0B  0 loop 
+loop5         7:5    0     0B  0 loop 
+loop6         7:6    0     0B  0 loop 
+loop7         7:7    0     0B  0 loop 
+nvme0n1     259:0    0 953.9G  0 disk 
+├─nvme0n1p1 259:1    0   487M  0 part /boot/efi
+├─nvme0n1p2 259:2    0 232.8G  0 part /
+├─nvme0n1p3 259:3    0  29.8G  0 part [SWAP]
+├─nvme0n1p4 259:4    0 419.1G  0 part /home
+└─nvme0n1p5 259:5    0 271.7G  0 part 
+~/leti/sem4/OS/scripts -> =file /usr/bin/dffile /usr/bin/df>                                                                                
+/usr/bin/df: ELF 64-bit LSB pie executable, x86-64, version 1 (SYSV), dynamically linked, interpreter /lib64/ld-linux-x86-64.so.2, BuildID[sha1]=2e13a8652cd172461bccd7e5f5bd1e4de51d2e9b, for GNU/Linux 3.2.0, stripped
+~/leti/sem4/OS/scripts -> =file /usr/bin/lsblkfile /usr/bin/lsblk>                                                                          
+/usr/bin/lsblk: ELF 64-bit LSB pie executable, x86-64, version 1 (SYSV), dynamically linked, interpreter /lib64/ld-linux-x86-64.so.2, BuildID[sha1]=f273ce2244014a4248186f11c1886f2b55cadf86, for GNU/Linux 3.2.0, stripped
+~/leti/sem4/OS/scripts -> =>                                                                                                                
+~/leti/sem4/OS/scripts -> =>                                                                                                                
+~/leti/sem4/OS/scripts -> =>                                                                                                                
+~/leti/sem4/OS/scripts -> =df -hT 2>/dev/null                                                                                               
+Filesystem     Type      Size  Used Avail Use% Mounted on
+udev           devtmpfs   16G     0   16G   0% /dev
+tmpfs          tmpfs     3.1G  7.8M  3.1G   1% /run
+/dev/nvme0n1p2 ext4      229G   22G  196G  10% /
+tmpfs          tmpfs      16G  115M   16G   1% /dev/shm
+tmpfs          tmpfs     5.0M     0  5.0M   0% /run/lock
+/dev/nvme0n1p4 ext4      412G   69G  322G  18% /home
+/dev/nvme0n1p1 vfat      487M   12M  475M   3% /boot/efi
+tmpfs          tmpfs     3.1G   24K  3.1G   1% /run/user/1000
+~/leti/sem4/OS/scripts -> =cat /etc/mtabcat /etc/mtab>                                                                                      
+sysfs /sys sysfs rw,nosuid,nodev,noexec,relatime 0 0
+proc /proc proc rw,nosuid,nodev,noexec,relatime 0 0
+udev /dev devtmpfs rw,nosuid,relatime,size=16209064k,nr_inodes=4052266,mode=755,inode64 0 0
+devpts /dev/pts devpts rw,nosuid,noexec,relatime,gid=5,mode=620,ptmxmode=000 0 0
+tmpfs /run tmpfs rw,nosuid,nodev,noexec,relatime,size=3246588k,mode=755,inode64 0 0
+/dev/nvme0n1p2 / ext4 rw,relatime,errors=remount-ro 0 0
+securityfs /sys/kernel/security securityfs rw,nosuid,nodev,noexec,relatime 0 0
+tmpfs /dev/shm tmpfs rw,nosuid,nodev,inode64 0 0
+tmpfs /run/lock tmpfs rw,nosuid,nodev,noexec,relatime,size=5120k,inode64 0 0
+cgroup2 /sys/fs/cgroup cgroup2 rw,nosuid,nodev,noexec,relatime,nsdelegate,memory_recursiveprot 0 0
+pstore /sys/fs/pstore pstore rw,nosuid,nodev,noexec,relatime 0 0
+efivarfs /sys/firmware/efi/efivars efivarfs rw,nosuid,nodev,noexec,relatime 0 0
+bpf /sys/fs/bpf bpf rw,nosuid,nodev,noexec,relatime,mode=700 0 0
+systemd-1 /proc/sys/fs/binfmt_misc autofs rw,relatime,fd=30,pgrp=1,timeout=0,minproto=5,maxproto=5,direct,pipe_ino=27848 0 0
+hugetlbfs /dev/hugepages hugetlbfs rw,relatime,pagesize=2M 0 0
+mqueue /dev/mqueue mqueue rw,nosuid,nodev,noexec,relatime 0 0
+debugfs /sys/kernel/debug debugfs rw,nosuid,nodev,noexec,relatime 0 0
+tracefs /sys/kernel/tracing tracefs rw,nosuid,nodev,noexec,relatime 0 0
+configfs /sys/kernel/config configfs rw,nosuid,nodev,noexec,relatime 0 0
+ramfs /run/credentials/systemd-sysctl.service ramfs ro,nosuid,nodev,noexec,relatime,mode=700 0 0
+ramfs /run/credentials/systemd-sysusers.service ramfs ro,nosuid,nodev,noexec,relatime,mode=700 0 0
+fusectl /sys/fs/fuse/connections fusectl rw,nosuid,nodev,noexec,relatime 0 0
+ramfs /run/credentials/systemd-tmpfiles-setup-dev.service ramfs ro,nosuid,nodev,noexec,relatime,mode=700 0 0
+/dev/nvme0n1p4 /home ext4 rw,relatime 0 0
+/dev/nvme0n1p1 /boot/efi vfat rw,relatime,fmask=0077,dmask=0077,codepage=437,iocharset=ascii,shortname=mixed,utf8,errors=remount-ro 0 0
+ramfs /run/credentials/systemd-tmpfiles-setup.service ramfs ro,nosuid,nodev,noexec,relatime,mode=700 0 0
+binfmt_misc /proc/sys/fs/binfmt_misc binfmt_misc rw,nosuid,nodev,noexec,relatime 0 0
+tmpfs /run/user/1000 tmpfs rw,nosuid,nodev,relatime,size=3246584k,nr_inodes=811646,mode=700,uid=1000,gid=1000,inode64 0 0
+hiddify-clash-desktop_13.1.4_amd64.AppImage /tmp/.mount_hiddifNdKCFT fuse.hiddify-clash-desktop_13.1.4_amd64.AppImage ro,nosuid,nodev,relatime,user_id=0,group_id=0 0 0
+portal /run/user/1000/doc fuse.portal rw,nosuid,nodev,relatime,user_id=1000,group_id=1000 0 0
+~/leti/sem4/OS/scripts -> =>                                                                                                                
+~/leti/sem4/OS/scripts -> =>                                                                                                                
+~/leti/sem4/OS/scripts -> =cat /proc/mounts                                                                                                 
+>at /proc/mounts
+sysfs /sys sysfs rw,nosuid,nodev,noexec,relatime 0 0
+proc /proc proc rw,nosuid,nodev,noexec,relatime 0 0
+udev /dev devtmpfs rw,nosuid,relatime,size=16209064k,nr_inodes=4052266,mode=755,inode64 0 0
+devpts /dev/pts devpts rw,nosuid,noexec,relatime,gid=5,mode=620,ptmxmode=000 0 0
+tmpfs /run tmpfs rw,nosuid,nodev,noexec,relatime,size=3246588k,mode=755,inode64 0 0
+/dev/nvme0n1p2 / ext4 rw,relatime,errors=remount-ro 0 0
+securityfs /sys/kernel/security securityfs rw,nosuid,nodev,noexec,relatime 0 0
+tmpfs /dev/shm tmpfs rw,nosuid,nodev,inode64 0 0
+tmpfs /run/lock tmpfs rw,nosuid,nodev,noexec,relatime,size=5120k,inode64 0 0
+cgroup2 /sys/fs/cgroup cgroup2 rw,nosuid,nodev,noexec,relatime,nsdelegate,memory_recursiveprot 0 0
+pstore /sys/fs/pstore pstore rw,nosuid,nodev,noexec,relatime 0 0
+efivarfs /sys/firmware/efi/efivars efivarfs rw,nosuid,nodev,noexec,relatime 0 0
+bpf /sys/fs/bpf bpf rw,nosuid,nodev,noexec,relatime,mode=700 0 0
+systemd-1 /proc/sys/fs/binfmt_misc autofs rw,relatime,fd=30,pgrp=1,timeout=0,minproto=5,maxproto=5,direct,pipe_ino=27848 0 0
+hugetlbfs /dev/hugepages hugetlbfs rw,relatime,pagesize=2M 0 0
+mqueue /dev/mqueue mqueue rw,nosuid,nodev,noexec,relatime 0 0
+debugfs /sys/kernel/debug debugfs rw,nosuid,nodev,noexec,relatime 0 0
+tracefs /sys/kernel/tracing tracefs rw,nosuid,nodev,noexec,relatime 0 0
+configfs /sys/kernel/config configfs rw,nosuid,nodev,noexec,relatime 0 0
+ramfs /run/credentials/systemd-sysctl.service ramfs ro,nosuid,nodev,noexec,relatime,mode=700 0 0
+ramfs /run/credentials/systemd-sysusers.service ramfs ro,nosuid,nodev,noexec,relatime,mode=700 0 0
+fusectl /sys/fs/fuse/connections fusectl rw,nosuid,nodev,noexec,relatime 0 0
+ramfs /run/credentials/systemd-tmpfiles-setup-dev.service ramfs ro,nosuid,nodev,noexec,relatime,mode=700 0 0
+/dev/nvme0n1p4 /home ext4 rw,relatime 0 0
+/dev/nvme0n1p1 /boot/efi vfat rw,relatime,fmask=0077,dmask=0077,codepage=437,iocharset=ascii,shortname=mixed,utf8,errors=remount-ro 0 0
+ramfs /run/credentials/systemd-tmpfiles-setup.service ramfs ro,nosuid,nodev,noexec,relatime,mode=700 0 0
+binfmt_misc /proc/sys/fs/binfmt_misc binfmt_misc rw,nosuid,nodev,noexec,relatime 0 0
+tmpfs /run/user/1000 tmpfs rw,nosuid,nodev,relatime,size=3246584k,nr_inodes=811646,mode=700,uid=1000,gid=1000,inode64 0 0
+hiddify-clash-desktop_13.1.4_amd64.AppImage /tmp/.mount_hiddifNdKCFT fuse.hiddify-clash-desktop_13.1.4_amd64.AppImage ro,nosuid,nodev,relatime,user_id=0,group_id=0 0 0
+portal /run/user/1000/doc fuse.portal rw,nosuid,nodev,relatime,user_id=1000,group_id=1000 0 0
+~/leti/sem4/OS/scripts -> =>                                                                                                                
+~/leti/sem4/OS/scripts -> =>                                                                                                                
+~/leti/sem4/OS/scripts -> =grep PATH_MAX /usr/include/limits.h                                                                              
+>rep PATH_MAX /usr/include/limits.h
+~/leti/sem4/OS/scripts -> =cat /usr/src/linux-headers-6.1.0-28-common/include/uapi/linux/limits.h | grep PATH_MAXcat /usr/src/linux-headers-6.1.0-28-common/include/uapi/linux/limits.h | grep PATH_MAX>
+cat: /usr/src/linux-headers-6.1.0-28-common/include/uapi/linux/limits.h: No such file or directory
+~/leti/sem4/OS/scripts -> =find /usr/include -name "limits.h" | xargs grep PATH_MAX                                                         
+>ind /usr/include -name "limits.h" | xargs grep PATH_MAX
+/usr/include/linux/limits.h:#define PATH_MAX        4096	/* # chars in a path name including nul */
+~/leti/sem4/OS/scripts -> =find / -type d 2>/dev/null | awk '{ print length, $0 }' | sort -n | tail -1                                      
+246 /var/lib/flatpak/runtime/org.gnome.Platform/x86_64/46/d921e2de0d766f0d6e0a57cee65d95aef737398989e2950c91dfedb9874d21ad/files/lib/python3.11/site-packages/pkg_resources/tests/data/my-test-package_unpacked-egg/my_test_package-1.0-py3.7.egg/EGG-INFO
+~/leti/sem4/OS/scripts -> =file -i /home/misha/leti/altushka/neural_network/without_learning.pyfile -i /home/misha/leti/altushka/neural_network/without_learning.py>
+/home/misha/leti/altushka/neural_network/without_learning.py: text/x-script.python; charset=utf-8
+~/leti/sem4/OS/scripts -> =file -k /home/misha/leti/altushka/neural_network/without_learning.pyfile -k /home/misha/leti/altushka/neural_network/without_learning.py>
+/home/misha/leti/altushka/neural_network/without_learning.py: Python script text executable\012-  Python script text executable\012-  Python script text executable\012-  Python script, Unicode text, UTF-8 text executable
+~/leti/sem4/OS/scripts -> =�с�сcd ..>                                                                                                     
+~/leti/sem4/OS -> =mkdir magic_experemenmentimen>                                                                                           
+~/leti/sem4/OS -> =cd magic_experiment/>                                                                                                    
+~/leti/sem4/OS/magic_experiment -> =echo -n "MY_MAGIC" > test_custom_file                                                                   
+echo "Это тестовый файл для расширения базы magic." >> test_custom_file
+~/leti/sem4/OS/magic_experiment -> =echo "Это тестовый файл для расширения базы magic." >> test_custom_file 
+~/leti/sem4/OS/magic_experiment -> =head -n 1 test_custom_filehead -n 1 test_custom_file>                                                   
+MY_MAGICЭто тестовый файл для расширения базы magic.
+~/leti/sem4/OS/magic_experiment -> =echo "MY_MAGIC" > test_custom_file                                                                      
+echo "Это тестовый файл для расширения базы magic." >> test_custom_file
+>cho "Это тестовый файл для расширения базы magic." >> test_custom_file
+~/leti/sem4/OS/magic_experiment -> =head -n 1 test_custom_file                                                                              
+>ead -n 1 test_custom_file
+MY_MAGIC
+~/leti/sem4/OS/magic_experiment -> =head -n 1 test_custom_file                                                                              
+MY_MAGICcustom_file\ test_custom_file >
+Это тестовый файл для расширения базы magic.
+~/leti/sem4/OS/magic_experiment -> =head -n 2 test_custom_fil 3 test_custom_file>                                                           
+MY_MAGIC
+Это тестовый файл для расширения базы magic.
+~/leti/sem4/OS/magic_experiment -> =head -n 1 test_custom_file                                                                              
+>ead -n 1 test_custom_file
+MY_MAGIC
+~/leti/sem4/OS/magic_experiment -> =sudo nano /usr/share/file/magic                                                                         
+>udo nano /usr/share/file/magic
+==
+~/leti/sem4/OS/magic_experiment -> =find /usr/share -type f -name "magic*"                                                                                                            
+/usr/share/mime/magic f -name "magic*"
+/usr/share/man/man5/magic.5.gz
+find: ‘/usr/share/polkit-1/rules.d’: Permission denied
+~/leti/sem4/OS/magic_experiment -> =sudo cp /usr/share/mime/magic /usr/share/mime/magic.bak                                                 
+>udo cp /usr/share/mime/magic /usr/share/mime/magic.bak
+~/leti/sem4/OS/magic_experiment -> =sudo nano /usr/share/mime/magic                                                                         
+>udo nano /usr/share/mime/magic
+[80:application/x-php]PE-Bookmark-file-1>+65e^J Justify     ^/ Go To Line  M-E RedoM-6 Copy^Q Where WasBracketme/magic                                                          
+*0=^@^A%/x-tex]lica]]ipocket-ebook]utable]�^@^@^@^@^@^@^@^@����@t^@o^@r^@"+39011                                                                  
+~/leti/sem4/OS/magic_experiment -> =sudo cp /usr/share/mime/magic.bak /usr/share/mime/magic                                                 
+~/leti/sem4/OS/magic_experiment -> =echo '0    string    MY_MAGIC    My Custom File Type' > my_magic                                        
+>cho '0    string    MY_MAGIC    My Custom File Type' > my_magic
+~/leti/sem4/OS/magic_experiment -> =file -m ./my_magic test_custom_file                                                                     
+>ile -m ./my_magic test_custom_file
+test_custom_file: My Custom File Type
+~/leti/sem4/OS/magic_experiment -> =�св ю�сcd ..>                                                                                       
+~/leti/sem4/OS -> =that is all>                                                                                                             
+zsh: command not found: that
+~/leti/sem4/OS -> =��учш�уexit>                                                                                                         
+
+Script done on 2025-03-09 23:47:55+03:00 [COMMAND_EXIT_CODE="127"]
