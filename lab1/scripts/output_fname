@@ -1,0 +1,28 @@
+/boot: -rw-r--r-- 1 root root   259624 Nov  1 07:23 config-6.1.0-27-amd64
+/dev: brw-rw----   1 root  disk      7,     0 Mar 11 16:55 loop0
+/dev: crw-------   1 root  root     10,   124 Mar 11 16:55 acpi_thermal_rel
+/: drwxr-xr-x   4 root root  4096 Feb  5 12:29 boot
+/: lrwxrwxrwx   1 root root     7 Feb  5 12:02 bin -> usr/bin
+/run: prw-------  1 root root      0 Mar 11 16:55 initctl
+/run/dbus: srw-rw-rw- 1 root       root  0 Mar 11 16:55 system_bus_socket
+/boot: -rw-r--r-- 1 root root   259624 Nov  1 07:23 config-6.1.0-27-amd64
+/dev: brw-rw----   1 root  disk      7,     0 Mar 11 16:55 loop0
+/dev: crw-------   1 root  root     10,   124 Mar 11 16:55 acpi_thermal_rel
+/: drwxr-xr-x   4 root root  4096 Feb  5 12:29 boot
+/: lrwxrwxrwx   1 root root     7 Feb  5 12:02 bin -> usr/bin
+/run: prw-------  1 root root      0 Mar 11 16:55 initctl
+/run/dbus: srw-rw-rw- 1 root       root  0 Mar 11 16:55 system_bus_socket
+/boot: -rw-r--r-- 1 root root   259624 Nov  1 07:23 config-6.1.0-27-amd64
+/dev: brw-rw----   1 root  disk      7,     0 Mar 11 16:55 loop0
+/dev: crw-------   1 root  root     10,   124 Mar 11 16:55 acpi_thermal_rel
+/: drwxr-xr-x   4 root root  4096 Feb  5 12:29 boot
+/: lrwxrwxrwx   1 root root     7 Feb  5 12:02 bin -> usr/bin
+/run: prw-------  1 root root      0 Mar 11 16:55 initctl
+/run/dbus: srw-rw-rw- 1 root       root  0 Mar 11 16:55 system_bus_socket
+/boot: -rw-r--r-- 1 root root   259624 Nov  1 07:23 config-6.1.0-27-amd64
+/dev: brw-rw----   1 root  disk      7,     0 Mar 11 16:55 loop0
+/dev: crw-------   1 root  root     10,   124 Mar 11 16:55 acpi_thermal_rel
+/: drwxr-xr-x   4 root root  4096 Feb  5 12:29 boot
+/: lrwxrwxrwx   1 root root     7 Feb  5 12:02 bin -> usr/bin
+/run: prw-------  1 root root      0 Mar 11 16:55 initctl
+/run/dbus: srw-rw-rw- 1 root       root  0 Mar 11 16:55 system_bus_socket

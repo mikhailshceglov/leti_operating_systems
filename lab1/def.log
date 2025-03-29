@@ -1,0 +1,490 @@
+~/leti/sem4/OS  lscpu
+Architecture:             x86_64
+  CPU op-mode(s):         32-bit, 64-bit
+  Address sizes:          39 bits physical, 48 bits virtual
+  Byte Order:             Little Endian
+CPU(s):                   20
+  On-line CPU(s) list:    0-19
+Vendor ID:                GenuineIntel
+  Model name:             13th Gen Intel(R) Core(TM) i7-13650HX
+    CPU family:           6
+    Model:                183
+    Thread(s) per core:   2
+    Core(s) per socket:   14
+    Socket(s):            1
+    Stepping:             1
+    CPU(s) scaling MHz:   49%
+    CPU max MHz:          4900.0000
+    CPU min MHz:          800.0000
+    BogoMIPS:             5606.40
+    Flags:                fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm
+                          pbe syscall nx pdpe1gb rdtscp lm constant_tsc art arch_perfmon pebs bts rep_good nopl xtopology nonstop_tsc cpuid ap
+                          erfmperf tsc_known_freq pni pclmulqdq dtes64 monitor ds_cpl vmx est tm2 ssse3 sdbg fma cx16 xtpr pdcm sse4_1 sse4_2
+                          x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand lahf_lm abm 3dnowprefetch cpuid_fault epb ssbd ibrs
+                           ibpb stibp ibrs_enhanced tpr_shadow vnmi flexpriority ept vpid ept_ad fsgsbase tsc_adjust bmi1 avx2 smep bmi2 erms
+                          invpcid rdseed adx smap clflushopt clwb intel_pt sha_ni xsaveopt xsavec xgetbv1 xsaves split_lock_detect avx_vnni dt
+                          herm ida arat pln pts hwp hwp_notify hwp_act_window hwp_epp hwp_pkg_req hfi umip pku ospke waitpkg gfni vaes vpclmul
+                          qdq rdpid movdiri movdir64b fsrm md_clear serialize arch_lbr ibt flush_l1d arch_capabilities
+Virtualization features:
+  Virtualization:         VT-x
+Caches (sum of all):
+  L1d:                    544 KiB (14 instances)
+  L1i:                    704 KiB (14 instances)
+  L2:                     11.5 MiB (8 instances)
+  L3:                     24 MiB (1 instance)
+NUMA:
+  NUMA node(s):           1
+  NUMA node0 CPU(s):      0-19
+Vulnerabilities:
+  Gather data sampling:   Not affected
+  Itlb multihit:          Not affected
+  L1tf:                   Not affected
+  Mds:                    Not affected
+  Meltdown:               Not affected
+  Mmio stale data:        Not affected
+  Reg file data sampling: Mitigation; Clear Register File
+  Retbleed:               Not affected
+  Spec rstack overflow:   Not affected
+  Spec store bypass:      Mitigation; Speculative Store Bypass disabled via prctl
+  Spectre v1:             Mitigation; usercopy/swapgs barriers and __user pointer sanitization
+  Spectre v2:             Mitigation; Enhanced / Automatic IBRS; IBPB conditional; RSB filling; PBRSB-eIBRS SW sequence; BHI BHI_DIS_S
+  Srbds:                  Not affected
+  Tsx async abort:        Not affected
+~/leti/sem4/OS  df
+Filesystem     1K-blocks     Used Available Use% Mounted on
+udev            16209064        0  16209064   0% /dev
+tmpfs            3246588     7952   3238636   1% /run
+/dev/nvme0n1p2 239198852 22164220 204811196  10% /
+tmpfs           16232932    74908  16158024   1% /dev/shm
+tmpfs               5120        0      5120   0% /run/lock
+/dev/nvme0n1p4 431433164 75720340 333723788  19% /home
+/dev/nvme0n1p1    497696    12204    485492   3% /boot/efi
+tmpfs            3246584       24   3246560   1% /run/user/1000
+~/leti/sem4/OS  df --help
+Usage: df [OPTION]... [FILE]...
+Show information about the file system on which each FILE resides,
+or all file systems by default.
+
+Mandatory arguments to long options are mandatory for short options too.
+  -a, --all             include pseudo, duplicate, inaccessible file systems
+  -B, --block-size=SIZE  scale sizes by SIZE before printing them; e.g.,
+                           '-BM' prints sizes in units of 1,048,576 bytes;
+                           see SIZE format below
+  -h, --human-readable  print sizes in powers of 1024 (e.g., 1023M)
+  -H, --si              print sizes in powers of 1000 (e.g., 1.1G)
+  -i, --inodes          list inode information instead of block usage
+  -k                    like --block-size=1K
+  -l, --local           limit listing to local file systems
+      --no-sync         do not invoke sync before getting usage info (default)
+      --output[=FIELD_LIST]  use the output format defined by FIELD_LIST,
+                               or print all fields if FIELD_LIST is omitted.
+  -P, --portability     use the POSIX output format
+      --sync            invoke sync before getting usage info
+      --total           elide all entries insignificant to available space,
+                          and produce a grand total
+  -t, --type=TYPE       limit listing to file systems of type TYPE
+  -T, --print-type      print file system type
+  -x, --exclude-type=TYPE   limit listing to file systems not of type TYPE
+  -v                    (ignored)
+      --help        display this help and exit
+      --version     output version information and exit
+
+Display values are in units of the first available SIZE from --block-size,
+and the DF_BLOCK_SIZE, BLOCK_SIZE and BLOCKSIZE environment variables.
+Otherwise, units default to 1024 bytes (or 512 if POSIXLY_CORRECT is set).
+
+The SIZE argument is an integer and optional unit (example: 10K is 10*1024).
+Units are K,M,G,T,P,E,Z,Y (powers of 1024) or KB,MB,... (powers of 1000).
+Binary prefixes can be used, too: KiB=K, MiB=M, and so on.
+
+FIELD_LIST is a comma-separated list of columns to be included.  Valid
+field names are: 'source', 'fstype', 'itotal', 'iused', 'iavail', 'ipcent',
+'size', 'used', 'avail', 'pcent', 'file' and 'target' (see info page).
+
+GNU coreutils online help: <https://www.gnu.org/software/coreutils/>
+Full documentation <https://www.gnu.org/software/coreutils/df>
+or available locally via: info '(coreutils) df invocation'
+~/leti/sem4/OS  df -T
+Filesystem     Type     1K-blocks     Used Available Use% Mounted on
+udev           devtmpfs  16209064        0  16209064   0% /dev
+tmpfs          tmpfs      3246588     7952   3238636   1% /run
+/dev/nvme0n1p2 ext4     239198852 22164220 204811196  10% /
+tmpfs          tmpfs     16232932    73884  16159048   1% /dev/shm
+tmpfs          tmpfs         5120        0      5120   0% /run/lock
+/dev/nvme0n1p4 ext4     431433164 75720340 333723788  19% /home
+/dev/nvme0n1p1 vfat        497696    12204    485492   3% /boot/efi
+tmpfs          tmpfs      3246584       24   3246560   1% /run/user/1000
+~/leti/sem4/OS  lsblk
+NAME        MAJ:MIN RM   SIZE RO TYPE MOUNTPOINTS
+nvme0n1     259:0    0 953.9G  0 disk
+├─nvme0n1p1 259:1    0   487M  0 part /boot/efi
+├─nvme0n1p2 259:2    0 232.8G  0 part /
+├─nvme0n1p3 259:3    0  29.8G  0 part [SWAP]
+├─nvme0n1p4 259:4    0 419.1G  0 part /home
+└─nvme0n1p5 259:5    0 271.7G  0 part
+~/leti/sem4/OS  fdisk --help
+
+Usage:
+ fdisk [options] <disk>         change partition table
+ fdisk [options] -l [<disk>...] list partition table(s)
+
+Display or manipulate a disk partition table.
+
+Options:
+ -b, --sector-size <size>      physical and logical sector size
+ -B, --protect-boot            don't erase bootbits when creating a new label
+ -c, --compatibility[=<mode>]  mode is 'dos' or 'nondos' (default)
+ -L, --color[=<when>]          colorize output (auto, always or never)
+                                 colors are enabled by default
+ -l, --list                    display partitions and exit
+ -x, --list-details            like --list but with more details
+ -n, --noauto-pt               don't create default partition table on empty devices
+ -o, --output <list>           output columns
+ -t, --type <type>             recognize specified partition table type only
+ -u, --units[=<unit>]          display units: 'cylinders' or 'sectors' (default)
+ -s, --getsz                   display device size in 512-byte sectors [DEPRECATED]
+     --bytes                   print SIZE in bytes rather than in human readable format
+     --lock[=<mode>]           use exclusive device lock (yes, no or nonblock)
+ -w, --wipe <mode>             wipe signatures (auto, always or never)
+ -W, --wipe-partitions <mode>  wipe signatures from new partitions (auto, always or never)
+
+ -C, --cylinders <number>      specify the number of cylinders
+ -H, --heads <number>          specify the number of heads
+ -S, --sectors <number>        specify the number of sectors per track
+
+ -h, --help                    display this help
+ -V, --version                 display version
+
+Available output columns:
+ gpt: Device Start End Sectors Size Type Type-UUID Attrs Name UUID
+ dos: Device Start End Sectors Cylinders Size Type Id Attrs Boot End-C/H/S Start-C/H/S
+ bsd: Slice Start End Sectors Cylinders Size Type Bsize Cpg Fsize
+ sgi: Device Start End Sectors Cylinders Size Type Id Attrs
+ sun: Device Start End Sectors Cylinders Size Type Id Flags
+
+For more details see fdisk(8).
+~/leti/sem4/OS  fdisk -l
+fdisk: cannot open /dev/nvme0n1: Permission denied
+~/leti/sem4/OS  sudo fdisk -l
+Disk /dev/nvme0n1: 953.87 GiB, 1024209543168 bytes, 2000409264 sectors
+Disk model: WD PC SN560 SDDPNQE-1T00-1002
+Units: sectors of 1 * 512 = 512 bytes
+Sector size (logical/physical): 512 bytes / 512 bytes
+I/O size (minimum/optimal): 512 bytes / 512 bytes
+Disklabel type: gpt
+Disk identifier: 91D9CD5A-3906-4351-AE2B-64A722CEBB15
+
+Device              Start        End   Sectors   Size Type
+/dev/nvme0n1p1       2048     999423    997376   487M EFI System
+/dev/nvme0n1p2     999424  489281535 488282112 232.8G Linux filesystem
+/dev/nvme0n1p3  489281536  551782399  62500864  29.8G Linux swap
+/dev/nvme0n1p4  551782400 1430688649 878906250 419.1G Linux filesystem
+/dev/nvme0n1p5 1430689792 2000408575 569718784 271.7G Linux filesystem
+~/leti/sem4/OS  df --help
+Usage: df [OPTION]... [FILE]...
+Show information about the file system on which each FILE resides,
+or all file systems by default.
+
+Mandatory arguments to long options are mandatory for short options too.
+  -a, --all             include pseudo, duplicate, inaccessible file systems
+  -B, --block-size=SIZE  scale sizes by SIZE before printing them; e.g.,
+                           '-BM' prints sizes in units of 1,048,576 bytes;
+                           see SIZE format below
+  -h, --human-readable  print sizes in powers of 1024 (e.g., 1023M)
+  -H, --si              print sizes in powers of 1000 (e.g., 1.1G)
+  -i, --inodes          list inode information instead of block usage
+  -k                    like --block-size=1K
+  -l, --local           limit listing to local file systems
+      --no-sync         do not invoke sync before getting usage info (default)
+      --output[=FIELD_LIST]  use the output format defined by FIELD_LIST,
+                               or print all fields if FIELD_LIST is omitted.
+  -P, --portability     use the POSIX output format
+      --sync            invoke sync before getting usage info
+      --total           elide all entries insignificant to available space,
+                          and produce a grand total
+  -t, --type=TYPE       limit listing to file systems of type TYPE
+  -T, --print-type      print file system type
+  -x, --exclude-type=TYPE   limit listing to file systems not of type TYPE
+  -v                    (ignored)
+      --help        display this help and exit
+      --version     output version information and exit
+
+Display values are in units of the first available SIZE from --block-size,
+and the DF_BLOCK_SIZE, BLOCK_SIZE and BLOCKSIZE environment variables.
+Otherwise, units default to 1024 bytes (or 512 if POSIXLY_CORRECT is set).
+
+The SIZE argument is an integer and optional unit (example: 10K is 10*1024).
+Units are K,M,G,T,P,E,Z,Y (powers of 1024) or KB,MB,... (powers of 1000).
+Binary prefixes can be used, too: KiB=K, MiB=M, and so on.
+
+FIELD_LIST is a comma-separated list of columns to be included.  Valid
+field names are: 'source', 'fstype', 'itotal', 'iused', 'iavail', 'ipcent',
+'size', 'used', 'avail', 'pcent', 'file' and 'target' (see info page).
+
+GNU coreutils online help: <https://www.gnu.org/software/coreutils/>
+Full documentation <https://www.gnu.org/software/coreutils/df>
+or available locally via: info '(coreutils) df invocation'
+~/leti/sem4/OS  lsblk -f
+NAME        FSTYPE FSVER LABEL UUID                                 FSAVAIL FSUSE% MOUNTPOINTS
+nvme0n1
+├─nvme0n1p1 vfat   FAT32       907F-1E3B                             474.1M     2% /boot/efi
+├─nvme0n1p2 ext4   1.0         48527ead-48dd-46f5-b8d1-0ec176289d0e  195.3G     9% /
+├─nvme0n1p3 swap   1           887e2213-fec0-4327-b388-80064ffb6753                [SWAP]
+├─nvme0n1p4 ext4   1.0         4e835750-181d-453b-98d9-072536eaf9bb  318.3G    18% /home
+└─nvme0n1p5 ext4   1.0         a1254edc-159a-48a3-9cc9-732aaf463b34
+~/leti/sem4/OS  lsblk
+NAME        MAJ:MIN RM   SIZE RO TYPE MOUNTPOINTS
+nvme0n1     259:0    0 953.9G  0 disk
+├─nvme0n1p1 259:1    0   487M  0 part /boot/efi
+├─nvme0n1p2 259:2    0 232.8G  0 part /
+├─nvme0n1p3 259:3    0  29.8G  0 part [SWAP]
+├─nvme0n1p4 259:4    0 419.1G  0 part /home
+└─nvme0n1p5 259:5    0 271.7G  0 part
+~/leti/sem4/OS  lsblk
+NAME        MAJ:MIN RM   SIZE RO TYPE MOUNTPOINTS
+sda           8:0    1  29.2G  0 disk
+└─sda1        8:1    1  29.1G  0 part
+nvme0n1     259:0    0 953.9G  0 disk
+├─nvme0n1p1 259:1    0   487M  0 part /boot/efi
+├─nvme0n1p2 259:2    0 232.8G  0 part /
+├─nvme0n1p3 259:3    0  29.8G  0 part [SWAP]
+├─nvme0n1p4 259:4    0 419.1G  0 part /home
+└─nvme0n1p5 259:5    0 271.7G  0 part
+~/leti/sem4/OS  sudo mount /dev/sda1 /mnt
+~/leti/sem4/OS  cd /mnt
+/mnt  ls
+ autorun.ico   boot	      casper   EFI	 md5sum.txt   preseed			   ubuntu
+ autorun.inf   boot.catalog   dists    install	 pool	     'System Volume Information'
+/mnt  ls -l
+total 272
+-rwxr-xr-x 1 root root 34494 Feb 12  2024  autorun.ico
+-rwxr-xr-x 1 root root   234 Feb 12  2024  autorun.inf
+drwxr-xr-x 3 root root 16384 Feb 12  2024  boot
+-rwxr-xr-x 1 root root  2048 Feb 12  2024  boot.catalog
+drwxr-xr-x 2 root root 16384 Feb 12  2024  casper
+drwxr-xr-x 3 root root 16384 Feb 12  2024  dists
+drwxr-xr-x 3 root root 16384 Feb 12  2024  EFI
+drwxr-xr-x 2 root root 16384 Feb 12  2024  install
+-rwxr-xr-x 1 root root 34166 Feb 12  2024  md5sum.txt
+drwxr-xr-x 4 root root 16384 Feb 12  2024  pool
+drwxr-xr-x 2 root root 16384 Feb 12  2024  preseed
+drwxr-xr-x 2 root root 16384 Feb 12  2024 'System Volume Information'
+-rwxr-xr-x 1 root root     1 Feb 12  2024  ubuntu
+/mnt  ls
+ autorun.ico   boot	      casper   EFI	 md5sum.txt   preseed			   ubuntu
+ autorun.inf   boot.catalog   dists    install	 pool	     'System Volume Information'
+/mnt  nano md5sum.txt
+/mnt 
+/mnt 
+/mnt  umount /mnt
+umount: /mnt: must be superuser to unmount.
+/mnt  sudo umount /mnt
+cumount: /mnt: target is busy.
+/mnt  cd
+~  sudo umount /mnt
+~  cd /usr/share/file
+/usr/share/file  ls
+magic  magic.mgc
+/usr/share/file  cd
+~  cd leti/sem4/OS
+~/leti/sem4/OS  ls
+1_lab.pdf  defence  into_git  into_git_os25-3381  lab1.log  old_log  other  scripts
+~/leti/sem4/OS  cd defence
+~/leti/sem4/OS/defence  ls
+~/leti/sem4/OS/defence  echo -n "magic" > custom_file
+~/leti/sem4/OS/defence  echo "тестовый файл типо" >> custom_file
+~/leti/sem4/OS/defence  nano custom_file
+~/leti/sem4/OS/defence  file magic custom_file
+magic:       cannot open `magic' (No such file or directory)
+custom_file: Unicode text, UTF-8 text
+~/leti/sem4/OS/defence  ls
+custom_file
+~/leti/sem4/OS/defence  echo -n "MY_MAGIC " > test_custom_file
+~/leti/sem4/OS/defence  echo "Это тестовый файл для расширения базы magic." >> test_custom_file
+~/leti/sem4/OS/defence  echo '0 string MY_MAGIC My Custom File Type' > my_magic
+~/leti/sem4/OS/defence  file -m ./my_magic test_custom_file
+test_custom_file: My Custom File Type
+~/leti/sem4/OS/defence 
+~/leti/sem4/OS/defence 
+~/leti/sem4/OS/defence 
+~/leti/sem4/OS/defence  cd /usr/share/file
+/usr/share/file  ls
+magic  magic.mgc
+/usr/share/file  cd
+~  cd /usr/share/file
+/usr/share/file  ls
+magic  magic.mgc
+/usr/share/file  nano magic
+/usr/share/file  nano magic.mgc
+/usr/share/file  nano magic.mgc
+/usr/share/file  find /usr /etc /lib -name magic
+/usr/share/mime/magic
+find: ‘/usr/share/polkit-1/rules.d’: Permission denied
+/usr/share/misc/magic
+/usr/share/file/magic
+find: ‘/etc/ssl/private’: Permission denied
+find: ‘/etc/polkit-1/rules.d’: Permission denied
+find: ‘/etc/polkit-1/localauthority’: Permission denied
+/etc/magic
+
+
+/usr/share/misc/magic   file -v
+file-5.44
+magic file from /etc/magic:/usr/share/misc/magic
+/usr/share/misc/magic  ls -l /usr/share/misc/magic
+lrwxrwxrwx 1 root root 13 Jan 28  2023 /usr/share/misc/magic -> ../file/magic
+/usr/share/misc/magic  ls -l /usr/share/file/magic
+total 0
+/usr/share/misc/magic  strings /usr/share/file/magic.mgc | less
+
+zsh: suspended  strings /usr/share/file/magic.mgc | less
+/usr/share/misc/magic  apt-get source file
+Reading package lists... Done
+NOTICE: 'file' packaging is maintained in the 'Git' version control system at:
+https://git.in-ulm.de/cbiedl/file.git
+Please use:
+git clone https://git.in-ulm.de/cbiedl/file.git
+to retrieve the latest (possibly unreleased) updates to the package.
+Need to get 1,228 kB of source archives.
+Err:1 http://deb.debian.org/debian bookworm/main file 1:5.44-3 (dsc)
+  Could not open file file_5.44-3.dsc - open (13: Permission denied) [IP: 198.18.0.71 80]
+Err:2 http://deb.debian.org/debian bookworm/main file 1:5.44-3 (tar)
+  Could not open file file_5.44.orig.tar.gz - open (13: Permission denied) [IP: 198.18.0.71 80]
+Err:3 http://deb.debian.org/debian bookworm/main file 1:5.44-3 (asc)
+  Could not open file file_5.44.orig.tar.gz.asc - open (13: Permission denied) [IP: 198.18.0.71 80]
+Err:4 http://deb.debian.org/debian bookworm/main file 1:5.44-3 (diff)
+  Could not open file file_5.44-3.debian.tar.xz - open (13: Permission denied) [IP: 198.18.0.71 80]
+E: Failed to fetch http://deb.debian.org/debian/pool/main/f/file/file_5.44-3.dsc  Could not open file file_5.44-3.dsc - open (13: Permission denied) [IP: 198.18.0.71 80]
+E: Failed to fetch http://deb.debian.org/debian/pool/main/f/file/file_5.44.orig.tar.gz  Could not open file file_5.44.orig.tar.gz - open (13: Permission denied) [IP: 198.18.0.71 80]
+E: Failed to fetch http://deb.debian.org/debian/pool/main/f/file/file_5.44.orig.tar.gz.asc  Could not open file file_5.44.orig.tar.gz.asc - open (13: Permission denied) [IP: 198.18.0.71 80]
+E: Failed to fetch http://deb.debian.org/debian/pool/main/f/file/file_5.44-3.debian.tar.xz  Could not open file file_5.44-3.debian.tar.xz - open (13: Permission denied) [IP: 198.18.0.71 80]
+E: Failed to fetch some archives.
+/usr/share/misc/magic  cd file-5.44/magic
+cd: no such file or directory: file-5.44/magic
+/usr/share/misc/magic  cd file-5.44/magic
+cd: no such file or directory: file-5.44/magic
+/usr/share/misc/magic  sudo apt-get source file
+Reading package lists... Done
+NOTICE: 'file' packaging is maintained in the 'Git' version control system at:
+https://git.in-ulm.de/cbiedl/file.git
+Please use:
+git clone https://git.in-ulm.de/cbiedl/file.git
+to retrieve the latest (possibly unreleased) updates to the package.
+Need to get 1,228 kB of source archives.
+Get:1 http://deb.debian.org/debian bookworm/main file 1:5.44-3 (dsc) [2,240 B]
+Get:2 http://deb.debian.org/debian bookworm/main file 1:5.44-3 (tar) [1,186 kB]
+Get:3 http://deb.debian.org/debian bookworm/main file 1:5.44-3 (asc) [201 B]
+Get:4 http://deb.debian.org/debian bookworm/main file 1:5.44-3 (diff) [38.9 kB]
+Fetched 1,228 kB in 2s (773 kB/s)
+dpkg-source: info: extracting file in file-5.44
+dpkg-source: info: unpacking file_5.44.orig.tar.gz
+dpkg-source: info: unpacking file_5.44-3.debian.tar.xz
+dpkg-source: info: using patch list from debian/patches/series
+dpkg-source: info: applying 1672082456.FILE5_44-5-g813b3304.pr-410-pandrew-add-bitcoin-and-leveldb-support.patch
+dpkg-source: info: applying 1672518248.FILE5_44-9-gdc71304b.pyzip-improvements-fc-stegerman.patch
+dpkg-source: info: applying 1673481589.FILE5_44-14-gbb955ca3.jar-manifest-signature-file-pkcs-7-signed-data-fc-stegerman.patch
+dpkg-source: info: applying 1673481736.FILE5_44-15-ga2756aa5.improve-javascript-detection-fc-stegerman.patch
+dpkg-source: info: applying 1673482012.FILE5_44-16-gb29519e7.detect-android-apk-files-fc-stegerman.patch
+dpkg-source: info: applying 1673482186.FILE5_44-17-g4c8ee2e7.detect-smali-files-fc-stegerman.patch
+dpkg-source: info: applying 1673482234.FILE5_44-18-g9fa5e784.detect-android-art-baseline-profiles-found-in-apk-files.patch
+dpkg-source: info: applying 1673482275.FILE5_44-19-g4341ed61.detect-android-package-resource-table-arsc-fc-stegerman.patch
+dpkg-source: info: applying 1673725413.FILE5_44-22-g6d565d82.improve-apk-detection-fc-stegerman.patch
+dpkg-source: info: applying 1674058221.FILE5_44-23-gbaf1f4b4.add-mime-type-to-html-fc-stegerman.patch
+dpkg-source: info: applying 1674058358.FILE5_44-24-gc4361a10.improve-detection-of-apk-files-if-we-find-a-manifest-file-at-least-say.patch
+dpkg-source: info: applying 1674400026.FILE5_44-29-g1e4b7389.increase-strength-to-beat-targa-fc-stegerman.patch
+dpkg-source: info: applying upstream.disable.att3b.patch
+dpkg-source: info: applying upstream.mute-debug-warning.patch
+dpkg-source: info: applying local.support-local-definitions-in-etc-magic.patch
+dpkg-source: info: applying local.don-t-include-libs-in-build.patch
+dpkg-source: info: applying local.extra-magic.patch
+dpkg-source: info: applying local.manpage-seccomp-is-disabled.patch
+W: Download is performed unsandboxed as root as file 'file_5.44-3.dsc' couldn't be accessed by user '_apt'. - pkgAcquire::Run (13: Permission denied)
+/usr/share/misc/magic  cd file-5.44
+/usr/share/misc/magic/file-5.44  find . -iname "*magic*"
+./tests/multiple-B.magic
+./tests/regex-eol.magic
+./tests/multiple-A.magic
+./doc/magic.man
+./doc/libmagic.man
+./.pc/1674400026.FILE5_44-29-g1e4b7389.increase-strength-to-beat-targa-fc-stegerman.patch/magic
+./.pc/1672082456.FILE5_44-5-g813b3304.pr-410-pandrew-add-bitcoin-and-leveldb-support.patch/magic
+./.pc/1672518248.FILE5_44-9-gdc71304b.pyzip-improvements-fc-stegerman.patch/magic
+./.pc/local.extra-magic.patch
+./.pc/local.extra-magic.patch/magic
+./.pc/1673482234.FILE5_44-18-g9fa5e784.detect-android-art-baseline-profiles-found-in-apk-files.patch/magic
+./.pc/1673482012.FILE5_44-16-gb29519e7.detect-android-apk-files-fc-stegerman.patch/magic
+./.pc/1674058221.FILE5_44-23-gbaf1f4b4.add-mime-type-to-html-fc-stegerman.patch/magic
+./.pc/1673481736.FILE5_44-15-ga2756aa5.improve-javascript-detection-fc-stegerman.patch/magic
+./.pc/upstream.disable.att3b.patch/magic
+./.pc/1673725413.FILE5_44-22-g6d565d82.improve-apk-detection-fc-stegerman.patch/magic
+./.pc/1674058358.FILE5_44-24-gc4361a10.improve-detection-of-apk-files-if-we-find-a-manifest-file-at-least-say.patch/magic
+./.pc/upstream.mute-debug-warning.patch/src/softmagic.c
+./.pc/1673481589.FILE5_44-14-gbb955ca3.jar-manifest-signature-file-pkcs-7-signed-data-fc-stegerman.patch/magic
+./.pc/1673482275.FILE5_44-19-g4341ed61.detect-android-package-resource-table-arsc-fc-stegerman.patch/magic
+./.pc/local.support-local-definitions-in-etc-magic.patch
+./.pc/local.support-local-definitions-in-etc-magic.patch/magic
+./.pc/local.support-local-definitions-in-etc-magic.patch/magic/magic.local
+./.pc/1673482186.FILE5_44-17-g4c8ee2e7.detect-smali-files-fc-stegerman.patch/magic
+./libmagic.pc.in
+./python/file_magic
+./python/magic.py
+./src/fsmagic.c
+./src/ascmagic.c
+./src/magic.c
+./src/magic.h.in
+./src/softmagic.c
+./debian/libmagic1.symbols
+./debian/libmagic-mgc.links
+./debian/patches/local.extra-magic.patch
+./debian/patches/local.support-local-definitions-in-etc-magic.patch
+./debian/libmagic1.bug-control
+./debian/libmagic-mgc.README.Debian
+./debian/debian-extra-magic
+./debian/libmagic-mgc.dirs
+./debian/libmagic1.install
+./debian/libmagic-mgc.install
+./debian/libmagic1.bug-presubj
+./debian/libmagic1.links
+./debian/libmagic-dev.install
+./magic
+./magic/magic.local
+./magic/Magdir/magic
+./magic/scripts/create_filemagic_flac
+/usr/share/misc/magic/file-5.44  cd magic
+/usr/share/misc/magic/file-5.44/magic  ls -l
+total 68
+-rw-r--r-- 1 root root   306 Mar 17 11:43 Header
+-rw-r--r-- 1 root root   321 Mar 16  2017 Localstuff
+drwxr-xr-x 2 root root 12288 Mar 17 11:43 Magdir
+-rw-r--r-- 1 root root   111 Mar 17 11:43 magic.local
+-rw-r--r-- 1 root root 11796 Mar 17 11:43 Makefile.am
+-rw-r--r-- 1 root root 26241 Dec 26  2022 Makefile.in
+drwxr-xr-x 2 root root  4096 Mar 17 11:43 scripts
+/usr/share/misc/magic/file-5.44/magic  less magic
+magic: No such file or directory
+/usr/share/misc/magic/file-5.44/magic  less Header
+
+zsh: suspended  less Header
+/usr/share/misc/magic/file-5.44/magic  cat Header
+# Magic data for file(1) command.
+# Format is described in in magic(5).
+# Don't edit this file, edit /etc/magic or send your magic improvements
+# to the upstream maintainers, at file@astron.com
+# or send your suggested inclusions
+# as a wishlist bug against the file package (using the reportbug utility).
+/usr/share/misc/magic/file-5.44/magic  head -n 20 Header
+
+# Magic data for file(1) command.
+# Format is described in in magic(5).
+# Don't edit this file, edit /etc/magic or send your magic improvements
+# to the upstream maintainers, at file@astron.com
+# or send your suggested inclusions
+# as a wishlist bug against the file package (using the reportbug utility).
+/usr/share/misc/magic/file-5.44/magic  ls -l Magdir
+total 2464
+-rw-r--r-- 1 root root   3731 May 12  2021 acorn
+...
+/usr/share/misc/magic/file-5.44/magic  nano Magdir/animation
+/usr/share/misc/magic/file-5.44/magic  nano Magdir/image
+/usr/share/misc/magic/file-5.44/magic  nano Magdir/animation
+/usr/share/misc/magic/file-5.44/magic  less Magdir/elf
