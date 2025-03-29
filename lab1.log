@@ -1,0 +1,690 @@
+# start
+
+~/leti/sem4/OS  who
+misha    tty1         2025-03-10 18:22
+misha    pts/1        2025-03-10 18:24
+
+~/leti/sem4/OS  lscpu
+Architecture:             x86_64
+  CPU op-mode(s):         32-bit, 64-bit
+  Address sizes:          39 bits physical, 48 bits virtual
+  Byte Order:             Little Endian
+CPU(s):                   20
+  On-line CPU(s) list:    0-19
+Vendor ID:                GenuineIntel
+  Model name:             13th Gen Intel(R) Core(TM) i7-13650HX
+    CPU family:           6
+    Model:                183
+    Thread(s) per core:   2
+    Core(s) per socket:   14
+    Socket(s):            1
+    Stepping:             1
+    CPU(s) scaling MHz:   44%
+    CPU max MHz:          4900.0000
+    CPU min MHz:          800.0000
+    BogoMIPS:             5606.40
+    Flags:                fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm
+                           pbe syscall nx pdpe1gb rdtscp lm constant_tsc art arch_perfmon pebs bts rep_good nopl xtopology nonstop_tsc cpuid
+                          aperfmperf tsc_known_freq pni pclmulqdq dtes64 monitor ds_cpl vmx est tm2 ssse3 sdbg fma cx16 xtpr pdcm sse4_1 sse4
+                          _2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand lahf_lm abm 3dnowprefetch cpuid_fault epb ssbd
+                          ibrs ibpb stibp ibrs_enhanced tpr_shadow vnmi flexpriority ept vpid ept_ad fsgsbase tsc_adjust bmi1 avx2 smep bmi2
+                          erms invpcid rdseed adx smap clflushopt clwb intel_pt sha_ni xsaveopt xsavec xgetbv1 xsaves split_lock_detect avx_v
+                          nni dtherm ida arat pln pts hwp hwp_notify hwp_act_window hwp_epp hwp_pkg_req hfi umip pku ospke waitpkg gfni vaes
+                          vpclmulqdq rdpid movdiri movdir64b fsrm md_clear serialize arch_lbr ibt flush_l1d arch_capabilities
+Virtualization features:
+  Virtualization:         VT-x
+Caches (sum of all):
+  L1d:                    544 KiB (14 instances)
+  L1i:                    704 KiB (14 instances)
+  L2:                     11.5 MiB (8 instances)
+  L3:                     24 MiB (1 instance)
+NUMA:
+  NUMA node(s):           1
+  NUMA node0 CPU(s):      0-19
+Vulnerabilities:
+  Gather data sampling:   Not affected
+  Itlb multihit:          Not affected
+  L1tf:                   Not affected
+  Mds:                    Not affected
+  Meltdown:               Not affected
+  Mmio stale data:        Not affected
+  Reg file data sampling: Mitigation; Clear Register File
+  Retbleed:               Not affected
+  Spec rstack overflow:   Not affected
+  Spec store bypass:      Mitigation; Speculative Store Bypass disabled via prctl
+  Spectre v1:             Mitigation; usercopy/swapgs barriers and __user pointer sanitization
+  Spectre v2:             Mitigation; Enhanced / Automatic IBRS; IBPB conditional; RSB filling; PBRSB-eIBRS SW sequence; BHI BHI_DIS_S
+  Srbds:                  Not affected
+  Tsx async abort:        Not affected
+
+~/leti/sem4/OS  uname -a
+Linux debian-laptop 6.1.0-30-amd64 #1 SMP PREEMPT_DYNAMIC Debian 6.1.124-1 (2025-01-12) x86_64 GNU/Linux
+
+~/leti/sem4/OS  ls -l
+total 604
+-rw-r--r-- 1 misha misha 591377 Mar  8 13:36 1_lab.pdf
+-rw-r--r-- 1 misha misha   9161 Mar 10 20:45 old.log
+drwxr-xr-x 3 misha misha   4096 Mar 10 20:47 old_log
+drwxr-xr-x 2 misha misha   4096 Mar 10 20:30 scripts
+-rw-r--r-- 1 misha misha      8 Mar 10 20:45 true.log
+ 
+
+### Task 1 ###
+
+~/leti/sem4/OS  ls -lR / 2> /dev/null | pcregrep -o1 -o3 --om-separator=" " -M '^(\/.*:)$\n([^\/\n].*\n)*?^(-.*)$' | head -n 1
+/boot: -rw-r--r-- 1 root root   259624 Nov  1 07:23 config-6.1.0-27-amd64
+~/leti/sem4/OS  ls -lR / 2> /dev/null | pcregrep -o1 -o3 --om-separator=" " -M '^(\/.*:)$\n([^\/\n].*\n)*?^(b.*)$' | head -n 1
+/dev: brw-rw----   1 root  disk      7,     0 Mar 11 16:55 loop0
+~/leti/sem4/OS  ls -lR / 2> /dev/null | pcregrep -o1 -o3 --om-separator=" " -M '^(\/.*:)$\n([^\/\n].*\n)*?^(c.*)$' | head -n 1
+/dev: crw-------   1 root  root     10,   124 Mar 11 16:55 acpi_thermal_rel
+~/leti/sem4/OS  ls -lR / 2> /dev/null | pcregrep -o1 -o3 --om-separator=" " -M '^(\/.*:)$\n([^\/\n].*\n)*?^(d.*)$' | head -n 1
+/: drwxr-xr-x   4 root root  4096 Feb  5 12:29 boot
+~/leti/sem4/OS  ls -lR / 2> /dev/null | pcregrep -o1 -o3 --om-separator=" " -M '^(\/.*:)$\n([^\/\n].*\n)*?^(l.*)$' | head -n 1
+/: lrwxrwxrwx   1 root root     7 Feb  5 12:02 bin -> usr/bin
+~/leti/sem4/OS  ls -lR / 2> /dev/null | pcregrep -o1 -o3 --om-separator=" " -M '^(\/.*:)$\n([^\/\n].*\n)*?^(p.*)$' | head -n 1
+/run: prw-------  1 root root      0 Mar 11 16:55 initctl
+~/leti/sem4/OS  ls -lR / 2> /dev/null | pcregrep -o1 -o3 --om-separator=" " -M '^(\/.*:)$\n([^\/\n].*\n)*?^(s.*)$' | head -n 1
+/run/dbus: srw-rw-rw- 1 root       root  0 Mar 11 16:55 system_bus_socket
+~/leti/sem4/OS 
+
+~/leti/sem4/OS  cd scripts
+~/leti/sem4/OS/scripts  nano lab1_task1.sh
+~/leti/sem4/OS/scripts  chmod +x lab1_task1.sh
+~/leti/sem4/OS/scripts  ./lab1_task1.sh lab1_output.txt
+output processing in file...
+
+
+### Task 2 ###
+
+~/leti/sem4/OS  mkdir test_os_2
+~/leti/sem4/OS  cd test_os_2
+~/leti/sem4/OS/test_os_2  touch hardlink_1 hardlink_2
+~/leti/sem4/OS/test_os_2  ln hardlink_1 first_hardlink
+~/leti/sem4/OS/test_os_2  mkdir another_dir
+~/leti/sem4/OS/test_os_2  ln hardlink_1 another_dir/second_hardlink
+~/leti/sem4/OS  ls -l test_os_2
+total 4
+drwxr-xr-x 2 misha misha 4096 Mar 11 17:35 another_dir
+-rw-r--r-- 3 misha misha    0 Mar 11 17:35 first_hardlink
+-rw-r--r-- 3 misha misha    0 Mar 11 17:35 hardlink_1
+-rw-r--r-- 1 misha misha    0 Mar 11 17:35 hardlink_2
+
+~/leti/sem4/OS  cd test_os_2
+~/leti/sem4/OS/test_os_2  stat -c '%i' hardlink_1
+3544659
+
+~/leti/sem4/OS  ls -iR1 ~ 2> /dev/null | grep "3544659"
+3544659 first_hardlink
+3544659 hardlink_1
+3544659 second_hardlink
+
+~/leti/sem4/OS/scripts  chmod +x lab1_task2.sh
+~/leti/sem4/OS/scripts  ./lab1_task2.sh ~/leti/sem4/OS/test_os_2/hardlink_1
+Выбранный inode: 3544659
+Поиск...
+Жесткие ссылки:
+3544659 first_hardlink
+3544659 hardlink_1
+3544659 second_hardlink
+
+
+### Task 3 ###
+
+~/leti/sem4/OS  touch testfile
+~/leti/sem4/OS  ln -s testfile first_link
+~/leti/sem4/OS  cp -s testfile scecond_link
+~/leti/sem4/OS  link testfile third_link
+~/leti/sem4/OS  ls -l
+total 612
+-rw-r--r-- 1 misha misha 591377 Mar  8 13:36 1_lab.pdf
+lrwxrwxrwx 1 misha misha      8 Mar 11 17:55 first_link -> testfile
+-rw-r--r-- 1 misha misha   9161 Mar 10 20:45 old.log
+drwxr-xr-x 3 misha misha   4096 Mar 10 20:47 old_log
+lrwxrwxrwx 1 misha misha      8 Mar 11 17:55 scecond_link -> testfile
+drwxr-xr-x 2 misha misha   4096 Mar 11 17:53 scripts
+-rw-r--r-- 2 misha misha      0 Mar 11 17:55 testfile
+drwxr-xr-x 3 misha misha   4096 Mar 11 17:35 test_os_2
+-rw-r--r-- 2 misha misha      0 Mar 11 17:55 third_link
+-rw-r--r-- 1 misha misha   6142 Mar 11 17:54 true.log
+
+~/leti/sem4/OS/scripts  chmod +x lab1_task3.sh
+~/leti/sem4/OS/scripts  ./lab1_task3.sh ~/leti/sem4/OS/testfile
+/home/misha/leti/sem4/OS/first_link
+/home/misha/leti/sem4/OS/scecond_link
+
+
+### Task 4 ###
+
+
+# in lab1_task3.sh
+
+
+### Task 5 ###
+
+~/leti/sem4/OS/scripts  find /home -type f -mtime -1 2> /dev/null | head -n 5
+/home/misha/Downloads/Telegram Desktop/Handbook_of_Floating_Point_Arithmetic_handbook_of_floating_point.pdf
+/home/misha/leti/sem4/CaAA/lab4/kmp.py
+/home/misha/leti/sem4/CaAA/lab4/Shceglov_lab4.pdf
+/home/misha/leti/sem4/CaAA/lab4/Shceglov_lab4.odt
+/home/misha/leti/sem4/CaAA/lab4/cyclic_shift_kmp.py
+
+~/leti/sem4/OS/scripts  find /home -type f -size +100M 2>/dev/null | head -n 3
+/home/misha/Downloads/pr-2024-3381.zip
+/home/misha/Downloads/leti-20250207T163515Z-001.zip
+/home/misha/Downloads/zoom_amd64.deb
+
+~/leti/sem4/OS/scripts  find /var/log -type f -empty 2>/dev/null
+/var/log/faillog
+/var/log/alternatives.log
+
+~/leti/sem4/OS/scripts  find /home -type f \( -name "*.ipynb" -a -size +1M \) -print 2>/dev/null
+/home/misha/Downloads/leti/semestr_2/Python_semestr_2/Lesson_1_1.ipynb
+/home/misha/Downloads/leti/semestr_2/Python_semestr_2/Lesson_1.ipynb
+/home/misha/leti/sem2/Python_semestr_2/Lesson_1_1.ipynb
+/home/misha/leti/sem2/Python_semestr_2/Lesson_1.ipynb
+/home/misha/leti/altushka/alternative_DMiTI copy.ipynb
+/home/misha/.local/share/Trash/files/leti/semestr_2/Python_semestr_2/Lesson_1_1.ipynb
+/home/misha/.local/share/Trash/files/leti/semestr_2/Python_semestr_2/Lesson_1.ipynb
+/home/misha/.local/share/Trash/files/leti (copy)/semestr_2/Python_semestr_2/Lesson_1_1.ipynb
+/home/misha/.local/share/Trash/files/leti (copy)/semestr_2/Python_semestr_2/Lesson_1.ipynb
+/home/misha/.local/share/Trash/files/leti (another copy)/semestr_2/Python_semestr_2/Lesson_1_1.ipynb
+/home/misha/.local/share/Trash/files/leti (another copy)/semestr_2/Python_semestr_2/Lesson_1.ipynb
+/home/misha/.local/share/Trash/files/alternative_DMiTI.ipynb
+
+
+### Task 6 ###
+
+~/leti/sem4/OS  hexdump -C -n 128 1_lab.pdf
+00000000  25 50 44 46 2d 31 2e 34  0d 0a 25 b5 b5 b5 b5 0d  |%PDF-1.4..%.....|
+00000010  0a 31 20 30 20 6f 62 6a  0d 0a 3c 3c 2f 54 79 70  |.1 0 obj..<</Typ|
+00000020  65 2f 43 61 74 61 6c 6f  67 2f 50 61 67 65 73 20  |e/Catalog/Pages |
+00000030  32 20 30 20 52 2f 4c 61  6e 67 28 72 75 2d 52 55  |2 0 R/Lang(ru-RU|
+00000040  29 20 2f 53 74 72 75 63  74 54 72 65 65 52 6f 6f  |) /StructTreeRoo|
+00000050  74 20 34 35 20 30 20 52  2f 4d 61 72 6b 49 6e 66  |t 45 0 R/MarkInf|
+00000060  6f 3c 3c 2f 4d 61 72 6b  65 64 20 74 72 75 65 3e  |o<</Marked true>|
+00000070  3e 2f 4f 75 74 70 75 74  49 6e 74 65 6e 74 73 5b  |>/OutputIntents[|
+00000080
+
+~/leti/sem4/OS  od -Ax -tx1z -v -N 128 1_lab.pdf
+000000 25 50 44 46 2d 31 2e 34 0d 0a 25 b5 b5 b5 b5 0d  >%PDF-1.4..%.....<
+000010 0a 31 20 30 20 6f 62 6a 0d 0a 3c 3c 2f 54 79 70  >.1 0 obj..<</Typ<
+000020 65 2f 43 61 74 61 6c 6f 67 2f 50 61 67 65 73 20  >e/Catalog/Pages <
+000030 32 20 30 20 52 2f 4c 61 6e 67 28 72 75 2d 52 55  >2 0 R/Lang(ru-RU<
+000040 29 20 2f 53 74 72 75 63 74 54 72 65 65 52 6f 6f  >) /StructTreeRoo<
+000050 74 20 34 35 20 30 20 52 2f 4d 61 72 6b 49 6e 66  >t 45 0 R/MarkInf<
+000060 6f 3c 3c 2f 4d 61 72 6b 65 64 20 74 72 75 65 3e  >o<</Marked true><
+000070 3e 2f 4f 75 74 70 75 74 49 6e 74 65 6e 74 73 5b  >>/OutputIntents[<
+000080
+
+~/leti/sem4/OS  hexdump -C -n 128 /home/misha/leti/altushka/neural_network/without_learning.py
+00000000  69 6d 70 6f 72 74 20 74  65 6e 73 6f 72 66 6c 6f  |import tensorflo|
+00000010  77 20 61 73 20 74 66 0a  69 6d 70 6f 72 74 20 6e  |w as tf.import n|
+00000020  75 6d 70 79 20 61 73 20  6e 70 0a 66 72 6f 6d 20  |umpy as np.from |
+00000030  6b 65 72 61 73 2e 70 72  65 70 72 6f 63 65 73 73  |keras.preprocess|
+00000040  69 6e 67 2e 73 65 71 75  65 6e 63 65 20 69 6d 70  |ing.sequence imp|
+00000050  6f 72 74 20 70 61 64 5f  73 65 71 75 65 6e 63 65  |ort pad_sequence|
+00000060  73 0a 69 6d 70 6f 72 74  20 70 69 63 6b 6c 65 0a  |s.import pickle.|
+00000070  69 6d 70 6f 72 74 20 72  65 0a 69 6d 70 6f 72 74  |import re.import|
+00000080
+
+~/leti/sem4/OS  od -Ax -tx1z -v -N 128 /home/misha/leti/altushka/neural_network/without_learning.py
+000000 69 6d 70 6f 72 74 20 74 65 6e 73 6f 72 66 6c 6f  >import tensorflo<
+000010 77 20 61 73 20 74 66 0a 69 6d 70 6f 72 74 20 6e  >w as tf.import n<
+000020 75 6d 70 79 20 61 73 20 6e 70 0a 66 72 6f 6d 20  >umpy as np.from <
+000030 6b 65 72 61 73 2e 70 72 65 70 72 6f 63 65 73 73  >keras.preprocess<
+000040 69 6e 67 2e 73 65 71 75 65 6e 63 65 20 69 6d 70  >ing.sequence imp<
+000050 6f 72 74 20 70 61 64 5f 73 65 71 75 65 6e 63 65  >ort pad_sequence<
+000060 73 0a 69 6d 70 6f 72 74 20 70 69 63 6b 6c 65 0a  >s.import pickle.<
+000070 69 6d 70 6f 72 74 20 72 65 0a 69 6d 70 6f 72 74  >import re.import<
+000080
+
+~/leti/sem4/OS  od -Ax -tx1z -v -N 128 /home/misha/leti/altushka/neural_network/word_encoder.pkl
+000000 80 04 95 c2 00 00 00 00 00 00 00 8c 1c 73 6b 6c  >.............skl<
+000010 65 61 72 6e 2e 70 72 65 70 72 6f 63 65 73 73 69  >earn.preprocessi<
+000020 6e 67 2e 5f 6c 61 62 65 6c 94 8c 0c 4c 61 62 65  >ng._label...Labe<
+000030 6c 45 6e 63 6f 64 65 72 94 93 94 29 81 94 7d 94  >lEncoder...)..}.<
+000040 28 8c 08 63 6c 61 73 73 65 73 5f 94 8c 16 6e 75  >(..classes_...nu<
+000050 6d 70 79 2e 5f 63 6f 72 65 2e 6d 75 6c 74 69 61  >mpy._core.multia<
+000060 72 72 61 79 94 8c 0c 5f 72 65 63 6f 6e 73 74 72  >rray..._reconstr<
+000070 75 63 74 94 93 94 8c 05 6e 75 6d 70 79 94 8c 07  >uct.....numpy...<
+000080
+
+~/leti/sem4/OS  hexdump -C -n 128 /home/misha/leti/altushka/neural_network/word_encoder.pkl
+00000000  80 04 95 c2 00 00 00 00  00 00 00 8c 1c 73 6b 6c  |.............skl|
+00000010  65 61 72 6e 2e 70 72 65  70 72 6f 63 65 73 73 69  |earn.preprocessi|
+00000020  6e 67 2e 5f 6c 61 62 65  6c 94 8c 0c 4c 61 62 65  |ng._label...Labe|
+00000030  6c 45 6e 63 6f 64 65 72  94 93 94 29 81 94 7d 94  |lEncoder...)..}.|
+00000040  28 8c 08 63 6c 61 73 73  65 73 5f 94 8c 16 6e 75  |(..classes_...nu|
+00000050  6d 70 79 2e 5f 63 6f 72  65 2e 6d 75 6c 74 69 61  |mpy._core.multia|
+00000060  72 72 61 79 94 8c 0c 5f  72 65 63 6f 6e 73 74 72  |rray..._reconstr|
+00000070  75 63 74 94 93 94 8c 05  6e 75 6d 70 79 94 8c 07  |uct.....numpy...|
+00000080
+
+~/leti/sem4/OS  hexdump -C -n 128 /home/misha/leti/sem4/OS/test_os_2
+hexdump: /home/misha/leti/sem4/OS/test_os_2: Is a directory
+
+
+### Task 7 ###
+
+~/leti/sem4/OS  mkdir test_os_7
+~/leti/sem4/OS  stat test_os_7
+  File: 
+test_os_7
+  Size: 4096      	Blocks: 8          IO Block: 4096   directory
+Device: 259,4	Inode: 3544679     Links: 2
+Access: (0755/drwxr-xr-x)  Uid: ( 1000/   misha)   Gid: ( 1000/   misha)
+Access: 2025-03-11 18:35:47.548414105 +0300
+Modify: 2025-03-11 18:35:47.548414105 +0300
+Change: 2025-03-11 18:35:47.548414105 +0300
+ Birth: 2025-03-11 18:35:47.548414105 +0300
+
+~/leti/sem4/OS  cd test_os_7
+~/leti/sem4/OS/test_os_7  touch filler_{1..10}
+~/leti/sem4/OS/test_os_7  cd ..
+~/leti/sem4/OS  stat test_os_7
+  File: test_os_7
+  Size: 4096      	Blocks: 8          IO Block: 4096   directory
+Device: 259,4	Inode: 3544679     Links: 2
+Access: (0755/drwxr-xr-x)  Uid: ( 1000/   misha)   Gid: ( 1000/   misha)
+Access: 2025-03-11 18:35:47.548414105 +0300
+Modify: 2025-03-11 18:36:01.506454304 +0300
+Change: 2025-03-11 18:36:01.506454304 +0300
+ Birth: 2025-03-11 18:35:47.548414105 +0300
+
+~/leti/sem4/OS  cd test_os_7
+~/leti/sem4/OS/test_os_7  touch filler_{11..1000}
+~/leti/sem4/OS/test_os_7  cd ..
+~/leti/sem4/OS  stat test_os_7
+  File: test_os_7
+  Size: 36864     	Blocks: 72         IO Block: 4096   directory
+Device: 259,4	Inode: 3544679     Links: 2
+Access: (0755/drwxr-xr-x)  Uid: ( 1000/   misha)   Gid: ( 1000/   misha)
+Access: 2025-03-11 18:35:47.548414105 +0300
+Modify: 2025-03-11 18:36:21.051606059 +0300
+Change: 2025-03-11 18:36:21.051606059 +0300
+ Birth: 2025-03-11 18:35:47.548414105 +0300
+
+~/leti/sem4/OS  cd test_os_7
+~/leti/sem4/OS/test_os_7  rm filler_*
+~/leti/sem4/OS/test_os_7  ls
+~/leti/sem4/OS/test_os_7  cd ..
+~/leti/sem4/OS  stat test_os_7
+  File: test_os_7
+  Size: 36864     	Blocks: 72         IO Block: 4096   directory
+Device: 259,4	Inode: 3544679     Links: 2
+Access: (0755/drwxr-xr-x)  Uid: ( 1000/   misha)   Gid: ( 1000/   misha)
+Access: 2025-03-11 18:37:58.116160137 +0300
+Modify: 2025-03-11 18:37:57.260303296 +0300
+Change: 2025-03-11 18:37:57.260303296 +0300
+ Birth: 2025-03-11 18:35:47.548414105 +0300
+
+~/leti/sem4/OS  cd scripts
+~/leti/sem4/OS/scripts  nano lab1_task7.sh
+~/leti/sem4/OS/scripts  chmod +x lab1_task7.sh
+~/leti/sem4/OS/scripts  ./lab1_task7.sh
+Created directory: test_os_7
+Initial stat:
+  File: test_os_7
+  Size: 4096      	Blocks: 8          IO Block: 4096   directory
+Device: 259,4	Inode: 3544693     Links: 2
+Access: (0755/drwxr-xr-x)  Uid: ( 1000/   misha)   Gid: ( 1000/   misha)
+Access: 2025-03-11 18:39:13.387261855 +0300
+Modify: 2025-03-11 18:39:13.387261855 +0300
+Change: 2025-03-11 18:39:13.387261855 +0300
+ Birth: 2025-03-11 18:39:13.387261855 +0300
+
+After creating 1000 files:
+  File: test_os_7
+  Size: 36864     	Blocks: 72         IO Block: 4096   directory
+Device: 259,4	Inode: 3544693     Links: 2
+Access: (0755/drwxr-xr-x)  Uid: ( 1000/   misha)   Gid: ( 1000/   misha)
+Access: 2025-03-11 18:39:13.387261855 +0300
+Modify: 2025-03-11 18:39:13.427254870 +0300
+Change: 2025-03-11 18:39:13.427254870 +0300
+ Birth: 2025-03-11 18:39:13.387261855 +0300
+
+After removing files:
+  File: test_os_7
+  Size: 36864     	Blocks: 72         IO Block: 4096   directory
+Device: 259,4	Inode: 3544693     Links: 2
+Access: (0755/drwxr-xr-x)  Uid: ( 1000/   misha)   Gid: ( 1000/   misha)
+Access: 2025-03-11 18:39:13.431254171 +0300
+Modify: 2025-03-11 18:39:13.451250678 +0300
+Change: 2025-03-11 18:39:13.451250678 +0300
+ Birth: 2025-03-11 18:39:13.387261855 +0300
+
+Experiment completed.
+
+
+### Task 8 ###
+
+
+~/leti/sem4/OS  passwd --help
+Usage: passwd [options] [LOGIN]
+
+Options:
+  -a, --all                     report password status on all accounts
+  -d, --delete                  delete the password for the named account
+  -e, --expire                  force expire the password for the named account
+  -h, --help                    display this help message and exit
+  -k, --keep-tokens             change password only if expired
+  -i, --inactive INACTIVE       set password inactive after expiration
+                                to INACTIVE
+  -l, --lock                    lock the password of the named account
+  -n, --mindays MIN_DAYS        set minimum number of days before password
+                                change to MIN_DAYS
+  -q, --quiet                   quiet mode
+  -r, --repository REPOSITORY   change password in REPOSITORY repository
+  -R, --root CHROOT_DIR         directory to chroot into
+  -S, --status                  report password status on the named account
+  -u, --unlock                  unlock the password of the named account
+  -w, --warndays WARN_DAYS      set expiration warning days to WARN_DAYS
+  -x, --maxdays MAX_DAYS        set maximum number of days before password
+                                change to MAX_DAYS
+
+~/leti/sem4/OS  ls -l /etc/passwd
+-rw-r--r-- 1 root root 1512 Feb  5 12:42 /etc/passwd
+
+~/leti/sem4/OS  ls -l /etc/shadow
+-rw-r----- 1 root shadow 798 Feb  5 12:42 /etc/shadow
+
+~/leti/sem4/OS  ls -l /usr/bin/passwd
+-rwsr-xr-x 1 root root 68248 Mar 23  2023 /usr/bin/passwd
+
+~/leti/sem4/OS  cat /etc/passwd | head -n 5
+root:x:0:0:root:/root:/bin/bash
+daemon:x:1:1:daemon:/usr/sbin:/usr/sbin/nologin
+bin:x:2:2:bin:/bin:/usr/sbin/nologin
+sys:x:3:3:sys:/dev:/usr/sbin/nologin
+sync:x:4:65534:sync:/bin:/bin/sync
+
+~/leti/sem4/OS  cat /etc/shadow | head -n 5
+cat: /etc/shadow: Permission denied# 9.1 Меняем владельца и права для файлов и каталогов.
+
+
+### Task 9 ###
+
+
+~/leti/sem4/OS  mkdir test_os_9
+~/leti/sem4/OS  cd test_os_9
+~/leti/sem4/OS/test_os_9  touch file1 file2
+~/leti/sem4/OS/test_os_9  mkdir another_dir
+~/leti/sem4/OS/test_os_9  touch another_dir/file3 another_dir/file4
+~/leti/sem4/OS/test_os_9  tree
+.
+├── another_dir│   ├── file3
+│   └── file4
+├── file1
+└── file2
+2 directories, 4 files
+
+~/leti/sem4/OS/test_os_9  chmod a+x file1
+~/leti/sem4/OS/test_os_9  chmod g+w file2
+~/leti/sem4/OS/test_os_9  ls -lR
+.:
+total 4
+drwxr-xr-x 2 misha misha 4096 Mar 11 18:46 another_dir
+-rwxr-xr-x 1 misha misha    0 Mar 11 18:46 file1
+-rw-rw-r-- 1 misha misha    0 Mar 11 18:46 file2
+
+./another_dir:
+total 0
+-rw-r--r-- 1 misha misha 0 Mar 11 18:46 file3
+-rw-r--r-- 1 misha misha 0 Mar 11 18:46 file4
+
+
+# 9.2 Make SUID-bit.
+
+~/leti/sem4/OS/test_os_9  sudo chown root:misha file1
+~/leti/sem4/OS/test_os_9  chmod 777 -R another_dir
+
+~/leti/sem4/OS/scripts  gcc SUID_TEST.c -o suid_test_program
+~/leti/sem4/OS/scripts  ls -l suid_test_program
+-rwxr-xr-x 1 misha misha 16008 Mar 11 18:53 suid_test_program
+
+~/leti/sem4/OS/scripts  sudo chown root:root suid_test_program
+~/leti/sem4/OS/scripts  sudo chmod u+s suid_test_program
+~/leti/sem4/OS/scripts  ls -l suid_test_program
+-rwsr-xr-x 1 root root 16008 Mar 11 18:53 suid_test_program
+
+
+# 9.3 exp with catalog.
+
+~/leti/sem4/OS/scripts  mkdir test_dir
+~/leti/sem4/OS/scripts  touch test_dir/test_file
+~/leti/sem4/OS/scripts  chmod 600 test_dir/test_file
+~/leti/sem4/OS/scripts  chmod 700 test_dir
+
+
+### Task 10 ###
+
+~/leti/sem4/OS/scripts  nano lab1_task10.c
+~/leti/sem4/OS/scripts  gcc lab1_task10.c -o task10
+~/leti/sem4/OS/scripts  sudo chown root:root task10
+~/leti/sem4/OS/scripts  sudo chmod u+s task10
+~/leti/sem4/OS/scripts  sudo sh -c 'echo "Секретное содержимое" > /home/misha/leti/OS/secret.txt'
+~/leti/sem4/OS/scripts  sudo sh -c 'echo "Секретное содержимое" > /home/misha/leti/sem4/OS/secret.txt'
+~/leti/sem4/OS/scripts  sudo chmod 600 /home/misha/leti/sem4/OS/secret.txt
+~/leti/sem4/OS/scripts  sudo chown root:root /home/misha/leti/sem4/OS/secret.txt
+~/leti/sem4/OS/scripts  ./task10 /home/misha/leti/sem4/OS/secret.txt
+Секретное содержимое
+
+~/leti/sem4/OS/scripts  sudo chown root:misha /home/misha/leti/sem4/OS/secret.txt
+~/leti/sem4/OS/scripts  sudo chmod 600 /home/misha/leti/sem4/OS/secret.txt
+~/leti/sem4/OS/scripts  ./task10 /home/misha/leti/sem4/OS/secret.txt
+Секретное содержимое
+
+~/leti/sem4/OS/scripts  sudo chmod 600 /home/misha/leti/sem4/OS/secret.txt
+~/leti/sem4/OS/scripts  ./task10 /home/misha/leti/sem4/OS/secret.txt
+Секретное содержимое
+
+
+### Task 11 ##
+
+~/leti/sem4/OS  df -h
+Filesystem      Size  Used Avail Use% Mounted on
+udev             16G     0   16G   0% /dev
+tmpfs           3.1G  7.8M  3.1G   1% /run
+/dev/nvme0n1p2  229G   22G  196G  10% /
+tmpfs            16G  121M   16G   1% /dev/shm
+tmpfs           5.0M     0  5.0M   0% /run/lock
+/dev/nvme0n1p4  412G   69G  322G  18% /home
+/dev/nvme0n1p1  487M   12M  475M   3% /boot/efi
+tmpfs           3.1G   28K  3.1G   1% /run/user/1000
+
+~/leti/sem4/OS  df -a
+df: /run/user/1000/doc: Operation not permitted
+Filesystem                                  1K-blocks     Used Available Use% Mounted on
+sysfs                                               0        0         0    - /sys
+proc                                                0        0         0    - /proc
+udev                                         16209064        0  16209064   0% /dev
+devpts                                              0        0         0    - /dev/pts
+tmpfs                                         3246588     7952   3238636   1% /run
+/dev/nvme0n1p2                              239198852 22130372 204845044  10% /
+securityfs                                          0        0         0    - /sys/kernel/security
+tmpfs                                        16232932   123576  16109356   1% /dev/shm
+tmpfs                                            5120        0      5120   0% /run/lock
+cgroup2                                             0        0         0    - /sys/fs/cgroup
+pstore                                              0        0         0    - /sys/fs/pstore
+efivarfs                                            0        0         0    - /sys/firmware/efi/efivars
+bpf                                                 0        0         0    - /sys/fs/bpf
+systemd-1                                           -        -         -    - /proc/sys/fs/binfmt_misc
+hugetlbfs                                           0        0         0    - /dev/hugepages
+mqueue                                              0        0         0    - /dev/mqueue
+debugfs                                             0        0         0    - /sys/kernel/debug
+tracefs                                             0        0         0    - /sys/kernel/tracing
+configfs                                            0        0         0    - /sys/kernel/config
+ramfs                                               0        0         0    - /run/credentials/systemd-sysctl.service
+ramfs                                               0        0         0    - /run/credentials/systemd-sysusers.service
+fusectl                                             0        0         0    - /sys/fs/fuse/connections
+ramfs                                               0        0         0    - /run/credentials/systemd-tmpfiles-setup-dev.service
+/dev/nvme0n1p4                              431433164 72061008 337383120  18% /home
+/dev/nvme0n1p1                                 497696    12204    485492   3% /boot/efi
+ramfs                                               0        0         0    - /run/credentials/systemd-tmpfiles-setup.service
+binfmt_misc                                         0        0         0    - /proc/sys/fs/binfmt_misc
+tmpfs                                         3246584       28   3246556   1% /run/user/1000
+hiddify-clash-desktop_13.1.4_amd64.AppImage         0        0         0    - /tmp/.mount_hiddifmUqHYo
+
+~/leti/sem4/OS  df -Th
+Filesystem     Type      Size  Used Avail Use% Mounted on
+udev           devtmpfs   16G     0   16G   0% /dev
+tmpfs          tmpfs     3.1G  7.8M  3.1G   1% /run
+/dev/nvme0n1p2 ext4      229G   22G  196G  10% /
+tmpfs          tmpfs      16G  121M   16G   1% /dev/shm
+tmpfs          tmpfs     5.0M     0  5.0M   0% /run/lock
+/dev/nvme0n1p4 ext4      412G   69G  322G  18% /home
+/dev/nvme0n1p1 vfat      487M   12M  475M   3% /boot/efi
+tmpfs          tmpfs     3.1G   28K  3.1G   1% /run/user/1000
+
+~/leti/sem4/OS  lsblk -a
+NAME        MAJ:MIN RM   SIZE RO TYPE MOUNTPOINTS
+loop0         7:0    0     0B  0 loop
+loop1         7:1    0     0B  0 loop
+loop2         7:2    0     0B  0 loop
+loop3         7:3    0     0B  0 loop
+loop4         7:4    0     0B  0 loop
+loop5         7:5    0     0B  0 loop
+loop6         7:6    0     0B  0 loop
+loop7         7:7    0     0B  0 loop
+nvme0n1     259:0    0 953.9G  0 disk
+├─nvme0n1p1 259:1    0   487M  0 part /boot/efi
+├─nvme0n1p2 259:2    0 232.8G  0 part /
+├─nvme0n1p3 259:3    0  29.8G  0 part [SWAP]
+├─nvme0n1p4 259:4    0 419.1G  0 part /home
+└─nvme0n1p5 259:5    0 271.7G  0 part
+
+~/leti/sem4/OS  file /usr/bin/df
+/usr/bin/df: ELF 64-bit LSB pie executable, x86-64, version 1 (SYSV), dynamically linked, interpreter /lib64/ld-linux-x86-64.so.2, BuildID[sha1]=2e13a8652cd172461bccd7e5f5bd1e4de51d2e9b, for GNU/Linux 3.2.0, stripped
+
+~/leti/sem4/OS  file /usr/bin/lsblk
+/usr/bin/lsblk: ELF 64-bit LSB pie executable, x86-64, version 1 (SYSV), dynamically linked, interpreter /lib64/ld-linux-x86-64.so.2, BuildID[sha1]=f273ce2244014a4248186f11c1886f2b55cadf86, for GNU/Linux 3.2.0, stripped
+
+~/leti/sem4/OS  df -hT 2>/dev/null
+Filesystem     Type      Size  Used Avail Use% Mounted on
+udev           devtmpfs   16G     0   16G   0% /dev
+tmpfs          tmpfs     3.1G  7.8M  3.1G   1% /run
+/dev/nvme0n1p2 ext4      229G   22G  196G  10% /
+tmpfs          tmpfs      16G  121M   16G   1% /dev/shm
+tmpfs          tmpfs     5.0M     0  5.0M   0% /run/lock
+/dev/nvme0n1p4 ext4      412G   69G  322G  18% /home
+/dev/nvme0n1p1 vfat      487M   12M  475M   3% /boot/efi
+tmpfs          tmpfs     3.1G   28K  3.1G   1% /run/user/1000
+
+~/leti/sem4/OS  cat /etc/mtab
+sysfs /sys sysfs rw,nosuid,nodev,noexec,relatime 0 0
+proc /proc proc rw,nosuid,nodev,noexec,relatime 0 0
+udev /dev devtmpfs rw,nosuid,relatime,size=16209064k,nr_inodes=4052266,mode=755,inode64 0 0
+devpts /dev/pts devpts rw,nosuid,noexec,relatime,gid=5,mode=620,ptmxmode=000 0 0
+tmpfs /run tmpfs rw,nosuid,nodev,noexec,relatime,size=3246588k,mode=755,inode64 0 0
+/dev/nvme0n1p2 / ext4 rw,relatime,errors=remount-ro 0 0
+securityfs /sys/kernel/security securityfs rw,nosuid,nodev,noexec,relatime 0 0
+tmpfs /dev/shm tmpfs rw,nosuid,nodev,inode64 0 0
+tmpfs /run/lock tmpfs rw,nosuid,nodev,noexec,relatime,size=5120k,inode64 0 0
+cgroup2 /sys/fs/cgroup cgroup2 rw,nosuid,nodev,noexec,relatime,nsdelegate,memory_recursiveprot 0 0
+pstore /sys/fs/pstore pstore rw,nosuid,nodev,noexec,relatime 0 0
+efivarfs /sys/firmware/efi/efivars efivarfs rw,nosuid,nodev,noexec,relatime 0 0
+bpf /sys/fs/bpf bpf rw,nosuid,nodev,noexec,relatime,mode=700 0 0
+systemd-1 /proc/sys/fs/binfmt_misc autofs rw,relatime,fd=30,pgrp=1,timeout=0,minproto=5,maxproto=5,direct,pipe_ino=17086 0 0
+hugetlbfs /dev/hugepages hugetlbfs rw,relatime,pagesize=2M 0 0
+mqueue /dev/mqueue mqueue rw,nosuid,nodev,noexec,relatime 0 0
+debugfs /sys/kernel/debug debugfs rw,nosuid,nodev,noexec,relatime 0 0
+tracefs /sys/kernel/tracing tracefs rw,nosuid,nodev,noexec,relatime 0 0
+configfs /sys/kernel/config configfs rw,nosuid,nodev,noexec,relatime 0 0
+ramfs /run/credentials/systemd-sysctl.service ramfs ro,nosuid,nodev,noexec,relatime,mode=700 0 0
+ramfs /run/credentials/systemd-sysusers.service ramfs ro,nosuid,nodev,noexec,relatime,mode=700 0 0
+fusectl /sys/fs/fuse/connections fusectl rw,nosuid,nodev,noexec,relatime 0 0
+ramfs /run/credentials/systemd-tmpfiles-setup-dev.service ramfs ro,nosuid,nodev,noexec,relatime,mode=700 0 0
+/dev/nvme0n1p4 /home ext4 rw,relatime 0 0
+/dev/nvme0n1p1 /boot/efi vfat rw,relatime,fmask=0077,dmask=0077,codepage=437,iocharset=ascii,shortname=mixed,utf8,errors=remount-ro 0 0
+ramfs /run/credentials/systemd-tmpfiles-setup.service ramfs ro,nosuid,nodev,noexec,relatime,mode=700 0 0
+binfmt_misc /proc/sys/fs/binfmt_misc binfmt_misc rw,nosuid,nodev,noexec,relatime 0 0
+tmpfs /run/user/1000 tmpfs rw,nosuid,nodev,relatime,size=3246584k,nr_inodes=811646,mode=700,uid=1000,gid=1000,inode64 0 0
+hiddify-clash-desktop_13.1.4_amd64.AppImage /tmp/.mount_hiddifmUqHYo fuse.hiddify-clash-desktop_13.1.4_amd64.AppImage ro,nosuid,nodev,relatime,user_id=0,group_id=0 0 0
+portal /run/user/1000/doc fuse.portal rw,nosuid,nodev,relatime,user_id=1000,group_id=1000 0 0
+
+~/leti/sem4/OS  cat /proc/mounts
+sysfs /sys sysfs rw,nosuid,nodev,noexec,relatime 0 0
+proc /proc proc rw,nosuid,nodev,noexec,relatime 0 0
+udev /dev devtmpfs rw,nosuid,relatime,size=16209064k,nr_inodes=4052266,mode=755,inode64 0 0
+devpts /dev/pts devpts rw,nosuid,noexec,relatime,gid=5,mode=620,ptmxmode=000 0 0
+tmpfs /run tmpfs rw,nosuid,nodev,noexec,relatime,size=3246588k,mode=755,inode64 0 0
+/dev/nvme0n1p2 / ext4 rw,relatime,errors=remount-ro 0 0
+securityfs /sys/kernel/security securityfs rw,nosuid,nodev,noexec,relatime 0 0
+tmpfs /dev/shm tmpfs rw,nosuid,nodev,inode64 0 0
+tmpfs /run/lock tmpfs rw,nosuid,nodev,noexec,relatime,size=5120k,inode64 0 0
+cgroup2 /sys/fs/cgroup cgroup2 rw,nosuid,nodev,noexec,relatime,nsdelegate,memory_recursiveprot 0 0
+pstore /sys/fs/pstore pstore rw,nosuid,nodev,noexec,relatime 0 0
+efivarfs /sys/firmware/efi/efivars efivarfs rw,nosuid,nodev,noexec,relatime 0 0
+bpf /sys/fs/bpf bpf rw,nosuid,nodev,noexec,relatime,mode=700 0 0
+systemd-1 /proc/sys/fs/binfmt_misc autofs rw,relatime,fd=30,pgrp=1,timeout=0,minproto=5,maxproto=5,direct,pipe_ino=17086 0 0
+hugetlbfs /dev/hugepages hugetlbfs rw,relatime,pagesize=2M 0 0
+mqueue /dev/mqueue mqueue rw,nosuid,nodev,noexec,relatime 0 0
+debugfs /sys/kernel/debug debugfs rw,nosuid,nodev,noexec,relatime 0 0
+tracefs /sys/kernel/tracing tracefs rw,nosuid,nodev,noexec,relatime 0 0
+configfs /sys/kernel/config configfs rw,nosuid,nodev,noexec,relatime 0 0
+ramfs /run/credentials/systemd-sysctl.service ramfs ro,nosuid,nodev,noexec,relatime,mode=700 0 0
+ramfs /run/credentials/systemd-sysusers.service ramfs ro,nosuid,nodev,noexec,relatime,mode=700 0 0
+fusectl /sys/fs/fuse/connections fusectl rw,nosuid,nodev,noexec,relatime 0 0
+ramfs /run/credentials/systemd-tmpfiles-setup-dev.service ramfs ro,nosuid,nodev,noexec,relatime,mode=700 0 0
+/dev/nvme0n1p4 /home ext4 rw,relatime 0 0
+/dev/nvme0n1p1 /boot/efi vfat rw,relatime,fmask=0077,dmask=0077,codepage=437,iocharset=ascii,shortname=mixed,utf8,errors=remount-ro 0 0
+ramfs /run/credentials/systemd-tmpfiles-setup.service ramfs ro,nosuid,nodev,noexec,relatime,mode=700 0 0
+binfmt_misc /proc/sys/fs/binfmt_misc binfmt_misc rw,nosuid,nodev,noexec,relatime 0 0
+tmpfs /run/user/1000 tmpfs rw,nosuid,nodev,relatime,size=3246584k,nr_inodes=811646,mode=700,uid=1000,gid=1000,inode64 0 0
+hiddify-clash-desktop_13.1.4_amd64.AppImage /tmp/.mount_hiddifmUqHYo fuse.hiddify-clash-desktop_13.1.4_amd64.AppImage ro,nosuid,nodev,relatime,user_id=0,group_id=0 0 0
+portal /run/user/1000/doc fuse.portal rw,nosuid,nodev,relatime,user_id=1000,group_id=1000 0 0
+
+~/leti/sem4/OS  find /usr/include -name "limits.h" | xargs grep PATH_MAX
+/usr/include/linux/limits.h:#define PATH_MAX        4096	/* # chars in a path name including nul */
+
+~/leti/sem4/OS  find / -type d 2>/dev/null | awk '{ print length, $0 }' | sort -n | tail -1
+246 /var/lib/flatpak/runtime/org.gnome.Platform/x86_64/46/d921e2de0d766f0d6e0a57cee65d95aef737398989e2950c91dfedb9874d21ad/files/lib/python3.11/site-packages/pkg_resources/tests/data/my-test-package_unpacked-egg/my_test_package-1.0-py3.7.egg/EGG-INFO
+
+~/leti/sem4/OS  file -i /home/misha/leti/altushka/neural_network/without_learning.py
+/home/misha/leti/altushka/neural_network/without_learning.py: text/x-script.python; charset=utf-8
+
+~/leti/sem4/OS  file -k /home/misha/leti/altushka/neural_network/without_learning.py
+/home/misha/leti/altushka/neural_network/without_learning.py: Python script text executable\012-  Python script text executable\012-  Python script text executable\012-  Python script, Unicode text, UTF-8 text executable
+
+
+### Задание 12 ###
+
+
+# 12.1 
+
+~/leti/sem4/OS  man file
+~/leti/sem4/OS  file /bin/ls
+/bin/ls: ELF 64-bit LSB pie executable, x86-64, version 1 (SYSV), dynamically linked, interpreter /lib64/ld-linux-x86-64.so.2, BuildID[sha1]=15dfff3239aa7c3b16a71e6b2e3b6e4009dab998, for GNU/Linux 3.2.0, stripped
+~/leti/sem4/OS  file /dev/null
+/dev/null: character special (1/3)
+~/leti/sem4/OS  file /etc/passwd
+/etc/passwd: ASCII text
+~/leti/sem4/OS  find /usr/share -type f -name "magic*"
+/usr/share/mime/magic
+/usr/share/mime/magic.bak
+/usr/share/man/man5/magic.5.gz
+find: ‘/usr/share/polkit-1/rules.d’: Permission denied
+
+
+# 12.2
+
+~/leti/sem4/OS  file -i 1_lab.pdf
+1_lab.pdf: application/pdf; charset=binary
+~/leti/sem4/OS  file -b 1_lab.pdf
+PDF document, version 1.4, 3 pages
+~/leti/sem4/OS  file -z 1_lab.pdf
+1_lab.pdf: PDF document, version 1.4, 3 pages
+~/leti/sem4/OS  file -k 1_lab.pdf
+1_lab.pdf: PDF document, version 1.4, 3 pages\012- data
+
+
+# 12.3
+
+~/leti/sem4/OS  mkdir magic_experiment
+~/leti/sem4/OS  cd magic_experiment
+~/leti/sem4/OS/magic_experiment  echo -n "MY_MAGIC " > test_custom_file
+~/leti/sem4/OS/magic_experiment  echo "Это тестовый файл для расширения базы magic." >> test_custom_file
+~/leti/sem4/OS/magic_experiment  echo '0 string MY_MAGIC My Custom File Type' > my_magic
+~/leti/sem4/OS/magic_experiment  file -m ./my_magic test_custom_file
+test_custom_file: My Custom File Type
+
