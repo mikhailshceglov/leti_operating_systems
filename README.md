@@ -29,7 +29,7 @@
 │   ├── SUID_TEST.c
 │   └── suid_test_program
 
-
+```
 ---
 
 ## Описание заданий
