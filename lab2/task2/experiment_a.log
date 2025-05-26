@@ -1,0 +1,9 @@
+F S   UID     PID    PPID  C PRI  NI ADDR SZ WCHAN  TTY          TIME CMD
+0 S  1000    7567    7546  0  80   0 -  3471 sigsus pts/2    00:00:00 zsh
+0 T  1000   19251    7567  0  80   0 -  2069 do_sig pts/2    00:00:00 man
+0 T  1000   19259   19251  0  80   0 -  1460 do_sig pts/2    00:00:00 pager
+0 T  1000   29578    7567  0  80   0 -  2069 do_sig pts/2    00:00:00 man
+0 T  1000   29586   29578  0  80   0 -  1460 do_sig pts/2    00:00:00 pager
+0 S  1000   38027    7567  0  80   0 -   615 do_wai pts/2    00:00:00 father_2_4
+0 S  1000   38040   38027  0  80   0 -   644 do_wai pts/2    00:00:00 sh
+4 R  1000   38041   38040  0  80   0 -  2804 -      pts/2    00:00:00 ps

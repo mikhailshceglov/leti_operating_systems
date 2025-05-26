@@ -1,0 +1,1453 @@
+# 1.1
+
+~/leti/sem4/OS/lab2/task1  sleep 100 &
+[1] 63222
+~/leti/sem4/OS/lab2/task1  sleep 200 &
+[2] 63247
+~/leti/sem4/OS/lab2/task1  sleep 250 &
+[3] 63269
+~/leti/sem4/OS/lab2/task1  jobs
+[1]    running    sleep 100
+[2]  - running    sleep 200
+[3]  + running    sleep 250
+~/leti/sem4/OS/lab2/task1  wait %1
+[1]    done       sleep 100
+~/leti/sem4/OS/lab2/task1  jobs
+[2]  - running    sleep 200
+[3]  + running    sleep 250
+~/leti/sem4/OS/lab2/task1  fg %2
+[2]  - running    sleep 200
+^Z
+zsh: suspended  sleep 200
+~/leti/sem4/OS/lab2/task1  kill %3
+[3]  - terminated  sleep 250
+~/leti/sem4/OS/lab2/task1  jobs
+[2]  + suspended  sleep 200
+~/leti/sem4/OS/lab2/task1  fg %2
+[2]  + continued  sleep 200
+
+
+# 1.2
+
+~  nohup sleep 120 &
+[1] 9019
+~  nohup: ignoring input and appending output to 'nohup.out'
+nohup sleep 140 &
+[2] 9049
+~  nohup: ignoring input and appending output to 'nohup.out'
+
+# close terminal
+
+~  ps aux | grep sleep
+misha       9019  0.0  0.0   5464   876 ?        SN   10:06   0:00 sleep 120
+misha       9049  0.0  0.0   5464   872 ?        SN   10:06   0:00 sleep 140
+misha       9156  0.0  0.0   6332  2084 pts/2    S+   10:06   0:00 grep sleep
+
+
+# 1.3
+
+~  cat /etc/passwd | head -n 15
+root:x:0:0:root:/root:/bin/bash
+daemon:x:1:1:daemon:/usr/sbin:/usr/sbin/nologin
+bin:x:2:2:bin:/bin:/usr/sbin/nologin
+sys:x:3:3:sys:/dev:/usr/sbin/nologin
+sync:x:4:65534:sync:/bin:/bin/sync
+games:x:5:60:games:/usr/games:/usr/sbin/nologin
+man:x:6:12:man:/var/cache/man:/usr/sbin/nologin
+lp:x:7:7:lp:/var/spool/lpd:/usr/sbin/nologin
+mail:x:8:8:mail:/var/mail:/usr/sbin/nologin
+news:x:9:9:news:/var/spool/news:/usr/sbin/nologin
+uucp:x:10:10:uucp:/var/spool/uucp:/usr/sbin/nologin
+proxy:x:13:13:proxy:/bin:/usr/sbin/nologin
+www-data:x:33:33:www-data:/var/www:/usr/sbin/nologin
+backup:x:34:34:backup:/var/backups:/usr/sbin/nologin
+list:x:38:38:Mailing List Manager:/var/list:/usr/sbin/nologin
+
+~  ps -eo pid,user,comm | sort -g | head -n 10
+    PID USER     COMMAND
+      1 root     systemd
+      2 root     kthreadd
+      3 root     rcu_gp
+      4 root     rcu_par_gp
+      5 root     slub_flushwq
+      6 root     netns
+      8 root     kworker/0:0H-events_highpri
+     10 root     mm_percpu_wq
+     11 root     rcu_tasks_kthread
+
+~  cat /proc/sys/kernel/pid_max
+4194304
+
+~  ps
+    PID TTY          TIME CMD
+   9137 pts/2    00:00:00 zsh
+  10850 pts/2    00:00:00 ps
+
+~  ps -eo pid,user,comm | sort -g | tail
+  10122 root     kworker/0:2-events_freezable
+  10144 root     kworker/1:0
+  10306 root     kworker/9:0-events
+  10385 root     kworker/14:0-pm
+  10386 root     kworker/18:2
+  10415 root     kworker/2:0
+  10653 root     kworker/7:0-mm_percpu_wq
+  11050 misha    ps
+  11051 misha    sort
+  11052 misha    tail
+
+
+# 1.4
+
+~  ps -eo pid,user,tty,comm | head -n 15
+    PID USER     TT       COMMAND
+      1 root     ?        systemd
+      2 root     ?        kthreadd
+      3 root     ?        rcu_gp
+      4 root     ?        rcu_par_gp
+      5 root     ?        slub_flushwq
+      6 root     ?        netns
+      8 root     ?        kworker/0:0H-events_highpri
+     10 root     ?        mm_percpu_wq
+     11 root     ?        rcu_tasks_kthread
+     12 root     ?        rcu_tasks_rude_kthread
+     13 root     ?        rcu_tasks_trace_kthread
+     14 root     ?        ksoftirqd/0
+     15 root     ?        rcu_preempt
+     16 root     ?        migration/0
+
+~  ps -eo pid,user,comm | grep "^ *[0-9]* root" | head -n 30
+      1 root     systemd
+      2 root     kthreadd
+      3 root     rcu_gp
+      4 root     rcu_par_gp
+      5 root     slub_flushwq
+      6 root     netns
+      8 root     kworker/0:0H-events_highpri
+     10 root     mm_percpu_wq
+     11 root     rcu_tasks_kthread
+     12 root     rcu_tasks_rude_kthread
+     13 root     rcu_tasks_trace_kthread
+     14 root     ksoftirqd/0
+     15 root     rcu_preempt
+     16 root     migration/0
+     18 root     cpuhp/0
+     19 root     cpuhp/1
+     20 root     migration/1
+     21 root     ksoftirqd/1
+     23 root     kworker/1:0H-events_highpri
+     24 root     cpuhp/2
+     25 root     migration/2
+     26 root     ksoftirqd/2
+     28 root     kworker/2:0H-events_highpri
+     29 root     cpuhp/3
+     30 root     migration/3
+     31 root     ksoftirqd/3
+     33 root     kworker/3:0H-events_highpri
+     34 root     cpuhp/4
+     35 root     migration/4
+     36 root     ksoftirqd/4
+
+~  pstree -p | head -n 100
+systemd(1)-+-ModemManager(978)-+-{ModemManager}(997)
+           |                   `-{ModemManager}(1003)
+           |-NetworkManager(967)-+-{NetworkManager}(991)
+           |                     `-{NetworkManager}(993)
+           |-Telegram(13316)-+-{Telegram}(13317)
+           |                 |-{Telegram}(13318)
+           |                 |-{Telegram}(13320)
+           |                 |-{Telegram}(13321)
+           |                 |-{Telegram}(13322)
+           |                 |-{Telegram}(13323)
+           |                 |-{Telegram}(13325)
+           |                 |-{Telegram}(13326)
+           |                 |-{Telegram}(13335)
+           |                 |-{Telegram}(13336)
+           |                 |-{Telegram}(13338)
+           |                 |-{Telegram}(13346)
+           |                 |-{Telegram}(13347)
+           |                 |-{Telegram}(13348)
+           |                 |-{Telegram}(13375)
+           |                 |-{Telegram}(13381)
+           |                 |-{Telegram}(13382)
+           |                 |-{Telegram}(13383)
+           |                 |-{Telegram}(13384)
+           |                 |-{Telegram}(13385)
+           |                 |-{Telegram}(13386)
+           |                 |-{Telegram}(13387)
+           |                 |-{Telegram}(13388)
+           |                 |-{Telegram}(13389)
+           |                 |-{Telegram}(13390)
+           |                 |-{Telegram}(13391)
+           |                 |-{Telegram}(13392)
+           |                 |-{Telegram}(13393)
+           |-alacritty(2406)-+-sudo(2430)---sudo(2432)---hiddify-clash-d(2433)-+-WebKitNetworkPr(2512)-+-{WebKitNetworkPr}(2594)
+           |                 |                                                 |                       |-{WebKitNetworkPr}(2598)
+           |                 |                                                 |                       |-{WebKitNetworkPr}(2599)
+           |                 |                                                 |                       |-{WebKitNetworkPr}(2600)
+           |                 |                                                 |                       |-{WebKitNetworkPr}(2602)
+           |                 |                                                 |                       |-{WebKitNetworkPr}(2603)
+           |                 |                                                 |                       |-{WebKitNetworkPr}(2604)
+           |                 |                                                 |                       |-{WebKitNetworkPr}(2605)
+           |                 |                                                 |                       `-{WebKitNetworkPr}(2643)
+           |                 |                                                 |-WebKitWebProces(2516)-+-{WebKitWebProces}(2595)
+           |                 |                                                 |                       |-{WebKitWebProces}(2596)
+           |                 |                                                 |                       |-{WebKitWebProces}(2597)
+           |                 |                                                 |                       |-{WebKitWebProces}(2601)
+           |                 |                                                 |                       |-{WebKitWebProces}(2609)
+           |                 |                                                 |                       |-{WebKitWebProces}(2613)
+           |                 |                                                 |                       |-{WebKitWebProces}(2614)
+           |                 |                                                 |                       |-{WebKitWebProces}(2615)
+           |                 |                                                 |                       |-{WebKitWebProces}(2616)
+           |                 |                                                 |                       |-{WebKitWebProces}(2617)
+           |                 |                                                 |                       |-{WebKitWebProces}(2618)
+           |                 |                                                 |                       |-{WebKitWebProces}(2619)
+
+
+# 1.5
+
+~  ps -o ppid= -p $$
+   9116
+
+~  cat /proc/9116/status
+Name:	alacritty
+Umask:	0022
+State:	S (sleeping)
+Tgid:	9116
+Ngid:	0
+Pid:	9116
+PPid:	1
+TracerPid:	0
+Uid:	1000	1000	1000	1000
+Gid:	1000	1000	1000	1000
+FDSize:	64
+Groups:	20 24 25 27 29 30 44 46 100 106 110 995 1000
+NStgid:	9116
+NSpid:	9116
+NSpgid:	9116
+NSsid:	9116
+VmPeak:	 1866232 kB
+VmSize:	 1826620 kB
+VmLck:	       0 kB
+VmPin:	       0 kB
+VmHWM:	  102980 kB
+VmRSS:	  100336 kB
+RssAnon:	   36424 kB
+RssFile:	   63908 kB
+RssShmem:	       4 kB
+VmData:	  179852 kB
+VmStk:	     140 kB
+VmExe:	    4768 kB
+VmLib:	  151572 kB
+VmPTE:	     700 kB
+VmSwap:	       0 kB
+HugetlbPages:	       0 kB
+CoreDumping:	0
+THP_enabled:	1
+Threads:	22
+SigQ:	0/126633
+SigPnd:	0000000000000000
+ShdPnd:	0000000000000000
+SigBlk:	0000000000000000
+SigIgn:	0000000000001004
+SigCgt:	0000000100010440
+CapInh:	0000000000000000
+CapPrm:	0000000000000000
+CapEff:	0000000000000000
+CapBnd:	000001ffffffffff
+CapAmb:	0000000000000000
+NoNewPrivs:	0
+Seccomp:	0
+Seccomp_filters:	0
+Speculation_Store_Bypass:	thread vulnerable
+SpeculationIndirectBranch:	conditional enabled
+Cpus_allowed:	fffff
+Cpus_allowed_list:	0-19
+Mems_allowed:	00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000001
+Mems_allowed_list:	0
+voluntary_ctxt_switches:	224537
+nonvoluntary_ctxt_switches:	3368
+
+~  cat /proc/9116/environ | tr '\0' '\n'
+MAIL=/var/mail/misha
+USER=misha
+LANGUAGE=en_CA:en
+XDG_SEAT=seat0
+XDG_SESSION_TYPE=tty
+SHLVL=0
+HOME=/home/misha
+MOTD_SHOWN=pam
+OLDPWD=/home/misha
+HUSHLOGIN=FALSE
+SYSTEMD_EXEC_PID=1004
+LOGNAME=misha
+_=/usr/bin/alacritty
+XDG_SESSION_CLASS=user
+TERM=linux
+XDG_SESSION_ID=1
+WINDOWPATH=1
+PATH=/home/misha/.cargo/bin:/usr/local/bin:/usr/bin:/bin:/usr/local/games:/usr/games
+INVOCATION_ID=794178de3eb84788b0f7ea818531de43
+XDG_RUNTIME_DIR=/run/user/1000
+DISPLAY=:0
+LANG=en_CA.UTF-8
+XAUTHORITY=/home/misha/.Xauthority
+SHELL=/usr/bin/zsh
+XDG_VTNR=1
+PWD=/home/misha
+XDG_DATA_DIRS=/var/lib/flatpak/exports/share:/usr/local/share/:/usr/share/
+
+~  ls -la /proc/9116/fd
+total 0
+dr-x------ 2 misha misha  0 Apr  4 10:06 .
+dr-xr-xr-x 9 misha misha  0 Apr  4 10:06 ..
+lr-x------ 1 misha misha 64 Apr  4 11:00 0 -> /dev/null
+lrwx------ 1 misha misha 64 Apr  4 10:06 1 -> /dev/tty1
+lrwx------ 1 misha misha 64 Apr  4 11:00 10 -> 'socket:[68603]'
+lrwx------ 1 misha misha 64 Apr  4 11:00 11 -> 'socket:[68604]'
+lrwx------ 1 misha misha 64 Apr  4 11:00 12 -> 'socket:[68605]'
+lrwx------ 1 misha misha 64 Apr  4 11:00 13 -> /dev/dri/card1
+lrwx------ 1 misha misha 64 Apr  4 11:00 14 -> /dev/dri/card1
+lrwx------ 1 misha misha 64 Apr  4 11:00 15 -> /dev/dri/card1
+lrwx------ 1 misha misha 64 Apr  4 11:00 16 -> /dev/dri/card1
+lrwx------ 1 misha misha 64 Apr  4 11:00 17 -> /dev/ptmx
+lrwx------ 1 misha misha 64 Apr  4 11:00 18 -> 'anon_inode:[eventpoll]'
+lrwx------ 1 misha misha 64 Apr  4 11:00 19 -> 'socket:[70046]'
+lrwx------ 1 misha misha 64 Apr  4 11:00 2 -> /dev/tty1
+lrwx------ 1 misha misha 64 Apr  4 11:00 20 -> 'socket:[70047]'
+lr-x------ 1 misha misha 64 Apr  4 11:00 21 -> 'pipe:[70049]'
+l-wx------ 1 misha misha 64 Apr  4 11:00 22 -> 'pipe:[70049]'
+lrwx------ 1 misha misha 64 Apr  4 11:00 3 -> 'socket:[68600]'
+lrwx------ 1 misha misha 64 Apr  4 11:00 4 -> 'socket:[36232]'
+lrwx------ 1 misha misha 64 Apr  4 11:00 5 -> 'anon_inode:[eventpoll]'
+lrwx------ 1 misha misha 64 Apr  4 11:00 6 -> 'anon_inode:[eventfd]'
+lrwx------ 1 misha misha 64 Apr  4 11:00 7 -> 'socket:[68601]'
+lrwx------ 1 misha misha 64 Apr  4 11:00 8 -> 'socket:[68602]'
+
+
+# 2.1
+
+~/leti/sem4/OS/lab2/task2  ls
+multiple.c  single.c
+~/leti/sem4/OS/lab2/task2  gcc -o single single.c
+~/leti/sem4/OS/lab2/task2  ./single
+Родительский процесс: PID = 22016, PPID = 3993
+Родительский процесс продолжает работу, ожидая завершения дочернего (PID = 22017)...
+Дочерний процесс: PID = 22017, PPID = 22016
+Дочерний процесс: 10 + 5 = 15
+Дочерний процесс завершился со статусом 0
+Родительский процесс: 7 * 3 = 21
+Процесс с PID 22016: Завершение программы.
+
+~/leti/sem4/OS/lab2/task2  gcc -o multiple multiple.c
+~/leti/sem4/OS/lab2/task2  ./multiple
+Родительский процесс: PID = 22596, PPID = 3993
+Родительский процесс продолжает работу, ожидая завершения дочернего (PID = 22597)...
+Родительский [PID 22596]: Итерация 0, значение 0
+Дочерний процесс: PID = 22597, PPID = 22596
+Дочерний [PID 22597]: Итерация 0, значение 0
+Родительский [PID 22596]: Итерация 1, значение 2
+Дочерний [PID 22597]: Итерация 1, значение 1
+Родительский [PID 22596]: Итерация 2, значение 4
+Дочерний [PID 22597]: Итерация 2, значение 4
+Родительский [PID 22596]: Итерация 3, значение 6
+Дочерний [PID 22597]: Итерация 3, значение 9
+Родительский [PID 22596]: Итерация 4, значение 8
+Дочерний [PID 22597]: Итерация 4, значение 16
+Родительский [PID 22596]: Итерация 5, значение 10
+Дочерний [PID 22597]: Итерация 5, значение 25
+Родительский [PID 22596]: Итерация 6, значение 12
+Дочерний [PID 22597]: Итерация 6, значение 36
+Родительский [PID 22596]: Итерация 7, значение 14
+Дочерний [PID 22597]: Итерация 7, значение 49
+Родительский [PID 22596]: Итерация 8, значение 16
+Дочерний [PID 22597]: Итерация 8, значение 64
+Родительский [PID 22596]: Итерация 9, значение 18
+Дочерний [PID 22597]: Итерация 9, значение 81
+Дочерний [PID 22597]: Итерация 10, значение 100
+Родительский [PID 22596]: Итерация 10, значение 20
+Родительский [PID 22596]: Итерация 11, значение 22
+Дочерний [PID 22597]: Итерация 11, значение 121
+Дочерний [PID 22597]: Итерация 12, значение 144
+Родительский [PID 22596]: Итерация 12, значение 24
+Дочерний [PID 22597]: Итерация 13, значение 169
+Родительский [PID 22596]: Итерация 13, значение 26
+Дочерний [PID 22597]: Итерация 14, значение 196
+Родительский [PID 22596]: Итерация 14, значение 28
+Дочерний [PID 22597]: Итерация 15, значение 225
+Родительский [PID 22596]: Итерация 15, значение 30
+Дочерний [PID 22597]: Итерация 16, значение 256
+Родительский [PID 22596]: Итерация 16, значение 32
+Дочерний [PID 22597]: Итерация 17, значение 289
+Родительский [PID 22596]: Итерация 17, значение 34
+Дочерний [PID 22597]: Итерация 18, значение 324
+Родительский [PID 22596]: Итерация 18, значение 36
+Дочерний [PID 22597]: Итерация 19, значение 361
+Родительский [PID 22596]: Итерация 19, значение 38
+Дочерний [PID 22597]: Итерация 20, значение 400
+Родительский [PID 22596]: Итерация 20, значение 40
+Дочерний [PID 22597]: Итерация 21, значение 441
+Родительский [PID 22596]: Итерация 21, значение 42
+Дочерний [PID 22597]: Итерация 22, значение 484
+Родительский [PID 22596]: Итерация 22, значение 44
+Дочерний [PID 22597]: Итерация 23, значение 529
+Родительский [PID 22596]: Итерация 23, значение 46
+Дочерний [PID 22597]: Итерация 24, значение 576
+Родительский [PID 22596]: Итерация 24, значение 48
+Дочерний [PID 22597]: Итерация 25, значение 625
+Родительский [PID 22596]: Итерация 25, значение 50
+Дочерний [PID 22597]: Итерация 26, значение 676
+Родительский [PID 22596]: Итерация 26, значение 52
+Дочерний [PID 22597]: Итерация 27, значение 729
+Родительский [PID 22596]: Итерация 27, значение 54
+Дочерний [PID 22597]: Итерация 28, значение 784
+Родительский [PID 22596]: Итерация 28, значение 56
+Дочерний [PID 22597]: Итерация 29, значение 841
+Родительский [PID 22596]: Итерация 29, значение 58
+Дочерний [PID 22597]: Итерация 30, значение 900
+Родительский [PID 22596]: Итерация 30, значение 60
+Дочерний [PID 22597]: Итерация 31, значение 961
+Родительский [PID 22596]: Итерация 31, значение 62
+Дочерний [PID 22597]: Итерация 32, значение 1024
+Родительский [PID 22596]: Итерация 32, значение 64
+Дочерний [PID 22597]: Итерация 33, значение 1089
+Родительский [PID 22596]: Итерация 33, значение 66
+Дочерний [PID 22597]: Итерация 34, значение 1156
+Родительский [PID 22596]: Итерация 34, значение 68
+Дочерний [PID 22597]: Итерация 35, значение 1225
+Родительский [PID 22596]: Итерация 35, значение 70
+Дочерний [PID 22597]: Итерация 36, значение 1296
+Родительский [PID 22596]: Итерация 36, значение 72
+Дочерний [PID 22597]: Итерация 37, значение 1369
+Родительский [PID 22596]: Итерация 37, значение 74
+Дочерний [PID 22597]: Итерация 38, значение 1444
+Родительский [PID 22596]: Итерация 38, значение 76
+Дочерний [PID 22597]: Итерация 39, значение 1521
+Родительский [PID 22596]: Итерация 39, значение 78
+Дочерний [PID 22597]: Итерация 40, значение 1600
+Родительский [PID 22596]: Итерация 40, значение 80
+Дочерний [PID 22597]: Итерация 41, значение 1681
+Родительский [PID 22596]: Итерация 41, значение 82
+Дочерний [PID 22597]: Итерация 42, значение 1764
+Родительский [PID 22596]: Итерация 42, значение 84
+Дочерний [PID 22597]: Итерация 43, значение 1849
+Родительский [PID 22596]: Итерация 43, значение 86
+Дочерний [PID 22597]: Итерация 44, значение 1936
+Родительский [PID 22596]: Итерация 44, значение 88
+Дочерний [PID 22597]: Итерация 45, значение 2025
+Родительский [PID 22596]: Итерация 45, значение 90
+Дочерний [PID 22597]: Итерация 46, значение 2116
+Родительский [PID 22596]: Итерация 46, значение 92
+Дочерний [PID 22597]: Итерация 47, значение 2209
+Родительский [PID 22596]: Итерация 47, значение 94
+Дочерний [PID 22597]: Итерация 48, значение 2304
+Родительский [PID 22596]: Итерация 48, значение 96
+Дочерний [PID 22597]: Итерация 49, значение 2401
+Родительский [PID 22596]: Итерация 49, значение 98
+Родительский процесс: Дочерний завершился со статусом 0
+Родительский процесс [PID 22596]: Завершение программы.
+
+# 2.2
+
+~/leti/sem4/OS/lab2/task2  nano father.c
+~/leti/sem4/OS/lab2/task2  nano son.c
+~/leti/sem4/OS/lab2/task2  gcc -o father father.c
+~/leti/sem4/OS/lab2/task2  gcc -o son son.c
+~/leti/sem4/OS/lab2/task2  ./father
+Родительский процесс: PID = 23584, ожидание завершения дочернего процесса (PID = 23585)...
+Дочерний процесс: PID = 23585, PPID = 23584
+Дочерний процесс запущен: PID = 23585, PPID = 23584
+Дочерний процесс завершается.
+Дочерний процесс завершился со статусом 0
+Родительский процесс завершается.
+~/leti/sem4/OS/lab2/task2  ./father &
+[1] 23624
+~/leti/sem4/OS/lab2/task2  Родительский процесс: PID = 23624, ожидание завершения дочернего процесса (PID = 23625)...
+Дочерний процесс: PID = 23625, PPID = 23624
+Дочерний процесс запущен: PID = 23625, PPID = 23624
+Дочерний процесс завершается.
+Дочерний процесс завершился со статусом 0
+Родительский процесс завершается.
+
+[1]  + done       ./father
+~/leti/sem4/OS/lab2/task2  cat process_log.txt
+F S   UID     PID    PPID  C PRI  NI ADDR SZ WCHAN  TTY          TIME CMD
+0 S  1000    3839    3817  0  80   0 -  3442 wait_w pts/2    00:00:00 zsh
+0 S  1000   23624    3839  0  85   5 -   615 do_wai pts/2    00:00:00 father
+0 S  1000   23625   23624  0  85   5 -   615 hrtime pts/2    00:00:00 son
+0 S  1000   23632   23624  0  85   5 -   644 do_wai pts/2    00:00:00 sh
+4 R  1000   23633   23632  0  85   5 -  2804 -      pts/2    00:00:00 ps
+
+# 2.3
+
+~/leti/sem4/OS/lab2/task2  gcc -o child_2_3 child_2_3.c
+~/leti/sem4/OS/lab2/task2  gcc -o parent_exec_2_3 parent_exec_2_3.c
+~/leti/sem4/OS/lab2/task2  ./parent_exec_2_3
+Родительский процесс (PID = 29496): Начало экспериментов с exec-функциями
+Эксперимент 1: execl() - передача аргументов списком
+Child Process started: PID = 29497, PPID = 29496
+Received Arguments (argc = 3):
+  argv[0] = child_2_3
+  argv[1] = Arg1
+  argv[2] = Arg2
+First few Environment Variables:
+  envp[0] = ALACRITTY_LOG=/tmp/Alacritty-3817.log
+  envp[1] = ALACRITTY_SOCKET=/run/user/1000/Alacritty-:0-3817.sock
+  envp[2] = ALACRITTY_WINDOW_ID=41943042
+  envp[3] = COLORTERM=truecolor
+  envp[4] = DISPLAY=:0
+Child Process (PID = 29497) exiting...
+Эксперимент 1 завершился.
+
+Эксперимент 2: execv() - передача аргументов через массив
+Child Process started: PID = 29506, PPID = 29496
+Received Arguments (argc = 3):
+  argv[0] = child_2_3
+  argv[1] = Arg1
+  argv[2] = Arg2
+First few Environment Variables:
+  envp[0] = ALACRITTY_LOG=/tmp/Alacritty-3817.log
+  envp[1] = ALACRITTY_SOCKET=/run/user/1000/Alacritty-:0-3817.sock
+  envp[2] = ALACRITTY_WINDOW_ID=41943042
+  envp[3] = COLORTERM=truecolor
+  envp[4] = DISPLAY=:0
+Child Process (PID = 29506) exiting...
+Эксперимент 2 завершился.
+
+Эксперимент 3: execle() - передача аргументов и окружения
+Child Process started: PID = 29517, PPID = 29496
+Received Arguments (argc = 3):
+  argv[0] = child_2_3
+  argv[1] = Arg1
+  argv[2] = Arg2
+First few Environment Variables:
+  envp[0] = MYVAR=env_execle
+  envp[1] = PATH=.:/usr/bin
+Child Process (PID = 29517) exiting...
+Эксперимент 3 завершился.
+
+Эксперимент 4: execve() - передача аргументов и окружения через массивы
+Child Process started: PID = 29526, PPID = 29496
+Received Arguments (argc = 3):
+  argv[0] = child_2_3
+  argv[1] = Arg1
+  argv[2] = Arg2
+First few Environment Variables:
+  envp[0] = MYVAR=env_execve
+  envp[1] = PATH=.:/usr/bin
+Child Process (PID = 29526) exiting...
+Эксперимент 4 завершился.
+
+Эксперимент 5: execlp() - поиск по PATH
+Child Process started: PID = 29539, PPID = 29496
+Received Arguments (argc = 3):
+  argv[0] = child_2_3
+  argv[1] = Arg1
+  argv[2] = Arg2
+First few Environment Variables:
+  envp[0] = ALACRITTY_LOG=/tmp/Alacritty-3817.log
+  envp[1] = ALACRITTY_SOCKET=/run/user/1000/Alacritty-:0-3817.sock
+  envp[2] = ALACRITTY_WINDOW_ID=41943042
+  envp[3] = COLORTERM=truecolor
+  envp[4] = DISPLAY=:0
+Child Process (PID = 29539) exiting...
+Эксперимент 5 завершился.
+
+Эксперимент 6: execvp() - передача аргументов с поиском по PATH
+Child Process started: PID = 29552, PPID = 29496
+Received Arguments (argc = 3):
+  argv[0] = child_2_3
+  argv[1] = Arg1
+  argv[2] = Arg2
+First few Environment Variables:
+  envp[0] = ALACRITTY_LOG=/tmp/Alacritty-3817.log
+  envp[1] = ALACRITTY_SOCKET=/run/user/1000/Alacritty-:0-3817.sock
+  envp[2] = ALACRITTY_WINDOW_ID=41943042
+  envp[3] = COLORTERM=truecolor
+  envp[4] = DISPLAY=:0
+Child Process (PID = 29552) exiting...
+Эксперимент 6 завершился.
+
+Родительский процесс (PID = 29496): Все эксперименты завершены.
+~/leti/sem4/OS/lab2/task2 
+
+# 2.4
+
+~/leti/sem4/OS/lab2/task2  ./father_2_4 a
+Эксперимент a: процесс-отец запускает сына и ОЖИДАЕТ его завершения.
+  [a] Родительский процесс: PID = 38076, ожидает ребенка (PID = 38077)...
+  [a] Дочерний процесс: PID = 38077, PPID = 38076
+  [a] Дочерний процесс (PID = 38077) завершается.
+  [a] Родительский процесс: Дочерний завершился со статусом 0.
+F S   UID     PID    PPID  C PRI  NI ADDR SZ WCHAN  TTY          TIME CMD
+0 S  1000    3839    3817  0  80   0 -  3423 sigsus pts/2    00:00:00 zsh
+0 S  1000   38076    3839  0  80   0 -   615 do_wai pts/2    00:00:00 father_2_4
+0 S  1000   38088   38076  0  80   0 -   644 do_wai pts/2    00:00:00 sh
+4 R  1000   38089   38088  0  80   0 -  2804 -      pts/2    00:00:00 ps
+~/leti/sem4/OS/lab2/task2  ./father_2_4 b
+Эксперимент b: процесс-отец запускает сына и НЕ ожидает его завершения, затем завершается сам.
+  [b] Родительский процесс (PID = 38099) завершается без ожидания ребенка (PID = 38100).
+  [b] Дочерний процесс (до ухода отца): PID = 38100, PPID = 1
+~/leti/sem4/OS/lab2/task2  ./father_2_4 c
+Эксперимент c: процесс-отец запускает сына и НЕ ожидает его завершения; потом ребенок завершает работу, остаётся zombie.
+  [c] Родительский процесс: PID = 38117, НЕ вызывает wait() для ребенка (PID = 38118).
+  [c] Дочерний процесс: PID = 38118, PPID = 38117
+  [b] Дочерний процесс: после ухода отца, новый PPID = 1
+  [c] Дочерний процесс (PID = 38118) завершается.
+F S   UID     PID    PPID  C PRI  NI ADDR SZ WCHAN  TTY          TIME CMD
+0 S  1000    3839    3817  0  80   0 -  3423 sigsus pts/2    00:00:00 zsh
+0 S  1000   38117    3839  0  80   0 -   615 do_wai pts/2    00:00:00 father_2_4
+1 Z  1000   38118   38117  0  80   0 -     0 -      pts/2    00:00:00 father_2_4
+0 S  1000   38143   38117  0  80   0 -   644 do_wai pts/2    00:00:00 sh
+4 R  1000   38144   38143  0  80   0 -  2804 -      pts/2    00:00:00 ps
+  [c] Родительский процесс: после вызова wait() зомби убран.
+~/leti/sem4/OS/lab2/task2  ./father_2_4 all
+Запуск эксперимента a:
+Эксперимент a: процесс-отец запускает сына и ОЖИДАЕТ его завершения.
+  [a] Родительский процесс: PID = 38154, ожидает ребенка (PID = 38155)...
+  [a] Дочерний процесс: PID = 38155, PPID = 38154
+  [a] Дочерний процесс (PID = 38155) завершается.
+  [a] Родительский процесс: Дочерний завершился со статусом 0.
+F S   UID     PID    PPID  C PRI  NI ADDR SZ WCHAN  TTY          TIME CMD
+0 S  1000    3839    3817  0  80   0 -  3423 sigsus pts/2    00:00:00 zsh
+0 S  1000   38154    3839  0  80   0 -   615 do_wai pts/2    00:00:00 father_2_4
+0 S  1000   38168   38154  0  80   0 -   644 do_wai pts/2    00:00:00 sh
+4 R  1000   38169   38168  0  80   0 -  2804 -      pts/2    00:00:00 ps
+
+Запуск эксперимента b:
+Эксперимент b: процесс-отец запускает сына и НЕ ожидает его завершения, затем завершается сам.
+  [b] Родительский процесс (PID = 38171) завершается без ожидания ребенка (PID = 38172).
+  [b] Дочерний процесс (до ухода отца): PID = 38172, PPID = 1
+
+Запуск эксперимента c:
+Эксперимент c: процесс-отец запускает сына и НЕ ожидает его завершения; потом ребенок завершает работу, остаётся zombie.
+  [c] Родительский процесс: PID = 38154, НЕ вызывает wait() для ребенка (PID = 38173).
+  [c] Дочерний процесс: PID = 38173, PPID = 38154
+  [c] Дочерний процесс (PID = 38173) завершается.
+F S   UID     PID    PPID  C PRI  NI ADDR SZ WCHAN  TTY          TIME CMD
+0 S  1000    3839    3817  0  80   0 -  3423 sigsus pts/2    00:00:00 zsh
+0 S  1000   38154    3839  0  80   0 -   615 do_wai pts/2    00:00:00 father_2_4
+1 S  1000   38172       1  0  80   0 -   615 hrtime pts/2    00:00:00 father_2_4
+1 Z  1000   38173   38154  0  80   0 -     0 -      pts/2    00:00:00 father_2_4
+0 S  1000   38192   38154  0  80   0 -   644 do_wai pts/2    00:00:00 sh
+4 R  1000   38193   38192  0  80   0 -  2804 -      pts/2    00:00:00 ps
+  [c] Родительский процесс: после вызова wait() зомби убран.
+
+
+# 3.1
+
+~/leti/sem4/OS/lab2/task3  gcc father.c -o father
+~/leti/sem4/OS/lab2/task3  gcc son1.c -o son1
+~/leti/sem4/OS/lab2/task3  gcc son2.c -o son2
+~/leti/sem4/OS/lab2/task3  gcc son3.c -o son3
+~/leti/sem4/OS/lab2/task3  ./father
+Son2 (PID=10341): Запущен, игнорирует сигнал SIGUSR1.
+Son1 (PID=10340): Запущен, реакция по умолчанию.
+Son3 (PID=10342): Запущен, установлен обработчик для SIGUSR1.
+
+--- До отправки сигналов ---
+Son3 (PID=10342): Перехватил сигнал 10 (SIGUSR1).
+
+--- После отправки сигналов ---
+Father process: Все дочерние процессы завершены.
+
+--- До отправки сигналов ---
+  UID     PID          PENDING          BLOCKED          IGNORED           CAUGHT STAT TTY        TIME COMMAND
+ 1000    2483 0000000000000000 0000000000000000 0000000000000000 000000000001405f S+   tty1       0:00 /bin/sh /usr/bin/startx
+ 1000    2608 0000000000000000 0000000000000000 0000000000000000 0000000000007207 S+   tty1       0:00 xinit /home/misha/.xinitrc -- /etc/X1>
+ 1000    2609 0000000000000000 0000000000000000 0000000000301000 00000001418066ef Sl   tty1       0:19 /usr/lib/xorg/Xorg -nolisten tcp :0 v>
+ 1000    2649 0000000000000000 0000000000000000 0000000000001000 0000000000014003 S    tty1       0:00 bspwm
+ 1000    2658 0000000000000000 0000000000000000 0000000000000006 0000000100000000 Sl   tty1       0:00 flameshot
+ 1000    4737 0000000000000000 0000000000000002 0000000000384000 0000000008013003 Ss   pts/0      0:00 /usr/bin/zsh
+ 1000    9471 0000000000000000 0000000000000000 0000000000384004 0000000008013003 Ss+  pts/3      0:00 /usr/bin/zsh
+ 1000   10339 0000000000000000 0000000000010000 0000000000000006 0000000000000000 S+   pts/0      0:00 ./father
+ 1000   10340 0000000000000000 0000000000000000 0000000000000000 0000000000000000 S+   pts/0      0:00 son1
+ 1000   10341 0000000000000000 0000000000000000 0000000000000200 0000000000000000 S+   pts/0      0:00 son2
+ 1000   10342 0000000000000000 0000000000000000 0000000000000000 0000000000000200 S+   pts/0      0:00 son3
+ 1000   10353 0000000000000000 0000000000000000 0000000180000000 0000000000010002 S+   pts/0      0:00 sh -c echo " --- До отправки сигналов>
+ 1000   10354 0000000000000000 0000000000000000 0000000180000000 000000007391fef9 R+   pts/0      0:00 ps -s
+
+--- После отправки сигналов ---
+  UID     PID          PENDING          BLOCKED          IGNORED           CAUGHT STAT TTY        TIME COMMAND
+ 1000    2483 0000000000000000 0000000000000000 0000000000000000 000000000001405f S+   tty1       0:00 /bin/sh /usr/bin/startx
+ 1000    2608 0000000000000000 0000000000000000 0000000000000000 0000000000007207 S+   tty1       0:00 xinit /home/misha/.xinitrc -- /etc/X1>
+ 1000    2609 0000000000000000 0000000000000000 0000000000301000 00000001418066ef Sl   tty1       0:19 /usr/lib/xorg/Xorg -nolisten tcp :0 v>
+ 1000    2649 0000000000000000 0000000000000000 0000000000001000 0000000000014003 S    tty1       0:00 bspwm
+ 1000    2658 0000000000000000 0000000000000000 0000000000000006 0000000100000000 Sl   tty1       0:00 flameshot
+ 1000    4737 0000000000000000 0000000000000002 0000000000384000 0000000008013003 Ss   pts/0      0:00 /usr/bin/zsh
+ 1000    9471 0000000000000000 0000000000000000 0000000000384004 0000000008013003 Ss+  pts/3      0:00 /usr/bin/zsh
+ 1000   10339 0000000000000000 0000000000010000 0000000000000006 0000000000000000 S+   pts/0      0:00 ./father
+ 1000   10340 0000000000000200 0000000000000000 0000000000000000 0000000000000000 Z+   pts/0      0:00 [son1] <defunct>
+ 1000   10341 0000000000000000 0000000000000000 0000000000000200 0000000000000000 S+   pts/0      0:00 son2
+ 1000   10342 0000000000000000 0000000000000000 0000000000000000 0000000000000200 S+   pts/0      0:00 son3
+ 1000   10367 0000000000000000 0000000000000000 0000000180000000 0000000000010002 S+   pts/0      0:00 sh -c echo " --- После отправки сигна>
+ 1000   10368 0000000000000000 0000000000000000 0000000180000000 000000007391fef9 R+   pts/0      0:00 ps -s
+
+--- Son3 после сигнала ---
+  UID     PID          PENDING          BLOCKED          IGNORED           CAUGHT STAT TTY        TIME COMMAND
+ 1000    2483 0000000000000000 0000000000000000 0000000000000000 000000000001405f S+   tty1       0:00 /bin/sh /usr/bin/startx
+ 1000    2608 0000000000000000 0000000000000000 0000000000000000 0000000000007207 S+   tty1       0:00 xinit /home/misha/.xinitrc -- /etc/X1>
+ 1000    2609 0000000000000000 0000000000000000 0000000000301000 00000001418066ef Sl   tty1       0:19 /usr/lib/xorg/Xorg -nolisten tcp :0 v>
+ 1000    2649 0000000000000000 0000000000000000 0000000000001000 0000000000014003 S    tty1       0:00 bspwm
+ 1000    2658 0000000000000000 0000000000000000 0000000000000006 0000000100000000 Sl   tty1       0:00 flameshot
+ 1000    4737 0000000000000000 0000000000000002 0000000000384000 0000000008013003 Ss   pts/0      0:00 /usr/bin/zsh
+ 1000    9471 0000000000000000 0000000000000000 0000000000384004 0000000008013003 Ss+  pts/3      0:00 /usr/bin/zsh
+ 1000   10339 0000000000000000 0000000000000000 0000000000000000 0000000000000000 S+   pts/0      0:00 ./father
+ 1000   10340 0000000000000200 0000000000000000 0000000000000000 0000000000000000 Z+   pts/0      0:00 [son1] <defunct>
+ 1000   10341 0000000000000000 0000000000000000 0000000000000200 0000000000000000 S+   pts/0      0:00 son2
+ 1000   10342 0000000000000000 0000000000010200 0000000000000006 0000000000000200 S+   pts/0      0:00 son3
+ 1000   10355 0000000000000000 0000000000000000 0000000180000000 0000000000010002 S+   pts/0      0:00 sh -c echo ' --- Son3 после сигнала ->
+ 1000   10356 0000000000000000 0000000000000000 0000000180000000 000000007391fef9 R+   pts/0      0:00 ps -s
+
+
+# 3.2
+
+~/leti/sem4/OS/lab2/task3  nano father_3_2.c
+~/leti/sem4/OS/lab2/task3  gcc father_3_2.c -o father_3_2
+~/leti/sem4/OS/lab2/task3  ./father_3_2
+Son2 (PID=12705) started.
+Son1 (PID=12704) started.
+Son3 (PID=12706) started.
+Родитель: потомок 12704 завершился первым, код возврата: 1
+Родитель: потомок son3 (PID=12706) завершился, код возврата: 3
+F S   UID     PID    PPID  C PRI  NI ADDR SZ WCHAN  TTY          TIME CMD
+1 Z  1000   12705   12703  0  80   0 -     0 -      pts/0    00:00:00 father_3_2
+Родитель: потомок son2 (PID=12705) завершился, код возврата: 2
+Все потомки завершены, программа завершается.
+
+
+# 4.1
+
+~/leti/sem4/OS/lab2/task4  nano task_4_1.c
+~/leti/sem4/OS/lab2/task4  gcc task_4_1.c -o task_4_1 -pthread
+~/leti/sem4/OS/lab2/task4  ./task_4_1
+Главный поток (PID=14408, TID=14408)
+pthread поток №1: PID=14408, TID=14409
+clone поток №3: PID=14408, TID=14411
+pthread поток №2: PID=14408, TID=14410
+clone поток №4: PID=14408, TID=14412
+Все потоки завершены.
+
+# 4.2
+
+~/leti/sem4/OS/lab2/task4  gcc task_4_1.c -o task_4_1 -pthread
+~/leti/sem4/OS/lab2/task4  ./task_4_1
+Главный поток (PID=25051, TID=25051)
+clone поток №clone поток №3:: PID=25051, TID=25055
+clone поток №clone поток №3:: PID=25051, TID=25055
+pthread поток №1: PID=25051, TID=25052
+pthread поток №2: PID=25051, TID=25053
+>>> Печатаю потоки через ps изнутри программы <<<
+misha      25051    4737   25051  0    5 16:54 pts/0    00:00:00 ./task_4_1
+misha      25051    4737   25052  0    5 16:54 pts/0    00:00:00 ./task_4_1
+misha      25051    4737   25053  0    5 16:54 pts/0    00:00:00 ./task_4_1
+misha      25051    4737   25054  0    5 16:54 pts/0    00:00:00 ./task_4_1
+misha      25051    4737   25055  0    5 16:54 pts/0    00:00:00 ./task_4_1
+misha      25060   25051   25060  0    1 16:54 pts/0    00:00:00 sh -c ps -eLf | grep task_4_1
+misha      25062   25060   25062  0    1 16:54 pts/0    00:00:00 grep task_4_1
+Пауза 30 секунд для анализа через ps…
+Все потоки завершены.
+~/leti/sem4/OS/lab2/task4 
+
+# new terminal
+~  ps -eLf | grep task_4_1
+misha      25051    4737   25051  0    1 16:54 pts/0    00:00:00 ./task_4_1
+misha      25195   25093   25195  0    1 16:54 pts/4    00:00:00 grep task_4_1
+
+
+# 4.3
+
+~/leti/sem4/OS/lab2/task4  nano task_4_3.c
+~/leti/sem4/OS/lab2/task4  gcc task_4_3.c -o task_4_3 -pthread
+~/leti/sem4/OS/lab2/task4  ./task_4_3
+Главный поток: адрес shared_counter = 0x5603562e6088
+Поток 1 (TID=140022117123776): адрес shared_counter = 0x5603562e6088
+Поток 2 (TID=140022108731072): адрес shared_counter = 0x5603562e6088
+Поток 3 (TID=140022100338368): адрес shared_counter = 0x5603562e6088
+Главный поток: все потоки завершены.
+Главный поток: итоговое значение shared_counter = 30
+
+Содержимое файла shared_log.txt:
+Поток 1: shared_counter = 1
+Поток 2: shared_counter = 2
+Поток 3: shared_counter = 3
+Поток 1: shared_counter = 4
+Поток 2: shared_counter = 5
+Поток 3: shared_counter = 6
+Поток 1: shared_counter = 7
+Поток 2: shared_counter = 8
+Поток 3: shared_counter = 9
+Поток 2: shared_counter = 10
+Поток 1: shared_counter = 11
+Поток 3: shared_counter = 12
+Поток 2: shared_counter = 13
+Поток 1: shared_counter = 14
+Поток 3: shared_counter = 15
+Поток 2: shared_counter = 16
+Поток 1: shared_counter = 17
+Поток 3: shared_counter = 18
+Поток 2: shared_counter = 19
+Поток 1: shared_counter = 20
+Поток 3: shared_counter = 21
+Поток 2: shared_counter = 22
+Поток 1: shared_counter = 23
+Поток 3: shared_counter = 24
+Поток 2: shared_counter = 25
+Поток 1: shared_counter = 26
+Поток 3: shared_counter = 27
+Поток 2: shared_counter = 28
+Поток 1: shared_counter = 29
+Поток 3: shared_counter = 30
+
+
+# 4.4
+
+~/leti/sem4/OS/lab2/task4  gcc task_4_4.c -o task_4_4 -pthread
+~/leti/sem4/OS/lab2/task4  ./task_4_4
+Главный процесс: PID=37457
+Запущены два потока. Проверьте их TID с помощью команды: ps -eLf | grep <имя вашей программы>
+Чтобы попытаться удалить (завершить) поток с кастомным обработчиком, откройте новый терминал и выполните:
+    kill -SIGUSR1 <TID_потока_2>
+Обратите внимание: отправка сигнала, действие которого по умолчанию завершает процесс (например, SIGTERM), приведёт к завершению всего процесса, а не только выбранного потока.
+Поток #1 запущен: PID=37457, TID=37458
+Поток #2 запущен: PID=37457, TID=37459
+Поток #2: установлен обработчик для SIGUSR1.
+Поток с TID=37458 получил сигнал 10 и завершает работу.
+Главный процесс завершает работу.
+
+# new terminal
+~  ps -eLf | grep task_4_4
+misha      37457   37224   37457  0    3 17:24 pts/0    00:00:00 ./task_4_4
+misha      37457   37224   37458  0    3 17:24 pts/0    00:00:00 ./task_4_4
+misha      37457   37224   37459  0    3 17:24 pts/0    00:00:00 ./task_4_4
+misha      37528   37490   37528  0    1 17:24 pts/4    00:00:00 grep task_4_4
+~  kill -SIGUSR1 37458
+~  ps -eLf | grep task_4_4
+misha      37457   37224   37457  0    2 17:24 pts/0    00:00:00 ./task_4_4
+misha      37457   37224   37459  0    2 17:24 pts/0    00:00:00 ./task_4_4
+misha      37689   37490   37689  0    1 17:24 pts/4    00:00:00 grep task_4_4
+
+
+# 5.1
+
+~/leti/sem4/OS/lab2/task5  chrt -p $$
+pid 37224's current scheduling policy: SCHED_OTHER
+pid 37224's current scheduling priority: 0
+
+~/leti/sem4/OS/lab2/task5  chrt -p 37224
+~/leti/sem4/OS/lab2/task5  ps -o pid,comm,ni -p 37224
+    PID COMMAND          NI
+  37224 zsh               0
+~/leti/sem4/OS/lab2/task5  nano scheduler_info.c
+~/leti/sem4/OS/lab2/task5  gcc scheduler_info.c -o scheduler_info
+~/leti/sem4/OS/lab2/task5  ./scheduler_info
+Текущая политика планирования: SCHED_OTHER (обычная)
+Текущее значение nice: 0
+~/leti/sem4/OS/lab2/task5  nano experiment.c
+~/leti/sem4/OS/lab2/task5  gcc experiment.c -o experiment
+~/leti/sem4/OS/lab2/task5  taskset -c 0 ./experiment
+Дочерний процесс 3 (PID=42324): итерация 0
+Дочерний процесс 2 (PID=42323): итерация 0
+Дочерний процесс 1 (PID=42322): итерация 0
+Дочерний процесс 3 (PID=42324): итерация 1
+Дочерний процесс 2 (PID=42323): итерация 1
+Дочерний процесс 1 (PID=42322): итерация 1
+Дочерний процесс 3 (PID=42324): итерация 2
+Дочерний процесс 2 (PID=42323): итерация 2
+Дочерний процесс 1 (PID=42322): итерация 2
+Дочерний процесс 3 (PID=42324): итерация 3
+Дочерний процесс 2 (PID=42323): итерация 3
+Дочерний процесс 1 (PID=42322): итерация 3
+Дочерний процесс 3 (PID=42324): итерация 4
+Дочерний процесс 2 (PID=42323): итерация 4
+Дочерний процесс 1 (PID=42322): итерация 4
+Дочерний процесс 3 (PID=42324): итерация 5
+Дочерний процесс 2 (PID=42323): итерация 5
+Дочерний процесс 1 (PID=42322): итерация 5
+Дочерний процесс 1 (PID=42322): итерация 6
+Дочерний процесс 2 (PID=42323): итерация 6
+Дочерний процесс 3 (PID=42324): итерация 6
+Дочерний процесс 2 (PID=42323): итерация 7
+Дочерний процесс 1 (PID=42322): итерация 7
+Дочерний процесс 3 (PID=42324): итерация 7
+Дочерний процесс 1 (PID=42322): итерация 8
+Дочерний процесс 3 (PID=42324): итерация 8
+Дочерний процесс 2 (PID=42323): итерация 8
+Дочерний процесс 2 (PID=42323): итерация 9
+Дочерний процесс 3 (PID=42324): итерация 9
+Дочерний процесс 1 (PID=42322): итерация 9
+Родитель: процесс с PID 42323 завершился, код возврата: 2
+Родитель: процесс с PID 42324 завершился, код возврата: 3
+Родитель: процесс с PID 42322 завершился, код возврата: 1
+
+
+# 5.2
+
+~/leti/sem4/OS/lab2/task5  nice -n 10 sleep 60 &
+[1] 46273
+~/leti/sem4/OS/lab2/task5  ps -o pid,comm,ni -p $(pidof sleep)
+    PID COMMAND          NI
+  46273 sleep            15
+~/leti/sem4/OS/lab2/task5  nano scheduler_info2.c
+~/leti/sem4/OS/lab2/task5  gcc scheduler_info2.c -o scheduler_info2
+~/leti/sem4/OS/lab2/task5  ./scheduler_info2
+Начальное значение nice: 0
+Значение nice после вызова nice(5): 5
+
+~/leti/sem4/OS/lab2/task5  ps -o pid,comm,ni -p $$
+    PID COMMAND          NI
+  37224 zsh               0
+~/leti/sem4/OS/lab2/task5  ps -o pid,comm,ni -p 1
+    PID COMMAND          NI
+      1 systemd           0
+~/leti/sem4/OS/lab2/task5 
+[1]  + done       nice -n 10 sleep 60
+
+~/leti/sem4/OS/lab2/task5  nano experiment_5_2.c
+~/leti/sem4/OS/lab2/task5  gcc experiment_5_2.c -o experiment
+~/leti/sem4/OS/lab2/task5  taskset -c 0 ./experiment
+Процесс 3 (PID=47032): итерация 0
+Процесс 2 (PID=47031): итерация 0
+Процесс 1 (PID=47030): итерация 0
+Процесс 3 (PID=47032): итерация 1
+Процесс 2 (PID=47031): итерация 1
+Процесс 1 (PID=47030): итерация 1
+Процесс 3 (PID=47032): итерация 2
+Процесс 2 (PID=47031): итерация 2
+Процесс 1 (PID=47030): итерация 2
+Процесс 3 (PID=47032): итерация 3
+Процесс 2 (PID=47031): итерация 3
+Процесс 1 (PID=47030): итерация 3
+Процесс 3 (PID=47032): итерация 4
+Процесс 2 (PID=47031): итерация 4
+Процесс 1 (PID=47030): итерация 4
+Процесс 3 (PID=47032): итерация 5
+Процесс 2 (PID=47031): итерация 5
+Процесс 1 (PID=47030): итерация 5
+Процесс 1 (PID=47030): итерация 6
+Процесс 2 (PID=47031): итерация 6
+Процесс 3 (PID=47032): итерация 6
+Процесс 2 (PID=47031): итерация 7
+Процесс 3 (PID=47032): итерация 7
+Процесс 1 (PID=47030): итерация 7
+Процесс 3 (PID=47032): итерация 8
+Процесс 1 (PID=47030): итерация 8
+Процесс 2 (PID=47031): итерация 8
+Процесс 2 (PID=47031): итерация 9
+Процесс 1 (PID=47030): итерация 9
+Процесс 3 (PID=47032): итерация 9
+Родитель: процесс с PID 47032 завершился, код возврата: 3
+Родитель: процесс с PID 47031 завершился, код возврата: 2
+Родитель: процесс с PID 47030 завершился, код возврата: 1
+
+
+# 5.3
+
+~/leti/sem4/OS/lab2/task5  nano experiment_fifo.c
+~/leti/sem4/OS/lab2/task5  gcc experiment_fifo.c -o experiment_fifo
+~/leti/sem4/OS/lab2/task5  taskset -c 0 ./experiment_fifo
+sched_setscheduler: Operation not permitted
+Родитель: процесс с PID 52546 завершился, код возврата 1
+sched_setscheduler: Operation not permitted
+Родитель: процесс с PID 52545 завершился, код возврата 1
+sched_setscheduler: Operation not permitted
+Родитель: процесс с PID 52544 завершился, код возврата 1
+Родитель: все дочерние процессы завершены.
+~/leti/sem4/OS/lab2/task5  taskset -c 0 ./experiment_fifo diff
+sched_setscheduler: Operation not permitted
+Родитель: процесс с PID 52574 завершился, код возврата 1
+sched_setscheduler: Operation not permitted
+Родитель: процесс с PID 52573 завершился, код возврата 1
+sched_setscheduler: Operation not permitted
+Родитель: процесс с PID 52572 завершился, код возврата 1
+Родитель: все дочерние процессы завершены.
+~/leti/sem4/OS/lab2/task5  nano priority_bounds.c
+~/leti/sem4/OS/lab2/task5  gcc priority_bounds.c -o priority_bounds
+~/leti/sem4/OS/lab2/task5  ./priority_bounds
+Приоритеты для SCHED_FIFO: минимальный = 1, максимальный = 99
+Приоритеты для SCHED_RR:   минимальный = 1, максимальный = 99
+~/leti/sem4/OS/lab2/task5  sudo taskset -c 0 ./experiment_fifo
+Дочерний процесс 3 (PID=59684) запущен с SCHED_FIFO, приоритет 50
+Дочерний процесс 3 (PID=59684): итерация 0
+Дочерний процесс 3 (PID=59684): итерация 1
+Дочерний процесс 3 (PID=59684): итерация 2
+Дочерний процесс 3 (PID=59684): итерация 3
+Дочерний процесс 3 (PID=59684): итерация 4
+Дочерний процесс 3 (PID=59684): итерация 5
+Дочерний процесс 3 (PID=59684): итерация 6
+Дочерний процесс 3 (PID=59684): итерация 7
+Дочерний процесс 3 (PID=59684): итерация 8
+Дочерний процесс 3 (PID=59684): итерация 9
+Дочерний процесс 3 (PID=59684): итерация 10
+Дочерний процесс 3 (PID=59684): итерация 11
+Дочерний процесс 3 (PID=59684): итерация 12
+Дочерний процесс 3 (PID=59684): итерация 13
+Дочерний процесс 3 (PID=59684): итерация 14
+Дочерний процесс 3 (PID=59684): итерация 15
+Дочерний процесс 3 (PID=59684): итерация 16
+Дочерний процесс 3 (PID=59684): итерация 17
+Дочерний процесс 3 (PID=59684): итерация 18
+Дочерний процесс 3 (PID=59684): итерация 19
+Дочерний процесс 3 (PID=59684): итерация 20
+Дочерний процесс 3 (PID=59684): итерация 21
+Дочерний процесс 3 (PID=59684): итерация 22
+Дочерний процесс 3 (PID=59684): итерация 23
+Дочерний процесс 3 (PID=59684): итерация 24
+Дочерний процесс 3 (PID=59684): итерация 25
+Дочерний процесс 3 (PID=59684): итерация 26
+Дочерний процесс 3 (PID=59684): итерация 27
+Дочерний процесс 3 (PID=59684): итерация 28
+Дочерний процесс 3 (PID=59684): итерация 29
+Дочерний процесс 3 (PID=59684) завершает работу.
+Родитель: процесс с PID 59684 завершился, код возврата 3
+Дочерний процесс 2 (PID=59683) запущен с SCHED_FIFO, приоритет 50
+Дочерний процесс 2 (PID=59683): итерация 0
+Дочерний процесс 2 (PID=59683): итерация 1
+Дочерний процесс 2 (PID=59683): итерация 2
+Дочерний процесс 2 (PID=59683): итерация 3
+Дочерний процесс 2 (PID=59683): итерация 4
+Дочерний процесс 2 (PID=59683): итерация 5
+Дочерний процесс 2 (PID=59683): итерация 6
+Дочерний процесс 2 (PID=59683): итерация 7
+Дочерний процесс 2 (PID=59683): итерация 8
+Дочерний процесс 2 (PID=59683): итерация 9
+Дочерний процесс 2 (PID=59683): итерация 10
+Дочерний процесс 2 (PID=59683): итерация 11
+Дочерний процесс 2 (PID=59683): итерация 12
+Дочерний процесс 2 (PID=59683): итерация 13
+Дочерний процесс 2 (PID=59683): итерация 14
+Дочерний процесс 2 (PID=59683): итерация 15
+Дочерний процесс 2 (PID=59683): итерация 16
+Дочерний процесс 2 (PID=59683): итерация 17
+Дочерний процесс 2 (PID=59683): итерация 18
+Дочерний процесс 2 (PID=59683): итерация 19
+Дочерний процесс 2 (PID=59683): итерация 20
+Дочерний процесс 2 (PID=59683): итерация 21
+Дочерний процесс 2 (PID=59683): итерация 22
+Дочерний процесс 2 (PID=59683): итерация 23
+Дочерний процесс 2 (PID=59683): итерация 24
+Дочерний процесс 2 (PID=59683): итерация 25
+Дочерний процесс 2 (PID=59683): итерация 26
+Дочерний процесс 2 (PID=59683): итерация 27
+Дочерний процесс 2 (PID=59683): итерация 28
+Дочерний процесс 2 (PID=59683): итерация 29
+Дочерний процесс 2 (PID=59683) завершает работу.
+Родитель: процесс с PID 59683 завершился, код возврата 2
+Дочерний процесс 1 (PID=59682) запущен с SCHED_FIFO, приоритет 50
+Дочерний процесс 1 (PID=59682): итерация 0
+Дочерний процесс 1 (PID=59682): итерация 1
+Дочерний процесс 1 (PID=59682): итерация 2
+Дочерний процесс 1 (PID=59682): итерация 3
+Дочерний процесс 1 (PID=59682): итерация 4
+Дочерний процесс 1 (PID=59682): итерация 5
+Дочерний процесс 1 (PID=59682): итерация 6
+Дочерний процесс 1 (PID=59682): итерация 7
+Дочерний процесс 1 (PID=59682): итерация 8
+Дочерний процесс 1 (PID=59682): итерация 9
+Дочерний процесс 1 (PID=59682): итерация 10
+Дочерний процесс 1 (PID=59682): итерация 11
+Дочерний процесс 1 (PID=59682): итерация 12
+Дочерний процесс 1 (PID=59682): итерация 13
+Дочерний процесс 1 (PID=59682): итерация 14
+Дочерний процесс 1 (PID=59682): итерация 15
+Дочерний процесс 1 (PID=59682): итерация 16
+Дочерний процесс 1 (PID=59682): итерация 17
+Дочерний процесс 1 (PID=59682): итерация 18
+Дочерний процесс 1 (PID=59682): итерация 19
+Дочерний процесс 1 (PID=59682): итерация 20
+Дочерний процесс 1 (PID=59682): итерация 21
+Дочерний процесс 1 (PID=59682): итерация 22
+Дочерний процесс 1 (PID=59682): итерация 23
+Дочерний процесс 1 (PID=59682): итерация 24
+Дочерний процесс 1 (PID=59682): итерация 25
+Дочерний процесс 1 (PID=59682): итерация 26
+Дочерний процесс 1 (PID=59682): итерация 27
+Дочерний процесс 1 (PID=59682): итерация 28
+Дочерний процесс 1 (PID=59682): итерация 29
+Дочерний процесс 1 (PID=59682) завершает работу.
+Родитель: процесс с PID 59682 завершился, код возврата 1
+Родитель: все дочерние процессы завершены.
+
+# 5.4
+
+~/leti/sem4/OS/lab2/task5  nano experiment_5_4.c
+~/leti/sem4/OS/lab2/task5  gcc experiment_5_4.c -o experiment_5_4 -pthread
+~/leti/sem4/OS/lab2/task5  taskset -c 0 ./experiment_5_4
+Квант времени для SCHED_RR: 0 сек и 20000000 нсек
+sched_setscheduler (SCHED_RR): Operation not permitted
+Родитель: процесс с PID 62862 завершился, код возврата 1
+sched_setscheduler (SCHED_RR): Operation not permitted
+Родитель: процесс с PID 62861 завершился, код возврата 1
+sched_setscheduler (SCHED_RR): Operation not permitted
+Родитель: процесс с PID 62860 завершился, код возврата 1
+Родитель: все дочерние процессы завершены.
+~/leti/sem4/OS/lab2/task5  taskset -c 0 ./experiment_5_4 diff
+Квант времени для SCHED_RR: 0 сек и 20000000 нсек
+sched_setscheduler (SCHED_RR): Operation not permitted
+Родитель: процесс с PID 62890 завершился, код возврата 1
+sched_setscheduler (SCHED_RR): Operation not permitted
+Родитель: процесс с PID 62889 завершился, код возврата 1
+sched_setscheduler (SCHED_RR): Operation not permitted
+Родитель: процесс с PID 62888 завершился, код возврата 1
+Родитель: все дочерние процессы завершены.
+~/leti/sem4/OS/lab2/task5  sudo taskset -c 0 ./experiment_5_4
+Квант времени для SCHED_RR: 0 сек и 20000000 нсек
+Дочерний процесс 3 (PID=63458) запущен с SCHED_RR, приоритет 50
+Процесс 3 (PID=63458): итерация 0
+Дочерний процесс 2 (PID=63457) запущен с SCHED_RR, приоритет 50
+Процесс 2 (PID=63457): итерация 0
+Дочерний процесс 1 (PID=63456) запущен с SCHED_RR, приоритет 50
+Процесс 1 (PID=63456): итерация 0
+Процесс 3 (PID=63458): итерация 1
+Процесс 2 (PID=63457): итерация 1
+Процесс 1 (PID=63456): итерация 1
+Процесс 3 (PID=63458): итерация 2
+Процесс 2 (PID=63457): итерация 2
+Процесс 1 (PID=63456): итерация 2
+Процесс 3 (PID=63458): итерация 3
+Процесс 2 (PID=63457): итерация 3
+Процесс 1 (PID=63456): итерация 3
+Процесс 3 (PID=63458): итерация 4
+Процесс 2 (PID=63457): итерация 4
+Процесс 1 (PID=63456): итерация 4
+Процесс 3 (PID=63458): итерация 5
+Процесс 2 (PID=63457): итерация 5
+Процесс 1 (PID=63456): итерация 5
+Процесс 3 (PID=63458): итерация 6
+Процесс 2 (PID=63457): итерация 6
+Процесс 1 (PID=63456): итерация 6
+Процесс 3 (PID=63458): итерация 7
+Процесс 2 (PID=63457): итерация 7
+Процесс 1 (PID=63456): итерация 7
+Процесс 3 (PID=63458): итерация 8
+Процесс 2 (PID=63457): итерация 8
+Процесс 1 (PID=63456): итерация 8
+Процесс 3 (PID=63458): итерация 9
+Процесс 2 (PID=63457): итерация 9
+Процесс 1 (PID=63456): итерация 9
+Процесс 3 (PID=63458): итерация 10
+Процесс 2 (PID=63457): итерация 10
+Процесс 1 (PID=63456): итерация 10
+Процесс 3 (PID=63458): итерация 11
+Процесс 2 (PID=63457): итерация 11
+Процесс 1 (PID=63456): итерация 11
+Процесс 3 (PID=63458): итерация 12
+Процесс 2 (PID=63457): итерация 12
+Процесс 1 (PID=63456): итерация 12
+Процесс 3 (PID=63458): итерация 13
+Процесс 2 (PID=63457): итерация 13
+Процесс 1 (PID=63456): итерация 13
+Процесс 3 (PID=63458): итерация 14
+Процесс 2 (PID=63457): итерация 14
+Процесс 1 (PID=63456): итерация 14
+Процесс 3 (PID=63458): итерация 15
+Процесс 2 (PID=63457): итерация 15
+Процесс 1 (PID=63456): итерация 15
+Процесс 3 (PID=63458): итерация 16
+Процесс 2 (PID=63457): итерация 16
+Процесс 1 (PID=63456): итерация 16
+Процесс 3 (PID=63458): итерация 17
+Процесс 2 (PID=63457): итерация 17
+Процесс 1 (PID=63456): итерация 17
+Процесс 3 (PID=63458): итерация 18
+Процесс 2 (PID=63457): итерация 18
+Процесс 1 (PID=63456): итерация 18
+Процесс 3 (PID=63458): итерация 19
+Процесс 2 (PID=63457): итерация 19
+Процесс 1 (PID=63456): итерация 19
+Процесс 3 (PID=63458): итерация 20
+Процесс 2 (PID=63457): итерация 20
+Процесс 1 (PID=63456): итерация 20
+Процесс 3 (PID=63458): итерация 21
+Процесс 2 (PID=63457): итерация 21
+Процесс 1 (PID=63456): итерация 21
+Процесс 3 (PID=63458): итерация 22
+Процесс 2 (PID=63457): итерация 22
+Процесс 1 (PID=63456): итерация 22
+Процесс 3 (PID=63458): итерация 23
+Процесс 2 (PID=63457): итерация 23
+Процесс 1 (PID=63456): итерация 23
+Процесс 3 (PID=63458): итерация 24
+Процесс 2 (PID=63457): итерация 24
+Процесс 1 (PID=63456): итерация 24
+Процесс 3 (PID=63458): итерация 25
+Процесс 2 (PID=63457): итерация 25
+Процесс 1 (PID=63456): итерация 25
+Процесс 3 (PID=63458): итерация 26
+Процесс 2 (PID=63457): итерация 26
+Процесс 1 (PID=63456): итерация 26
+Процесс 3 (PID=63458): итерация 27
+Процесс 2 (PID=63457): итерация 27
+Процесс 1 (PID=63456): итерация 27
+Процесс 3 (PID=63458): итерация 28
+Процесс 2 (PID=63457): итерация 28
+Процесс 1 (PID=63456): итерация 28
+Процесс 3 (PID=63458): итерация 29
+Процесс 2 (PID=63457): итерация 29
+Процесс 1 (PID=63456): итерация 29
+Дочерний процесс 3 (PID=63458) завершает работу.
+Дочерний процесс 2 (PID=63457) завершает работу.
+Дочерний процесс 1 (PID=63456) завершает работу.
+Родитель: процесс с PID 63456 завершился, код возврата 1
+Родитель: процесс с PID 63457 завершился, код возврата 2
+Родитель: процесс с PID 63458 завершился, код возврата 3
+Родитель: все дочерние процессы завершены.
+
+# 5.5
+
+~/leti/sem4/OS/lab2/task5  nano experiment_5_5.c
+~/leti/sem4/OS/lab2/task5  gcc experiment_5_5.c -o experiment_5_5
+~/leti/sem4/OS/lab2/task5  sudo taskset -c 0 ./experiment_5_5
+Процесс с SCHED_OTHER (PID=64959, TID=64959) запущен с nice=0 (SCHED_OTHER по умолчанию)
+SCHED_OTHER процесс (PID=64959): итерация 0
+Процесс с SCHED_RR (PID=64958, TID=64958) запущен с приоритетом 50
+SCHED_RR процесс (PID=64958): итерация 0
+SCHED_RR процесс (PID=64958): итерация 1
+SCHED_OTHER процесс (PID=64959): итерация 1
+SCHED_RR процесс (PID=64958): итерация 2
+SCHED_OTHER процесс (PID=64959): итерация 2
+SCHED_RR процесс (PID=64958): итерация 3
+SCHED_OTHER процесс (PID=64959): итерация 3
+SCHED_RR процесс (PID=64958): итерация 4
+SCHED_OTHER процесс (PID=64959): итерация 4
+SCHED_RR процесс (PID=64958): итерация 5
+SCHED_OTHER процесс (PID=64959): итерация 5
+SCHED_RR процесс (PID=64958): итерация 6
+SCHED_OTHER процесс (PID=64959): итерация 6
+SCHED_RR процесс (PID=64958): итерация 7
+SCHED_OTHER процесс (PID=64959): итерация 7
+SCHED_RR процесс (PID=64958): итерация 8
+SCHED_OTHER процесс (PID=64959): итерация 8
+SCHED_RR процесс (PID=64958): итерация 9
+SCHED_OTHER процесс (PID=64959): итерация 9
+SCHED_RR процесс (PID=64958): итерация 10
+SCHED_OTHER процесс (PID=64959): итерация 10
+SCHED_RR процесс (PID=64958): итерация 11
+SCHED_OTHER процесс (PID=64959): итерация 11
+SCHED_RR процесс (PID=64958): итерация 12
+SCHED_OTHER процесс (PID=64959): итерация 12
+SCHED_RR процесс (PID=64958): итерация 13
+SCHED_OTHER процесс (PID=64959): итерация 13
+SCHED_RR процесс (PID=64958): итерация 14
+SCHED_OTHER процесс (PID=64959): итерация 14
+SCHED_RR процесс (PID=64958): итерация 15
+SCHED_OTHER процесс (PID=64959): итерация 15
+SCHED_RR процесс (PID=64958): итерация 16
+SCHED_OTHER процесс (PID=64959): итерация 16
+SCHED_RR процесс (PID=64958): итерация 17
+SCHED_OTHER процесс (PID=64959): итерация 17
+SCHED_RR процесс (PID=64958): итерация 18
+SCHED_OTHER процесс (PID=64959): итерация 18
+SCHED_RR процесс (PID=64958): итерация 19
+SCHED_OTHER процесс (PID=64959): итерация 19
+SCHED_RR процесс (PID=64958): итерация 20
+SCHED_OTHER процесс (PID=64959): итерация 20
+SCHED_RR процесс (PID=64958): итерация 21
+SCHED_OTHER процесс (PID=64959): итерация 21
+SCHED_RR процесс (PID=64958): итерация 22
+SCHED_OTHER процесс (PID=64959): итерация 22
+SCHED_RR процесс (PID=64958): итерация 23
+SCHED_OTHER процесс (PID=64959): итерация 23
+SCHED_RR процесс (PID=64958): итерация 24
+SCHED_OTHER процесс (PID=64959): итерация 24
+SCHED_RR процесс (PID=64958): итерация 25
+SCHED_OTHER процесс (PID=64959): итерация 25
+SCHED_RR процесс (PID=64958): итерация 26
+SCHED_OTHER процесс (PID=64959): итерация 26
+SCHED_RR процесс (PID=64958): итерация 27
+SCHED_OTHER процесс (PID=64959): итерация 27
+SCHED_RR процесс (PID=64958): итерация 28
+SCHED_OTHER процесс (PID=64959): итерация 28
+SCHED_RR процесс (PID=64958): итерация 29
+SCHED_OTHER процесс (PID=64959): итерация 29
+Родитель: оба процесса завершены.
+~/leti/sem4/OS/lab2/task5 
+
+
+# 5.6
+
+~/leti/sem4/OS/lab2/task5  nano task_5_6.c
+~/leti/sem4/OS/lab2/task5  gcc task_5_6.c -o task_5_6 -pthread
+~/leti/sem4/OS/lab2/task5  taskset -c 0 sudo ./task_5_6
+=== Начальные параметры (все потоки) ===
+Главный поток: ТID=139832982464320, политика=SCHED_OTHER, приоритет=0
+Дочерний поток: ТID=139832982464320, политика=SCHED_OTHER, приоритет=0
+Дочерний поток: ТID=139832982464320, политика=SCHED_OTHER, приоритет=0
+Дочерний поток: ТID=139832982464320, политика=SCHED_OTHER, приоритет=0
+========================================
+Поток #3 (TID=139832965674688): итерация 0
+Поток #2 (TID=139832974067392): итерация 0
+Поток #1 (TID=139832982460096): итерация 0
+Поток #3 (TID=139832965674688): итерация 1
+Поток #2 (TID=139832974067392): итерация 1
+Поток #1 (TID=139832982460096): итерация 1
+Поток #3 (TID=139832965674688): итерация 2
+Поток #2 (TID=139832974067392): итерация 2
+Поток #1 (TID=139832982460096): итерация 2
+Поток #3 (TID=139832965674688): итерация 3
+Поток #2 (TID=139832974067392): итерация 3
+Поток #1 (TID=139832982460096): итерация 3
+Поток #3 (TID=139832965674688): итерация 4
+Поток #2 (TID=139832974067392): итерация 4
+Поток #1 (TID=139832982460096): итерация 4
+Поток #1 (TID=139832982460096): итерация 5
+Поток #2 (TID=139832974067392): итерация 5
+Поток #3 (TID=139832965674688): итерация 5
+Поток #2 (TID=139832974067392): итерация 6
+Поток #1 (TID=139832982460096): итерация 6
+Поток #3 (TID=139832965674688): итерация 6
+Поток #1 (TID=139832982460096): итерация 7
+Поток #2 (TID=139832974067392): итерация 7
+Поток #3 (TID=139832965674688): итерация 7
+Поток #2 (TID=139832974067392): итерация 8
+Поток #1 (TID=139832982460096): итерация 8
+Поток #3 (TID=139832965674688): итерация 8
+Поток #3 (TID=139832965674688): итерация 9
+Поток #1 (TID=139832982460096): итерация 9
+Поток #2 (TID=139832974067392): итерация 9
+Поток #1 (TID=139832982460096): итерация 10
+Поток #3 (TID=139832965674688): итерация 10
+Поток #2 (TID=139832974067392): итерация 10
+Поток #1 (TID=139832982460096): итерация 11
+Поток #3 (TID=139832965674688): итерация 11
+Поток #2 (TID=139832974067392): итерация 11
+Поток #3 (TID=139832965674688): итерация 12
+Поток #2 (TID=139832974067392): итерация 12
+Поток #1 (TID=139832982460096): итерация 12
+Поток #2 (TID=139832974067392): итерация 13
+Поток #1 (TID=139832982460096): итерация 13
+Поток #3 (TID=139832965674688): итерация 13
+Поток #1 (TID=139832982460096): итерация 14
+Поток #2 (TID=139832974067392): итерация 14
+Поток #3 (TID=139832965674688): итерация 14
+Поток #3 (TID=139832965674688): итерация 15
+Поток #2 (TID=139832974067392): итерация 15
+Поток #1 (TID=139832982460096): итерация 15
+Поток #2 (TID=139832974067392): итерация 16
+Поток #3 (TID=139832965674688): итерация 16
+Поток #1 (TID=139832982460096): итерация 16
+Поток #3 (TID=139832965674688): итерация 17
+Поток #1 (TID=139832982460096): итерация 17
+Поток #2 (TID=139832974067392): итерация 17
+Поток #1 (TID=139832982460096): итерация 18
+Поток #2 (TID=139832974067392): итерация 18
+Поток #3 (TID=139832965674688): итерация 18
+Поток #2 (TID=139832974067392): итерация 19
+Поток #3 (TID=139832965674688): итерация 19
+Поток #1 (TID=139832982460096): итерация 19
+
+*** Эксперимент 5.6.1: Изменяем для ВСЕХ потоков на SCHED_RR с приоритетом 50 ***
+=== Параметры после смены политики для всех потоков ===
+Главный поток: ТID=139832982464320, политика=SCHED_RR, приоритет=50
+Дочерний поток: ТID=139832982464320, политика=SCHED_RR, приоритет=50
+Дочерний поток: ТID=139832982464320, политика=SCHED_RR, приоритет=50
+Дочерний поток: ТID=139832982464320, политика=SCHED_RR, приоритет=50
+=======================================================
+Поток #3 (TID=139832965674688): итерация 20
+Поток #2 (TID=139832974067392): итерация 20
+Поток #1 (TID=139832982460096): итерация 20
+Поток #3 (TID=139832965674688): итерация 21
+Поток #2 (TID=139832974067392): итерация 21
+Поток #1 (TID=139832982460096): итерация 21
+Поток #3 (TID=139832965674688): итерация 22
+Поток #2 (TID=139832974067392): итерация 22
+Поток #1 (TID=139832982460096): итерация 22
+Поток #3 (TID=139832965674688): итерация 23
+Поток #2 (TID=139832974067392): итерация 23
+Поток #1 (TID=139832982460096): итерация 23
+Поток #3 (TID=139832965674688): итерация 24
+Поток #2 (TID=139832974067392): итерация 24
+Поток #1 (TID=139832982460096): итерация 24
+Поток #3 (TID=139832965674688): итерация 25
+Поток #2 (TID=139832974067392): итерация 25
+Поток #1 (TID=139832982460096): итерация 25
+Поток #3 (TID=139832965674688): итерация 26
+Поток #2 (TID=139832974067392): итерация 26
+Поток #1 (TID=139832982460096): итерация 26
+Поток #3 (TID=139832965674688): итерация 27
+Поток #2 (TID=139832974067392): итерация 27
+Поток #1 (TID=139832982460096): итерация 27
+Поток #3 (TID=139832965674688): итерация 28
+Поток #2 (TID=139832974067392): итерация 28
+Поток #1 (TID=139832982460096): итерация 28
+Поток #3 (TID=139832965674688): итерация 29
+Поток #2 (TID=139832974067392): итерация 29
+Поток #1 (TID=139832982460096): итерация 29
+
+*** Эксперимент 5.6.2: Изменяем параметры только для одного потока ***
+pthread_setschedparam для одного потока: Success
+=== Параметры после изменения только для потока 2 ===
+pthread_getschedparam: Success
+pthread_getschedparam: Success
+pthread_getschedparam: Success
+=========================================================
+Главный поток: все потоки завершены.
+
+
+# 6.1
+
+~/leti/sem4/OS/lab2/task6  nano experiment_6_1.c
+~/leti/sem4/OS/lab2/task6  nano child_exec.c
+~/leti/sem4/OS/lab2/task6  gcc experiment_6_1.c -o experiment_6_1
+~/leti/sem4/OS/lab2/task6  gcc child_exec.c -o child_exec
+~/leti/sem4/OS/lab2/task6  ./experiment_6_1
+Эксперимент завершён. Проверьте файл inherit_file.log
+~/leti/sem4/OS/lab2/task6  ./experiment_6_1
+Эксперимент завершён. Проверьте файл inherit_file.log
+
+# inherit_file.log
+Parent (PID=68763): Файл открыт.
+Child (PID=68764, PPID=68763): наследует fd до exec().
+Child (PID=68764): перед exec(), fd еще открыт.
+Child_exec (PID=68764): получил inherited fd (3) после exec(), fd открыт.
+Child_exec (PID=68764): завершает работу.
+Parent (PID=68763): Потомок завершился.
+
+
+# 6.2
+
+~/leti/sem4/OS/lab2/task6  nano experiment_sched_inherit_6_2.c
+~/leti/sem4/OS/lab2/task6  gcc experiment_sched_inherit_6_2.c -o experiment_sched_inherit_6_2
+~/leti/sem4/OS/lab2/task6  gcc child_sched_exec_6_2.c -o child_sched_exec_6_2
+~/leti/sem4/OS/lab2/task6  taskset -c 0 ./experiment_sched_inherit_6_2
+Parent process scheduling parameters:
+Parent: PID=74529, Policy=SCHED_OTHER, Priority=0
+Child (exec) process scheduling parameters:
+Child (exec): PID=74531, Policy=SCHED_OTHER, Priority=0
+Child (fork): PID=74530, Policy=SCHED_OTHER, Priority=0
+
+
+# 6.3
+
+~/leti/sem4/OS/lab2/task6  nano experiment_6_3.c
+~/leti/sem4/OS/lab2/task6  nano child_signal_exec_6_3.c
+~/leti/sem4/OS/lab2/task6  gcc experiment_6_3.c -o experiment_6_3
+~/leti/sem4/OS/lab2/task6  gcc child_signal_exec_6_3.c -o child_signal_exec_6_3
+~/leti/sem4/OS/lab2/task6  taskset -c 0 ./experiment_6_3
+Parent (PID=75624): Installed custom handler for SIGUSR1 and ignoring SIGUSR2.
+Child2 (PID=75626): About to exec child_signal_exec_6_3; signal dispositions should reset for caught signals.
+Child_exec (PID=75626): In exec child, checking inherited signal dispositions...
+SIGUSR1: default
+SIGUSR2: ignored
+Child_exec (PID=75626): Exiting.
+Child1 (PID=75625): Inherited signal dispositions via fork.
+Child1 (PID=75625): Raising SIGUSR1...
+Custom handler triggered in process 75625 for signal 10
+Child1 (PID=75625): Raising SIGUSR2...
+Child1 (PID=75625): Exiting normally (fork mode).
+Parent (PID=75624): Both children finished.
+
+
+# 6.4
+
+~/leti/sem4/OS/lab2/task6  nano experiment_6_4.c
+~/leti/sem4/OS/lab2/task6  gcc experiment_6_4.c -o experiment_6_4
+~/leti/sem4/OS/lab2/task6  taskset -c 0 ./experiment_6_4
+Parent: PID=80673, global_var address=0x564df9c16058, initial value=100
+Clone child: PID=80674, global_var address=0x564df9c16058, initial value=100 (mode=shared)
+Clone child: PID=80674, updated global_var = 150 (mode=shared)
+Parent after child (mode=shared): global_var = 150
+~/leti/sem4/OS/lab2/task6  taskset -c 0 ./experiment_6_4
+Parent: PID=80893, global_var address=0x5568776b0058, initial value=100
+Clone child: PID=80894, global_var address=0x5568776b0058, initial value=100 (mode=shared)
+Clone child: PID=80894, updated global_var = 150 (mode=shared)
+Parent after child (mode=shared): global_var = 150

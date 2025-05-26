@@ -1,0 +1,6 @@
+Parent (PID=68763): Файл открыт.
+Child (PID=68764, PPID=68763): наследует fd до exec().
+Child (PID=68764): перед exec(), fd еще открыт.
+Child_exec (PID=68764): получил inherited fd (3) после exec(), fd открыт.
+Child_exec (PID=68764): завершает работу.
+Parent (PID=68763): Потомок завершился.

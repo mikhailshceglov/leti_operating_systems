@@ -1,0 +1,6 @@
+F S   UID     PID    PPID  C PRI  NI ADDR SZ WCHAN  TTY          TIME CMD
+0 S  1000    3839    3817  0  80   0 -  3442 wait_w pts/2    00:00:00 zsh
+0 S  1000   23624    3839  0  85   5 -   615 do_wai pts/2    00:00:00 father
+0 S  1000   23625   23624  0  85   5 -   615 hrtime pts/2    00:00:00 son
+0 S  1000   23632   23624  0  85   5 -   644 do_wai pts/2    00:00:00 sh
+4 R  1000   23633   23632  0  85   5 -  2804 -      pts/2    00:00:00 ps
