@@ -1,0 +1,331 @@
+# 1.1
+
+~/leti/sem4/OS/lab3/task1  gcc -pthread sigusr_1_1.c -o sigusr_1_1
+~/leti/sem4/OS/lab3/task1  ./sigusr_1_1
+[ 0s.000175616s] Second thread working cycle 1
+[ 0s.500458248s] Second thread working cycle 2
+[ 1s.000742446s] Second thread working cycle 3
+[ 1s.500978604s] Second thread working cycle 4
+[ 2s.000116505s] Main: timer expired, expected deletion of second thread
+zsh: user-defined signal 1  ./sigusr_1_1
+
+# У второй нити нет своего обработчика для SIGUSR1,поэтому сигнал действует по умолчанию: завершает весь процесс.
+
+# 1.2
+
+~/leti/sem4/OS/lab3/task1  gcc -o sigusr_1_2 sigusr_1_2.c
+~/leti/sem4/OS/lab3/task1  ./sigusr_1_2
+[ 0s.000138565s] Second thread working cycle 1
+[ 0s.500296846s] Second thread working cycle 2
+[ 1s.000499186s] Second thread working cycle 3
+[ 1s.500672052s] Second thread working cycle 4
+[ 2s.000180513s] Main: timer expired, sending SIGUSR1
+[ 2s.000317750s] Handler: received SIGUSR1, exiting thread
+[ 2s.000536798s] Main: second thread exited, program ending
+
+# В версии 1.1 отправка SIGUSR1 без пользовательского обработчика сразу приводит к завершению 
+# всего процесса. В 1.2 собственный обработчик SIGUSR1 в потоке печатает уведомление,
+# завершает только вторую нить через pthread_exit, а главный поток продолжает работу
+# и выводит финальное сообщение.
+
+# 3.1
+
+~/leti/sem4/OS/lab3/task3  gcc -pthread sigaction_3_1.c -o sigaction_3_1
+~/leti/sem4/OS/lab3/task3  ./sigaction_3_1
+Старое действие для SIGINT было SIG_DFL (по умолчанию).
+Посылаем SIGINT самому себе...
+Обработчик SIGINT начат.
+Посылаем SIGUSR1 из обработчика SIGINT...
+Обработчик SIGINT завершен.
+Обработчик SIGUSR1 выполнен.
+Основной процесс завершает работу.
+
+# Блокировка SIGUSR1 в sa_mask обработчика SIGINT предотвратила его доставку до завершения и обеспечила
+# отложенную обработку SIGUSR1 сразу после выхода из этого обработчика. Восстановление старого
+# обработчика SIGINT через oldact вернуло SIG_DFL‑поведение, и повторный raise завершил процесс, показывая
+# возможность sigaction() переключаться между пользовательскими и стандартными обработчиками.
+
+
+# 5.1
+
+~/leti/sem4/OS/lab3/task5  gcc -pthread -o shm_sync_5_1 shm_sync_5_1.c
+~/leti/sem4/OS/lab3/task5  ./shm_sync_5_1
+Producer записал: "Сообщение 1"
+Consumer прочитал: "Сообщение 1"
+Producer записал: "Сообщение 2"
+Consumer прочитал: "Сообщение 2"
+Producer записал: "Сообщение 3"
+Consumer прочитал: "Сообщение 3"
+Producer записал: "Сообщение 4"
+Consumer прочитал: "Сообщение 4"
+Producer записал: "Сообщение 5"
+Consumer прочитал: "Сообщение 5"
+
+# При помощи POSIX‑разделяемой памяти и семафоров передача пяти сообщений от родительского к дочернему
+# процессу происходит строго по порядку: продюсер блокируется, пока буфер занят, а консьюмер — пока
+# в нём нет новых данных, после чего каждый семафор корректно разблокирует нужный процесс,
+# обеспечивая синхронизацию без активного ожидания.
+
+
+# 5.2
+
+~/leti/sem4/OS/lab3/task5  gcc -pthread shm_sync_sem_5_2.c -o shm_sync_sem_5_2
+~/leti/sem4/OS/lab3/task5  gcc -pthread shm_sync_mutex_5_2.c -o shm_sync_mutex_5_2
+~/leti/sem4/OS/lab3/task5  ./shm_sync_sem_5_2
+Semaphore sync: 804007 us, 124377.03 msgs/sec
+~/leti/sem4/OS/lab3/task5  ./shm_sync_mutex_5_2
+Mutex+cond sync: 883660 us, 113165.70 msgs/sec
+
+# POSIX‑семафоры показали время порядка 800 мс (~125 000 сообщений/сек), демонстрируя очень высокую
+# пропускную способность при простом сценарии и минимальной логике в обработчиках.
+# pthread_mutex + pthread_cond отработали чуть медленнее – около 870 мс (~115 000 сообщений/сек).
+# Это объясняется тем, что каждое pthread_cond_wait/pthread_cond_signal при сильном «шумовом» контеншене
+# всё же чаще приводит к переходу в ядро и раскондиционированию блокировок.
+
+
+# 5.3
+
+~/leti/sem4/OS/lab3/task5  gcc -pthread shm_sync_threads_sem_5_3.c -o shm_sync_threads_sem_5_3
+~/leti/sem4/OS/lab3/task5  gcc -pthread shm_sync_threads_mutex_5_3.c -o shm_sync_threads_mutex_5_3
+~/leti/sem4/OS/lab3/task5  ./shm_sync_threads_sem_5_3
+Threads semaphore sync: 869542 us, 115003.07 msgs/sec
+~/leti/sem4/OS/lab3/task5  ./shm_sync_threads_mutex_5_3
+Threads mutex+cond sync: 857161 us, 116664.20 msgs/sec
+
+# При переходе от процессов к потокам производительность POSIX‑семафоров снизилась
+# (время выросло с ≈808 мс до ≈869 мс), тогда как pthread_mutex + pthread_cond в среде
+# потоков стали работать чуть быстрее (улучшение с ≈872 мс до ≈857 мс), что объясняется тем,
+# что futex‑основание условных переменных и мьютексов в однопроцессном пространстве даёт меньшие
+# накладные расходы по сравнению с семафорами в общем случае.При этом самым скоростным из всех вариантов
+# оказался межпроцессный семафорный обмен между процессами (≈808 мс). 
+
+
+# 6.1
+
+# Примеры использования анонимных каналов (pipe) в командной строке
+~/leti/sem4/OS/lab3/task5  ls -1 | grep '\.c$' | wc -l
+5
+
+~/leti/sem4/OS/lab3/task5  ls /usr/bin | ( grep '^a' ; grep '^b' )
+aa-enabled
+aa-exec
+aa-features-abi
+addpart
+addr2line
+alacritty
+animate
+animate-im6
+animate-im6.q16
+ansifilter
+ant
+anytopnm
+appres
+apropos
+apt
+apt-cache
+apt-cdrom
+apt-config
+apt-extracttemplates
+apt-ftparchive
+apt-get
+apt-key
+apt-listchanges
+apt-mark
+apt-sortpkgs
+ar
+arandr
+arch
+aria2c
+as
+asciitopgm
+aspell
+aspell-import
+asusctl
+asusd
+asusd-user
+atktopbm
+atobm
+avstopam
+awk
+
+~/leti/sem4/OS/lab3/task5  cat /proc/sys/fs/pipe-max-size
+1048576
+
+~/leti/sem4/OS/lab3/task5  ps aux | sort -k 3 -nr | head -n 10
+root        3535  5.6  1.1 92180956 378808 pts/1 SLl+ Apr20  18:42 ././/lib/x86_64-linux-gnu/webkit2gtk-4.0/WebKitWebProcess 12 29
+misha       3014  3.7  1.1 1461716356 386444 ?   Sl   Apr20  12:33 /opt/google/chrome/chrome --type=renderer --string-annotations --crashpad-handler-pid=2755 --enable-crash-reporter=44dc67f4-ad4d-469b-81f6-83678110646a, --change-stack-guard-on-fork=enable --lang=en-GB --num-raster-threads=4 --enable-main-frame-before-activation --renderer-client-id=11 --time-ticks-at-unix-epoch=-1745164025700874 --launch-time-ticks=33607767 --shared-files=v8_context_snapshot_data:100 --field-trial-handle=3,i,14513083070270824617,13449467375783740538,262144 --variations-seed-version=20250417-050109.954000
+misha       2809  1.6  0.7 34858880 233536 ?     Sl   Apr20   5:31 /opt/google/chrome/chrome --type=gpu-process --string-annotations --crashpad-handler-pid=2755 --enable-crash-reporter=44dc67f4-ad4d-469b-81f6-83678110646a, --change-stack-guard-on-fork=enable --gpu-preferences=UAAAAAAAAAAgAAAEAAAAAAAAAAAAAAAAAABgAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAABAAAAAAAAAAEAAAAAAAAAAIAAAAAAAAAAgAAAAAAAAA --shared-files --field-trial-handle=3,i,14513083070270824617,13449467375783740538,262144 --variations-seed-version=20250417-050109.954000
+misha       2579  1.3  0.6 28386852 220580 tty1  Sl   Apr20   4:35 /usr/lib/xorg/Xorg -nolisten tcp :0 vt1 -keeptty -auth /tmp/serverauth.Ntdq10bsf2
+misha      50591  0.9  0.3 1826220 103332 ?      Ssl  00:18   0:01 alacritty
+misha       2748  0.7  1.2 34693732 408308 ?     Sl   Apr20   2:35 /usr/bin/google-chrome-stable
+root        3452  0.3  0.3 111601132 125412 pts/1 Sl+ Apr20   1:02 hiddify-clash-desktop
+root       50163  0.2  0.0      0     0 ?        I    00:17   0:00 [kworker/16:0-events]
+misha       2994  0.2  1.0 1461681472 325268 ?   Sl   Apr20   0:50 /opt/google/chrome/chrome --type=renderer --string-annotations --crashpad-handler-pid=2755 --enable-crash-reporter=44dc67f4-ad4d-469b-81f6-83678110646a, --change-stack-guard-on-fork=enable --lang=en-GB --num-raster-threads=4 --enable-main-frame-before-activation --renderer-client-id=8 --time-ticks-at-unix-epoch=-1745164025700874 --launch-time-ticks=33580703 --shared-files=v8_context_snapshot_data:100 --field-trial-handle=3,i,14513083070270824617,13449467375783740538,262144 --variations-seed-version=20250417-050109.954000
+misha       2657  0.2  0.0 835800 23408 ?        Sl   Apr20   0:44 polybar main
+
+# Основные ограничения анонимных каналов pipe:
+# 1. Односторонность и родитель‑потомок: работают только внутри одного процесса и его потомков, передача в одном направлении.
+# 2. Фиксированный буфер (~64 КБ): размер можно менять программно, но не выше системного лимита.
+# 3. Временность: исчезают при завершении процессов, не имеют имени.
+
+# Родитель создаёт pipe и форкает ребёнка: тот пишет в канал сообщение «Hello through pipe!»,
+# закрывает запись, а родитель, закрыв конец для записи, читает из канала и выводит полученную строку.
+
+~/leti/sem4/OS/lab3/task6  gcc pipe_example_6_1.c -o pipe_example_6_1
+~/leti/sem4/OS/lab3/task6  ./pipe_example_6_1
+Default pipe buffer size: 65536 bytes
+Read from pipe: 'Hello through pipe!'
+
+
+# 6.2
+
+~/leti/sem4/OS/lab3/task6  gcc fifo_example_6_2.c -o fifo_example_6_2
+~/leti/sem4/OS/lab3/task6  ./fifo_example_6_2
+prw-r--r-- 1 misha misha 0 Apr 21 00:33 /tmp/myfifo
+  File: /tmp/myfifo
+  Size: 0         	Blocks: 0          IO Block: 4096   fifo
+Device: 259,2	Inode: 4587540     Links: 1
+Access: (0644/prw-r--r--)  Uid: ( 1000/   misha)   Gid: ( 1000/   misha)
+Access: 2025-04-21 00:33:18.276964618 +0300
+Modify: 2025-04-21 00:33:18.276964618 +0300
+Change: 2025-04-21 00:33:18.276964618 +0300
+ Birth: 2025-04-21 00:33:18.276964618 +0300
+
+Info for /tmp/myfifo:
+  Device: 66306
+  Inode: 4587540
+  Mode: 644 (FIFO)
+  Link count: 1
+  Size: 0 bytes (always 0 for FIFO)
+
+/proc/self/fd entry:
+lr-x------ 1 misha misha 64 Apr 21 00:33 3 -> /tmp/myfifo
+
+Read from FIFO: 'Hello from program FIFO!'
+
+
+# 6.3
+
+~/leti/sem4/OS/lab3/task6  gcc -o mq_example_6_3 mq_example_6_3.c -lrt
+~/leti/sem4/OS/lab3/task6  ./mq_example_6_3
+Queue attributes: maxmsg=10, msgsize=64, curmsgs=0
+Parent: no messages, doing other work...
+Child: sent 'Message 1'
+Parent: received 'Message 1'
+Parent: no messages, doing other work...
+Child: sent 'Message 2'
+Parent: received 'Message 2'
+Parent: no messages, doing other work...
+Parent: no messages, doing other work...
+Child: sent 'Message 3'
+Parent: received 'Message 3'
+Parent: no messages, doing other work...
+Parent: no messages, doing other work...
+Child: sent 'Message 4'
+Parent: received 'Message 4'
+Parent: no messages, doing other work...
+Parent: no messages, doing other work...
+Child: sent 'Message 5'
+Parent: received 'Message 5'
+
+# В выводе видно, что сразу после создания очередь пуста (curmsgs=0), и родительская сторона в неблокирующем
+# режиме многократно выводит «no messages, doing other work…» до тех пор, пока потомок через 1 с не пошлёт новое
+# сообщение. Как только «Child: sent message N» появляется в логе, родитель в следующей итерации цикла успешно
+# принимает его и тут же продолжает ненавязчиво проверять очередь, не блокируясь, демонстрируя почтовый ящик — отправитель
+# и получатель не синхронизированы напрямую, родитель может заниматься другой работой до появления новых сообщений.
+
+# Далее ограничения для IPC
+~/leti/sem4/OS/lab3/task6  cat /proc/sys/fs/pipe-max-size
+1048576
+
+~/leti/sem4/OS/lab3/task6  cat /proc/sys/kernel/msgmnb
+16384
+
+~/leti/sem4/OS/lab3/task6  cat /proc/sys/kernel/msgmax
+8192
+
+~/leti/sem4/OS/lab3/task6  cat /proc/sys/fs/mqueue/msg_max
+10
+
+~/leti/sem4/OS/lab3/task6  cat /proc/sys/fs/mqueue/msgsize_max
+8192
+
+
+# 7
+
+# Лимит числа открытых дескрипторов (включая сокеты) для процесса 
+~/leti/sem4/OS/lab3/task7  ulimit -n
+1024
+
+# Длина поля sun_path в unix‑доменном сокете (макс. 108 байт)
+~/leti/sem4/OS/lab3/task7  grep '^#define UNIX_PATH_MAX' /usr/include/linux/un.h
+define UNIX_PATH_MAX	108
+
+# Максимальный backlog для listen()
+~/leti/sem4/OS/lab3/task7  cat /proc/sys/net/core/somaxconn
+1024
+
+# Максимальный SYN‑backlog для TCP‑соединений
+~/leti/sem4/OS/lab3/task7  cat /proc/sys/net/ipv4/tcp_max_syn_backlog
+2048
+
+# Размеры буферов сокетов
+~/leti/sem4/OS/lab3/task7  cat /proc/sys/net/core/rmem_default
+212992
+~/leti/sem4/OS/lab3/task7  cat /proc/sys/net/core/rmem_max
+212992
+~/leti/sem4/OS/lab3/task7  cat /proc/sys/net/core/wmem_default
+212992
+~/leti/sem4/OS/lab3/task7  cat /proc/sys/net/core/wmem_max
+212992
+
+~/leti/sem4/OS/lab3/task7  sudo sh -c 'echo "net.core.somaxconn = 4096" >> /etc/sysctl.conf'
+
+# Изменение лимита somaxconn в /etc/sysctl.conf
+~/leti/sem4/OS/lab3/task7  sudo sysctl -p /etc/sysctl.conf
+net.core.somaxconn = 1024
+net.core.somaxconn = 1024
+net.core.somaxconn = 4096
+
+
+# 7.1
+
+# server_tcp_7_1.c – TCP‑сервер
+# client_tcp_7_1.c – TCP‑клиент
+
+# terminal 1
+~/leti/sem4/OS/lab3/task7  nano client_tcp_7_1.c
+~/leti/sem4/OS/lab3/task7  gcc server_tcp_7_1.c -o server
+~/leti/sem4/OS/lab3/task7  ./server
+TCP server listening on port 5000...
+Client connected.
+Server received: Hello from TCP client!
+Server finished.
+~/leti/sem4/OS/lab3/task7 
+
+# terminal 2
+~  cd leti/sem4/OS/lab3/task7
+~/leti/sem4/OS/lab3/task7  gcc client_tcp_7_1.c -o client
+~/leti/sem4/OS/lab3/task7  ./client
+Connected to server.
+Client received: Hello from TCP server!
+
+
+# 7.2
+
+# server_udp_7_2.c – UDP‑сервер, слушающий порт 5001, принимающий одно сообщение и отвечающий тем же клиентом.
+# client_udp_7_2.c – UDP‑клиент, отправляющий datagram на 127.0.0.1:5001 и получающий ответ.
+
+# terminal 1
+~/leti/sem4/OS/lab3/task7  gcc server_udp_7_2.c -o udp_server
+~/leti/sem4/OS/lab3/task7  ./udp_server
+UDP server listening on port 5001...
+Server received from 127.0.0.1:45115: Hi from UDP client, new client!
+Server sent response.
+
+# terminal 2
+~  cd leti/sem4/OS/lab3/task7
+~/leti/sem4/OS/lab3/task7  gcc client_udp_7_2.c -o udp_client
+~/leti/sem4/OS/lab3/task7  ./udp_client
+Client sent: Hi from UDP client, new client!
+Client received: Hi from UDP server, new server!!
